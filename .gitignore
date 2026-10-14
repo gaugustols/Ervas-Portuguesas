@@ -1,0 +1,17 @@
+
+# Arquivos temporários do Superdesign
+.superdesign/tmp/
+
+# Dependências e builds locais
+node_modules/
+dist/
+.next/
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+!.env.example
+
+# Arquivos locais do sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="pt-PT" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remédios de Ervas Portuguesas | Guia Educativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-paper: #F7F5EC;
+            --bg-alt: #EEEBDD;
+            --deep-green: #183D31;
+            --body-ink: #33463B;
+            --muted-text: #667065;
+            --gold: #A17D45;
+            --border: #D9DDCE;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--body-ink);
+            background-color: var(--bg-paper);
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        .text-label {
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .btn-primary {
+            background-color: var(--deep-green);
+            color: white;
+            height: 56px;
+            padding: 0 32px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: background-color 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1f4e3f;
+        }
+        .hero-arch {
+            border-radius: 500px 500px 0 0;
+            overflow: hidden;
+        }
+        .faq-details[open] summary iconify-icon {
+            transform: rotate(180deg);
+        }
+        .herb-tab[aria-selected="true"] {
+            color: var(--deep-green);
+            border-bottom: 2px solid var(--gold);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        .modal-overlay {
+            background: rgba(24, 61, 49, 0.4);
+            backdrop-blur: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col" data-sd-id="1">
+        <!-- Navigation -->
+        <nav class="sticky top-0 z-40 bg-[#F7F5EC] border-b border-[#D9DDCE]" data-sd-id="2">
+            <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between" data-sd-id="3">
+                <a href="#" id="nav-brand" class="font-serif text-2xl font-semibold text-[#183D31]" data-sd-id="4">Remédios de Ervas Portuguesas</a>
+                
+                <div class="hidden lg:flex items-center gap-10" data-sd-id="5">
+                    <a href="#editorial" id="nav-guia" class="text-sm uppercase tracking-widest hover:text-[#A17D45] transition-colors" data-sd-id="6">O guia</a>
+                    <a href="#conteudo" id="nav-previa" class="text-sm uppercase tracking-widest hover:text-[#A17D45] transition-colors" data-sd-id="7">Uma prévia</a>
+                    <a href="#faq" id="nav-perguntas" class="text-sm uppercase tracking-widest hover:text-[#A17D45] transition-colors" data-sd-id="8">Perguntas frequentes</a>
+                    <a href="#oferta" id="nav-conhecer" class="btn-primary text-sm tracking-widest !h-12 !px-6" data-sd-id="9">Conhecer o guia</a>
+                </div>
+
+                <button class="lg:hidden text-2xl" aria-label="Menu" data-sd-id="10">
+                    <iconify-icon icon="lucide:menu"></iconify-icon>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="pt-16 pb-24 lg:py-32" data-sd-id="11">
+            <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-sd-id="12">
+                <div class="max-w-xl" data-sd-id="13">
+                    <span class="text-label text-[#A17D45] mb-6 block" data-sd-id="14">Saberes de Portugal</span>
+                    <h1 class="text-[40px] md:text-[64px] lg:text-[88px] leading-[1.05] text-[#183D31] mb-8" data-sd-id="15">
+                        A tradição das ervas, <i class="font-serif">ao seu alcance.</i>
+                    </h1>
+                    <p class="text-lg leading-relaxed text-[#667065] mb-10" data-sd-id="16">
+                        Conheça a proposta de um guia educativo dedicado às ervas e aos saberes portugueses. Um convite para explorar a tradição botânica com curiosidade e responsabilidade.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4" data-sd-id="17">
+                        <a href="#oferta" id="hero-cta-main" class="btn-primary" data-sd-id="18">
+                            Conhecer o guia
+                            <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+                        </a>
+                        <a href="#conteudo" id="hero-cta-sec" class="h-[56px] px-8 border border-[#D9DDCE] rounded-[4px] inline-flex items-center justify-center text-sm tracking-widest uppercase hover:bg-[#EEEBDD] transition-colors" data-sd-id="19">
+                            Explorar a proposta
+                        </a>
+                    </div>
+                    <div class="mt-16 flex items-center gap-6 border-t border-[#D9DDCE] pt-8" data-sd-id="20">
+                        <div class="flex flex-col" data-sd-id="21">
+                            <span class="text-[10px] uppercase tracking-widest text-[#667065]" data-sd-id="22">Tradição</span>
+                            <span class="text-sm font-medium" data-sd-id="23">Botânica</span>
+                        </div>
+                        <div class="w-px h-8 bg-[#D9DDCE]" data-sd-id="24"></div>
+                        <div class="flex flex-col" data-sd-id="25">
+                            <span class="text-[10px] uppercase tracking-widest text-[#667065]" data-sd-id="26">Conteúdo</span>
+                            <span class="text-sm font-medium" data-sd-id="27">Educativo</span>
+                        </div>
+                        <div class="w-px h-8 bg-[#D9DDCE]" data-sd-id="28"></div>
+                        <div class="flex flex-col" data-sd-id="29">
+                            <span class="text-[10px] uppercase tracking-widest text-[#667065]" data-sd-id="30">Formato</span>
+                            <span class="text-sm font-medium" data-sd-id="31">No seu ritmo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col items-center lg:items-end" data-sd-id="32">
+                    <div class="hero-arch w-full max-w-[500px] border border-[#D9DDCE] p-2" data-sd-id="33">
+                        <img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/projects/1c9a9e66-41d1-43b9-939c-025ecdb208f1/content-assets/botica-portuguesa/botica-portuguesa.png" alt="Composição botânica com ervas, argamassa e linho" class="w-full aspect-[4/5] object-cover hero-arch" data-sd-id="34">
+                    </div>
+                    
+                    <!-- Digital Cover Mockup -->
+                    <div class="absolute -bottom-8 -left-4 lg:-left-20 bg-white p-4 shadow-xl border border-[#D9DDCE] max-w-[180px] lg:max-w-[220px]" data-sd-id="35">
+                        <div class="bg-[#183D31] aspect-[2/3] p-6 flex flex-col justify-between text-white border-4 border-[#A17D45]/20" data-sd-id="36">
+                            <div class="space-y-1" data-sd-id="37">
+                                <div class="h-px w-8 bg-[#A17D45]" data-sd-id="38"></div>
+                                <span class="text-[8px] uppercase tracking-[0.2em] font-medium" data-sd-id="39">Sabedoria Ancestral</span>
+                            </div>
+                            <h3 class="text-2xl font-serif leading-tight italic" data-sd-id="40">
+                                Remédios de <br>Ervas <br>Portuguesas
+                            </h3>
+                            <div class="text-[7px] uppercase tracking-[0.1em] text-white/60" data-sd-id="41">
+                                Edição Proposta • MMXXIV
+                            </div>
+                        </div>
+                        <p class="mt-3 text-[10px] uppercase tracking-widest text-center text-[#667065] italic" data-sd-id="42">Proposta de capa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="editorial" class="bg-[#EEEBDD] py-24 md:py-32 border-y border-[#D9DDCE]" data-sd-id="43">
+            <div class="max-w-[800px] mx-auto px-6 text-center" data-sd-id="44">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl text-[#183D31] mb-8 italic" data-sd-id="45">Conhecimento que atravessa gerações.</h2>
+                <p class="text-xl leading-relaxed text-[#33463B] font-serif italic" data-sd-id="46">
+                    Portugal guarda em suas terras e memórias um patrimônio botânico silencioso. Este guia nasce como um convite para o resgate desse saber, apresentando as plantas não apenas como elementos naturais, mas como elos vivos da nossa cultura e identidade.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Proposal -->
+        <section id="conteudo" class="py-24 md:py-32" data-sd-id="47">
+            <div class="max-w-[1200px] mx-auto px-6" data-sd-id="48">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8" data-sd-id="49">
+                    <div class="max-w-2xl" data-sd-id="50">
+                        <span class="text-label text-[#A17D45] mb-4 block italic font-serif" data-sd-id="51">Proposta de conteúdo</span>
+                        <h2 class="text-4xl md:text-5xl text-[#183D31]" data-sd-id="52">Um novo olhar sobre as ervas</h2>
+                    </div>
+                    <p class="text-sm text-[#667065] max-w-xs italic" data-sd-id="53">
+                        * Estrutura sugerida, a ser validada conforme o desenvolvimento final do produto.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12" data-sd-id="54">
+                    <div class="space-y-6" data-sd-id="55">
+                        <div class="font-serif text-5xl text-[#D9DDCE]" data-sd-id="56">01.</div>
+                        <h3 class="text-2xl font-serif text-[#183D31]" data-sd-id="57">Conhecer as plantas</h3>
+                        <p class="leading-relaxed text-[#667065]" data-sd-id="58">Uma exploração detalhada da morfologia e das características botânicas das espécies nativas e adaptadas ao solo português.</p>
+                    </div>
+                    <div class="space-y-6" data-sd-id="59">
+                        <div class="font-serif text-5xl text-[#D9DDCE]" data-sd-id="60">02.</div>
+                        <h3 class="text-2xl font-serif text-[#183D31]" data-sd-id="61">Entender a tradição</h3>
+                        <p class="leading-relaxed text-[#667065]" data-sd-id="62">Um mergulho nos usos históricos e culturais que moldaram a botica tradicional nas diferentes regiões de Portugal.</p>
+                    </div>
+                    <div class="space-y-6" data-sd-id="63">
+                        <div class="font-serif text-5xl text-[#D9DDCE]" data-sd-id="64">03.</div>
+                        <h3 class="text-2xl font-serif text-[#183D31]" data-sd-id="65">Aprender com responsabilidade</h3>
+                        <p class="leading-relaxed text-[#667065]" data-sd-id="66">Diretrizes sobre colheita sustentável, conservação e o respeito ético ao ecossistema botânico local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botanical Preview -->
+        <section class="py-24 md:py-32 bg-white border-y border-[#D9DDCE]" data-sd-id="67">
+            <div class="max-w-[1200px] mx-auto px-6" data-sd-id="68">
+                <div class="text-center mb-16" data-sd-id="69">
+                    <span class="text-label text-[#A17D45] mb-4 block" data-sd-id="70">Prévia Ilustrativa</span>
+                    <h2 class="text-4xl md:text-5xl text-[#183D31]" data-sd-id="71">Comece pela curiosidade</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start" data-sd-id="72">
+                    <div class="lg:col-span-4 flex flex-col gap-2" data-sd-id="73">
+                        <button onclick="selectHerb('camomila')" id="herb-tab-camomila" aria-selected="true" class="herb-tab text-left p-6 border border-[#D9DDCE] rounded-[4px] transition-all hover:bg-[#F7F5EC]" data-sd-id="74">
+                            <span class="text-label text-[10px] block mb-2" data-sd-id="75">01</span>
+                            <h4 class="text-xl font-serif" data-sd-id="76">Camomila</h4>
+                        </button>
+                        <button onclick="selectHerb('alecrim')" id="herb-tab-alecrim" aria-selected="false" class="herb-tab text-left p-6 border border-[#D9DDCE] rounded-[4px] transition-all hover:bg-[#F7F5EC]" data-sd-id="77">
+                            <span class="text-label text-[10px] block mb-2" data-sd-id="78">02</span>
+                            <h4 class="text-xl font-serif" data-sd-id="79">Alecrim</h4>
+                        </button>
+                        <button onclick="selectHerb('hortela')" id="herb-tab-hortela" aria-selected="false" class="herb-tab text-left p-6 border border-[#D9DDCE] rounded-[4px] transition-all hover:bg-[#F7F5EC]" data-sd-id="80">
+                            <span class="text-label text-[10px] block mb-2" data-sd-id="81">03</span>
+                            <h4 class="text-xl font-serif" data-sd-id="82">Hortelã</h4>
+                        </button>
+                    </div>
+
+                    <div class="lg:col-span-8 bg-[#F7F5EC] border border-[#D9DDCE] rounded-[8px] p-8 md:p-12 min-h-[400px]" data-sd-id="83">
+                        <div id="herb-content-camomila" class="herb-panel space-y-6" data-sd-id="84">
+                            <div class="flex flex-col md:flex-row gap-8" data-sd-id="85">
+                                <div class="flex-1 space-y-6" data-sd-id="86">
+                                    <h3 class="text-3xl font-serif text-[#183D31] italic" data-sd-id="87">Matricaria recutita</h3>
+                                    <p class="leading-relaxed text-[#33463B]" data-sd-id="88">
+                                        A camomila é conhecida pela sua delicadeza e aroma floral adocicado. Em Portugal, as suas pequenas flores brancas pontuam os campos, evocando uma sensação de calma rural e frescura campestre.
+                                    </p>
+                                    <p class="text-sm text-[#667065] italic" data-sd-id="89">
+                                        Curiosidade botânica: O seu nome deriva do grego "khamaimelon", que significa "maçã da terra", devido ao perfume das suas flores.
+                                    </p>
+                                </div>
+                                <div class="w-full md:w-64 aspect-square bg-[#EEEBDD] border border-[#D9DDCE] flex items-center justify-center" data-sd-id="90">
+                                     <iconify-icon icon="lucide:leaf" class="text-4xl text-[#183D31]/20"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="herb-content-alecrim" class="herb-panel hidden space-y-6" data-sd-id="91">
+                            <div class="flex flex-col md:flex-row gap-8" data-sd-id="92">
+                                <div class="flex-1 space-y-6" data-sd-id="93">
+                                    <h3 class="text-3xl font-serif text-[#183D31] italic" data-sd-id="94">Rosmarinus officinalis</h3>
+                                    <p class="leading-relaxed text-[#33463B]" data-sd-id="95">
+                                        Resistente e aromático, o alecrim é um símbolo da paisagem mediterrânica. Com as suas folhas agulhadas e aroma vigoroso, é uma presença constante nos jardins e montes portugueses.
+                                    </p>
+                                    <p class="text-sm text-[#667065] italic" data-sd-id="96">
+                                        Curiosidade botânica: O nome "Rosmarinus" traduz-se como "orvalho do mar", refletindo a sua preferência por zonas costeiras.
+                                    </p>
+                                </div>
+                                <div class="w-full md:w-64 aspect-square bg-[#EEEBDD] border border-[#D9DDCE] flex items-center justify-center" data-sd-id="97">
+                                     <iconify-icon icon="lucide:sprout" class="text-4xl text-[#183D31]/20"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="herb-content-hortela" class="herb-panel hidden space-y-6" data-sd-id="98">
+                            <div class="flex flex-col md:flex-row gap-8" data-sd-id="99">
+                                <div class="flex-1 space-y-6" data-sd-id="100">
+                                    <h3 class="text-3xl font-serif text-[#183D31] italic" data-sd-id="101">Mentha spicata</h3>
+                                    <p class="leading-relaxed text-[#33463B]" data-sd-id="102">
+                                        A hortelã é sinónimo de frescura e vivacidade. Cresce generosamente junto a fontes e ribeiros, espalhando o seu perfume refrescante por onde a água corre.
+                                    </p>
+                                    <p class="text-sm text-[#667065] italic" data-sd-id="103">
+                                        Curiosidade botânica: Existem dezenas de variedades, cada uma com o seu perfil aromático único, desde as mais doces às mais mentoladas.
+                                    </p>
+                                </div>
+                                <div class="w-full md:w-64 aspect-square bg-[#EEEBDD] border border-[#D9DDCE] flex items-center justify-center" data-sd-id="104">
+                                     <iconify-icon icon="lucide:wind" class="text-4xl text-[#183D31]/20"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Section -->
+        <section id="oferta" class="bg-[#183D31] py-24 md:py-32 text-white" data-sd-id="105">
+            <div class="max-w-[1200px] mx-auto px-6" data-sd-id="106">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-sd-id="107">
+                    <div class="space-y-8" data-sd-id="108">
+                        <span class="text-label text-[#A17D45]" data-sd-id="109">O próximo capítulo</span>
+                        <h2 class="text-[48px] md:text-[64px] font-serif leading-tight" data-sd-id="110">Seu próximo capítulo <i class="italic">começa aqui.</i></h2>
+                        <p class="text-lg text-white/80 leading-relaxed" data-sd-id="111">
+                            Garanta o seu lugar na jornada de descoberta da flora portuguesa. Este guia está em fase final de preparação para oferecer o melhor conteúdo educativo para si.
+                        </p>
+                        <div class="bg-white/5 border border-white/10 p-8 rounded-[4px] space-y-4" data-sd-id="112">
+                            <div class="flex justify-between items-end" data-sd-id="113">
+                                <span class="text-sm text-white/60 uppercase tracking-widest" data-sd-id="114">Valor do investimento</span>
+                                <span class="text-2xl font-serif text-[#A17D45]" data-sd-id="115">Oferta em preparação</span>
+                            </div>
+                            <button onclick="openModal()" id="btn-availability" class="w-full h-[56px] bg-[#A17D45] text-white flex items-center justify-center gap-3 uppercase tracking-widest text-sm hover:bg-[#b88e50] transition-colors" data-sd-id="116">
+                                Ver disponibilidade
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center lg:justify-end" data-sd-id="117">
+                        <div class="bg-white p-6 shadow-2xl rotate-3 max-w-[320px]" data-sd-id="118">
+                            <div class="bg-[#183D31] aspect-[2/3] p-10 flex flex-col justify-between text-white border-4 border-[#A17D45]/20" data-sd-id="119">
+                                <div class="space-y-2" data-sd-id="120">
+                                    <div class="h-px w-12 bg-[#A17D45]" data-sd-id="121"></div>
+                                    <span class="text-[10px] uppercase tracking-[0.2em] font-medium" data-sd-id="122">Sabedoria Ancestral</span>
+                                </div>
+                                <h3 class="text-3xl font-serif leading-tight italic" data-sd-id="123">
+                                    Remédios de <br>Ervas <br>Portuguesas
+                                </h3>
+                                <div class="text-[8px] uppercase tracking-[0.1em] text-white/60" data-sd-id="124">
+                                    Edição Proposta • MMXXIV
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 md:py-32" data-sd-id="125">
+            <div class="max-w-[800px] mx-auto px-6" data-sd-id="126">
+                <div class="text-center mb-16" data-sd-id="127">
+                    <span class="text-label text-[#A17D45] mb-4 block" data-sd-id="128">Dúvidas Frequentes</span>
+                    <h2 class="text-4xl md:text-5xl text-[#183D31]" data-sd-id="129">Perguntas comuns</h2>
+                </div>
+
+                <div class="space-y-4" data-sd-id="130">
+                    <details class="faq-details group border border-[#D9DDCE] rounded-[4px]" data-sd-id="131">
+                        <summary class="list-none p-6 flex items-center justify-between cursor-pointer hover:bg-[#EEEBDD] transition-colors" data-sd-id="132">
+                            <h4 class="text-lg font-serif" data-sd-id="133">O que é este produto?</h4>
+                            <iconify-icon icon="lucide:chevron-down" class="text-[#A17D45] transition-transform"></iconify-icon>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#667065] leading-relaxed" data-sd-id="134">
+                            Trata-se de uma proposta de guia educativo dedicado à botânica e aos saberes tradicionais portugueses. Os conteúdos exatos estão em fase de confirmação final para garantir o máximo rigor informativo.
+                        </div>
+                    </details>
+
+                    <details class="faq-details group border border-[#D9DDCE] rounded-[4px]" data-sd-id="135">
+                        <summary class="list-none p-6 flex items-center justify-between cursor-pointer hover:bg-[#EEEBDD] transition-colors" data-sd-id="136">
+                            <h4 class="text-lg font-serif" data-sd-id="137">É um produto físico?</h4>
+                            <iconify-icon icon="lucide:chevron-down" class="text-[#A17D45] transition-transform"></iconify-icon>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#667065] leading-relaxed" data-sd-id="138">
+                            O formato final do guia (digital ou impresso) ainda está por confirmar. Fique atento às nossas comunicações para saber como receberá o seu guia.
+                        </div>
+                    </details>
+
+                    <details class="faq-details group border border-[#D9DDCE] rounded-[4px]" data-sd-id="139">
+                        <summary class="list-none p-6 flex items-center justify-between cursor-pointer hover:bg-[#EEEBDD] transition-colors" data-sd-id="140">
+                            <h4 class="text-lg font-serif" data-sd-id="141">O conteúdo substitui orientação profissional?</h4>
+                            <iconify-icon icon="lucide:chevron-down" class="text-[#A17D45] transition-transform"></iconify-icon>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#667065] leading-relaxed" data-sd-id="142">
+                            Não. O conteúdo é puramente educativo e cultural. Não substitui, em circunstância alguma, a orientação de profissionais de saúde, médicos ou especialistas certificados.
+                        </div>
+                    </details>
+
+                    <details class="faq-details group border border-[#D9DDCE] rounded-[4px]" data-sd-id="143">
+                        <summary class="list-none p-6 flex items-center justify-between cursor-pointer hover:bg-[#EEEBDD] transition-colors" data-sd-id="144">
+                            <h4 class="text-lg font-serif" data-sd-id="145">Como posso comprar?</h4>
+                            <iconify-icon icon="lucide:chevron-down" class="text-[#A17D45] transition-transform"></iconify-icon>
+                        </summary>
+                        <div class="px-6 pb-6 text-[#667065] leading-relaxed" data-sd-id="146">
+                            A oferta e a disponibilidade serão anunciadas em breve através do botão "Ver disponibilidade". Atualmente, o link de compra está em preparação.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-[#F7F5EC] border-t border-[#D9DDCE] py-16" data-sd-id="147">
+            <div class="max-w-[1200px] mx-auto px-6" data-sd-id="148">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-12" data-sd-id="149">
+                    <div class="space-y-2" data-sd-id="150">
+                        <span class="font-serif text-2xl font-semibold text-[#183D31]" data-sd-id="151">Remédios de Ervas Portuguesas</span>
+                        <p class="text-sm text-[#667065] italic" data-sd-id="152">Saberes de Portugal, tradição botânica.</p>
+                    </div>
+                    <div class="flex gap-8" data-sd-id="153">
+                        <a href="#" id="foot-home" class="text-sm uppercase tracking-widest text-[#33463B] hover:text-[#A17D45]" data-sd-id="154">Início</a>
+                        <a href="#editorial" id="foot-editorial" class="text-sm uppercase tracking-widest text-[#33463B] hover:text-[#A17D45]" data-sd-id="155">O Guia</a>
+                        <a href="#faq" id="foot-faq" class="text-sm uppercase tracking-widest text-[#33463B] hover:text-[#A17D45]" data-sd-id="156">FAQ</a>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-[#D9DDCE] flex flex-col md:flex-row justify-between gap-4" data-sd-id="157">
+                    <p class="text-xs text-[#667065] uppercase tracking-widest" data-sd-id="158">
+                        © 2024 Remédios de Ervas Portuguesas
+                    </p>
+                    <p class="text-xs text-[#667065] uppercase tracking-widest max-w-md text-right" data-sd-id="159">
+                        Conteúdo educativo. Não substitui orientação profissional.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div id="modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6" data-sd-id="160">
+            <div class="modal-overlay absolute inset-0" onclick="closeModal()" data-sd-id="161"></div>
+            <div class="bg-white relative z-10 w-full max-w-[480px] p-10 md:p-16 border border-[#D9DDCE] shadow-2xl rounded-[4px] text-center" data-sd-id="162">
+                <button onclick="closeModal()" id="modal-close" class="absolute top-6 right-6 text-2xl text-[#667065] hover:text-[#183D31]" data-sd-id="163">
+                    <iconify-icon icon="lucide:x"></iconify-icon>
+                </button>
+                <iconify-icon icon="lucide:clock" class="text-5xl text-[#A17D45] mb-8"></iconify-icon>
+                <h3 class="text-3xl font-serif text-[#183D31] mb-6 italic" data-sd-id="164">Em breve</h3>
+                <p class="text-[#667065] leading-relaxed mb-8" data-sd-id="165">
+                    O link de compra está sendo preparado. <br>Volte em breve para conhecer a oferta completa.
+                </p>
+                <button onclick="closeModal()" id="modal-confirm" class="btn-primary w-full" data-sd-id="166">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectHerb(herbId) {
+            // Update tabs
+            document.querySelectorAll('.herb-tab').forEach(tab => {
+                tab.setAttribute('aria-selected', 'false');
+            });
+            document.getElementById('herb-tab-' + herbId).setAttribute('aria-selected', 'true');
+
+            // Update panels
+            document.querySelectorAll('.herb-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.getElementById('herb-content-' + herbId).classList.remove('hidden');
+        }
+
+        function openModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('modal-close').focus();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.getElementById('btn-availability').focus();
+        }
+
+        // Close modal on Escape
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+
+</body></html>
