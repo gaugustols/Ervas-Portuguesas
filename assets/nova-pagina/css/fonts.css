@@ -40,3 +40,33 @@
   font-display: swap;
   src: url(../fonts/fonte-06.ttf) format('truetype');
 }
+
+/* Identidade editorial: arquivos locais, sem requisições a serviços externos. */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/anton-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/plus-jakarta-sans-300.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/plus-jakarta-sans-400.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/plus-jakarta-sans-600.ttf) format('truetype');
+}
