@@ -23,3 +23,16 @@
     observer.observe(oferta);
   }
 })();
+
+// Exibe a mensagem somente quando ha pelo menos um sintoma selecionado.
+(() => {
+  const sintomas = document.querySelector('.sintomas-grid');
+  const resposta = document.getElementById('sintomas-resposta');
+  if (!sintomas || !resposta) return;
+  const atualizarResposta = () => {
+    resposta.hidden = !sintomas.querySelector('input[name="sintomas"]:checked');
+  };
+  sintomas.addEventListener('change', atualizarResposta);
+  window.addEventListener('pageshow', atualizarResposta);
+  atualizarResposta();
+})();
