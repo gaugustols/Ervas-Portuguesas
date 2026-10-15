@@ -1029,3 +1029,62 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
   font-size: 13px;
   line-height: 1.6;
 }
+
+/* Sintomas selecionaveis: cada cartao funciona como um checkbox nativo. */
+.sintomas-grid {
+  gap: 12px 20px;
+}
+.sintomas-grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sintomas-grid li {
+  padding: 0;
+  border: 0;
+}
+.sintomas-grid li::before {
+  content: none;
+}
+.sintoma-opcao {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 64px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(183, 198, 194, .08);
+  cursor: pointer;
+}
+.sintoma-opcao input {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 4px 0 0;
+  accent-color: #166534;
+  cursor: pointer;
+}
+.sintoma-opcao span {
+  flex: 1;
+  min-width: 0;
+}
+.sintoma-opcao:has(input:checked) {
+  border-color: #166534;
+  background: #edf5ef;
+}
+.sintoma-opcao:focus-within {
+  outline: 2px solid #166534;
+  outline-offset: 3px;
+}
+@media (hover: hover) {
+  .sintoma-opcao:hover {
+    border-color: #166534;
+  }
+}
+@media (max-width: 480px) {
+  .sintoma-opcao {
+    padding: 14px;
+    gap: 10px;
+  }
+}
