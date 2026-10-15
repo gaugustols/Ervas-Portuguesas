@@ -1088,3 +1088,21 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
     gap: 10px;
   }
 }
+
+/* Retorno da selecao, logo abaixo dos cartoes de sintomas. */
+.sintomas-resposta {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: clamp(18px, 3vw, 26px);
+  border: 1px solid #166534;
+  border-radius: 14px;
+  background: #edf5ef;
+  color: #14532d;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.sintomas-resposta[hidden] {
+  display: none;
+}
