@@ -1260,3 +1260,24 @@ body.dep-zoom-aberto { overflow: hidden; }
     transition: none;
   }
 }
+
+/* Texto de contexto do testemunho e preco unico em euros. */
+.hero .hero-prova-origem {
+  color: var(--sage);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.oferta-box .parcela small {
+  margin-right: 0;
+  margin-left: 4px;
+}
+
+.footer-marca {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--white);
+  font-family: 'Anton', Impact, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: .02em;
+}

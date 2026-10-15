@@ -24,7 +24,7 @@
   }
 })();
 
-// Ampliacao acessivel dos prints de depoimentos, sem dependencias externas.
+// Ampliacao acessivel dos capturas de testemunhos, sem dependencias externas.
 (() => {
   if (!('HTMLDialogElement' in window)) return;
   const imagens = document.querySelectorAll('.dep-card img');
@@ -32,7 +32,7 @@
   const dialogo = document.createElement('dialog');
   if (typeof dialogo.showModal !== 'function') return;
   dialogo.className = 'dep-zoom';
-  dialogo.setAttribute('aria-label', 'Depoimento ampliado');
+  dialogo.setAttribute('aria-label', 'Testemunho ampliado');
   const fechar = document.createElement('button');
   fechar.type = 'button';
   fechar.className = 'dep-zoom-fechar';
