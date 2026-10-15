@@ -941,3 +941,20 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
     margin: 4px 0 0;
   }
 }
+/* Botoes de compra: contraste consistente no desktop e no mobile. */
+.btn,
+.hero .btn,
+.oferta .btn,
+.cta-fixo .btn {
+  background: #166534;
+  border-color: #4b9b68;
+  color: #ffffff !important;
+}
+.btn:hover,
+.hero .btn:hover,
+.oferta .btn:hover,
+.cta-fixo .btn:hover {
+  background: #14532d;
+  border-color: #4b9b68;
+  color: #ffffff !important;
+}
