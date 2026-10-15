@@ -883,3 +883,61 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
   .btn, .link-oferta, .dep-card, .bonus-card { transition: none; }
   .btn:hover, .link-oferta:hover, .dep-card:hover, .bonus-card:hover { transform: none; }
 }
+
+/* Mobile: imagem, chamada e acao na mesma sequencia da referencia. */
+@media (max-width: 860px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 24px 20px 36px;
+  }
+  .hero-heading,
+  .hero-grid,
+  .hero-grid > div:not(.hero-book) {
+    display: contents;
+  }
+  .hero .hero-book {
+    grid-row: 1;
+    order: 0;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .hero-book .link-oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero .hero-book img {
+    width: auto;
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    grid-row: 2;
+    font-size: clamp(28px, 7.4vw, 40px);
+    margin: 0;
+  }
+  .hero .sub-h1 {
+    grid-row: 3;
+    margin: -8px 0 0;
+  }
+  .hero .hero-grid .btn {
+    grid-row: 4;
+    width: 100%;
+    padding-inline: 16px;
+  }
+  .hero-prova-social {
+    grid-row: 5;
+    margin-top: 0;
+  }
+  .hero-bullets {
+    grid-row: 6;
+    margin: 4px 0 0;
+  }
+}
