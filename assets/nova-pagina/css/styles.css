@@ -523,7 +523,7 @@ a:focus-visible {
   gap: clamp(32px, 5vw, 76px);
   align-items: center;
 }
-.hero-grid > div:first-child > p:first-child {
+.hero-heading > p:first-child {
   color: var(--sage) !important;
   border-color: var(--line-light) !important;
   border-radius: 2px !important;
@@ -843,7 +843,7 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
   .hero h1 { font-size: clamp(38px, 7vw, 58px); }
   .hero-book { order: -1; width: min(100%, 320px); margin-inline: auto; padding: 24px; }
   .hero-book img { max-width: 230px; margin-bottom: 20px; }
-  .hero-grid > div:first-child > p:first-child { margin-bottom: 24px !important; }
+  .hero-heading > p:first-child { margin-bottom: 24px !important; }
   .hero::before, .hero::after { width: 280px; height: 280px; filter: blur(60px); }
   .hero::after { bottom: -160px; }
   .sec { padding-block: 64px; }
