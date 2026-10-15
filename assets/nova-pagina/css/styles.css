@@ -1281,3 +1281,26 @@ body.dep-zoom-aberto { overflow: hidden; }
   font-weight: 400;
   letter-spacing: .02em;
 }
+
+/* Mockup do bloco de resultado, com proporcao integral em ambas as telas. */
+.resultado .split:has(.resultado-mockup) {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+.resultado .resultado-mockup {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+}
+@media (max-width: 860px) {
+  .resultado .split:has(.resultado-mockup) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .resultado .resultado-mockup {
+    max-width: 420px;
+  }
+}
