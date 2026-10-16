@@ -1,0 +1,33 @@
+import { z } from "zod";
+
+export const schema = z.object({
+  score: z.number().min(0).max(5),
+  count: z.number().int().nonnegative(),
+  countLabel: z.string().min(1).max(24),
+  source: z.string().min(1).max(40),
+  snippets: z.array(z.object({ quote: z.string().min(1), author: z.string().min(1) })).min(1).max(3),
+  colors: z.object({ text: z.string(), primary: z.string(), background: z.string() }),
+  fonts: z.object({ heading: z.string(), body: z.string(), numerals: z.string() }),
+});
+
+export type RatingSummaryInput = z.infer<typeof schema>;
+
+// Score supplied by the owner. Count describes the selected excerpts, not total reviews.
+// Quotes and names are transcribed from the original images 07, 08 and 13.
+export const defaults: RatingSummaryInput = schema.parse({
+  score: 4.9,
+  count: 3,
+  countLabel: "comentários em destaque",
+  source: "Comentários sobre a obra",
+  snippets: [
+    { quote: "Estou muito feliz. Obrigada", author: "Valdeny Val" },
+    { quote: "Estou lendo e praticando. O meu livro veio rapidinho. Adorei!", author: "Regina Celia Vallejo Mendes" },
+    { quote: "Recebi o livro obrigada", author: "editepereirasouza" },
+  ],
+  colors: { text: "#ffffff", primary: "#0b6b2c", background: "#000000" },
+  fonts: {
+    heading: "'Plus Jakarta Sans', system-ui, sans-serif",
+    body: "'Plus Jakarta Sans', system-ui, sans-serif",
+    numerals: "'Plus Jakarta Sans', system-ui, sans-serif",
+  },
+});

@@ -1,4 +1,4 @@
 import { registerRoot } from "remotion";
-import { HookQuestionComposition } from "../demo";
+import { HookQuestionComposition, StarRatingSummaryComposition } from "../demo";
 
-registerRoot(HookQuestionComposition);
+registerRoot(() => <><HookQuestionComposition /><StarRatingSummaryComposition /></>);

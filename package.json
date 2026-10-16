@@ -4,15 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline && node scripts/export-static.mjs",
-    "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify",
+    "build": "npm run build:styles && npm run build:headline && npm run build:rating && node scripts/export-static.mjs",
+    "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify && tailwindcss -i styles/rating-summary.css -o assets/nova-pagina/css/rating-summary.css --minify",
     "build:headline": "tsx scripts/build-hook-question.tsx",
     "typecheck": "tsc --noEmit",
     "check:hook": "tsx scripts/check-hook-question.tsx",
+    "build:rating": "tsx scripts/build-rating-summary.tsx",
+    "check:rating": "tsx scripts/check-rating-summary.tsx",
     "preview": "node servidor-local.mjs"
   },
   "dependencies": {
     "clsx": "2.1.1",
+    "lucide-react": "1.58.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.536",
