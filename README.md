@@ -2,7 +2,10 @@
 
 Landing page estática com entrada em `index.html`, na raiz. Os recursos da página ficam em `assets/nova-pagina/`: CSS, JavaScript, imagens, fontes locais e suas licenças.
 
-Não é necessário instalar dependências ou executar uma compilação.
+Para servir a versão estática já gerada, não é necessário instalar dependências.
+Para alterar o componente React da headline, execute `npm ci`, `npm run typecheck`
+e `npm run build`. A estrutura TypeScript/Tailwind, a configuração shadcn/ui e a
+demo Remotion estão documentadas em [docs/hook-question.md](docs/hook-question.md).
 
 ## Testar localmente
 

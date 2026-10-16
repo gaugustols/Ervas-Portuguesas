@@ -1,0 +1,27 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { renderToStaticMarkup } from "react-dom/server";
+import { getHookQuestionMotion, HookQuestion, meta } from "../components/ui/hook-question";
+import { defaults, schema } from "../video/hook-question/hook-question.schema";
+
+assert.deepEqual(schema.parse(defaults), defaults);
+assert.deepEqual(getHookQuestionMotion(0), { questionOpacity: 0, questionY: 32, answerOpacity: 0 });
+assert.deepEqual(getHookQuestionMotion(20), { questionOpacity: 1, questionY: 0, answerOpacity: 0 });
+assert.equal(getHookQuestionMotion(45).answerOpacity, 0);
+assert.deepEqual(getHookQuestionMotion(60), { questionOpacity: 1, questionY: 0, answerOpacity: 1 });
+assert.deepEqual(getHookQuestionMotion(104), getHookQuestionMotion(60));
+assert.equal(meta.timing.duration.default, 105);
+const firstFrame = renderToStaticMarkup(<HookQuestion {...defaults} frame={0} />);
+assert.match(firstFrame, /<span[^>]*style="animation:none;opacity:0;transform:translateY\(32px\)"/);
+const settled = renderToStaticMarkup(<HookQuestion {...defaults} frame={60} />);
+assert.ok(!settled.includes("opacity:0"));
+const reduced = renderToStaticMarkup(<HookQuestion {...defaults} frame={0} reducedMotion />);
+assert.ok(!reduced.includes("opacity:0"), "Reduced motion must show both texts immediately");
+const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+assert.ok(html.includes(renderToStaticMarkup(<HookQuestion {...defaults} />)));
+assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
+const css = readFileSync(new URL("../assets/nova-pagina/css/hook-question.css", import.meta.url), "utf8");
+assert.ok(css.includes("prefers-reduced-motion:reduce"));
+assert.ok(css.includes("hook-question-rise") && css.includes("hook-question-fade"));
+assert.ok(css.includes("hq\\:block"), "Tailwind utility must be compiled");
+console.log("Hook timing, reduced motion, schema, generated markup and compiled CSS passed.");
