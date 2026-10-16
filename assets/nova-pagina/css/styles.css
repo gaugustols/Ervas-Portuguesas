@@ -1466,7 +1466,7 @@ body {
 .hero .hero-prova-social {
   border-left-color: var(--pagina-destaque);
 }
-.hero-prova-social .estrelas { color: var(--pagina-destaque); }
+.hero-prova-social .estrelas { color: #ff9900; }
 .hero-book::before { border-color: var(--pagina-linha); }
 .hero-book .tag-fisico {
   background: rgba(11, 107, 44, .07);
