@@ -1,5 +1,23 @@
-// Revisão local: sem rastreamento, coleta de dados ou destinos externos.
+// Configure separadamente os links de pagamento; vazios mantêm os CTAs pendentes.
+const BASIC_CHECKOUT_URL = '';
+const PRO_CHECKOUT_URL = '';
+
 (() => {
+  const checkouts = { basic: BASIC_CHECKOUT_URL, pro: PRO_CHECKOUT_URL };
+  document.querySelectorAll('[data-checkout-plan]').forEach(link => {
+    const endereco = checkouts[link.dataset.checkoutPlan]?.trim();
+    if (!endereco) return;
+    let destino;
+    try {
+      destino = new URL(endereco);
+    } catch {
+      return;
+    }
+    if (!['https:', 'http:'].includes(destino.protocol)) return;
+    link.setAttribute('href', destino.href);
+    link.removeAttribute('aria-disabled');
+    link.removeAttribute('data-link-pendente');
+  });
   document.querySelectorAll('[data-link-pendente]').forEach(link => {
     link.addEventListener('click', event => event.preventDefault());
     link.addEventListener('keydown', event => {

@@ -1887,3 +1887,82 @@ footer {
     font-size: 12px;
   }
 }
+
+/* Planos de compra: estilos limitados a secao de oferta. */
+.oferta-planos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+.oferta-plano {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 20px;
+  background: var(--pagina-painel);
+  color: var(--pagina-texto);
+}
+.oferta-plano-pro {
+  border: 2px solid var(--pagina-destaque);
+  box-shadow: 0 12px 36px rgba(11, 107, 44, .15);
+}
+.plano-recomendado {
+  position: absolute;
+  top: -14px;
+  left: 28px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--pagina-destaque);
+  color: var(--pagina-texto);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.5;
+}
+.oferta-plano h3 {
+  margin: 0 0 10px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.plano-descricao { margin: 0; font-size: 14px; line-height: 1.7; }
+.plano-preco {
+  margin: 24px 0;
+  font-size: clamp(48px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.15;
+}
+.plano-beneficios {
+  display: grid;
+  gap: 16px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.plano-beneficios li { position: relative; padding-left: 26px; }
+.plano-beneficios li::before {
+  content: '';
+  position: absolute;
+  top: .4em;
+  left: 3px;
+  width: 7px;
+  height: 12px;
+  border: solid var(--pagina-destaque);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.oferta-plano .btn { align-self: center; margin-top: auto; }
+.oferta-plano .btn:focus-visible { outline-color: var(--pagina-texto); }
+@media (max-width: 860px) {
+  .oferta-planos { grid-template-columns: minmax(0, 1fr); gap: 36px; max-width: 540px; }
+}

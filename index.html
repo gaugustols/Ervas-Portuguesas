@@ -426,23 +426,35 @@
 </section>
 
 <!-- OFERTA -->
-<section class="sec oferta" id="oferta">
+<section class="sec oferta" id="oferta" aria-labelledby="oferta-titulo">
   <div class="container">
-    <h2>Oferta Especial de Lançamento</h2>
-    <p class="valor-total">Botica Viva com dois bónus incluídos.</p>
-    <div class="oferta-box">
-      <p class="tipo">Guia digital</p>
-      <p class="frete">Acesso após a compra</p>
-      <img src="assets/nova-pagina/images/botica-viva.svg" alt="Botica Viva, disponível em formato digital por 14 €" loading="lazy" width="220" height="300">
-      <p class="parcela-label">Só hoje:</p>
-      <p class="parcela">14 <small>€</small></p>
-      <p class="avista">Pagamento único de 14 €.</p>
-      <a class="btn btn-lg" role="link" tabindex="0" aria-disabled="true" data-link-pendente="checkout">Quero adquirir o meu agora</a>
-      <div class="selos">
-        <span>Compra segura</span>
-        <span>Satisfação garantida</span>
-        <span>Privacidade protegida</span>
-      </div>
+    <h2 id="oferta-titulo">Escolha como quer descobrir o poder das ervas tradicionais</h2>
+    <p class="valor-total">Do essencial ao mais completo, escolha o guia ideal para si.</p>
+    <div class="oferta-planos">
+      <article class="oferta-plano" aria-labelledby="plano-basico-titulo">
+        <h3 id="plano-basico-titulo">PLANO BÁSICO</h3>
+        <p class="plano-descricao" id="plano-basico-descricao">Para quem quer começar</p>
+        <p class="plano-preco">€7,90</p>
+        <ul class="plano-beneficios">
+          <li>Guia Digital Botica Viva</li>
+          <li>Instruções práticas de preparação</li>
+          <li>Acesso imediato ao conteúdo</li>
+        </ul>
+        <a class="btn" role="link" tabindex="0" aria-disabled="true" aria-describedby="plano-basico-descricao" data-link-pendente="checkout" data-checkout-plan="basic">QUERO O PLANO BÁSICO</a>
+      </article>
+      <article class="oferta-plano oferta-plano-pro" aria-labelledby="plano-pro-titulo">
+        <span class="plano-recomendado">RECOMENDADO</span>
+        <h3 id="plano-pro-titulo">PLANO PRO</h3>
+        <p class="plano-descricao" id="plano-pro-descricao">A experiência completa da Botica Viva</p>
+        <p class="plano-preco">€14,90</p>
+        <ul class="plano-beneficios">
+          <li>Tudo o que está incluído no Plano Básico</li>
+          <li>Caderno Ilustrado de Infusões</li>
+          <li>Guia de Cultivo e Conservação</li>
+          <li>Fichas Práticas para Imprimir</li>
+        </ul>
+        <a class="btn" role="link" tabindex="0" aria-disabled="true" aria-describedby="plano-pro-descricao" data-link-pendente="checkout" data-checkout-plan="pro">QUERO O PLANO PRO</a>
+      </article>
     </div>
   </div>
 </section>
