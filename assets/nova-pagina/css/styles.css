@@ -1304,3 +1304,21 @@ body.dep-zoom-aberto { overflow: hidden; }
     max-width: 420px;
   }
 }
+
+/* Fundos verde-preto para destacar os CTAs e os detalhes verdes. */
+:root {
+  --fundo-verde-preto: #060f0b;
+}
+.hero,
+.resultado,
+.aprender,
+.oferta,
+.faixa-topo,
+.cta-fixo,
+footer {
+  background: var(--fundo-verde-preto);
+}
+.hero::before,
+.hero::after {
+  opacity: .06;
+}
