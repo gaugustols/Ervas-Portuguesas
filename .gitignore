@@ -5,6 +5,7 @@
 # Dependências e builds locais
 node_modules/
 dist/
+/public/
 .next/
 
 # Variáveis de ambiente e credenciais

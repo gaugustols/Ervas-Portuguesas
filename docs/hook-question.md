@@ -14,6 +14,7 @@ A página entregue mantém HTML legível sem JavaScript; a animação funciona p
 - `video/hook-question/hook-question.tsx`: adaptador que recebe o frame do Remotion.
 - `demo.tsx` e `video/index.tsx`: composição Remotion, 1920 × 1080, 30 fps, 105 frames.
 - `scripts/build-hook-question.tsx`: gera somente o bloco da headline e seu link CSS.
+- `scripts/export-static.mjs`: copia o HTML e os recursos finais para `public/`.
 
 `components/ui` não existia antes. A pasta concentra os componentes reutilizáveis e
 corresponde ao destino configurado do CLI shadcn. O alias `@/*` está no `tsconfig.json`.
@@ -30,7 +31,9 @@ npm run preview
 ```
 
 Abra `http://127.0.0.1:4173`. Os arquivos estáticos gerados são versionados junto com
-o código; a integração existente de publicação permanece responsável pelo deploy.
+o código. O build também gera `public/`, ignorado pelo Git, contendo apenas o
+HTML e os recursos da página para a publicação estática. A integração existente
+de publicação permanece responsável pelo deploy.
 Para editar o texto, altere `defaults` no schema e execute `npm run build`.
 
 O componente recebe `question`, `answer`, `colors` e `fonts`. `frame` permite

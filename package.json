@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline",
+    "build": "npm run build:styles && npm run build:headline && node scripts/export-static.mjs",
     "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify",
     "build:headline": "tsx scripts/build-hook-question.tsx",
     "typecheck": "tsc --noEmit",
