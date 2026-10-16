@@ -75,3 +75,43 @@
     if (origem && origem.isConnected) origem.focus();
   });
 })();
+
+// Sete minutos por sessao; recarregar a pagina nao reinicia o contador.
+(() => {
+  const bloco = document.querySelector('[data-offer-countdown-block]');
+  if (!bloco) return;
+  const contador = bloco.querySelector('[data-offer-countdown]');
+  const rotulo = bloco.querySelector('[data-offer-label]');
+  if (!contador || !rotulo) return;
+  const chave = 'botica-viva-offer-session-v1';
+  let limite = Date.now() + 7 * 60 * 1000;
+  try {
+    const guardado = Number(window.sessionStorage.getItem(chave));
+    if (Number.isFinite(guardado) && guardado > 0) {
+      limite = guardado;
+    } else {
+      window.sessionStorage.setItem(chave, String(limite));
+    }
+  } catch {
+    // O contador continua a funcionar se o armazenamento estiver indisponivel.
+  }
+  bloco.hidden = false;
+  let intervalo = null;
+  const atualizar = () => {
+    const segundos = Math.max(0, Math.ceil((limite - Date.now()) / 1000));
+    const horas = Math.floor(segundos / 3600);
+    const minutos = Math.floor((segundos % 3600) / 60);
+    const resto = segundos % 60;
+    contador.textContent = [horas, minutos, resto]
+      .map(valor => String(valor).padStart(2, '0')).join(':');
+    contador.dateTime = 'PT' + segundos + 'S';
+    if (segundos === 0) {
+      rotulo.textContent = 'Oferta expirada';
+      if (intervalo !== null) clearInterval(intervalo);
+    }
+    return segundos;
+  };
+  if (atualizar() > 0) intervalo = setInterval(atualizar, 1000);
+  window.addEventListener('pageshow', atualizar);
+  document.addEventListener('visibilitychange', atualizar);
+})();

@@ -1322,3 +1322,78 @@ footer {
 .hero::after {
   opacity: .06;
 }
+
+/* Selos e contador abaixo do primeiro CTA. */
+.hero-compra-info {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 16px;
+}
+.hero-selos {
+  max-width: 440px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hero-selos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 6px 10px;
+  border: 1px solid rgba(189, 224, 200, .2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .035);
+  color: #e7f4eb;
+  font: 600 10px/1.4 'Courier New', monospace;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+.hero-selo-check {
+  color: #72b98b;
+  font-size: 12px;
+  font-weight: 700;
+}
+.hero-oferta-tempo {
+  margin-top: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(189, 224, 200, .16);
+}
+.hero-oferta-rotulo {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--sage);
+  font: 600 10px/1.5 'Courier New', monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.hero-oferta-contador {
+  display: block;
+  color: #72b98b;
+  font: 700 30px/1.2 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .015em;
+}
+.hero-compra-info [hidden] {
+  display: none;
+}
+@media (max-width: 860px) {
+  .hero-compra-info {
+    grid-row: 5;
+    margin-top: -4px;
+  }
+  .hero-prova-social { grid-row: 6; }
+  .hero-bullets { grid-row: 7; }
+}
+@media (max-width: 480px) {
+  .hero-selos { gap: 6px; }
+  .hero-selos li {
+    min-height: 26px;
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+}
