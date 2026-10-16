@@ -1499,7 +1499,10 @@ body {
 .quem .lista-check li, .quem .lista-fogo li {
   border-bottom-color: var(--pagina-linha);
 }
-.sintomas-resposta, .sintomas-resposta .sintomas-resposta-numero {
+.sintomas-resposta {
+  color: #ffffff;
+}
+.sintomas-resposta .sintomas-resposta-numero {
   color: var(--pagina-destaque);
 }
 .sintoma-opcao input { accent-color: var(--pagina-destaque); }
