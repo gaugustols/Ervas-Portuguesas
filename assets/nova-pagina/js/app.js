@@ -138,7 +138,7 @@ const VIDEO_URL = '';
   });
 })();
 
-// Um prazo de sete minutos por sessao, partilhado por todos os contadores.
+// Um prazo de uma hora por sessao, partilhado por todos os contadores.
 (() => {
   const blocos = Array.from(document.querySelectorAll('[data-offer-countdown-block]'))
     .map(bloco => ({
@@ -148,8 +148,8 @@ const VIDEO_URL = '';
     }))
     .filter(({ contador, rotulo }) => contador && rotulo);
   if (!blocos.length) return;
-  const chave = 'botica-viva-offer-session-v1';
-  let limite = Date.now() + 7 * 60 * 1000;
+  const chave = 'botica-viva-offer-session-v2';
+  let limite = Date.now() + 60 * 60 * 1000;
   try {
     const guardado = Number(window.sessionStorage.getItem(chave));
     if (Number.isFinite(guardado) && guardado > 0) {
