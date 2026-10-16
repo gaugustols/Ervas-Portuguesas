@@ -1474,7 +1474,7 @@ body {
   border-color: var(--pagina-linha);
 }
 .hero-selo-check { color: var(--pagina-destaque); }
-.hero-oferta-contador { color: var(--pagina-texto); }
+.hero-oferta-contador { color: var(--pagina-destaque); }
 .hero-selos li { border-color: var(--pagina-linha); }
 .hero-oferta-tempo { border-bottom-color: var(--pagina-linha); }
 .quote-block blockquote {
@@ -1963,8 +1963,31 @@ footer {
 }
 .oferta-plano .btn { align-self: center; margin-top: auto; }
 .oferta-plano .btn:focus-visible { outline-color: var(--pagina-texto); }
+.oferta-tempo {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 18px 24px;
+  border: 1px solid var(--pagina-destaque);
+  border-radius: 16px;
+  background: var(--pagina-painel);
+  text-align: left;
+}
+.oferta-tempo[hidden] { display: none; }
+.oferta-tempo-alerta {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ff4747;
+  box-shadow: 0 0 10px rgba(255, 71, 71, .8), 0 0 22px rgba(255, 71, 71, .4);
+}
 @media (max-width: 860px) {
   .oferta-planos { grid-template-columns: minmax(0, 1fr); gap: 36px; max-width: 540px; }
+  .oferta-tempo { grid-column: 1; padding-inline: 20px; }
 }
 
 /* Mini VSL da hero: espaco estavel antes da headline, sem imagens adicionais. */

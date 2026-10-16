@@ -138,13 +138,16 @@ const VIDEO_URL = '';
   });
 })();
 
-// Sete minutos por sessao; recarregar a pagina nao reinicia o contador.
+// Um prazo de sete minutos por sessao, partilhado por todos os contadores.
 (() => {
-  const bloco = document.querySelector('[data-offer-countdown-block]');
-  if (!bloco) return;
-  const contador = bloco.querySelector('[data-offer-countdown]');
-  const rotulo = bloco.querySelector('[data-offer-label]');
-  if (!contador || !rotulo) return;
+  const blocos = Array.from(document.querySelectorAll('[data-offer-countdown-block]'))
+    .map(bloco => ({
+      bloco,
+      contador: bloco.querySelector('[data-offer-countdown]'),
+      rotulo: bloco.querySelector('[data-offer-label]'),
+    }))
+    .filter(({ contador, rotulo }) => contador && rotulo);
+  if (!blocos.length) return;
   const chave = 'botica-viva-offer-session-v1';
   let limite = Date.now() + 7 * 60 * 1000;
   try {
@@ -157,18 +160,21 @@ const VIDEO_URL = '';
   } catch {
     // O contador continua a funcionar se o armazenamento estiver indisponivel.
   }
-  bloco.hidden = false;
+  blocos.forEach(({ bloco }) => { bloco.hidden = false; });
   let intervalo = null;
   const atualizar = () => {
     const segundos = Math.max(0, Math.ceil((limite - Date.now()) / 1000));
     const horas = Math.floor(segundos / 3600);
     const minutos = Math.floor((segundos % 3600) / 60);
     const resto = segundos % 60;
-    contador.textContent = [horas, minutos, resto]
+    const tempo = [horas, minutos, resto]
       .map(valor => String(valor).padStart(2, '0')).join(':');
-    contador.dateTime = 'PT' + segundos + 'S';
+    blocos.forEach(({ contador, rotulo }) => {
+      contador.textContent = tempo;
+      contador.dateTime = 'PT' + segundos + 'S';
+      if (segundos === 0) rotulo.textContent = 'Oferta expirada';
+    });
     if (segundos === 0) {
-      rotulo.textContent = 'Oferta expirada';
       if (intervalo !== null) clearInterval(intervalo);
     }
     return segundos;
