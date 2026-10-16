@@ -1447,7 +1447,7 @@ body {
 .sec-title, .bonus h2, .aprender h2 { margin-bottom: 32px; }
 .sec strong { color: var(--pagina-texto); }
 .hero .sub-h1 { color: var(--sage); }
-.hero-grid { gap: clamp(28px, 5vw, 56px); }
+.hero-grid { grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 5vw, 56px); }
 .split, .split.reverso { gap: clamp(28px, 5vw, 64px); }
 .cols-2, .bonus-grid { gap: clamp(20px, 3vw, 32px); }
 .quem .cols-2 { gap: clamp(28px, 5vw, 56px); }
@@ -2024,9 +2024,8 @@ footer {
 .hero-video [hidden] { display: none; }
 @media (max-width: 860px) {
   .hero-video { grid-row: 1; max-width: 100%; margin-bottom: 0; }
-  .hero .hero-book { grid-row: 4; }
-  .hero .hero-grid .btn { grid-row: 5; }
-  .hero-compra-info { grid-row: 6; }
-  .hero .hero-prova-social { grid-row: 7; }
-  .hero-bullets { grid-row: 8; }
+  .hero .hero-grid .btn { grid-row: 4; }
+  .hero-compra-info { grid-row: 5; }
+  .hero .hero-prova-social { grid-row: 6; }
+  .hero-bullets { grid-row: 7; }
 }
