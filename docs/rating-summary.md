@@ -17,7 +17,9 @@ de stock neste bloco.
 Os dados ficam em `video/rating-summary/rating-summary.schema.ts`. O schema aceita
 `score` entre 0 e 5, `count`, `countLabel`, `source`, até três `snippets`, cores e
 fontes. Não são necessários providers ou estado global. A integração usa a
-paleta preta, verde `#0b6b2c` e branca da landing.
+referência visual aprovada: painel bege `#eceae6`, nota preta, estrelas laranja
+`#ff9900` e cartões brancos com sombra. Essa paleta fica restrita ao componente;
+o restante da landing mantém as suas cores.
 
 ## Compilação e estilos
 
@@ -42,7 +44,10 @@ termina no frame 42; as estrelas, no 46; as citações entram nos frames 50, 58 
 e assentam no 78, a 30 fps. A preferência por movimento reduzido mostra o estado
 final imediatamente. A contagem visual não altera os rótulos acessíveis.
 
-O layout tem duas colunas no desktop e uma coluna até 860 px. A composição
+O layout tem duas colunas, uma divisória vertical e cartões compactos, passando
+para uma coluna até 480 px. As estrelas pequenas dos cartões representam a mesma
+classificação geral de 4,9, identificada no rótulo acessível e no tooltip, sem
+atribuir uma nota individual não informada a cada autor. A composição
 `StarRatingSummaryComposition` em `demo.tsx` usa o adaptador
 `video/rating-summary/rating-summary.tsx`: 1920 × 1080, 30 fps e 150 frames.
 O adaptador controla o movimento pelo frame do Remotion, sem depender de tempo

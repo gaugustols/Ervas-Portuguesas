@@ -1,6 +1,6 @@
 // Built with Remotion - https://remotion.pro/license
 import type { CSSProperties } from "react";
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { defineVideoMeta } from "../../kit/spec";
 import type { RatingSummaryInput } from "../../video/rating-summary/rating-summary.schema";
 
@@ -71,7 +71,6 @@ export function RatingSummary({ score, count, countLabel, source, snippets, colo
   return (
     <div className="rating-summary hq:grid hq:min-w-0" style={style} data-rating-summary={controlled ? undefined : ""}>
       <div className="rating-summary-overview">
-        <p className="rating-summary-source">{source}</p>
         <div className="rating-summary-score" role="img" aria-label={`Avaliação de ${formatScore(score)} em 5`} style={{ fontFamily: fonts.numerals }}>
           <span aria-hidden="true" data-rating-score={score}>{formatScore(state.score)}</span>
           <span className="rating-summary-scale" aria-hidden="true">/5</span>
@@ -91,6 +90,7 @@ export function RatingSummary({ score, count, countLabel, source, snippets, colo
           <strong aria-hidden="true" data-rating-count={count} style={{ fontFamily: fonts.numerals }}>{state.count}</strong>
           <span aria-hidden="true">{countLabel}</span>
         </p>
+        <p className="rating-summary-source">{source}</p>
       </div>
       <div className="rating-summary-snippets hq:grid hq:min-w-0" aria-label="Comentários selecionados">
         {snippets.map((snippet, index) => {
@@ -102,9 +102,15 @@ export function RatingSummary({ score, count, countLabel, source, snippets, colo
           } as CSSProperties;
           return (
             <figure className="rating-summary-snippet" key={snippet.author + index} style={snippetStyle}>
-              <Quote className="rating-summary-quote-icon" aria-hidden="true" />
-              <blockquote>{snippet.quote}</blockquote>
-              <figcaption style={{ fontFamily: fonts.heading }}>— {snippet.author}</figcaption>
+              <figcaption className="rating-summary-card-heading" style={{ fontFamily: fonts.heading }}>
+                <span className="rating-summary-author">{snippet.author}</span>
+                <span className="rating-summary-card-stars" role="img" aria-label={`Classificação geral de ${formatScore(score)} em 5`} title={`Classificação geral: ${formatScore(score)}/5`}>
+                  {Array.from({ length: 5 }, (_, star) => (
+                    <Star key={star} fill="currentColor" aria-hidden="true" style={{ clipPath: `inset(0 ${(1 - clamp(score - star)) * 100}% 0 0)` }} />
+                  ))}
+                </span>
+              </figcaption>
+              <blockquote>“{snippet.quote}”</blockquote>
             </figure>
           );
         })}

@@ -24,10 +24,10 @@ export const defaults: RatingSummaryInput = schema.parse({
     { quote: "Estou lendo e praticando. O meu livro veio rapidinho. Adorei!", author: "Regina Celia Vallejo Mendes" },
     { quote: "Recebi o livro obrigada", author: "editepereirasouza" },
   ],
-  colors: { text: "#ffffff", primary: "#0b6b2c", background: "#000000" },
+  colors: { text: "#111111", primary: "#ff9900", background: "#eceae6" },
   fonts: {
-    heading: "'Plus Jakarta Sans', system-ui, sans-serif",
-    body: "'Plus Jakarta Sans', system-ui, sans-serif",
-    numerals: "'Plus Jakarta Sans', system-ui, sans-serif",
+    heading: "Arial, Helvetica, sans-serif",
+    body: "Arial, Helvetica, sans-serif",
+    numerals: "Arial, Helvetica, sans-serif",
   },
 });
