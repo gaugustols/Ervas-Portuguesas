@@ -190,14 +190,115 @@
       </li>
     </ol>
 
-    <div class="exemplos">
-      <p style="text-align:center;font-weight:800;margin-bottom:16px;">Alguns exemplos REAIS do guia:</p>
-      <p>→ <strong>Azia:</strong> boldo, erva-doce, espinheira-santa, tanchagem</p>
-      <p>→ <strong>Anemia:</strong> agrião, guaco, banana, taioba, couve</p>
-      <p>→ <strong>Amigdalite:</strong> romã, tanchagem, limão, canela</p>
-      <p>→ <strong>Asma:</strong> poejo, gengibre, aloé, melão-de-são-caetano</p>
-      <p>→ <strong>Ansiedade:</strong> hortelã, alecrim, manjericão, camomila</p>
+    <div class="exemplos previa-guia" data-guide-preview aria-labelledby="previa-guia-titulo">
+      <div class="previa-cabecalho">
+        <span class="previa-selo">Explora o Botica Viva</span>
+        <h3 id="previa-guia-titulo" class="previa-titulo">Alguns exemplos REAIS do guia</h3>
+        <p>Vê um exemplo do que vais encontrar no guia. Escolhe um tema para explorar as plantas que aparecem nesse exemplo.</p>
+      </div>
+      <div class="previa-janela">
+        <div class="previa-barra">
+          <span class="previa-marca">Botica Viva</span>
+          <span class="previa-amostra">Amostra do guia</span>
+        </div>
+        <div class="previa-temas" role="tablist" aria-label="Temas da amostra do guia" data-preview-tabs hidden>
+          <button type="button" class="previa-tema" id="previa-tab-azia" role="tab" aria-controls="previa-painel-azia" aria-selected="false" tabindex="-1" data-preview-topic="azia">Azia</button>
+          <button type="button" class="previa-tema" id="previa-tab-anemia" role="tab" aria-controls="previa-painel-anemia" aria-selected="false" tabindex="-1" data-preview-topic="anemia">Anemia</button>
+          <button type="button" class="previa-tema" id="previa-tab-amigdalite" role="tab" aria-controls="previa-painel-amigdalite" aria-selected="false" tabindex="-1" data-preview-topic="amigdalite">Amigdalite</button>
+          <button type="button" class="previa-tema" id="previa-tab-asma" role="tab" aria-controls="previa-painel-asma" aria-selected="false" tabindex="-1" data-preview-topic="asma">Asma</button>
+          <button type="button" class="previa-tema" id="previa-tab-ansiedade" role="tab" aria-controls="previa-painel-ansiedade" aria-selected="false" tabindex="-1" data-preview-topic="ansiedade">Ansiedade</button>
+        </div>
+        <div class="previa-paineis">
+          <section class="previa-painel" id="previa-painel-azia" aria-labelledby="previa-titulo-azia" data-preview-panel="azia">
+            <div class="previa-painel-topo">
+              <span class="previa-etiqueta">Exemplo do guia</span>
+              <span class="previa-indice" aria-hidden="true">01 / 05</span>
+            </div>
+            <h4 id="previa-titulo-azia">Azia</h4>
+            <p class="previa-descricao">Plantas e ingredientes que aparecem neste exemplo:</p>
+            <ul class="previa-plantas">
+              <li>boldo</li>
+              <li>erva-doce</li>
+              <li>espinheira-santa</li>
+              <li>tanchagem</li>
+            </ul>
+          </section>
+          <section class="previa-painel" id="previa-painel-anemia" aria-labelledby="previa-titulo-anemia" data-preview-panel="anemia">
+            <div class="previa-painel-topo">
+              <span class="previa-etiqueta">Exemplo do guia</span>
+              <span class="previa-indice" aria-hidden="true">02 / 05</span>
+            </div>
+            <h4 id="previa-titulo-anemia">Anemia</h4>
+            <p class="previa-descricao">Plantas e ingredientes que aparecem neste exemplo:</p>
+            <ul class="previa-plantas">
+              <li>agrião</li>
+              <li>guaco</li>
+              <li>banana</li>
+              <li>taioba</li>
+              <li>couve</li>
+            </ul>
+          </section>
+          <section class="previa-painel" id="previa-painel-amigdalite" aria-labelledby="previa-titulo-amigdalite" data-preview-panel="amigdalite">
+            <div class="previa-painel-topo">
+              <span class="previa-etiqueta">Exemplo do guia</span>
+              <span class="previa-indice" aria-hidden="true">03 / 05</span>
+            </div>
+            <h4 id="previa-titulo-amigdalite">Amigdalite</h4>
+            <p class="previa-descricao">Plantas e ingredientes que aparecem neste exemplo:</p>
+            <ul class="previa-plantas">
+              <li>romã</li>
+              <li>tanchagem</li>
+              <li>limão</li>
+              <li>canela</li>
+            </ul>
+          </section>
+          <section class="previa-painel" id="previa-painel-asma" aria-labelledby="previa-titulo-asma" data-preview-panel="asma">
+            <div class="previa-painel-topo">
+              <span class="previa-etiqueta">Exemplo do guia</span>
+              <span class="previa-indice" aria-hidden="true">04 / 05</span>
+            </div>
+            <h4 id="previa-titulo-asma">Asma</h4>
+            <p class="previa-descricao">Plantas e ingredientes que aparecem neste exemplo:</p>
+            <ul class="previa-plantas">
+              <li>poejo</li>
+              <li>gengibre</li>
+              <li>aloé</li>
+              <li>melão-de-são-caetano</li>
+            </ul>
+          </section>
+          <section class="previa-painel" id="previa-painel-ansiedade" aria-labelledby="previa-titulo-ansiedade" data-preview-panel="ansiedade">
+            <div class="previa-painel-topo">
+              <span class="previa-etiqueta">Exemplo do guia</span>
+              <span class="previa-indice" aria-hidden="true">05 / 05</span>
+            </div>
+            <h4 id="previa-titulo-ansiedade">Ansiedade</h4>
+            <p class="previa-descricao">Plantas e ingredientes que aparecem neste exemplo:</p>
+            <ul class="previa-plantas">
+              <li>hortelã</li>
+              <li>alecrim</li>
+              <li>manjericão</li>
+              <li>camomila</li>
+            </ul>
+          </section>
+        </div>
+        <div class="previa-exploracao" data-preview-exploration hidden>
+          <p class="previa-progresso" data-preview-progress role="status" aria-live="polite"></p>
+          <div class="previa-progresso-trilho" aria-hidden="true"><span data-preview-progress-fill></span></div>
+        </div>
+        <details class="previa-detalhes">
+          <summary>O que mais encontras no guia completo?</summary>
+          <ul>
+            <li>Formas de preparação explicadas passo a passo.</li>
+            <li>Informação sobre os usos tradicionais das plantas.</li>
+            <li>Cuidados e contraindicações a ter em conta.</li>
+          </ul>
+        </details>
+      </div>
       <p class="fecho">Não precisas de decorar nada.<small>Basta seguires o sistema.</small></p>
+      <div class="previa-acao">
+        <a class="btn" href="#oferta">Quero explorar o guia completo</a>
+        <span>Botica Viva · 14 € · Acesso após a compra</span>
+      </div>
     </div>
   </div>
 </section>

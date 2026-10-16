@@ -115,3 +115,51 @@
   window.addEventListener('pageshow', atualizar);
   document.addEventListener('visibilitychange', atualizar);
 })();
+
+// Amostra do guia: seleciona conteudo ja presente na pagina, sem recolher dados.
+(() => {
+  const raiz = document.querySelector('[data-guide-preview]');
+  if (!raiz) return;
+  const navegacao = raiz.querySelector('[data-preview-tabs]');
+  const botoes = Array.from(raiz.querySelectorAll('[data-preview-topic]'));
+  const paineis = Array.from(raiz.querySelectorAll('[data-preview-panel]'));
+  const exploracao = raiz.querySelector('[data-preview-exploration]');
+  const progresso = raiz.querySelector('[data-preview-progress]');
+  const preenchimento = raiz.querySelector('[data-preview-progress-fill]');
+  if (!navegacao || !botoes.length || botoes.length !== paineis.length) return;
+  const visitados = new Set();
+  const selecionar = (chave, moverFoco = false) => {
+    const botaoAtivo = botoes.find(botao => botao.dataset.previewTopic === chave);
+    const painelAtivo = paineis.find(painel => painel.dataset.previewPanel === chave);
+    if (!botaoAtivo || !painelAtivo) return;
+    botoes.forEach(botao => {
+      const ativo = botao === botaoAtivo;
+      botao.setAttribute('aria-selected', String(ativo));
+      botao.tabIndex = ativo ? 0 : -1;
+    });
+    paineis.forEach(painel => {
+      painel.hidden = painel !== painelAtivo;
+      painel.setAttribute('role', 'tabpanel');
+    });
+    visitados.add(chave);
+    if (progresso) progresso.textContent = visitados.size + ' de ' + botoes.length + ' temas explorados';
+    if (preenchimento) preenchimento.style.width = (visitados.size / botoes.length * 100) + '%';
+    if (moverFoco) botaoAtivo.focus();
+  };
+  botoes.forEach((botao, indice) => {
+    botao.addEventListener('click', () => selecionar(botao.dataset.previewTopic));
+    botao.addEventListener('keydown', evento => {
+      let seguinte;
+      if (evento.key === 'ArrowRight') seguinte = (indice + 1) % botoes.length;
+      else if (evento.key === 'ArrowLeft') seguinte = (indice - 1 + botoes.length) % botoes.length;
+      else if (evento.key === 'Home') seguinte = 0;
+      else if (evento.key === 'End') seguinte = botoes.length - 1;
+      else return;
+      evento.preventDefault();
+      selecionar(botoes[seguinte].dataset.previewTopic, true);
+    });
+  });
+  selecionar(botoes[0].dataset.previewTopic);
+  navegacao.hidden = false;
+  if (exploracao) exploracao.hidden = false;
+})();
