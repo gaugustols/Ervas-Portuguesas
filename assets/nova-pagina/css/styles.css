@@ -1397,3 +1397,223 @@ footer {
     font-size: 9px;
   }
 }
+
+/* Direcao visual escura do Botica Viva: conteudo e ordem dos blocos preservados. */
+:root {
+  --pagina-fundo: #050b08;
+  --pagina-fundo-suave: #08120c;
+  --pagina-painel: #0c1711;
+  --pagina-texto: #dfeae2;
+  --pagina-titulo: #f4faf6;
+  --pagina-secundario: #b2c3b8;
+  --pagina-destaque: #70ee9d;
+  --pagina-linha: rgba(112, 238, 157, .16);
+  --verde-escuro: var(--pagina-titulo);
+  --verde-medio: var(--pagina-destaque);
+  --texto-suave: var(--pagina-secundario);
+  --ink-muted: var(--pagina-secundario);
+  --sage: #b5d3bf;
+  --verde-superficie: var(--pagina-painel);
+  --verde-borda: #284b34;
+  --line: var(--pagina-linha);
+  --line-light: rgba(181, 211, 191, .2);
+}
+body {
+  background: var(--pagina-fundo);
+  color: var(--pagina-texto);
+  line-height: 1.7;
+}
+::selection { background: #70ee9d; color: #05140b; }
+.hero, .sec, footer { color: var(--pagina-texto); }
+.sec {
+  padding-block: clamp(64px, 7vw, 96px);
+  border-top: 1px solid rgba(181, 211, 191, .08);
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(65, 137, 87, .09), transparent 62%),
+    linear-gradient(180deg, #070f0a 0%, #050b08 100%);
+}
+.sec:nth-of-type(even) {
+  background:
+    radial-gradient(ellipse at 88% 45%, rgba(65, 137, 87, .08), transparent 64%),
+    linear-gradient(180deg, #050b08 0%, #08120c 48%, #050b08 100%);
+}
+.hero {
+  background:
+    radial-gradient(ellipse at 75% 10%, rgba(77, 156, 99, .14), transparent 64%),
+    linear-gradient(160deg, #08120c 0%, #050b08 68%);
+  border-bottom: 1px solid var(--pagina-linha);
+}
+.hero::before, .hero::after { content: none; }
+.hero h1, .sec h2, .sec h3 { color: var(--pagina-titulo); }
+.sec h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.14;
+}
+.sec-title, .bonus h2, .aprender h2 { margin-bottom: 32px; }
+.sec strong { color: var(--pagina-destaque); }
+.hero .sub-h1 { color: var(--sage); }
+.hero-grid { gap: clamp(28px, 5vw, 56px); }
+.split, .split.reverso { gap: clamp(28px, 5vw, 64px); }
+.cols-2, .bonus-grid { gap: clamp(20px, 3vw, 32px); }
+.quem .cols-2 { gap: clamp(28px, 5vw, 56px); }
+.quote-block { margin-top: 40px; }
+.destaque-viagem { margin-block: 64px 32px; color: var(--pagina-titulo); }
+.destaque-viagem u { text-decoration-color: var(--pagina-destaque); }
+.foto-nepal { margin-bottom: 64px; }
+/* Paineis discretos, sem grandes superficies brancas. */
+:is(.hero .hero-prova-social, .sintoma-opcao, .card-aprender, .bonus-card,
+    .garantia-card, .exemplos, .oferta-box, .dep-card) {
+  background:
+    linear-gradient(135deg, rgba(112, 238, 157, .045), rgba(255, 255, 255, .012)),
+    var(--pagina-painel);
+  border-color: var(--pagina-linha);
+  color: var(--pagina-texto);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .1);
+}
+.hero .hero-prova-social {
+  border-left-color: var(--pagina-destaque);
+}
+.hero-prova-social .estrelas { color: var(--pagina-destaque); }
+.hero-book::before { border-color: var(--pagina-linha); }
+.hero-book .tag-fisico {
+  background: rgba(112, 238, 157, .07);
+  color: var(--pagina-destaque);
+  border-color: var(--pagina-linha);
+}
+.hero-selo-check, .hero-oferta-contador { color: var(--pagina-destaque); }
+.hero-selos li { border-color: var(--pagina-linha); }
+.hero-oferta-tempo { border-bottom-color: var(--pagina-linha); }
+.quote-block blockquote {
+  color: var(--pagina-titulo);
+  border-left: 3px solid var(--pagina-destaque);
+}
+.quote-block .intro { color: var(--pagina-secundario); }
+.lista-pills li {
+  background: rgba(112, 238, 157, .05);
+  color: var(--pagina-texto);
+  border-color: var(--pagina-linha);
+}
+.lista-check li::before, .lista-pills li::before, .lista-fogo li::before {
+  color: var(--pagina-destaque);
+}
+.quem .lista-check li, .quem .lista-fogo li {
+  border-bottom-color: var(--pagina-linha);
+}
+.sintomas-resposta, .sintomas-resposta .sintomas-resposta-numero {
+  color: var(--pagina-destaque);
+}
+.sintoma-opcao input { accent-color: var(--pagina-destaque); }
+.sintomas-grid .sintoma-opcao:has(input:checked) {
+  border-color: var(--pagina-destaque);
+  background: linear-gradient(135deg, #173d25, #10291b);
+  box-shadow: inset 0 0 0 1px var(--pagina-destaque);
+}
+.sintoma-opcao:focus-within {
+  outline-color: var(--pagina-destaque);
+}
+.passo { border-bottom-color: var(--pagina-linha); }
+.passo p, .card-aprender ul, .bonus-card p { color: var(--pagina-secundario); }
+.card-aprender h3::before, .card-aprender li::before {
+  color: var(--pagina-destaque);
+}
+.bonus-card .rotulo, .bonus-card .preco strong { color: var(--pagina-destaque); }
+.exemplos .fecho { color: var(--pagina-titulo); }
+.exemplos .fecho small { color: var(--pagina-secundario); }
+.farma .rotulo { color: var(--pagina-destaque); }
+.farma blockquote { color: var(--pagina-titulo); }
+.farma cite { color: var(--pagina-destaque); }
+.dep-eyebrow {
+  background: rgba(112, 238, 157, .06);
+  border-color: var(--pagina-linha);
+  color: var(--pagina-destaque);
+}
+.dep-sub { color: var(--pagina-secundario); }
+/* Os prints permanecem originais dentro de molduras escuras. */
+.dep-ampliar { background: transparent; }
+.dep-ampliar-icone {
+  background: var(--pagina-painel);
+  color: var(--pagina-destaque);
+  border-color: #508d61;
+}
+.dep-zoom {
+  background: var(--pagina-painel);
+  color: var(--pagina-texto);
+  border-color: var(--pagina-linha);
+}
+.dep-zoom-fechar {
+  background: #12251a;
+  color: var(--pagina-destaque);
+  border-color: var(--pagina-linha);
+}
+.oferta h2, .resultado h2 { color: var(--pagina-destaque); }
+.oferta .valor-total { color: var(--pagina-secundario); }
+.oferta-box {
+  border-color: rgba(112, 238, 157, .42);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .2), 0 0 48px rgba(112, 238, 157, .035);
+}
+.oferta-box .tipo { color: var(--pagina-titulo); }
+.oferta-box .frete, .oferta-box .parcela { color: var(--pagina-destaque); }
+.oferta-box .parcela-label, .oferta-box .avista, .selos {
+  color: var(--pagina-secundario);
+}
+.selos span::before { color: var(--pagina-destaque); }
+.selo-garantia {
+  background: rgba(112, 238, 157, .09);
+  color: var(--pagina-destaque);
+  border-color: var(--pagina-destaque);
+}
+.garantia-texto p { color: var(--pagina-secundario); }
+/* CTAs com verde vivo e texto escuro para contraste com o fundo. */
+.btn, .hero .btn, .oferta .btn, .cta-fixo .btn {
+  background: linear-gradient(105deg, #70ee9d, #44d77d);
+  border-color: #91f6b5;
+  color: #05140b !important;
+  font-weight: 800;
+  box-shadow: 0 6px 24px rgba(69, 215, 125, .18);
+}
+.btn:hover, .hero .btn:hover, .oferta .btn:hover, .cta-fixo .btn:hover {
+  background: linear-gradient(105deg, #8df7b3, #58e78d);
+  border-color: #b0ffcb;
+  color: #05140b !important;
+  box-shadow: 0 8px 30px rgba(69, 215, 125, .25);
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline-color: var(--pagina-destaque);
+}
+.faixa-topo {
+  background: linear-gradient(90deg, #0b1d11, #112918, #0b1d11);
+  border-bottom: 1px solid var(--pagina-linha);
+  color: var(--sage);
+}
+.faixa-topo-selo { background: var(--pagina-destaque); color: #05140b; }
+footer {
+  background: linear-gradient(180deg, #070f0a, #040906);
+  border-top: 1px solid var(--pagina-linha);
+}
+.footer-grid-3 h4 { color: var(--pagina-titulo); }
+.footer-grid-3 a, .footer-sub { color: var(--pagina-secundario); }
+.footer-base { border-top-color: var(--pagina-linha); }
+.cta-fixo {
+  background: rgba(5, 11, 8, .97);
+  border-top-color: rgba(112, 238, 157, .25);
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, .25);
+}
+.cta-fixo .preco-mini strong { color: var(--pagina-destaque); }
+@media (hover: hover) and (pointer: fine) {
+  .sintoma-opcao:hover {
+    background: #10241a;
+    border-color: rgba(112, 238, 157, .5);
+  }
+  .bonus-card:hover, .dep-card:hover {
+    border-color: rgba(112, 238, 157, .4);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
+  }
+  .dep-zoom-fechar:hover { background: #193722; }
+}
+@media (max-width: 480px) {
+  .sec { padding-block: 56px; }
+  .sec h2 { font-size: clamp(28px, 8vw, 34px); }
+  .sec-title, .bonus h2, .aprender h2 { margin-bottom: 28px; }
+  .destaque-viagem { margin-block: 48px 28px; }
+  .foto-nepal { margin-bottom: 48px; }
+}
