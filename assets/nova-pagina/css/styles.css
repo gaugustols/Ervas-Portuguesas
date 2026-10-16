@@ -1400,8 +1400,8 @@ footer {
 
 /* Direcao visual escura do Botica Viva: conteudo e ordem dos blocos preservados. */
 :root {
-  --pagina-fundo: #050b08;
-  --pagina-fundo-suave: #08120c;
+  --pagina-fundo: #030303;
+  --pagina-fundo-suave: #080808;
   --pagina-painel: #0c1711;
   --pagina-texto: #dfeae2;
   --pagina-titulo: #f4faf6;
@@ -1427,20 +1427,14 @@ body {
 .hero, .sec, footer { color: var(--pagina-texto); }
 .sec {
   padding-block: clamp(64px, 7vw, 96px);
-  border-top: 1px solid rgba(181, 211, 191, .08);
-  background:
-    radial-gradient(ellipse at 12% 0%, rgba(65, 137, 87, .09), transparent 62%),
-    linear-gradient(180deg, #070f0a 0%, #050b08 100%);
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  background: var(--pagina-fundo);
 }
 .sec:nth-of-type(even) {
-  background:
-    radial-gradient(ellipse at 88% 45%, rgba(65, 137, 87, .08), transparent 64%),
-    linear-gradient(180deg, #050b08 0%, #08120c 48%, #050b08 100%);
+  background: var(--pagina-fundo-suave);
 }
 .hero {
-  background:
-    radial-gradient(ellipse at 75% 10%, rgba(77, 156, 99, .14), transparent 64%),
-    linear-gradient(160deg, #08120c 0%, #050b08 68%);
+  background: var(--pagina-painel);
   border-bottom: 1px solid var(--pagina-linha);
 }
 .hero::before, .hero::after { content: none; }
@@ -1463,9 +1457,7 @@ body {
 /* Paineis discretos, sem grandes superficies brancas. */
 :is(.hero .hero-prova-social, .sintoma-opcao, .card-aprender, .bonus-card,
     .garantia-card, .exemplos, .oferta-box, .dep-card) {
-  background:
-    linear-gradient(135deg, rgba(112, 238, 157, .045), rgba(255, 255, 255, .012)),
-    var(--pagina-painel);
+  background: var(--pagina-painel);
   border-color: var(--pagina-linha);
   color: var(--pagina-texto);
   box-shadow: 0 12px 36px rgba(0, 0, 0, .1);
@@ -1590,7 +1582,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .faixa-topo-selo { background: var(--pagina-destaque); color: #05140b; }
 footer {
-  background: linear-gradient(180deg, #070f0a, #040906);
+  background: var(--pagina-fundo);
   border-top: 1px solid var(--pagina-linha);
 }
 .footer-grid-3 h4 { color: var(--pagina-titulo); }
@@ -1657,7 +1649,7 @@ footer {
   padding: 32px 24px;
   border: 1px solid rgba(181, 211, 191, .12);
   border-radius: 16px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, .025), rgba(112, 238, 157, .015));
+  background: var(--pagina-painel);
   text-align: center;
   transition: border-color 180ms ease, background-color 180ms ease,
     box-shadow 180ms ease, transform 180ms ease;
@@ -1742,7 +1734,7 @@ footer {
   padding: clamp(18px, 3vw, 28px);
   border: 1px solid rgba(112, 238, 157, .2);
   border-radius: 18px;
-  background: linear-gradient(155deg, #102017, #070f0a);
+  background: var(--pagina-painel);
 }
 .previa-barra {
   display: flex;
@@ -1789,7 +1781,7 @@ footer {
   padding: clamp(18px, 3vw, 28px);
   border: 1px solid var(--pagina-linha);
   border-radius: 14px;
-  background: rgba(5, 11, 8, .55);
+  background: var(--pagina-fundo-suave);
 }
 .previa-painel-topo { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
 .previa-etiqueta, .previa-indice {
