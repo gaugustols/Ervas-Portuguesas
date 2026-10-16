@@ -18,9 +18,9 @@ export const defaults: HookQuestionInput = schema.parse({
   question: "Azia, insónias, ansiedade, colesterol alto, dores… E se algumas das ervas mais valiosas estivessem no teu quintal e nem soubesses?",
   answer: "(Mesmo sem experiência com plantas)",
   colors: {
-    text: "#f4faf6",
-    primary: "#b5d3bf",
-    background: "#030303",
+    text: "#ffffff",
+    primary: "#0b6b2c",
+    background: "#000000",
   },
   fonts: { heading: "'Plus Jakarta Sans', system-ui, sans-serif" },
 });

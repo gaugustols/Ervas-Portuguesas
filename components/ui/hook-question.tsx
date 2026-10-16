@@ -62,7 +62,7 @@ export function HookQuestion({ question, answer, colors, fonts, frame, reducedMo
     transform: `translateY(${motion.questionY}px)`,
   } : undefined;
   const answerStyle: CSSProperties = {
-    color: colors.primary,
+    color: colors.text,
     fontFamily: fonts.heading,
     ...(controlled ? { animation: "none", opacity: motion.answerOpacity } : {}),
   };
@@ -70,7 +70,11 @@ export function HookQuestion({ question, answer, colors, fonts, frame, reducedMo
   return (
     <>
       <h1 className={cn("hook-question-title hq:relative hq:w-full hq:text-balance", className)} style={titleStyle}>
-        <span className="hook-question-enter hq:block" style={questionStyle}>{question}</span>
+        <span className="hook-question-enter hq:block" style={questionStyle}>
+          {question.split(/(\bervas?\b)/gi).map((part, index) =>
+            /^ervas?$/i.test(part) ? <span key={index} className="hook-question-accent" style={{ color: colors.primary }}>{part}</span> : part
+          )}
+        </span>
       </h1>
       <p className="sub-h1 hook-question-answer hq:w-full hq:text-balance" style={answerStyle}>
         {answer}
