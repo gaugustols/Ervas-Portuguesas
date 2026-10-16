@@ -1966,3 +1966,67 @@ footer {
 @media (max-width: 860px) {
   .oferta-planos { grid-template-columns: minmax(0, 1fr); gap: 36px; max-width: 540px; }
 }
+
+/* Mini VSL da hero: espaco estavel antes da headline, sem imagens adicionais. */
+.hero-video {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 32px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 107, 44, .42);
+  border-radius: 20px;
+  background: var(--pagina-painel);
+  box-shadow: 0 12px 32px rgba(11, 107, 44, .1);
+}
+.hero-video-placeholder, .hero-video-load, .hero-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.hero-video-placeholder, .hero-video-load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+  background: transparent;
+  color: var(--pagina-texto);
+  font: inherit;
+  font-size: 14px;
+  text-align: center;
+}
+.hero-video-load { cursor: pointer; }
+.hero-video-load:hover { background: rgba(11, 107, 44, .1); }
+.hero-video-play {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pagina-destaque);
+}
+.hero-video-play::before {
+  content: '';
+  margin-left: 4px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid var(--pagina-texto);
+}
+.hero-video-load:focus-visible, .hero-video iframe:focus-visible {
+  outline: 3px solid var(--pagina-texto);
+  outline-offset: -6px;
+}
+.hero-video [hidden] { display: none; }
+@media (max-width: 860px) {
+  .hero-video { grid-row: 1; max-width: 100%; margin-bottom: 0; }
+  .hero .hero-book { grid-row: 4; }
+  .hero .hero-grid .btn { grid-row: 5; }
+  .hero-compra-info { grid-row: 6; }
+  .hero .hero-prova-social { grid-row: 7; }
+  .hero-bullets { grid-row: 8; }
+}

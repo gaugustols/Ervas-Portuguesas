@@ -1,6 +1,8 @@
 // Configure separadamente os links de pagamento; vazios mantêm os CTAs pendentes.
 const BASIC_CHECKOUT_URL = '';
 const PRO_CHECKOUT_URL = '';
+// URL publica do YouTube; o iframe so e criado apos interacao.
+const VIDEO_URL = '';
 
 (() => {
   const checkouts = { basic: BASIC_CHECKOUT_URL, pro: PRO_CHECKOUT_URL };
@@ -40,6 +42,48 @@ const PRO_CHECKOUT_URL = '';
     }, { threshold: 0.15 });
     observer.observe(oferta);
   }
+})();
+
+// Mini VSL: reserva o espaco e carrega o YouTube apenas a pedido.
+(() => {
+  const raiz = document.querySelector('[data-hero-video]');
+  if (!raiz || !VIDEO_URL.trim()) return;
+  let endereco;
+  try {
+    endereco = new URL(VIDEO_URL.trim());
+  } catch {
+    return;
+  }
+  if (!['https:', 'http:'].includes(endereco.protocol)) return;
+  const host = endereco.hostname;
+  let videoId;
+  if (host === 'youtu.be') {
+    videoId = endereco.pathname.slice(1);
+  } else if (['youtube.com', 'www.youtube.com', 'm.youtube.com',
+    'youtube-nocookie.com', 'www.youtube-nocookie.com'].includes(host)) {
+    videoId = endereco.pathname === '/watch'
+      ? endereco.searchParams.get('v')
+      : endereco.pathname.match(/^\/(?:embed|shorts|live)\/([^/]+)\/?$/)?.[1];
+  }
+  if (!videoId || !/^[\w-]{11}$/.test(videoId)) return;
+  const botao = raiz.querySelector('[data-video-load]');
+  const placeholder = raiz.querySelector('[data-video-placeholder]');
+  if (!botao || !placeholder) return;
+  placeholder.hidden = true;
+  botao.hidden = false;
+  botao.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=0&loop=0&playsinline=1&rel=0';
+    iframe.title = 'Vídeo de apresentação da Botica Viva';
+    iframe.width = '680';
+    iframe.height = '383';
+    iframe.loading = 'lazy';
+    iframe.allow = 'encrypted-media; picture-in-picture; fullscreen';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    raiz.replaceChildren(iframe);
+    iframe.focus();
+  }, { once: true });
 })();
 
 // Ampliacao acessivel dos capturas de testemunhos, sem dependencias externas.
