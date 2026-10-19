@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && node scripts/export-static.mjs",
+    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && npm run build:faq && node scripts/export-static.mjs",
+    "build:faq": "tsx scripts/build-faq.tsx",
     "build:vsl": "tsx scripts/build-vsl.tsx",
     "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify && tailwindcss -i styles/rating-summary.css -o assets/nova-pagina/css/rating-summary.css --minify",
     "build:headline": "tsx scripts/build-hook-question.tsx",
@@ -15,8 +16,10 @@
     "preview": "node servidor-local.mjs"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "1.3.1",
     "clsx": "2.1.1",
     "lucide-react": "1.58.0",
+    "motion": "14.4.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "remotion": "4.0.536",
