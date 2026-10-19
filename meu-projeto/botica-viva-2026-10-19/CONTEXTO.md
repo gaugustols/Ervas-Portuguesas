@@ -44,6 +44,7 @@
 - 19/10/2026 · Template ampliado para incluir a experiência exigida pela própria skill: biblioteca, boas-vindas, evidência real, painel e oferta única dispensável. Sem novas bibliotecas.
 - 19/10/2026 · Imagens de botânica com licenças abertas e atribuição; fontes e imagens locais, sem dependência de CDN em execução.
 - 19/10/2026 · Sem login, backend ou subscrição: não solicitados. Não confundir armazenamento local com controlo de acesso ou sincronização.
+- 19/10/2026 · Manual PDF para acesso após compra na Hotmart. O utilizador confirmou que o endereço público e o contacto de apoio ainda não estão definidos; documento assinalado como versão para revisão, sem ligações de acesso inventadas.
 
 ## Arquivos
 - `02-OFERTA.md` · escrito: correspondência com a oferta e limites.
@@ -52,6 +53,7 @@
 - `pro/` · funcionando: entregável PRO autónomo.
 - `scripts/` · escrito: geração, fotografias e verificação.
 - `08-WEBAPP.md` · escrito: validação, recusa total, nota interna 8,8/10 e próximos passos.
+- `manual/` e `../../output/pdf/botica-viva-manual-de-acesso.pdf` · escrito e verificado: manual de cinco páginas, PT-PT, com acesso e apoio por configurar.
 
 ## Próxima ação
 - Escolher plataforma de entrega por plano, configurar checkouts reais e rever profissionalmente o conteúdo e as alegações de saúde antes da comercialização.
