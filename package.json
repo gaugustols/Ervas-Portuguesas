@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline && npm run build:rating && node scripts/export-static.mjs",
+    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && node scripts/export-static.mjs",
+    "build:vsl": "tsx scripts/build-vsl.tsx",
     "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify && tailwindcss -i styles/rating-summary.css -o assets/nova-pagina/css/rating-summary.css --minify",
     "build:headline": "tsx scripts/build-hook-question.tsx",
     "typecheck": "tsc --noEmit",
@@ -27,6 +28,7 @@
     "@types/node": "24.19.2",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
     "tailwindcss": "4.3.0",
     "tsx": "4.23.15",
     "typescript": "5.9.3"
