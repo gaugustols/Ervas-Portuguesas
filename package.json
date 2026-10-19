@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && npm run build:faq && node scripts/export-static.mjs",
+    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && npm run build:faq && npm run build:animations && node scripts/export-static.mjs",
+    "build:animations": "tsx scripts/build-animations.tsx",
+    "check:animations": "tsx scripts/check-animations.tsx",
     "build:faq": "tsx scripts/build-faq.tsx",
     "build:vsl": "tsx scripts/build-vsl.tsx",
     "build:styles": "tailwindcss -i styles/hook-question.css -o assets/nova-pagina/css/hook-question.css --minify && tailwindcss -i styles/rating-summary.css -o assets/nova-pagina/css/rating-summary.css --minify",
