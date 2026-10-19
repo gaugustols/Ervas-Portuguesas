@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- Adaptado do template creator-webapp/assets/webapp-template/index.html. -->
+<html lang="pt-PT">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+ <meta name="theme-color" content="#080b09">
+ <title>Botica Viva · {{PLANO}}</title>
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230b6b2c'/%3E%3Cpath d='M12 28Q28 27 29 10Q12 10 12 28ZM12 28L24 16' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+ <link rel="stylesheet" href="assets/styles.css">
+ <script id="conteudo" type="application/json">{{CONTEUDO}}</script>
+ <script defer src="assets/app.js"></script>
+</head>
+<body>
+ <a class="skip" href="#principal">Saltar para o conteúdo</a>
+ <aside class="sidebar">
+  <a class="brand" href="#inicio" aria-label="Botica Viva, início"><span class="brand-mark" aria-hidden="true"><svg width="29" height="33" viewBox="0 0 32 36" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 32V9M16 17C7 17 4 12 4 7c8 0 12 4 12 10Zm0 8c9 0 12-5 12-10-8 0-12 4-12 10Zm0-13c0-6 3-9 7-10 1 6-1 10-7 10Z"/></svg></span><span>Botica Viva<small>O seu guia de ervas</small></span></a>
+  <span class="plan">PLANO {{PLANO}}</span>
+  <nav id="navegacao" aria-label="Navegação principal"></nav>
+  <div class="side-bottom"><p>Conhecer. Preparar.<br>Cuidar com consciência.</p><small>O seu progresso fica neste dispositivo.</small></div>
+ </aside>
+ <div class="workspace">
+  <header class="topbar"><span>A SUA BOTICA, MAIS PERTO</span><span id="top-progress"></span></header>
+  <main id="principal" tabindex="-1"><noscript>Ative o JavaScript para consultar a biblioteca e guardar as suas fichas neste dispositivo.</noscript></main>
+  <footer>Conteúdo educativo para adultos; não substitui aconselhamento de saúde.<br><button id="abrir-fontes" class="text-button">Fontes, segurança e dados locais</button></footer>
+ </div>
+ <div id="aviso" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
