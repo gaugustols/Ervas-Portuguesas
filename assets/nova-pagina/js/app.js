@@ -2,7 +2,7 @@
 const BASIC_CHECKOUT_URL = '';
 const PRO_CHECKOUT_URL = '';
 // URL publica do YouTube; o iframe so e criado apos interacao.
-const VIDEO_URL = '';
+const VIDEO_URL = 'https://www.youtube.com/watch?v=2EpSrJxbIl0&t=3s';
 
 (() => {
   const checkouts = { basic: BASIC_CHECKOUT_URL, pro: PRO_CHECKOUT_URL };
@@ -66,6 +66,7 @@ const VIDEO_URL = '';
       : endereco.pathname.match(/^\/(?:embed|shorts|live)\/([^/]+)\/?$/)?.[1];
   }
   if (!videoId || !/^[\w-]{11}$/.test(videoId)) return;
+  const inicio = endereco.searchParams.get('t')?.match(/^(\d+)s?$/)?.[1];
   const botao = raiz.querySelector('[data-video-load]');
   const placeholder = raiz.querySelector('[data-video-placeholder]');
   if (!botao || !placeholder) return;
@@ -74,6 +75,7 @@ const VIDEO_URL = '';
   botao.addEventListener('click', () => {
     const iframe = document.createElement('iframe');
     iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=0&loop=0&playsinline=1&rel=0';
+    if (inicio && Number.isSafeInteger(Number(inicio))) iframe.src += '&start=' + Number(inicio);
     iframe.title = 'Vídeo de apresentação da Botica Viva';
     iframe.width = '680';
     iframe.height = '383';
