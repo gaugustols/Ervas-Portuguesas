@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PREVIEW_PORT || 4173);
+const pages = new Set(['index.html', 'obrigado.html']);
 const mime = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -24,14 +25,14 @@ const server = http.createServer((req, res) => {
     const url = new URL(req.url, 'http://localhost');
     const relative = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html';
     // Servir somente a landing page e seus recursos; não expor pastas Git ou originais.
-    if (relative !== 'index.html' && !relative.startsWith('assets/nova-pagina/')) {
+    if (!pages.has(relative) && !relative.startsWith('assets/nova-pagina/')) {
       res.writeHead(404);
       res.end();
       return;
     }
     const file = fs.realpathSync(path.resolve(root, relative));
     const assetRoot = path.join(root, 'assets', 'nova-pagina') + path.sep;
-    if (file !== path.join(root, 'index.html') && !file.startsWith(assetRoot)) {
+    if (![...pages].some(page => file === path.join(root, page)) && !file.startsWith(assetRoot)) {
       res.writeHead(403);
       res.end();
       return;
