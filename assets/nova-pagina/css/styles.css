@@ -2165,3 +2165,8 @@ footer {
   .faq-content { animation: none !important; }
   .faq-icon { transition: none; }
 }
+
+/* Mesma familia da headline em todos os textos; preserva tamanhos e pesos. */
+body, body *, body::before, body::after, body *::before, body *::after {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
