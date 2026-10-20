@@ -1,5 +1,20 @@
 # Página de obrigado · Botica Viva
 
+## Atualização · MVP sem login (20/10/2026)
+
+Esta atualização substitui as pendências de acesso do registo inicial abaixo. O utilizador autorizou publicar o MVP por link, sem login. Não há aprovação, identificação do comprador ou autorização por plano implementadas nesta versão.
+
+- `obrigado.html`: escolha explícita entre «Abrir o Plano Básico» (`/app/`) e «Abrir o Plano PRO» (`/pro/`). Ambos são links HTTPS do domínio `ervasportuguesas.vercel.app`.
+- `obrigado-basico.html` e `obrigado-pro.html`: uma única ação para a versão correspondente. Geradas a partir do mesmo template; sem dados de comprador na URL.
+- Recomendação para o painel da Hotmart: usar `https://ervasportuguesas.vercel.app/obrigado.html` no estado de compra aprovada. Como as duas ofertas pertencem ao mesmo produto, o destino comum funciona sem depender de uma configuração por oferta. Caso a conta permita destinos por oferta, as variantes estão disponíveis; essa opção específica não foi verificada no painel.
+- O contacto próprio de apoio continua por definir; permanece a ajuda oficial da Hotmart. Não foram enviados e-mails nem alteradas as configurações da conta Hotmart.
+- Configuração: `WEBAPP_ACCESS_URL`, `PRO_WEBAPP_ACCESS_URL` e `SUPPORT_URL` em `lib/thank-you-config.mjs`. O exportador inclui os três HTMLs e apenas os ficheiros compilados dos apps.
+- Testes do obrigado: 320/375/768/1440 px, dois CTAs visíveis na primeira dobra, teclado, FAQ nativo, sem dependência de JavaScript e sem erros de consola/HTTP. Os links individuais e a escolha de plano foram verificados. A landing original não foi alterada.
+
+Nota interna atual: **9/10**, mantendo clareza 2/2, identidade/PT-PT 2/2, acessibilidade 2/2, revisão de segurança no escopo do MVP 2/2 e entrega 1/2 (configuração real na Hotmart e compra de ponta a ponta ainda não testadas). A ausência de login é uma decisão do MVP, não uma funcionalidade de proteção.
+
+## Registo inicial (anterior à decisão de publicar o MVP)
+
 ## Estado e decisão
 
 Página escrita para a etapa posterior à compra aprovada. O comprador já conhece o produto: o formato é curto, com uma ação principal, os primeiros passos e apoio. Foram aplicadas as skills locais `creator-pagina`, `checkout-upsell` (apenas a etapa de obrigado), `pos-venda` (ativação D0) e `auditoria-seguranca`.

@@ -3,10 +3,16 @@ import { readFileSync, readdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { renderThankYou } from './build-thank-you.mjs';
-import { WEBAPP_ACCESS_URL, SUPPORT_URL } from '../lib/thank-you-config.mjs';
+import { WEBAPP_ACCESS_URL, PRO_WEBAPP_ACCESS_URL, SUPPORT_URL } from '../lib/thank-you-config.mjs';
 
 const html = readFileSync('obrigado.html', 'utf8');
-assert.equal(html, renderThankYou({ accessUrl: WEBAPP_ACCESS_URL, supportUrl: SUPPORT_URL }));
+assert.equal(html, renderThankYou({ accessUrl: WEBAPP_ACCESS_URL, proAccessUrl: PRO_WEBAPP_ACCESS_URL, supportUrl: SUPPORT_URL }));
+for (const [file, accessUrl, plan] of [['obrigado-basico.html', WEBAPP_ACCESS_URL, 'Básico'], ['obrigado-pro.html', PRO_WEBAPP_ACCESS_URL, 'PRO']]) {
+  const variant = readFileSync(file, 'utf8');
+  assert.equal(variant, renderThankYou({ accessUrl, plan, supportUrl: SUPPORT_URL }));
+  assert.equal(readFileSync('public/' + file, 'utf8'), variant);
+  assert.ok(!variant.includes('id="acesso-pro"'));
+}
 assert.match(html, /lang="pt-PT"/);
 assert.match(html, /name="robots" content="noindex, nofollow, noarchive"/);
 assert.match(html, /name="referrer" content="no-referrer"/);
@@ -19,10 +25,26 @@ assert.ok(ready.includes('Abrir o meu webapp') && ready.includes('href="mailto:a
 for (const accessUrl of ['javascript:alert(1)', 'http://area.example.com', 'https://127.0.0.1/', 'https://user:pass@area.example.com/', 'https://area.example.com/%0a']) assert.throws(() => renderThankYou({ accessUrl }));
 assert.throws(() => renderThankYou({ supportUrl: 'mailto:apoio@example.com?bcc=outro@example.com' }));
 assert.equal(readFileSync('public/obrigado.html', 'utf8'), html);
-assert.deepEqual(readdirSync('public').sort(), ['assets', 'index.html', 'obrigado.html']);
+assert.deepEqual(readdirSync('public').sort(), ['app', 'assets', 'index.html', 'obrigado-basico.html', 'obrigado-pro.html', 'obrigado.html', 'pro']);
+for (const version of ['app', 'pro']) {
+  const files = readdirSync('public/' + version, { recursive: true, withFileTypes: true }).filter(entry => entry.isFile());
+  assert.equal(files.length, 38, 'Only compiled HTML, runtime, CSS, fonts/license and 32 plant images');
+  for (const entry of files) {
+    const target = path.join(entry.parentPath, entry.name);
+    const relative = path.relative('public/' + version, target).replaceAll('\\', '/');
+    assert.match(relative, /^(?:index\.html|assets\/(?:app\.js|styles\.css|fonts\/(?:plus-jakarta-sans-(?:400|600)\.ttf|LICENSE-plusjakartasans\.txt)|plantas\/erva-\d+\.(?:jpg|png|webp)))$/);
+    assert.deepEqual(readFileSync(target), readFileSync(path.join('meu-projeto/botica-viva-2026-10-19', version, relative)));
+  }
+}
 
 const origin = 'http://127.0.0.1:4173';
 assert.equal((await fetch(origin + '/obrigado.html')).status, 200);
+for (const route of ['/obrigado-basico.html', '/obrigado-pro.html', '/app/', '/pro/']) assert.equal((await fetch(origin + route)).status, 200, route);
+for (const route of ['/app', '/pro']) {
+  const redirect = await fetch(origin + route, { redirect: 'manual' });
+  assert.equal(redirect.status, 308); assert.equal(redirect.headers.get('location'), route + '/');
+}
+for (const route of ['/app/..%2fsrc/conteudo.mjs', '/pro/..%5cCONTEXTO.md', '/app/src/app.js']) assert.equal((await fetch(origin + route)).status, 404, route);
 const cssUrl = '/assets/nova-pagina/css/obrigado.css';
 const cssResponse = await fetch(origin + cssUrl);
 assert.equal(cssResponse.status, 200);
@@ -32,7 +54,7 @@ for (const url of ['/AGENTS.md', '/.git/config', '/.agents/skills/creator-pagina
 console.log('Passed: static rendering, safe config/fallback, noindex, CSP, PT-PT, local HTTP assets and isolated public export.');
 
 if (process.argv.includes('--browser')) {
-  const tabs = await (await fetch('http://127.0.0.1:9238/json')).json();
+  const tabs = await (await fetch(`http://127.0.0.1:${process.env.THANK_YOU_CDP_PORT || 9238}/json`)).json();
   const tab = tabs.find(t => t.type === 'page' && (t.url === 'about:blank' || t.url.startsWith(origin)));
   assert.ok(tab, 'Use an isolated Chrome test profile on port 9238.');
   const socket = new WebSocket(tab.webSocketDebuggerUrl);
@@ -71,6 +93,7 @@ if (process.argv.includes('--browser')) {
       await evaluate('window.scrollTo({top:0,behavior:"instant"})');
       assert.ok(await evaluate('document.documentElement.scrollWidth <= innerWidth'), `Overflow at ${width}`);
       assert.ok(await evaluate('document.getElementById("acesso-principal").getBoundingClientRect().bottom <= innerHeight'), `Primary action above fold at ${width}`);
+      if (PRO_WEBAPP_ACCESS_URL) assert.ok(await evaluate('document.getElementById("acesso-pro").getBoundingClientRect().bottom <= innerHeight'), `PRO action above fold at ${width}`);
       assert.equal(await evaluate('document.getElementById("acesso-principal").href'), WEBAPP_ACCESS_URL || 'https://consumer.hotmart.com/');
       const photo = await call('Page.captureScreenshot', { format: 'png' });
       writeFileSync(path.join(output, `obrigado-${width}.png`), Buffer.from(photo.data, 'base64'));

@@ -1,5 +1,13 @@
 # Webapp · Botica Viva
 
+## Atualização · MVP público sem login (20/10/2026)
+
+O utilizador autorizou publicar as duas versões por link para validar o produto. A exportação da raiz inclui agora apenas os ficheiros compilados em `/app/` e `/pro/`, no domínio existente `https://ervasportuguesas.vercel.app`. A página `/obrigado.html` permite escolher o plano adquirido; existem também `/obrigado-basico.html` e `/obrigado-pro.html`. Não foi criado um domínio/projeto separado.
+
+O checkout da oferta PRO dentro do Básico usa o link real `https://pay.hotmart.com/P108062599Y?off=uszcskzv`, com gatilho e recusa preservados. O teste de integração foi adaptado para o servidor da publicação em 4173 e confirmou os dois planos, todos os recursos, primeiro resultado, persistência, oferta/recusa, exportação e impressão. Os verificadores das duas versões passaram sem falhas ou avisos e sem achados automáticos de segurança.
+
+Sem login, qualquer pessoa com os links tem acesso. Não há validação de compra, sincronização ou revogação automática; essa é uma decisão do MVP. O passo de configuração da Hotmart e uma compra real ainda não foram realizados. A avaliação original e os registos abaixo documentam a etapa inicial, anterior a esta publicação; as pendências antigas de URL/checkout foram substituídas pelas decisões desta atualização. O manual PDF continua por atualizar com os endereços e o contacto de apoio real.
+
 ## Resultado
 
 Entregável original em português de Portugal, criado com a skill `creator-webapp`. Versões estáticas autónomas em `app/index.html` (Básico) e `pro/index.html` (PRO). Mantida a identidade preta, verde e branca e a família Plus Jakarta Sans. Nenhum ficheiro da landing page foi alterado.

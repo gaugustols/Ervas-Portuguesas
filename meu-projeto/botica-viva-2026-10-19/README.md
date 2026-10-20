@@ -13,12 +13,19 @@ node meu-projeto/botica-viva-2026-10-19/servidor-app.mjs
 
 Acesso local: <http://127.0.0.1:4174/app/> e <http://127.0.0.1:4174/pro/>.
 
-Não há conta nem validação de pagamento nesta versão. A distribuição deve ser feita pela plataforma de entrega escolhida pelo vendedor. Não publicar as duas pastas abertamente se pretender restringir materiais por plano. A exportação Vercel atual da landing page não as inclui.
+Em 20/10/2026, o utilizador escolheu publicar o MVP sem login. O build da raiz exporta apenas os ficheiros de produção para `public/app/` e `public/pro/`, no domínio existente da Vercel:
+
+- Básico: <https://ervasportuguesas.vercel.app/app/>.
+- PRO: <https://ervasportuguesas.vercel.app/pro/>.
+- Obrigado comum para a Hotmart: <https://ervasportuguesas.vercel.app/obrigado.html>.
+- Obrigado individual: `/obrigado-basico.html` ou `/obrigado-pro.html`.
+
+Não há conta nem validação de pagamento nesta versão: qualquer pessoa com o link pode abrir o material. As pastas separadas mantêm os conteúdos organizados, sem impedir a partilha dos endereços. O progresso continua guardado apenas no navegador. Para prévia da publicação completa, usar `node servidor-local.mjs` na raiz, em `http://127.0.0.1:4173`.
 
 ## Edição
 
 - Texto e oferta: `src/conteudo.mjs` e a configuração de oferta em `scripts/gerar.mjs`.
-- Checkout: substituir `#PLACEHOLDER-CHECKOUT-PRO` por um URL HTTPS real em `scripts/gerar.mjs`. Até lá o botão permanece desativado.
+- Checkout PRO: configurado em `scripts/gerar.mjs` com a oferta real Hotmart `uszcskzv`, apresentada só após o primeiro resultado no Básico.
 - Interface: `src/template.html`, `src/styles.css`, `src/app.js`.
 - Fotografias e licenças: `media/creditos.json`, autor e ligação exibidos em cada ficha e em Fontes.
 

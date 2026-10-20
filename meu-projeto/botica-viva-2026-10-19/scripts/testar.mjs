@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import os from 'node:os';
 const root=fileURLToPath(new URL('../',import.meta.url));
-const base='http://127.0.0.1:4174';
+const base=process.env.WEBAPP_TEST_ORIGIN||'http://127.0.0.1:4173';
 const temp=path.join(os.tmpdir(),'botica-viva-verificacao-'+Date.now());await mkdir(temp,{recursive:true});
 for(const plano of ['app','pro']){
  const html=await readFile(root+plano+'/index.html','utf8');
@@ -50,7 +50,7 @@ try{
  assert.equal(await evaluate(`JSON.parse(localStorage.getItem('botica-viva:1:Básico')).fichas.length`),1);
  await goto('trilha/m1');await evaluate(`const f=document.getElementById('evidencia');f.value='Alecrim da cozinha: não utilizar até esclarecer a identificação';f.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('input[name=feito]').checked=true;document.querySelector('form').requestSubmit()`);
  assert.equal(await evaluate('document.querySelectorAll("[data-offer]").length'),1);
- assert.equal(await evaluate('document.querySelector("[data-offer] button").disabled'),true,'Sem checkout fictício');
+ assert.equal(await evaluate('document.querySelector("[data-offer] a.button").href'),'https://pay.hotmart.com/P108062599Y?off=uszcskzv','Checkout PRO real');
  await call('Page.reload');await pause(250);assert.equal(await evaluate('document.querySelectorAll("[data-offer]").length'),1,'Oferta e progresso persistem');
  await evaluate(`[...document.querySelectorAll('button')].find(b=>b.textContent==='Agora não').click()`);
  await call('Page.reload');await pause(250);assert.equal(await evaluate('document.querySelectorAll("[data-offer]").length'),0,'Dispensa persistente');

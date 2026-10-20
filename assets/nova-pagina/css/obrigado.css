@@ -41,6 +41,7 @@ h1 span{color:var(--accent)}
 .support-card p:last-child{max-width:530px;color:var(--muted);font-size:14px;margin-bottom:0}
 .secondary-button{flex:none;border:1px solid #4d795b;color:var(--text);font-size:13px;min-width:200px}
 .secondary-button:hover{background:#193520}
+.secondary-access{margin-top:12px}
 .questions{padding-block:50px 60px;max-width:760px;margin-inline:auto}
 .questions h2{font-size:24px;letter-spacing:-.8px;margin-bottom:20px}
 details{border-bottom:1px solid var(--line);padding:18px 0}
@@ -59,4 +60,5 @@ details p{font-size:14px;color:var(--muted);margin:16px 0 0}
   .questions{padding-block:38px 42px}.page-footer{flex-direction:column;gap:8px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}a{transition:none}}
+@media(max-width:360px){.brand-bar{padding-block:14px}.welcome{padding-top:22px}h1{font-size:32px}.intro{font-size:12px;margin-bottom:18px}.eyebrow{margin-bottom:14px}.access-card{padding:18px 14px}.access-card h2{font-size:19px}.access-description{font-size:12px;margin-bottom:14px}.primary-button,.secondary-access{font-size:12px;min-height:50px;padding:12px 14px}.secondary-access{margin-top:10px}}
 @media print{body{background:white;color:black}.brand-bar,.page-footer,.access-card,.step-grid li,.support-card{background:white;color:black;box-shadow:none;border-color:#999}h1 span,.section-label,.eyebrow,.step-number,a{color:#0b6b2c}.intro,.access-description,.access-note,.step-grid p,.support-card p:last-child,details p{color:#333}.primary-button{background:white;color:black}details{break-inside:avoid}}

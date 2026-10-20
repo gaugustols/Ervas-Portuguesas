@@ -1,5 +1,18 @@
 # Segurança · página de obrigado
 
+## Atualização · publicação do MVP sem login (20/10/2026)
+
+O utilizador autorizou expressamente o acesso por link sem login para validar o produto. Por isso, `/app/` e `/pro/` passam a ser destinos públicos intencionais. Separação por pastas, `noindex` e identificação do plano na interface não constituem autenticação. A implementação não afirma validar compras e não restringe pessoas que recebam uma ligação partilhada.
+
+- Exportação restrita: cada versão inclui 38 ficheiros — HTML, runtime, CSS, duas fontes, licença e 32 fotografias. A lista é derivada do HTML compilado e validada; não copia documentação, configurações, fonte de conteúdo, skills, credenciais, ZIPs ou testes.
+- Cada app foi revisto com os verificadores locais: **zero falhas, zero avisos e zero achados automáticos de segurança**. O HTML mantém `noindex,nofollow` e `no-referrer`. Não foram introduzidos formulários de login, chaves, APIs externas ou dados de comprador em query strings.
+- Teste de navegação pelo servidor recusa tentativas de travessia de diretórios, rotas de fonte e ficheiros internos. A exportação é comparada byte a byte aos ficheiros compilados; raiz pública limitada a landing, recursos, três páginas de obrigado e apps.
+- Os nove falsos positivos `mask-image-*` e os avisos do runtime React da landing permanecem os mesmos, já triados abaixo. Os webapps usam o DOM nativo e não adicionam esses bundles.
+- Chrome isolado: recursos HTTP de ambos os planos, 375/768/1440 px, primeira ficha, módulo com evidência, dispensa persistente de oferta, exportação e impressão passaram. Página de obrigado verificada também em 320 px. Sem erros JS ou de rede nos percursos testados.
+- Após deploy, verificar 200 em `/app/`, `/pro/`, três páginas de obrigado e recursos; 404 em `meu-projeto/`, `.agents/`, `lib/`, `templates/`, ficheiros de contexto e ZIPs. Não existem login, controlo por compra ou revogação automática de acesso neste MVP.
+
+## Registo inicial (antes da decisão de acesso por link)
+
 ## Escopo
 
 Nova página e respetivos recursos, exportação pública e servidor local. Sem alterações a autenticação, permissões, GitHub ou configuração da Vercel. Não foi executado um deploy separado da integração Git existente. Não foi realizado um teste de invasão.

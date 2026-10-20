@@ -6,7 +6,7 @@ Fonte: secção de planos do `index.html` da raiz, consultada em 19/10/2026. Con
 - **PRO — €14,90:** todo o Básico, Caderno Ilustrado de Infusões, Guia de Cultivo e Conservação, Fichas Práticas para Imprimir. App autónoma em `pro/`, separada do Básico.
 - Garantia comunicada na página: 7 dias. A aplicação não processa pagamentos nem pedidos de reembolso.
 - Primeiro resultado: uma ficha de planta identificada e um plano de preparação alimentar documentado. Prazo de execução proposto: dia 1, até 72 horas; não se refere a melhoria de sintomas.
-- Única oferta interna: apresentar o PRO depois da conclusão do primeiro módulo com evidência. €14,90 é o preço integral do plano, não um suplemento de €7 nem uma promessa de crédito da compra anterior. Checkout pendente: `#PLACEHOLDER-CHECKOUT-PRO`; botão desativado até configuração.
+- Única oferta interna: apresentar o PRO depois da conclusão do primeiro módulo com evidência. €14,90 é o preço integral do plano, não um suplemento de €7 nem uma promessa de crédito da compra anterior. Checkout configurado em 20/10/2026: `https://pay.hotmart.com/P108062599Y?off=uszcskzv`.
 - Sem subscrição, order bump ou serviço adicional definidos. Não criar ofertas novas.
 
 ## Correspondência com a página
