@@ -1,5 +1,5 @@
 // Configure separadamente os links de pagamento; vazios mantêm os CTAs pendentes.
-const BASIC_CHECKOUT_URL = '';
+const BASIC_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=dv3haixa';
 const PRO_CHECKOUT_URL = '';
 
 (() => {
