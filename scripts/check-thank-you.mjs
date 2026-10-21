@@ -28,11 +28,13 @@ assert.equal(readFileSync('public/obrigado.html', 'utf8'), html);
 assert.deepEqual(readdirSync('public').sort(), ['app', 'assets', 'index.html', 'obrigado-basico.html', 'obrigado-pro.html', 'obrigado.html', 'pro']);
 for (const version of ['app', 'pro']) {
   const files = readdirSync('public/' + version, { recursive: true, withFileTypes: true }).filter(entry => entry.isFile());
-  assert.equal(files.length, 38, 'Only compiled HTML, runtime, CSS, fonts/license and 32 plant images');
+  const data = JSON.parse(readFileSync('public/' + version + '/index.html', 'utf8').split('<script id="conteudo" type="application/json">')[1].split('</script>')[0]);
+  const images = new Set(data.ervas.flatMap(herb => [herb.foto, herb.fotoPequena].filter(Boolean)));
+  assert.equal(files.length, 6 + images.size, 'Only compiled HTML, runtime, CSS, fonts/license and used plant images');
   for (const entry of files) {
     const target = path.join(entry.parentPath, entry.name);
     const relative = path.relative('public/' + version, target).replaceAll('\\', '/');
-    assert.match(relative, /^(?:index\.html|assets\/(?:app\.js|styles\.css|fonts\/(?:plus-jakarta-sans-(?:400|600)\.ttf|LICENSE-plusjakartasans\.txt)|plantas\/erva-\d+\.(?:jpg|png|webp)))$/);
+    assert.match(relative, /^(?:index\.html|assets\/(?:app\.js|styles\.css|fonts\/(?:plus-jakarta-sans-(?:400|600)\.ttf|LICENSE-plusjakartasans\.txt)|plantas\/erva-\d+(?:-small)?\.(?:jpg|png|webp)))$/);
     assert.deepEqual(readFileSync(target), readFileSync(path.join('meu-projeto/botica-viva-2026-10-19', version, relative)));
   }
 }
