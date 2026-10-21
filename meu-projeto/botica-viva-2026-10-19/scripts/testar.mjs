@@ -11,7 +11,7 @@ const temp=path.join(os.tmpdir(),'botica-viva-verificacao-'+Date.now());await mk
 for(const plano of ['app','pro']){
  const html=await readFile(root+plano+'/index.html','utf8');
  const data=JSON.parse(html.match(/<script id="conteudo" type="application\/json">(.*?)<\/script>/s)[1]);
- assert.equal(data.ervas.length,32);assert.equal(data.temas.length,72);assert.equal(data.modulos.length,6);
+ assert.equal(data.ervas.length,38);assert.equal(data.temas.length,72);assert.equal(data.modulos.length,6);
  assert.equal(Boolean(data.pro),plano==='pro','Conteúdo PRO deve ficar separado do Básico');
  const assets=['index.html','assets/styles.css','assets/app.js','assets/fonts/plus-jakarta-sans-400.ttf','assets/fonts/plus-jakarta-sans-600.ttf',...data.ervas.map(e=>e.foto)];
  for(const asset of assets){const r=await fetch(base+'/'+plano+'/'+asset);assert.equal(r.status,200,asset);assert.ok(Number(r.headers.get('content-length'))>0|| (await r.arrayBuffer()).byteLength>0);}
@@ -55,7 +55,7 @@ try{
  await evaluate(`[...document.querySelectorAll('button')].find(b=>b.textContent==='Agora não').click()`);
  await call('Page.reload');await pause(250);assert.equal(await evaluate('document.querySelectorAll("[data-offer]").length'),0,'Dispensa persistente');
  await goto('proximo');assert.equal(await evaluate('document.querySelectorAll("[data-offer]").length'),0);
- await goto('plantas');await evaluate(`const s=document.getElementById('pesquisa-plantas');s.value='hortela';s.dispatchEvent(new Event('input'))`);assert.equal(await evaluate('document.querySelectorAll(".plant").length'),2,'Pesquisa sem acentos');
+ await goto('plantas');await evaluate(`const s=document.getElementById('pesquisa-plantas');s.value='hortela';s.dispatchEvent(new Event('input'))`);assert.equal(await evaluate('document.querySelectorAll(".plant").length'),3,'Pesquisa sem acentos');
  await evaluate('document.querySelector(".favourite").click()');await call('Page.reload');await pause(250);assert.equal(await evaluate(`JSON.parse(localStorage.getItem('botica-viva:1:Básico')).favoritos.length`),1);
  await goto('biblioteca/temas');await evaluate(`const s=document.querySelector('input[type=search]');s.value='insónia';s.dispatchEvent(new Event('input'))`);assert.equal(await evaluate('document.querySelectorAll("details").length'),1);
  await goto('painel');await shot('painel-mobile');await evaluate(`[...document.querySelectorAll('button')].find(b=>b.textContent==='Exportar todos os dados').click()`);await pause(200);
@@ -68,6 +68,6 @@ try{
  await call('Emulation.setEmulatedMedia',{media:'print'});const pdf=await call('Page.printToPDF',{printBackground:false,paperWidth:8.27,paperHeight:11.69,marginTop:.4,marginBottom:.4,marginLeft:.4,marginRight:.4});await writeFile(path.join(temp,'ficha.pdf'),Buffer.from(pdf.data,'base64'));assert.ok((await stat(path.join(temp,'ficha.pdf'))).size>2000);await call('Emulation.setEmulatedMedia',{media:''});
  for(const width of [375,768,1440]){await viewport(width);for(const route of ['pro','imprimir/0','imprimir/1','imprimir/2','imprimir/3']){await goto(route);await noOverflow();}}
  assert.deepEqual(errors,[],'Console / erros JavaScript');assert.deepEqual(httpErrors,[],'Recursos HTTP');
- console.log('PASSOU: 32 fotografias por plano, 72 temas, separação PRO, recursos HTTP, 3 larguras, navegação, evidência, pesquisa, favoritos, rascunho, persistência, oferta/dispensa, exportação, impressão e console.');
+ console.log('PASSOU: 38 fotografias por plano, 72 temas, separação PRO, recursos HTTP, 3 larguras, navegação, evidência, pesquisa, favoritos, rascunho, persistência, oferta/dispensa, exportação, impressão e console.');
  console.log('Capturas e PDF de teste (temporários): '+temp);
 }finally{ws.close()}

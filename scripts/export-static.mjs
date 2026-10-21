@@ -21,6 +21,10 @@ for (const version of ['app', 'pro']) {
   for (const herb of data.ervas) {
     if (!/^assets\/plantas\/erva-\d+\.(?:jpg|png|webp)$/.test(herb.foto)) throw new Error('Unexpected webapp asset path.');
     files.add(herb.foto);
+    if (herb.fotoPequena) {
+      if (!/^assets\/plantas\/erva-\d+-small\.webp$/.test(herb.fotoPequena)) throw new Error('Unexpected responsive asset path.');
+      files.add(herb.fotoPequena);
+    }
   }
   for (const file of files) {
     const from = path.join(source, file);

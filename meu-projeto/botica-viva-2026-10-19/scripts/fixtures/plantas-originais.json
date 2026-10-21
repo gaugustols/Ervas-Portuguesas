@@ -1,0 +1,194 @@
+[
+  {
+    "id": "erva-1",
+    "especie": "Salvia rosmarinus",
+    "uso": "Perfuma legumes assados; retire os ramos lenhosos antes de servir.",
+    "cuidado": "Óleo essencial e extratos não equivalem ao tempero alimentar."
+  },
+  {
+    "id": "erva-2",
+    "especie": "Mentha spicata",
+    "uso": "Junte folhas lavadas a uma salada ou água aromatizada para consumo imediato.",
+    "cuidado": "Não confundir diferentes espécies de hortelã nem usar o aroma para identificar plantas."
+  },
+  {
+    "id": "erva-3",
+    "especie": "Mentha × piperita",
+    "uso": "Estude a diferença entre folhas, chá e cápsulas de óleo padronizado.",
+    "cuidado": "Preparações de hortelã podem agravar o refluxo; o óleo não é uma receita caseira."
+  },
+  {
+    "id": "erva-4",
+    "especie": "Ocimum basilicum",
+    "uso": "Adicione no fim da confeção a tomate ou massa. Lave antes de picar.",
+    "cuidado": "Pesto caseiro necessita de higiene e conservação no frio; não guardar ervas em óleo à temperatura ambiente."
+  },
+  {
+    "id": "erva-5",
+    "especie": "Thymus vulgaris",
+    "uso": "Use como tempero em sopas e legumes, retirando talos duros.",
+    "cuidado": "Não aplicar óleo essencial puro na pele nem o ingerir."
+  },
+  {
+    "id": "erva-6",
+    "especie": "Origanum vulgare",
+    "uso": "Use pequenas quantidades de folhas alimentares secas em molhos.",
+    "cuidado": "Óleo concentrado não tem o mesmo perfil do tempero."
+  },
+  {
+    "id": "erva-7",
+    "especie": "Petroselinum crispum",
+    "uso": "Pique sobre sopa já pronta; conserve o restante no frigorífico.",
+    "cuidado": "Sementes e extratos concentrados não são equivalentes às folhas culinárias."
+  },
+  {
+    "id": "erva-8",
+    "especie": "Coriandrum sativum",
+    "uso": "Separe o uso de folhas frescas do de sementes em especiaria.",
+    "cuidado": "Alergias alimentares também podem ocorrer com ervas e especiarias."
+  },
+  {
+    "id": "erva-9",
+    "especie": "Allium schoenoprasum",
+    "uso": "Corte com tesoura limpa e junte a pratos já cozinhados.",
+    "cuidado": "Não colher plantas semelhantes junto de bolbos ornamentais."
+  },
+  {
+    "id": "erva-10",
+    "especie": "Laurus nobilis",
+    "uso": "Perfume um estufado com folha alimentar e retire-a antes de comer.",
+    "cuidado": "Loureiro-cerejo e outros ornamentais não são substitutos do louro alimentar."
+  },
+  {
+    "id": "erva-11",
+    "especie": "Salvia officinalis",
+    "uso": "Use folhas alimentares em pequenas quantidades como tempero.",
+    "cuidado": "Evite extratos concentrados e óleo essencial por iniciativa própria."
+  },
+  {
+    "id": "erva-12",
+    "especie": "Melissa officinalis",
+    "uso": "Para bebida, escolha produto alimentar identificado e siga o rótulo.",
+    "cuidado": "O nome popular varia; não pressupõe eficácia para ansiedade ou insónia."
+  },
+  {
+    "id": "erva-13",
+    "especie": "Matricaria chamomilla",
+    "uso": "Compare os nomes científicos no rótulo antes de preparar uma bebida.",
+    "cuidado": "Pode causar alergia, sobretudo em pessoas sensíveis a Asteraceae; interações são possíveis."
+  },
+  {
+    "id": "erva-14",
+    "especie": "Foeniculum vulgare",
+    "uso": "Use o bolbo na cozinha; para infusão de frutos, respeite o produto alimentar.",
+    "cuidado": "Não dar infusões a bebés por iniciativa própria; não recolher umbelíferas silvestres."
+  },
+  {
+    "id": "erva-15",
+    "especie": "Aloysia citrodora",
+    "uso": "Folhas secas de fornecedor identificado podem aromatizar uma bebida.",
+    "cuidado": "Não confundir com capim-limão: são espécies diferentes."
+  },
+  {
+    "id": "erva-16",
+    "especie": "Camellia sinensis",
+    "uso": "Chá verde e preto provêm desta espécie; siga o tempo indicado na embalagem.",
+    "cuidado": "Contém cafeína; extratos de chá verde não equivalem à bebida."
+  },
+  {
+    "id": "erva-17",
+    "especie": "Hibiscus sabdariffa",
+    "uso": "Escolha cálices embalados para alimentação, não flores ornamentais.",
+    "cuidado": "Uso de medicamentos ou tensão baixa exige esclarecer a compatibilidade antes do uso regular."
+  },
+  {
+    "id": "erva-18",
+    "especie": "Zingiber officinale",
+    "uso": "Rale um pouco como especiaria em sopa ou salteado.",
+    "cuidado": "Pode causar azia e desconforto; suplementos requerem aconselhamento, sobretudo com medicação."
+  },
+  {
+    "id": "erva-19",
+    "especie": "Curcuma longa",
+    "uso": "Use como especiaria num prato, sem procurar uma dose terapêutica.",
+    "cuidado": "Suplementos de elevada absorção foram associados a lesão do fígado; não equivalem ao alimento."
+  },
+  {
+    "id": "erva-20",
+    "especie": "Cinnamomum verum",
+    "uso": "Aromatize fruta cozida com um pouco de canela alimentar.",
+    "cuidado": "Não usar canela para controlar a diabetes; a canela-cássia pode conter mais cumarina."
+  },
+  {
+    "id": "erva-21",
+    "especie": "Allium sativum",
+    "uso": "Use no tempero, bem conservado e sem bolor.",
+    "cuidado": "Suplementos podem interferir com medicamentos; evite conservas caseiras de alho em óleo fora do frio."
+  },
+  {
+    "id": "erva-22",
+    "especie": "Allium cepa",
+    "uso": "Inclua numa base de legumes; descarte partes deterioradas.",
+    "cuidado": "Não aplicar cebola em feridas nem usar sumos como gotas."
+  },
+  {
+    "id": "erva-23",
+    "especie": "Citrus × limon",
+    "uso": "Lave a casca antes de raspar para um prato ou bebida.",
+    "cuidado": "Acidez pode agravar refluxo; não aplicar sumo na pele antes de exposição solar."
+  },
+  {
+    "id": "erva-24",
+    "especie": "Citrus × sinensis",
+    "uso": "Prefira comer a fruta inteira; raspa apenas de casca própria para alimentação.",
+    "cuidado": "Sumos não substituem água nem tratamento; não confundir com extratos de laranja-amarga."
+  },
+  {
+    "id": "erva-25",
+    "especie": "Punica granatum",
+    "uso": "Junte os bagos a uma salada ou iogurte.",
+    "cuidado": "Não preparar decocções de casca ou raiz por iniciativa própria."
+  },
+  {
+    "id": "erva-26",
+    "especie": "Nasturtium officinale",
+    "uso": "Compre de origem controlada e lave segundo indicação do produtor.",
+    "cuidado": "Não colher em cursos de água desconhecidos devido a risco de contaminação."
+  },
+  {
+    "id": "erva-27",
+    "especie": "Brassica oleracea",
+    "uso": "Cozinhe numa sopa variada; evite atribuir propriedades de desintoxicação.",
+    "cuidado": "Quem usa varfarina deve discutir consistência da vitamina K na dieta com a equipa clínica."
+  },
+  {
+    "id": "erva-28",
+    "especie": "Lavandula angustifolia",
+    "uso": "Estude primeiro o rótulo: decoração, cosmético e alimento são categorias diferentes.",
+    "cuidado": "Não ingerir óleo essencial; aroma forte pode ser desconfortável e não substitui cuidados de saúde."
+  },
+  {
+    "id": "erva-29",
+    "especie": "Echinacea purpurea",
+    "uso": "Consulte a evidência e a composição do produto antes de considerar qualquer uso.",
+    "cuidado": "Possíveis alergias e interações; não usar como substituto de vacinação ou cuidados numa infeção."
+  },
+  {
+    "id": "erva-30",
+    "especie": "Valeriana officinalis",
+    "uso": "É um tema para conversar com o farmacêutico, não uma receita culinária.",
+    "cuidado": "Pode causar sonolência; não combinar por iniciativa própria com sedativos ou álcool."
+  },
+  {
+    "id": "erva-31",
+    "especie": "Hypericum perforatum",
+    "uso": "Leve o nome e a lista de medicamentos ao farmacêutico antes de ponderar o uso.",
+    "cuidado": "Interage com muitos medicamentos, incluindo contracetivos e antidepressivos. Não iniciar nem suspender sozinho."
+  },
+  {
+    "id": "erva-32",
+    "especie": "Aloe vera",
+    "uso": "Distinga cosmético, gel, látex e folha inteira; não são intercambiáveis.",
+    "cuidado": "Não ingerir preparações caseiras da folha ou do látex; não aplicar em queimaduras graves."
+  }
+]

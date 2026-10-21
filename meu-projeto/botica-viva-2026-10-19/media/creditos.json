@@ -1,13 +1,16 @@
 {
   "erva-1": {
-    "ficheiro": "erva-1.jpg",
+    "ficheiro": "erva-1.webp",
     "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Margalob\" title=\"User:Margalob\">Margalob</a>",
     "licenca": "CC BY-SA 4.0",
     "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Rosemary_in_bloom.JPG",
     "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Rosemary_in_bloom.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "data": "2026-10-19",
-    "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
+    "data": "2026-10-20",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-1-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
   },
   "erva-2": {
     "ficheiro": "erva-2.jpg",
@@ -30,14 +33,17 @@
     "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
   },
   "erva-4": {
-    "ficheiro": "erva-4.jpg",
+    "ficheiro": "erva-4.webp",
     "autor": "Photo by David J. Stang",
     "licenca": "CC BY-SA 4.0",
     "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Ocimum_basilicum_8zz.jpg",
     "original": "https://upload.wikimedia.org/wikipedia/commons/9/97/Ocimum_basilicum_8zz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "data": "2026-10-19",
-    "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
+    "data": "2026-10-20",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-4-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
   },
   "erva-5": {
     "ficheiro": "erva-5.jpg",
@@ -110,14 +116,17 @@
     "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
   },
   "erva-12": {
-    "ficheiro": "erva-12.jpg",
+    "ficheiro": "erva-12.webp",
     "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Amitchell125\" title=\"User:Amitchell125\">Amitchell125</a>",
     "licenca": "CC BY-SA 4.0",
     "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "pagina": "https://commons.wikimedia.org/wiki/File:Lemon_balm_plant.jpg",
     "original": "https://upload.wikimedia.org/wikipedia/commons/7/70/Lemon_balm_plant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "data": "2026-10-19",
-    "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
+    "data": "2026-10-20",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-12-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
   },
   "erva-13": {
     "ficheiro": "erva-13.jpg",
@@ -310,13 +319,112 @@
     "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
   },
   "erva-32": {
-    "ficheiro": "erva-32.png",
-    "autor": "Collage by <a href=\"https://en.wikipedia.org/wiki/User:MidgleyDJ\" class=\"extiw\" title=\"en:User:MidgleyDJ\">en:User:MidgleyDJ</a>, original images from Wikimedia commons (<a href=\"//commons.wikimedia.org/wiki/File:Aloe_vera_offsets.jpg\" title=\"File:Aloe vera offsets.jpg\">Image:Aloe_vera_offsets.jpg</a> and <a href=\"//commons.wikimedia.org/wiki/File:Aloe_vera_C.jpg\" title=\"File:Aloe vera C.jpg\">Image:Aloe_vera_C.jpg</a>)",
+    "ficheiro": "erva-32.webp",
+    "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/33837972@N00\">Chris and Kelly</a>",
+    "licenca": "CC BY-SA 2.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Aloe_vera_offsets.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Aloe_vera_offsets.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-32-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-33": {
+    "ficheiro": "erva-33.webp",
+    "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Kenraiz\" title=\"User:Kenraiz\">Krzysztof Ziarnek, Kenraiz</a>",
+    "licenca": "CC BY-SA 4.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Peumus_boldus_kz04.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/77/Peumus_boldus_kz04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Peumus boldus",
+    "titulo": "File:Peumus boldus kz04.jpg",
+    "descricao": "Peumus boldus in Dunedin Botanic Garden",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-33-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-34": {
+    "ficheiro": "erva-34.webp",
+    "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Obsidian_Soul\" title=\"User:Obsidian Soul\">Obsidian Soul</a>",
+    "licenca": "CC0",
+    "licencaUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tanglad_(lemongrass,_Cymbopogon_citratus)_-_Philippines.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Tanglad_%28lemongrass%2C_Cymbopogon_citratus%29_-_Philippines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Cymbopogon citratus",
+    "titulo": "File:Tanglad (lemongrass, Cymbopogon citratus) - Philippines.jpg",
+    "descricao": "Tanglad (lemongrass, <i>Cymbopogon citratus</i>) - Philippines",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-34-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-35": {
+    "ficheiro": "erva-35.webp",
+    "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Toluaye\" title=\"User:Toluaye\">Toluaye</a>",
+    "licenca": "Public domain",
+    "licencaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Quebra-Pedra._Phyllanthus_niruri.JPG",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Quebra-Pedra._Phyllanthus_niruri.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Phyllanthus niruri",
+    "titulo": "File:Quebra-Pedra. Phyllanthus niruri.JPG",
+    "descricao": "Quebra-Pedra. Phyllanthus niruri",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-35-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-36": {
+    "ficheiro": "erva-36.webp",
+    "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Prenn\" title=\"User:Prenn\">Prenn</a>",
     "licenca": "CC BY-SA 3.0",
     "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Aloe_vera_flower_inset.png",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Aloe_vera_flower_inset.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "data": "2026-10-19",
-    "alteracao": "Redimensionamento automático pelo Wikimedia Commons; enquadramento CSS na aplicação."
+    "pagina": "https://commons.wikimedia.org/wiki/File:Bidens_pilosa_02.JPG",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/26/Bidens_pilosa_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Bidens pilosa",
+    "titulo": "File:Bidens pilosa 02.JPG",
+    "descricao": "Xuyến chi",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-36-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-37": {
+    "ficheiro": "erva-37.webp",
+    "autor": "<a href=\"//commons.wikimedia.org/wiki/User:Aathavan_jaffna\" title=\"User:Aathavan jaffna\">Aathavan jaffna</a>",
+    "licenca": "CC BY-SA 3.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Plectranthus_amboinicus_in_jaffna.JPG",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Plectranthus_amboinicus_in_jaffna.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Coleus amboinicus",
+    "titulo": "File:Plectranthus amboinicus in jaffna.JPG",
+    "descricao": "Plectranthus_amboinicus in jaffna, sri lanka",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-37-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
+  },
+  "erva-38": {
+    "ficheiro": "erva-38.webp",
+    "autor": "<a rel=\"nofollow\" class=\"external text\" href=\"http://www.hear.org/starr/\">Forest &amp; Kim Starr</a>",
+    "licenca": "CC BY 3.0",
+    "licencaUrl": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Starr_050816-3669_Chenopodium_ambrosioides.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/35/Starr_050816-3669_Chenopodium_ambrosioides.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "data": "2026-10-20",
+    "especie": "Dysphania ambrosioides",
+    "titulo": "File:Starr 050816-3669 Chenopodium ambrosioides.jpg",
+    "descricao": "<i>Dysphania ambrosioides</i> (L.) Mosyakin &amp; Clemants (Syn.: <i>Chenopodium ambrosioides</i> L.) (leaves). Location: Maui, Waiale Gulch",
+    "alteracao": "Fotografia redimensionada e convertida para WebP; enquadramento ajustado.",
+    "ficheiroPequeno": "erva-38-small.webp",
+    "largura": 960,
+    "larguraPequena": 480
   }
 }

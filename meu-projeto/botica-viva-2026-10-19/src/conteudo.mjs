@@ -1,3 +1,4 @@
+import { plantasComplementares } from './plantas-complementares.mjs';
 // Redação original Botica Viva. Fontes consultadas em 19/10/2026.
 export const fontes = [
  ['NCCIH · Plantas: evidência e segurança','https://www.nccih.nih.gov/health/herbsataglance'],
@@ -59,6 +60,23 @@ const plantas = [
 ];
 
 export const ervas = plantas.map((p,i)=>({id:`erva-${i+1}`,nome:p[0],especie:p[1],pagina:p[2],grupo:p[3],parte:p[4],uso:p[5],cuidado:p[6],fonte:({Camomila:5,'Hortelã-pimenta':6,Gengibre:7,'Canela-do-ceilão':8,Curcuma:9,Aloé:10,Alecrim:11,Manjericão:12,Hipericão:17,Valeriana:18,Equinácea:19})[p[0]] ?? (p[3]==='Estudo'?0:3)}));
+
+// Enriquece quatro espécies existentes e acrescenta seis, sem alterar IDs guardados.
+for (const nova of plantasComplementares) {
+ const existente = ervas.find(e => e.especie === nova.especie);
+ const referencias = nova.referencias.map(ref => {
+  let i = fontes.findIndex(f => f[1] === ref[1]);
+  if (i < 0) { i = fontes.length; fontes.push(ref); }
+  return i;
+ });
+ if (existente) {
+  const cuidadoAnterior = existente.cuidado;
+  Object.assign(existente, nova, {fonte:referencias[0], referencias});
+  existente.cuidado = cuidadoAnterior + ' ' + nova.cuidado;
+ } else {
+  ervas.push({...nova, id:'erva-'+(ervas.length+1), uso:'Consulte a preparação e as precauções desta ficha.', fonte:referencias[0], referencias});
+ }
+}
 
 export const modulos = [
  {id:'m1',titulo:'A sua primeira ficha',tempo:'8 min',objetivo:'Sair com uma planta identificada e uma decisão de uso documentada.',texto:'Comece por uma erva alimentar embalada que já conhece. Um nome popular ou uma fotografia não bastam para confirmar uma espécie silvestre. A primeira vitória é saber o que tem nas mãos e quando não usar.',passos:['Leia o nome, a origem e a validade no rótulo. Compare a espécie com a biblioteca.','Escolha uma utilização culinária simples. Se a identificação ou compatibilidade gerar dúvida, registe «não utilizar» e a pergunta para o farmacêutico.','Na ferramenta Ficha prática, guarde a planta, a origem e a decisão. Volte aqui e registe o título da ficha.'],exemplo:'Alecrim alimentar do supermercado, rótulo conservado. Utilização: aromatizar legumes assados. Não usar óleo essencial. Ficha guardada: «Alecrim da cozinha».',erro:'Colher uma planta desconhecida porque se parece com uma fotografia.',evidencia:'Título da ficha guardada e decisão de uso',requerFicha:true},
