@@ -62,4 +62,5 @@
 - `04-PAGINA-OBRIGADO.md` e `11-SEGURANCA-OBRIGADO.md` · escritos: decisões, configuração Hotmart, verificações e limites da nova página.
 
 ## Próxima ação
+- 22/10/2026 · Fichas das 38 plantas uniformizadas em quatro blocos: utilizações, preparação, modo de usar e cuidados, nos dois planos. Pesquisa ampliada pelo resumo, atalhos com foco e fontes por ficha. Mantidos IDs/registos, fotografias, oferta e separação PRO. Não foram atribuídas doses medicinais universais; o louro segue produto alimentar identificado. Fontes e testes documentados em `08-WEBAPP.md` e `11-SEGURANCA.md`. QA visual pendente por indisponibilidade do navegador.
 - Configurar `/obrigado.html` no estado de compra aprovada na Hotmart e testar as duas ofertas; definir apoio real e atualizar o manual PDF com os acessos publicados. Após validar o MVP, implementar login/autorização por compra e revogação por reembolso. A revisão profissional do conteúdo e das alegações de saúde permanece necessária.

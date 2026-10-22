@@ -1,5 +1,16 @@
 # Webapp · Botica Viva
 
+## Atualização · Fichas intuitivas (22/10/2026)
+
+- As 38 plantas dos dois planos passam a ter resumo, utilizações e limites da evidência, preparação com ingredientes/passos, modo de usar e cuidados específicos. Mantidos os IDs, fotografias, nomes, favoritos, rascunhos, progresso e conteúdo exclusivo PRO.
+- A pesquisa aceita nome, espécie, aliases e resumo de utilização. Cada ficha tem quatro atalhos com foco acessível e movimento reduzido, sem alterar a rota da planta. Grelha de atalhos com quatro colunas no desktop e duas no mobile.
+- Louro: diferencia o estudo de cápsulas da bebida caseira e usa instruções de produto alimentar identificado; não converte a receita enviada numa dose medicinal validada. Plantas de estudo não recebem receitas de ingestão. Aloé usa apenas gel cosmético identificado na preparação, sem instruções de extração doméstica.
+- Fontes de consulta por ficha; novas referências incluem EMA (tomilho/funcho), NCCIH (alho/chá/lavanda), Universidade de Wisconsin (louro) e o estudo primário do louro. Sem atribuição de autoria clínica ou referência a um vídeo que não foi analisado.
+- Validação: build completo concluído; teste `scripts/testar-fichas.mjs` com DOM em memória, quatro blocos nas 38 fichas de cada plano, pesquisa, atalhos/foco, favoritos e preservação de registos; 53 recursos HTTP por plano. A validação estrutural Python passa sem falhas; dois avisos por plano relativos às fotografias preexistentes `erva-12.webp` (471 KB) e `erva-33.webp` (365 KB). Não foram adicionadas imagens.
+- Limite: navegador indisponível nesta sessão; não foram realizados testes visuais de responsividade, console real ou o teste CDP `scripts/testar.mjs`. O teste em memória não substitui estas verificações. Revisão profissional de conteúdo não foi realizada.
+- Nota interna de organização/completude: 8,5/10; conteúdo completo e navegação verificada em memória, com desconto pela ausência de QA visual. Não é uma nota de eficácia clínica.
+- Recusa total: quem recusa o PRO continua a pesquisar e a abrir as 38 fichas completas, guardar favoritos e criar a sua ficha no Básico. Gatilhos e condições da oferta não foram alterados.
+
 ## Atualização · MVP público sem login (20/10/2026)
 
 O utilizador autorizou publicar as duas versões por link para validar o produto. A exportação da raiz inclui agora apenas os ficheiros compilados em `/app/` e `/pro/`, no domínio existente `https://ervasportuguesas.vercel.app`. A página `/obrigado.html` permite escolher o plano adquirido; existem também `/obrigado-basico.html` e `/obrigado-pro.html`. Não foi criado um domínio/projeto separado.

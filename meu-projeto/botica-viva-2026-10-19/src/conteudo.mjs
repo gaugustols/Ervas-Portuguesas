@@ -1,4 +1,5 @@
 import { plantasComplementares } from './plantas-complementares.mjs';
+import { completarFichas } from './fichas-plantas.mjs';
 // Redação original Botica Viva. Fontes consultadas em 19/10/2026.
 export const fontes = [
  ['NCCIH · Plantas: evidência e segurança','https://www.nccih.nih.gov/health/herbsataglance'],
@@ -77,6 +78,8 @@ for (const nova of plantasComplementares) {
   ervas.push({...nova, id:'erva-'+(ervas.length+1), uso:'Consulte a preparação e as precauções desta ficha.', fonte:referencias[0], referencias});
  }
 }
+
+completarFichas(ervas, fontes);
 
 export const modulos = [
  {id:'m1',titulo:'A sua primeira ficha',tempo:'8 min',objetivo:'Sair com uma planta identificada e uma decisão de uso documentada.',texto:'Comece por uma erva alimentar embalada que já conhece. Um nome popular ou uma fotografia não bastam para confirmar uma espécie silvestre. A primeira vitória é saber o que tem nas mãos e quando não usar.',passos:['Leia o nome, a origem e a validade no rótulo. Compare a espécie com a biblioteca.','Escolha uma utilização culinária simples. Se a identificação ou compatibilidade gerar dúvida, registe «não utilizar» e a pergunta para o farmacêutico.','Na ferramenta Ficha prática, guarde a planta, a origem e a decisão. Volte aqui e registe o título da ficha.'],exemplo:'Alecrim alimentar do supermercado, rótulo conservado. Utilização: aromatizar legumes assados. Não usar óleo essencial. Ficha guardada: «Alecrim da cozinha».',erro:'Colher uma planta desconhecida porque se parece com uma fotografia.',evidencia:'Título da ficha guardada e decisão de uso',requerFicha:true},
