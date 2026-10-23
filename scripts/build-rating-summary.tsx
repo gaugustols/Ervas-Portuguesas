@@ -13,7 +13,7 @@ html = html.replace(section, (_match, opening: string, body: string, closing: st
     ? /<!-- rating-summary:start -->[\s\S]*?<!-- rating-summary:end -->/
     : /<div class="dep-grid">[\s\S]*?<\/div>/;
   if (!target.test(body)) throw new Error("Testimonials target missing; no files changed.");
-  const updated = body.replace(target, () => markup).replace(/(<p class="dep-sub">)[\s\S]*?(<\/p>)/, "$1Excertos de comentários públicos sobre a obra de origem.$2");
+  const updated = body.replace(target, () => markup).replace(/(<p class="dep-sub">)[\s\S]*?(<\/p>)/, "$1Estes comentários referem-se à obra de referência, não à aplicação Botica Viva. O produto vendido nesta página é o acesso à aplicação online; não inclui um livro impresso.$2");
   return opening + updated + closing;
 });
 const css = '<link rel="stylesheet" href="assets/nova-pagina/css/rating-summary.css">';
