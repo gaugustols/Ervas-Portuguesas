@@ -71,9 +71,9 @@ export function VslPlayer({ videoUrl }: { videoUrl: string }) {
       )}
       <span className="vsl-shade" aria-hidden="true" />
       <span className="vsl-callout">
-        <span>Seu vídeo já começou</span>
+        <span>Vê o vídeo</span>
         <VolumeOff className="vsl-icon" aria-hidden="true" />
-        <span>Clique para ouvir</span>
+        <span>Clica para reproduzir</span>
       </span>
     </button>
   );

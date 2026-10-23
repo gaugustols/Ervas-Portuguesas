@@ -15,10 +15,11 @@ from reportlab.platypus import BaseDocTemplate, PageTemplate, Frame, Paragraph, 
 
 ROOT = Path(__file__).resolve().parents[3]
 OUTPUT = ROOT / 'output' / 'pdf' / 'botica-viva-manual-de-acesso.pdf'
-BASIC_ACCESS_URL = ''
-PRO_ACCESS_URL = ''
+BASIC_ACCESS_URL = 'https://ervasportuguesas.vercel.app/app/'
+PRO_ACCESS_URL = 'https://ervasportuguesas.vercel.app/pro/'
 SUPPORT_CONTACT = ''
-DRAFT = not (BASIC_ACCESS_URL and PRO_ACCESS_URL and SUPPORT_CONTACT)
+ACCESS_READY = bool(BASIC_ACCESS_URL and PRO_ACCESS_URL)
+DRAFT = not (ACCESS_READY and SUPPORT_CONTACT)
 for access_url in [BASIC_ACCESS_URL, PRO_ACCESS_URL]:
     if access_url and not access_url.startswith('https://'):
         raise ValueError('Use uma ligação pública HTTPS real para o acesso.')
@@ -98,7 +99,7 @@ def frame(c,doc,cover=False):
     c.drawString(44,33,'Botica Viva | Português de Portugal | Outubro de 2026')
     c.drawRightString(W-44,33,f'{doc.page:02} / {TOTAL:02}')
     if DRAFT:
-        c.setFont('Jakarta600',6.6);c.drawRightString(W-44,20,'VERSÃO PARA REVISÃO - ACESSO E APOIO POR CONFIGURAR')
+        c.setFont('Jakarta600',6.6);c.drawRightString(W-44,20,'VERSÃO PARA REVISÃO - APOIO POR DEFINIR')
     names=['inicio','acesso','primeira-ficha','materiais','dados-e-apoio']
     if doc.page <= len(names):
         c.bookmarkPage(names[doc.page-1]);c.addOutlineEntry(['Boas-vindas','Acesso após a compra','A primeira ficha','Materiais do seu plano','Dados e apoio'][doc.page-1],names[doc.page-1],level=0)
@@ -111,14 +112,14 @@ story=[]
 story += [gap(44),P('O SEU GUIA PARA COMEÇAR','cover-kicker'),P('O saber das ervas,<br/>mais perto de si.','cover-title'),P('Manual de acesso e utilização<br/>do webapp Botica Viva.','cover-body'),gap(20)]
 story += [box('Conhecer. Preparar. Guardar.','Aprenda a orientar-se no webapp, crie a sua primeira ficha e descubra os materiais incluídos no plano que adquiriu.',dark=True),gap(20)]
 if DRAFT:
-    story += [box('Versão para revisão','A ligação pública de acesso e o contacto de apoio ainda não estão definidos. Estes dados devem ser configurados e testados antes da entrega deste manual aos compradores.',warning=True),gap(18)]
+    story += [box('Versão para revisão','As ligações de acesso estão incluídas. Falta definir o contacto direto de apoio e testar o percurso de compra e entrega antes de disponibilizar este manual aos compradores.',warning=True),gap(18)]
 for label, target in [('01 / Aceder após a compra','acesso'),('02 / Criar a primeira ficha','primeira-ficha'),('03 / Explorar o seu plano','materiais'),('04 / Guardar os dados e pedir apoio','dados-e-apoio')]:
     story.append(Paragraph(f'<link href="#{target}" color="#cde7d5">{label}</link>',ParagraphStyle('toc',parent=styles['cover-body'],fontSize=10,leading=17,spaceAfter=5)))
 story += [NextPageTemplate('body'),PageBreak()]
 
-story += [P('01 / ACESSO','kicker'),P('Entre com o e-mail<br/>da sua compra.','title'),P('A Hotmart permite consultar a compra. A ligação para o Botica Viva é disponibilizada pelo produtor, de acordo com o plano adquirido.')]
-story += [step(1,'Confirme a compra','Procure a confirmação de pagamento da Hotmart no e-mail utilizado na compra. Verifique também as pastas de spam e correio não solicitado.'),step(2,'Abra a sua área de comprador',f'Aceda a <link href="{CONSUMER}" color="#0b6b2c"><b>consumer.hotmart.com</b></link> e inicie sessão com o mesmo e-mail. Siga as opções de acesso ou recuperação de palavra-passe apresentadas pela plataforma.'),step(3,'Localize o Botica Viva','Na área <b>Minhas compras</b>, selecione o produto. Consulte os conteúdos e as informações de entrega disponibilizados pelo produtor.'),step(4,'Abra o webapp do seu plano','Quando a ligação estiver disponível, abra a versão correspondente ao plano Básico ou PRO que adquiriu. Guarde a ligação nos favoritos do seu navegador.')]
-if DRAFT:
+story += [P('01 / ACESSO','kicker'),P('Abra o webapp<br/>do seu plano.','title'),P('A Botica Viva é uma ferramenta digital de consulta de plantas e preparações caseiras. Acesso vitalício ao plano adquirido; garantia de 7 dias, conforme as condições da compra na Hotmart.')]
+story += [step(1,'Confirme a compra','Procure a confirmação de pagamento da Hotmart no e-mail utilizado na compra. Verifique também as pastas de spam e correio não solicitado.'),step(2,'Consulte a compra, se necessário',f'Aceda a <link href="{CONSUMER}" color="#0b6b2c"><b>consumer.hotmart.com</b></link> com o e-mail da compra. A conta Hotmart é separada do webapp.'),step(3,'Confirme o plano adquirido','Na área <b>Minhas compras</b>, selecione Botica Viva, produto <b>8746348</b>, e consulte os detalhes da compra.'),step(4,'Abra o webapp','Use a ligação do Básico ou PRO abaixo e guarde-a nos favoritos. O app atual não pede login próprio.')]
+if not ACCESS_READY:
     story += [gap(8),box('Ligação ao webapp: por configurar','Esta versão do manual não contém um botão de entrada no Botica Viva. O endereço local de desenvolvimento não permite o acesso dos compradores.',warning=True)]
 else:
     basic_link = escape(BASIC_ACCESS_URL, {'"': '&quot;'})
@@ -128,28 +129,28 @@ story += [gap(12),P('Para utilizar no computador, tablet ou telemóvel, abra o e
 story += newpage()
 
 story += [P('02 / PRIMEIRA UTILIZAÇÃO','kicker'),P('Crie a sua<br/>primeira ficha.','title'),P('Comece por um produto alimentar identificado que já conhece. Não confirme a segurança de uma planta silvestre apenas por uma fotografia.')]
-story += [step(1,'Comece no Início','Selecione <b>Começar o primeiro passo</b> e leia o módulo <b>A sua primeira ficha</b>, na área <b>A minha trilha</b>.'),step(2,'Consulte a biblioteca de plantas','Abra <b>Plantas</b>, pesquise o nome e selecione <b>Ver ficha</b>. Leia o nome científico, a parte utilizada, os cuidados e as fontes. Pode guardar a planta nos favoritos.'),step(3,'Preencha a Ficha prática','Indique planta, título, origem, decisão, método, instruções do rótulo ou dúvida a esclarecer e próxima ação. Se tiver dúvidas, selecione <b>Não utilizar até esclarecer</b>.'),step(4,'Guarde e conclua o módulo','Confirme a leitura das instruções e selecione <b>Guardar a minha ficha</b>. Regresse ao primeiro módulo, escreva a evidência do que fez, assinale a confirmação e escolha <b>Guardar e concluir módulo</b>.')]
+story += [step(1,'Comece no Início','Selecione <b>Começar o primeiro passo</b> e leia o módulo <b>A sua primeira ficha</b>, na área <b>O meu percurso</b>.'),step(2,'Consulte a biblioteca de plantas','Abra <b>Plantas</b>, pesquise o nome e selecione <b>Ver ficha</b>. Leia os blocos <b>Para que é usada</b>, <b>Modo de preparar</b>, <b>Modo de usar</b> e <b>Cuidados</b>. Pode guardar a planta nos favoritos.'),step(3,'Preencha a Ficha prática','Indique planta, título, origem, decisão, método, instruções do rótulo ou dúvida a esclarecer e próxima ação. Se tiver dúvidas, selecione <b>Não utilizar até esclarecer</b>.'),step(4,'Guarde e conclua o módulo','Confirme a leitura das instruções e selecione <b>Guardar a minha ficha</b>. Regresse ao primeiro módulo, escreva a evidência do que fez, assinale a confirmação e escolha <b>Guardar e concluir módulo</b>.')]
 story += [gap(10),box('O que conta como primeiro resultado?','Ter uma ficha guardada e uma decisão responsável documentada. A conclusão do primeiro módulo exige esse registo; apenas assinalar uma caixa não chega.'),gap(11),P('As fichas e os módulos concluídos ficam disponíveis em <b>Progresso</b>. O painel acompanha ações registadas, não efeitos sobre sintomas.','small')]
 story += newpage()
 
 story += [P('03 / O SEU CONTEÚDO','kicker'),P('Explore os materiais<br/>do seu plano.','title')]
 rows=[
  [P('<b>Área</b>','small'),P('<b>Para que serve</b>','small')],
- [P('A minha trilha'),P('Seis módulos curtos, com passos, exemplos e registos de conclusão.')],
- [P('Plantas'),P('32 fichas com fotografia, nomes, utilização alimentar, cuidados e fontes.')],
+ [P('O meu percurso'),P('Seis módulos curtos, com passos, exemplos e registos de conclusão.')],
+ [P('Plantas'),P('38 fichas com fotografia, utilizações, preparação, modo de usar, cuidados e fontes.')],
  [P('Ficha prática'),P('Organizar as informações do produto e guardar uma decisão de utilização.')],
  [P('Progresso'),P('Consultar módulos concluídos, marcos e fichas guardadas.')],
  [P('Biblioteca'),P('Métodos de preparação, temas de consulta, nutrientes, modelos e aromas.')],
 ]
 t=Table(rows,colWidths=[132,CONTENT-132],hAlign='LEFT');t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),PALE),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),12),('RIGHTPADDING',(0,0),(-1,-1),12),('TOPPADDING',(0,0),(-1,-1),10),('BOTTOMPADDING',(0,0),(-1,-1),4),('LINEBELOW',(0,0),(-1,-1),.4,LINE)]));story += [t,gap(14)]
-story += [box('Plano Básico','Inclui o guia, as instruções de preparação, a trilha, a biblioteca, o gerador de fichas e o painel de progresso.'),gap(11),box('Plano PRO','Inclui tudo o que existe no Básico, mais <b>Caderno Ilustrado de Infusões</b>, <b>Guia de Cultivo e Conservação</b> e <b>Fichas Práticas para Imprimir</b>. Estes materiais estão na área <b>Materiais PRO</b>.'),gap(13)]
+story += [box('Plano Básico - 7,90 EUR','Inclui as 38 fichas, as instruções de preparação, o percurso, a biblioteca, o gerador de fichas e o painel de progresso.'),gap(11),box('Plano PRO - 14,90 EUR','Inclui tudo o que existe no Básico, mais oito fichas no <b>Caderno Ilustrado de Infusões</b>, cultivo de seis plantas e quatro modelos de <b>Fichas Práticas para Imprimir</b>. Estes materiais estão em <b>Materiais PRO</b>.'),gap(13)]
 story += [P('Como utilizar os modelos PRO','h2'),P('Em <b>Materiais PRO</b>, escolha <b>Preencher e imprimir</b>. Preencha a ficha e selecione <b>Imprimir / guardar PDF</b>. Na janela do navegador, escolha a impressora ou a opção para guardar em PDF. Os nomes podem variar entre dispositivos.','small')]
 story += newpage()
 
 story += [P('04 / DADOS E APOIO','kicker'),P('Guarde o seu trabalho.<br/>Saiba onde pedir ajuda.','title')]
 story += [box('Os seus registos ficam neste navegador','Utilize o mesmo dispositivo e navegador para retomar o trabalho. Limpar os dados do navegador ou usar navegação privada pode eliminar os registos. Não há sincronização automática, transferência entre planos nem importação de cópias JSON.'),gap(11)]
-story += [P('Faça uma cópia regularmente','h2'),P('Em <b>Progresso</b>, selecione <b>Exportar todos os dados</b> para guardar os registos num ficheiro JSON. Para uma ficha legível fora do webapp, utilize <b>Descarregar ficha</b> ou <b>Imprimir as fichas</b>. A cópia JSON é um arquivo de consulta; a app atual não a importa.')]
-pending_note = ' Nesta versão de revisão, a ligação ainda está por configurar.' if DRAFT else ''
+story += [P('Faça uma cópia regularmente','h2'),P('Em <b>Progresso</b>, selecione <b>Exportar todos os dados</b> para guardar os registos num ficheiro JSON. Para uma ficha legível fora do webapp, utilize <b>Descarregar ficha</b> ou <b>Imprimir as fichas</b>. A cópia JSON é um ficheiro de consulta; a app atual não a importa.')]
+pending_note = ' Nesta versão de revisão, a ligação ainda está por configurar.' if not ACCESS_READY else ''
 story += [P('Se não conseguir entrar','h2'),P('<b>A compra não aparece:</b> confirme o e-mail de compra e a confirmação de pagamento. Para dificuldades com a conta Hotmart, consulte a <link href="'+HELP+'" color="#0b6b2c">Central de Ajuda</link>.<br/><b>A ligação está ausente ou não abre:</b> contacte o produtor pelo canal indicado nos detalhes da compra.'+pending_note+'<br/><b>O progresso desapareceu:</b> confirme se está no mesmo navegador, dispositivo e versão do plano. Consulte as fichas em texto ou PDF que guardou.')]
 story += [P('Contactar o produtor','h2')]
 if SUPPORT_CONTACT:

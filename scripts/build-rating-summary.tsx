@@ -6,6 +6,12 @@ import { defaults } from "../video/rating-summary/rating-summary.schema";
 const path = new URL("../index.html", import.meta.url);
 let html = readFileSync(path, "utf8");
 const section = /(<section class="sec depoimentos">)([\s\S]*?)(<\/section>)/;
+// O lançamento do web app usa conteúdo do produto, sem avaliações de uma obra diferente.
+if (html.includes('data-product-overview')) {
+  if (html.includes('<!-- rating-summary:start -->')) throw new Error('Legacy rating must not appear in the web app offer.');
+  console.log("Web app overview preserved; legacy book reviews are not published.");
+  process.exit(0);
+}
 if ((html.match(/<section class="sec depoimentos">/g) ?? []).length !== 1) throw new Error("Expected one testimonials section.");
 const markup = `<!-- rating-summary:start -->\n    ${renderToStaticMarkup(<RatingSummary {...defaults} />)}\n    <!-- rating-summary:end -->`;
 html = html.replace(section, (_match, opening: string, body: string, closing: string) => {

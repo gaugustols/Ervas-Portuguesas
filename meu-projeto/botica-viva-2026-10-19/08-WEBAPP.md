@@ -1,5 +1,13 @@
 # Webapp · Botica Viva
 
+## Atualização · preparação para lançamento (23/10/2026)
+
+- Confirmados pelo utilizador: Básico e PRO, acesso vitalício, garantia de 7 dias e apoio ainda não definido. Condições, entrega e pendências em `02-OFERTA.md`, `06-CHECKOUT-E-UPSELL.md` e `12-LANCAMENTO.md`.
+- Mantidos os conteúdos, IDs, fotografias e chave de armazenamento. Apenas os textos de «trilha» foram adaptados para «percurso», mantendo `#trilha` para não quebrar ligações existentes.
+- Manual PDF atualizado com as ligações reais, 38 fichas e nomes atuais da interface. Cinco páginas renderizadas e revistas; ainda é versão para revisão por faltar apoio e teste real de compra/entrega.
+- Novas verificações: coerência da landing com as quantidades do app, dez entradas complementares e fotografias, checkouts públicos do produto 8746348 e preservação do Pixel. Não foi efetuado pagamento nem recebido e-mail de teste. Navegador/telemóvel real e contacto do produtor ainda por testar.
+- Nota interna de preparação editorial/técnica: 8,5/10. Não representa prontidão comercial; suporte e validação de ponta a ponta pendentes.
+
 ## Atualização · Fichas intuitivas (22/10/2026)
 
 - As 38 plantas dos dois planos passam a ter resumo, utilizações e limites da evidência, preparação com ingredientes/passos, modo de usar e cuidados específicos. Mantidos os IDs, fotografias, nomes, favoritos, rascunhos, progresso e conteúdo exclusivo PRO.

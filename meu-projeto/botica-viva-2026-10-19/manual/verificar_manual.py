@@ -35,6 +35,11 @@ assert '127.0.0.1' not in fulltext and 'localhost' not in fulltext
 assert 'utilização' in fulltext and 'telemóvel' in fulltext
 assert 'VERSÃO PARA REVISÃO' in fulltext and 'por configurar' in fulltext
 assert 'Guardar a minha ficha' in fulltext and 'Exportar todos os dados' in fulltext
+assert '38 fichas' in fulltext and 'O meu percurso' in fulltext
+assert 'Acesso vitalício' in fulltext and 'garantia de 7 dias' in fulltext
+assert 'https://ervasportuguesas.vercel.app/app/' in summary['links']
+assert 'https://ervasportuguesas.vercel.app/pro/' in summary['links']
+assert 'A minha trilha' not in fulltext and '32 fichas' not in fulltext
 assert '\ufffd' not in fulltext, 'Caráter de substituição detetado'
 assert not any(dash in fulltext for dash in ['\u2010','\u2011','\u2012','\u2013','\u2014']), 'Utilizar apenas hífen ASCII'
 summary['links'] = sorted(set(summary['links']))
