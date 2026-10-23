@@ -15,6 +15,6 @@ Versão de referência para o lançamento: 23/10/2026. Produto digital Botica Vi
 
 O app inclui 38 fichas botânicas com fotografias, 72 temas de consulta (64 sinais/condições e 8 contextos especiais), 6 módulos, 6 métodos de preparação, tabela de nutrientes e orientações sobre aromas. Os temas clínicos são perguntas de consulta e limites de autocuidado, não receitas para tratar doenças. As fotografias ajudam a estudar e não confirmam a identificação de uma planta para ingestão.
 
-O PRO acrescenta oito fichas de infusões, cultivo e conservação de seis plantas e quatro modelos para imprimir. A landing foi alinhada com esta entrega: sem promessas de cura, referência a livro entregue, testemunhos sobre outra obra, autoria clínica ou urgência sem prazo real. As amostras públicas usam cinco plantas efetivamente incluídas nos dois planos. Não há receitas de ingestão de óleos essenciais.
+O PRO acrescenta oito fichas de infusões, cultivo e conservação de seis plantas e quatro modelos para imprimir. Não há receitas de ingestão de óleos essenciais. Por instrução do utilizador em 23/10/2026, a landing foi reposta na versão anterior à reescrita, do commit `875f3b9`; a descrição do produto neste documento não autoriza alterar novamente a copy da página.
 
 As duas ofertas atuais foram preservadas, conforme decisão do utilizador. Os bloqueios operacionais e a matriz de teste estão em `12-LANCAMENTO.md`.

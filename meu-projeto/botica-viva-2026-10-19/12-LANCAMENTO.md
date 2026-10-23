@@ -1,5 +1,7 @@
 # Lançamento inicial · Botica Viva · 23/10/2026
 
+**Correção posterior solicitada pelo utilizador:** a reescrita da landing foi anulada e os nove ficheiros da página e das suas fontes de geração voltaram à versão `875f3b9`. Abaixo fica o registo da auditoria anterior, não a descrição da copy atual. O teste `scripts/check-launch.mjs`, criado para impor a reescrita, foi removido. Web app, manual e condições confirmadas mantidos.
+
 **Estado: ainda não validado de ponta a ponta.** Correções editoriais e verificações locais não substituem o teste de compra, entrega e apoio.
 
 ## Condições de referência

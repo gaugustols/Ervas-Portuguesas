@@ -20,9 +20,7 @@ assert.ok(markup.includes('data-rating-star="90"'), "Fractional last star is pre
 const reduced = renderToStaticMarkup(<RatingSummary {...defaults} frame={0} reducedMotion />);
 assert.ok(!reduced.includes("opacity:0"));
 const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
-if (html.includes('data-product-overview')) {
-  assert.ok(!html.includes('data-rating-summary='), 'The launch page must not present book reviews as app reviews');
-} else assert.ok(html.includes(markup));
+assert.ok(html.includes(markup));
 
 const runtime = readFileSync(new URL("../assets/nova-pagina/js/rating-summary.js", import.meta.url), "utf8");
 function runtimeScenario(reducedMotion: boolean, observerAvailable = true) {

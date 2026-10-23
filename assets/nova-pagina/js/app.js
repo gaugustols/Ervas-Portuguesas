@@ -94,6 +94,52 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv';
   });
 })();
 
+// Um prazo de uma hora por sessao, partilhado por todos os contadores.
+(() => {
+  const blocos = Array.from(document.querySelectorAll('[data-offer-countdown-block]'))
+    .map(bloco => ({
+      bloco,
+      contador: bloco.querySelector('[data-offer-countdown]'),
+      rotulo: bloco.querySelector('[data-offer-label]'),
+    }))
+    .filter(({ contador, rotulo }) => contador && rotulo);
+  if (!blocos.length) return;
+  const chave = 'botica-viva-offer-session-v2';
+  let limite = Date.now() + 60 * 60 * 1000;
+  try {
+    const guardado = Number(window.sessionStorage.getItem(chave));
+    if (Number.isFinite(guardado) && guardado > 0) {
+      limite = guardado;
+    } else {
+      window.sessionStorage.setItem(chave, String(limite));
+    }
+  } catch {
+    // O contador continua a funcionar se o armazenamento estiver indisponivel.
+  }
+  blocos.forEach(({ bloco }) => { bloco.hidden = false; });
+  let intervalo = null;
+  const atualizar = () => {
+    const segundos = Math.max(0, Math.ceil((limite - Date.now()) / 1000));
+    const horas = Math.floor(segundos / 3600);
+    const minutos = Math.floor((segundos % 3600) / 60);
+    const resto = segundos % 60;
+    const tempo = [horas, minutos, resto]
+      .map(valor => String(valor).padStart(2, '0')).join(':');
+    blocos.forEach(({ contador, rotulo }) => {
+      contador.textContent = tempo;
+      contador.dateTime = 'PT' + segundos + 'S';
+      if (segundos === 0) rotulo.textContent = 'Oferta expirada';
+    });
+    if (segundos === 0) {
+      if (intervalo !== null) clearInterval(intervalo);
+    }
+    return segundos;
+  };
+  if (atualizar() > 0) intervalo = setInterval(atualizar, 1000);
+  window.addEventListener('pageshow', atualizar);
+  document.addEventListener('visibilitychange', atualizar);
+})();
+
 // Amostra do guia: seleciona conteudo ja presente na pagina, sem recolher dados.
 (() => {
   const raiz = document.querySelector('[data-guide-preview]');
@@ -120,7 +166,7 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv';
       painel.setAttribute('role', 'tabpanel');
     });
     visitados.add(chave);
-    if (progresso) progresso.textContent = visitados.size + ' de ' + botoes.length + ' plantas consultadas';
+    if (progresso) progresso.textContent = visitados.size + ' de ' + botoes.length + ' temas explorados';
     if (preenchimento) preenchimento.style.width = (visitados.size / botoes.length * 100) + '%';
     if (moverFoco) botaoAtivo.focus();
   };
