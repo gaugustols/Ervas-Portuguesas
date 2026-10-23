@@ -22,3 +22,15 @@ Navegador indisponível: não foi feita validação visual em telemóvel/desktop
 O preço de referência €29,90, a oferta de €9,50 e a linha de garantia/acesso foram fornecidos pelo utilizador. Não foi validado um histórico independente do preço de referência. O complemento e o checkout ainda têm de existir antes de ativar a compra. Recursos Hotmart de um clique, pagamento e entrega não foram verificados nesta etapa.
 
 Não foram alteradas configurações de GitHub ou Vercel. Confirmar o deployment correspondente ao commit e os recursos públicos após o push; o resultado remoto deve ser reportado na conclusão da tarefa.
+
+## Upsell 2 — verificação adicional em 23/10/2026
+
+- Nova página `upsell-2.html`, gerada a partir de `templates/upsell-2.html`, com a mesma CSP, noindex e os quatro recursos locais do Upsell 1. Sem alteração dos estilos partilhados e sem novos scripts no navegador.
+- Preço de €7,90 confirmado explicitamente pelo utilizador no destaque e no CTA; referência de €17,90 fornecida na copy. Teste impede a reaparição de €4,90 na página.
+- `UPSELL2_CHECKOUT_URL` vazio: botão de compra desativado. Recusa para `https://consumer.hotmart.com/`, permitindo consultar o plano de sete dias sem inventar uma ligação de entrega. Não é redirecionamento de pagamento nem prova de compra.
+- O gerador passou a partilhar a renderização das duas páginas. O HTML do Upsell 1 continua idêntico após o build, incluindo a sua recusa para a página de obrigado. A lista de destinos de recusa contém apenas o seletor existente e as compras Hotmart, com caminhos fixos e sem query strings; entradas arbitrárias continuam rejeitadas.
+- `check:upsell`: estados de compra, preço, destinos, query strings, exportação e HTTP das duas páginas aprovados. `check:thank-you` sem navegador aprovado. Sintaxe dos JavaScripts modificados e diff verificados.
+- Verificador da skill checkout-upsell sobre uma cópia dos cinco recursos da página: zero falhas e zero avisos. Auditor de segurança sobre os mesmos recursos: zero achados e zero críticos. Não é uma nova auditoria integral do restante site.
+- Confirmado que landing, Upsell 1, templates/estilos anteriores, obrigado, versões Básico/PRO e manual PDF foram preservados. Nenhum checkout real foi chamado ou pagamento realizado.
+- Navegador indisponível: sem validação visual de responsividade ou console. Avaliação interna de fidelidade e consistência técnica: 8,5/10; não é nota de conversão.
+- A copy pressupõe aquisição do Upsell 1. Na ativação futura, configurar a passagem após a aprovação dessa compra, e não após a recusa. Recursos Hotmart de um clique e entrega continuam por verificar; downsell e oferta final aguardam as copys do utilizador.

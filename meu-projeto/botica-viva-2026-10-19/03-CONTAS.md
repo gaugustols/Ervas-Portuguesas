@@ -18,6 +18,12 @@ Quando o Upsell 1 estiver ativo, se `a` for a proporção de compradores dos doi
 
 `ticket bruto com Upsell 1 = ticket atual + €9,50 × a`.
 
+**Upsell 2 recebido:** «Mantém a Tua Horta Viva», €7,90 confirmado pelo utilizador no preço e no CTA. Se `c` for a adesão ao Upsell 2 entre quem comprou o Upsell 1, e `a` continuar a ser a adesão ao Upsell 1 entre os compradores iniciais:
+
+`ticket bruto com os dois upsells = ticket atual + €9,50 × a + €7,90 × a × c`.
+
+O fator `a × c` evita atribuir o Upsell 2 a todos os compradores do front. Aceitar ambos acrescenta €17,40 à compra inicial: total de €25,30 com o Básico ou €32,30 com o PRO. É apenas aritmética, não uma previsão de conversão, receita ou margem. Ainda não existem checkouts nem adesões observadas para estas ofertas.
+
 Se uma pessoa aceitar apenas esse complemento, o total bruto é €17,40 após o Básico ou €24,40 após o PRO. Estes são totais aritméticos, não previsões de adesão ou lucro. Os preços das restantes etapas e as regras de passagem ainda não foram enviados; não somar ofertas sem considerar os caminhos e as taxas de aceitação condicionais.
 
 Se `p` for a proporção das vendas diretas do PRO, entre 0 e 1:

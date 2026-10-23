@@ -2,7 +2,7 @@
 
 ## Desenvolvimento atual
 
-**Estado: Upsell 1 gerado e verificado localmente; compra desativada, à espera do checkout próprio.** Skill: `.agents/skills/checkout-upsell`. O utilizador definiu um funil comum para Básico e PRO e decidiu enviar a própria copy de Upsell 1, Upsell 2, downsell e oferta final. As sugestões anteriores de upgrade e de novos complementos foram substituídas por esta decisão.
+**Estado: Upsell 1 publicado; Upsell 2 gerado e verificado localmente com preço de €7,90 confirmado pelo utilizador; compras desativadas, à espera dos checkouts próprios.** Skill: `.agents/skills/checkout-upsell`. O utilizador definiu um funil comum para Básico e PRO e decidiu enviar a própria copy de Upsell 1, Upsell 2, downsell e oferta final. As sugestões anteriores de upgrade e de novos complementos foram substituídas por esta decisão.
 
 Página criada: `../../upsell-1.html`, gerada por `../../scripts/build-upsell.mjs` a partir de `../../templates/upsell-1.html`. URL de publicação: `https://ervasportuguesas.vercel.app/upsell-1.html`. A estética reutiliza `obrigado.css` e acrescenta `upsell.css`, sem modificar a página de obrigado, a landing ou o produto. Não foram alteradas configurações no painel Hotmart.
 
@@ -85,9 +85,13 @@ Preços abaixo são propostas internas, não ofertas ativas. O intervalo de 20�
 
 ## Próximas páginas do mesmo funil
 
-- `/upsell-2.html`: aguarda copy, preço e checkout do utilizador.
+- `/upsell-2.html`: «Mantém a Tua Horta Viva», copy recebida e página criada na mesma estética. Preço de referência €17,90 fornecido na copy; preço final €7,90 confirmado explicitamente pelo utilizador, incluindo o botão que originalmente dizia €4,90. Checkout próprio ainda por enviar; `UPSELL2_CHECKOUT_URL` vazio mantém a compra desativada.
 - `/downsell.html`: aguarda copy, preço e checkout do utilizador.
 - `/oferta-final.html`: aguarda copy, preço e checkout do utilizador.
+
+O Upsell 2 é o «PASSO 3», complementar ao plano de horta em sete dias. Preservados os quatro parágrafos, os três benefícios e o CTA de recusa «Não, obrigado. Quero continuar apenas com o plano de 7 dias.». A recusa aponta para `https://consumer.hotmart.com/`, onde o comprador consulta a compra anterior; não inventar uma ligação de entrega do novo plano. A página tem configuração independente e é gerada pelo mesmo script do Upsell 1, sem alterar o HTML ou a recusa da primeira página.
+
+Como a copy do Upsell 2 pressupõe que a pessoa adquiriu o plano de sete dias, a ativação futura deve apresentá-lo após aprovação do Upsell 1. Não encaminhar automaticamente a recusa do Upsell 1 para esta página nem interpretar parâmetros de URL como prova de compra. O redirecionamento no painel Hotmart continua por configurar e testar.
 
 Não foram criadas páginas vazias nem links para etapas inexistentes. A ordem de aceitação/recusa entre as quatro etapas e o destino após cada pagamento ainda precisam de ser definidos; não supor automaticamente que todas as pessoas devem passar por todas as páginas. Até lá, a recusa do Upsell 1 mantém a saída direta para o acesso comprado.
 
