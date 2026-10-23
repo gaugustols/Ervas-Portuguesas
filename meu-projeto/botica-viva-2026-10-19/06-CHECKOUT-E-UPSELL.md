@@ -73,7 +73,9 @@ Preços abaixo são propostas internas, não ofertas ativas. O intervalo de 20�
 
 **Destinatários:** compradores de ambos os planos, Básico e PRO, com a mesma página e o mesmo complemento. Não é uma venda do upgrade PRO.
 
-**Copy:** fornecida pelo utilizador e preservada no template, incluindo «PASSO 2», «Já tens o guia», os parágrafos, os três benefícios e a linha de garantia/acesso/Hotmart. A oferta propõe escolher três plantas, reunir materiais e montar os primeiros vasos em sete dias, respeitando as condições do espaço. O conteúdo do novo entregável não foi criado nesta tarefa.
+**Copy:** fornecida pelo utilizador e preservada no template, incluindo «PASSO 2», «Já tens o guia», os parágrafos, os três benefícios e a linha de garantia/acesso/Hotmart. A oferta propõe escolher três plantas, reunir materiais e montar os primeiros vasos em sete dias, respeitando as condições do espaço.
+
+**Entregável PDF:** em 23/10/2026, o utilizador forneceu `Botica_Viva_Horta_7_Dias_Guia.pdf` e pediu uma edição estética na identidade da aplicação. Criado `../../output/pdf/botica-viva-horta-em-7-dias.pdf`: 30 páginas A4, seis fotografias com créditos, diagramas de demonstração e fichas claras para imprimir. Conteúdo preservado e comparado em 528 fragmentos; todas as páginas revistas visualmente. Fontes e decisões em `upsell-1-pdf/README.md`. O PDF fica fora da exportação pública. Ainda falta carregá-lo na Hotmart e testar a entrega após pagamento; a página e o checkout permanecem como estavam.
 
 **Preço:** €9,50. Referência de €29,90 apresentada na copy do utilizador e preservada; não foi consultado um histórico independente desse preço. Não foram acrescentadas contagens regressivas, vagas, testemunhos ou números de vendas.
 

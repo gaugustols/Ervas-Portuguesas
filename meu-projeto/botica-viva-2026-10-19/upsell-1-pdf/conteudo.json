@@ -1,0 +1,1628 @@
+{
+  "source_name": "Botica_Viva_Horta_7_Dias_Guia.pdf",
+  "source_sha256": "8af18964759913ebb93df3ee27fbdac4f892ea269da2dcc976a9d143c3003388",
+  "pages": [
+    {
+      "source_page": 1,
+      "nodes": [
+        {
+          "type": "callout_title",
+          "text": "BOTICA VIVA • GUIA DE EXECUÇÃO"
+        },
+        {
+          "type": "title",
+          "text": "A Minha Horta"
+        },
+        {
+          "type": "title",
+          "text": "Medicinal em 7 Dias"
+        },
+        {
+          "type": "heading",
+          "text": "Três plantas. Três vasos. Um plano que consegues seguir em casa."
+        },
+        {
+          "type": "callout_title",
+          "text": "A PROMESSA DESTE GUIA"
+        },
+        {
+          "type": "body",
+          "text": "Em sete dias, escolhes três plantas adequadas ao teu espaço, compras os materiais necessários, montas os vasos e ficas com uma rotina inicial de cuidados. Não precisas de um jardim, mas precisas de luz e de um local apropriado."
+        },
+        {
+          "type": "body",
+          "text": "Inclui: diagnóstico de luz • dois percursos de plantas • lista de compras por quantidades • instruções de transplante • tarefas diárias • diagnóstico de problemas • folhas de registo."
+        },
+        {
+          "type": "callout_title",
+          "text": "EDIÇÃO PARA PORTUGAL | USO DOMÉSTICO"
+        },
+        {
+          "type": "body",
+          "text": "Conteúdo de cultivo doméstico. Não é um manual de tratamentos médicos, nem substitui aconselhamento clínico."
+        }
+      ]
+    },
+    {
+      "source_page": 2,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Como usar este guia"
+        },
+        {
+          "type": "body",
+          "text": "Não tens de ler tudo antes de começar. Faz a tarefa de cada dia e assinala o resultado. Podes consultar as fichas das plantas sempre que tiveres dúvidas."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Dia",
+              "O que vais fazer",
+              "O resultado concreto"
+            ],
+            [
+              "1",
+              "Medir a luz e escolher o local",
+              "Local viável identificado"
+            ],
+            [
+              "2",
+              "Escolher um trio de plantas",
+              "Três espécies definidas"
+            ],
+            [
+              "3",
+              "Comprar e confirmar os materiais",
+              "Tudo pronto para plantar"
+            ],
+            [
+              "4",
+              "Preparar e plantar os três vasos",
+              "Três vasos montados"
+            ],
+            [
+              "5",
+              "Aprender a avaliar a rega",
+              "Primeira decisão de rega"
+            ],
+            [
+              "6",
+              "Verificar a adaptação",
+              "Problemas identificados cedo"
+            ],
+            [
+              "7",
+              "Montar a rotina de manutenção",
+              "Plano semanal pronto"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que este plano resolve"
+        },
+        {
+          "type": "bullet",
+          "text": "Evita compras ao acaso: saberás que espécies procurar, que vasos escolher e que substrato usar."
+        },
+        {
+          "type": "bullet",
+          "text": "Evita os erros dos primeiros dias: regar por hábito, enterrar o caule e pôr todas as plantas no mesmo local."
+        },
+        {
+          "type": "bullet",
+          "text": "Deixa-te com registos concretos para saber quando observar, quando regar e o que fazer a seguir."
+        },
+        {
+          "type": "heading",
+          "text": "Antes de começar, três regras importantes"
+        },
+        {
+          "type": "ordered",
+          "text": "Cada planta fica no seu próprio vaso. Mesmo que duas gostem de muito sol, podem precisar de rega diferente."
+        },
+        {
+          "type": "ordered",
+          "text": "Luz, chuva e vento mudam muito entre regiões e estações do ano. As indicações são um ponto de partida: confirma sempre o estado da planta e do substrato."
+        },
+        {
+          "type": "ordered",
+          "text": "Se não tiveres luz suficiente, não compres plantas só para cumprir o calendário. Resolve primeiro o local. Este guia explica como decidir."
+        },
+        {
+          "type": "callout_title",
+          "text": "SEGURANÇA"
+        },
+        {
+          "type": "body",
+          "text": "Compra plantas identificadas em viveiros ou centros de jardinagem. Não colhas plantas desconhecidas na natureza. Este plano ensina cultivo, não recomenda infusões, dosagens ou utilização de plantas para tratar doenças. Se tencionas consumir alguma planta e tens medicação, doença, gravidez ou aleitamento, confirma a segurança com um profissional de saúde."
+        }
+      ]
+    },
+    {
+      "source_page": 3,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Escolhe o teu percurso"
+        },
+        {
+          "type": "body",
+          "text": "Não há um trio universal que funcione em todas as varandas. A escolha certa depende sobretudo de quantas horas de SOL DIRETO o local recebe num dia de céu limpo."
+        },
+        {
+          "type": "heading",
+          "text": "1. Faz a auditoria de luz"
+        },
+        {
+          "type": "ordered",
+          "text": "Escolhe o local real dos vasos: varanda, terraço, pátio ou janela exterior protegida e segura."
+        },
+        {
+          "type": "ordered",
+          "text": "Num dia com sol, observa a luz às 9h, 11h, 13h, 15h e 17h. Anota os intervalos em que os raios de sol chegam diretamente ao local."
+        },
+        {
+          "type": "ordered",
+          "text": "Soma aproximadamente as horas de sol direto. Se o dia estiver encoberto, repete o registo: não confundas claridade com sol."
+        },
+        {
+          "type": "ordered",
+          "text": "Repara também no vento, chuva intensa e calor refletido por paredes ou vidros."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Condição observada",
+              "Percurso indicado",
+              "Nota"
+            ],
+            [
+              "5 ou mais horas de sol direto",
+              "A: trio de sol",
+              "Pode exigir proteção no pico do verão"
+            ],
+            [
+              "3 a 5 horas de sol, de preferência manhã",
+              "B: trio de meia-sombra",
+              "Mantém humidade regular, sem encharcar"
+            ],
+            [
+              "Menos de 3 horas de sol direto",
+              "Rever local antes de comprar",
+              "Crescimento de ervas aromáticas pode ser fraco"
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "As faixas de horas são referências práticas, não garantias. A época do ano, a temperatura e a exposição fazem diferença. Um parapeito exposto ao vento ou ao sol de verão pode precisar de ajustes."
+        },
+        {
+          "type": "heading",
+          "text": "2. Percurso A: local com muito sol"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Planta (nome a procurar)",
+              "Vaso inicial",
+              "Luz / atenção"
+            ],
+            [
+              "Alecrim (Salvia rosmarinus)",
+              "20–25 cm Ø; furos",
+              "Muito sol; não gosta de substrato encharcado"
+            ],
+            [
+              "Tomilho (Thymus vulgaris)",
+              "16–20 cm Ø; furos",
+              "Muito sol; prefere mistura leve e drenante"
+            ],
+            [
+              "Orégãos (Origanum vulgare)",
+              "18–22 cm Ø; furos",
+              "Sol; no verão extremo pode beneficiar de sol de manhã"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "3. Percurso B: luz moderada"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Planta (nome a procurar)",
+              "Vaso inicial",
+              "Luz / atenção"
+            ],
+            [
+              "Hortelã-verde (Mentha spicata)",
+              "20–25 cm Ø; furos",
+              "Sol suave / meia-sombra; quer humidade mais regular"
+            ],
+            [
+              "Erva-cidreira (Melissa officinalis)",
+              "20–25 cm Ø; furos",
+              "Sol de manhã / meia-sombra; proteger do calor seco"
+            ],
+            [
+              "Salsa (Petroselinum crispum)",
+              "18–22 cm Ø; fundo",
+              "Algum sol direto; crescimento mais lento com pouca luz"
+            ]
+          ]
+        },
+        {
+          "type": "callout_title",
+          "text": "E SE TENS ZONAS DIFERENTES?"
+        },
+        {
+          "type": "body",
+          "text": "Podes colocar alecrim e tomilho na parte ensolarada e hortelã num canto com sol suave. Não precisas de limitar o plano a um único trio, desde que cada planta tenha as condições indicadas e um vaso separado."
+        }
+      ]
+    },
+    {
+      "source_page": 4,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "As 6 plantas, sem adivinhações"
+        },
+        {
+          "type": "body",
+          "text": "Escolhe apenas três. As fichas abaixo ajudam-te a perceber o que observar e evitam tratar todas da mesma maneira."
+        },
+        {
+          "type": "heading",
+          "text": "Percurso A | Alecrim"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Salvia rosmarinus (também pode surgir com a designação antiga Rosmarinus officinalis). Prefere exterior com muito sol e ar a circular. É um arbusto que pode crescer bastante, por isso o vaso inicial não é definitivo."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: procura ramos firmes, folhas sem manchas extensas e um vaso que não esteja constantemente ensopado."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso de 20–25 cm com furos, substrato drenante, mesma profundidade da planta original."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: não uses calendário fixo; espera que a camada superior do substrato seque e verifica mais abaixo antes de regar. No frio chuvoso, rega menos."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: terra permanentemente molhada. Se houver folhas a escurecer e solo húmido durante dias, verifica drenagem e exposição à chuva."
+        },
+        {
+          "type": "heading",
+          "text": "Percurso A | Tomilho"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Thymus vulgaris. É compacto, gosta de sol e tolera períodos mais secos depois de se estabelecer."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: procura folhagem densa, sem grande parte dos ramos secos na base."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso de 16–20 cm com furos, substrato muito bem drenado."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: deixa a superfície secar antes de decidir. Faz uma rega completa quando necessário, sem deixar água acumulada no prato."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: excesso de água, especialmente com pouco sol e temperaturas baixas."
+        },
+        {
+          "type": "heading",
+          "text": "Percurso A | Orégãos"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Origanum vulgare. Gosta de boa luz, mas em verões quentes pode ressentir-se de sol forte junto a paredes que irradiam calor."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: escolhe ramos firmes com rebentos novos e verifica a parte inferior das folhas."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso de 18–22 cm, furos e substrato drenante."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: observa quando os primeiros centímetros do substrato secam; pode precisar de mais água do que o tomilho em calor intenso."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: confundir murchidão de calor com falta de água; verifica a terra antes de acrescentar água."
+        }
+      ]
+    },
+    {
+      "source_page": 5,
+      "nodes": [
+        {
+          "type": "heading",
+          "text": "Percurso B | Hortelã-verde"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Mentha spicata. Cresce bem com luz abundante e algum sol suave. Espalha-se por raízes/rizomas, por isso fica isolada num vaso."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: procura cheiro e identificação corretos na etiqueta; folhas firmes e ausência de insetos visíveis."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso de 20–25 cm; substrato universal de qualidade que mantenha alguma humidade, sempre com furos."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: quando a superfície começa a secar, verifica a humidade e rega se necessário; não deixes a terra secar totalmente durante muito tempo."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: deixar o vaso sem água ao sol intenso do verão ou, no extremo oposto, manter o prato cheio de água."
+        },
+        {
+          "type": "heading",
+          "text": "Percurso B | Erva-cidreira"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Melissa officinalis. Prefere boa claridade e algum sol, especialmente de manhã, com proteção nas horas de calor intenso."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: procura folhas verdes e crescimento novo sem sinais de praga."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso de 20–25 cm com substrato universal solto e furos."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: verifica os 1–2 cm superficiais; em calor e vento pode secar depressa."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: colocá-la junto a vidro ou parede muito quente, onde o substrato seca antes de reparares."
+        },
+        {
+          "type": "heading",
+          "text": "Percurso B | Salsa"
+        },
+        {
+          "type": "body",
+          "text": "Nome na etiqueta: Petroselinum crispum. Gosta de boa luz, com algumas horas de sol. Em sombra densa cresce devagar."
+        },
+        {
+          "type": "bullet",
+          "text": "Ao comprar: escolhe um vaso saudável e evita plantas amarelecidas e muito apertadas."
+        },
+        {
+          "type": "bullet",
+          "text": "Plantação: vaso relativamente fundo, cerca de 18–22 cm de diâmetro e pelo menos 20 cm de profundidade, com furos."
+        },
+        {
+          "type": "bullet",
+          "text": "Rega: mantém o substrato ligeiramente húmido sem encharcar; testa antes de acrescentar água."
+        },
+        {
+          "type": "bullet",
+          "text": "Erro comum: expor uma planta de viveiro a sol intenso de repente, sem adaptação."
+        },
+        {
+          "type": "callout_title",
+          "text": "ATENÇÃO À IDENTIDADE BOTÂNICA"
+        },
+        {
+          "type": "body",
+          "text": "Nomes populares variam. Confirma sempre o nome científico na etiqueta. Fotografias e cheiro, isoladamente, não servem para confirmar segurança de consumo. Nunca uses plantas ornamentais de origem ou tratamento desconhecidos para preparar alimentos ou bebidas."
+        }
+      ]
+    },
+    {
+      "source_page": 6,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 1 | Encontra o lugar certo"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 15–25 MINUTOS, DISTRIBUÍDOS PELO DIA"
+        },
+        {
+          "type": "heading",
+          "text": "Missão de hoje"
+        },
+        {
+          "type": "body",
+          "text": "Escolher onde os três vasos podem ficar e determinar se tens sol suficiente para o Percurso A ou B. Hoje ainda não se compra nada."
+        },
+        {
+          "type": "heading",
+          "text": "Passo a passo"
+        },
+        {
+          "type": "ordered",
+          "text": "Assinala com fita ou uma folha de papel o local onde os vasos vão ficar. Pensa no espaço que os vasos ocuparão, não só no espaço de uma planta."
+        },
+        {
+          "type": "ordered",
+          "text": "Observa quando o sol bate diretamente nesse ponto. Usa cinco observações curtas e anota horas aproximadas."
+        },
+        {
+          "type": "ordered",
+          "text": "Vê se existe uma forma de escoar água sem pingar para a rua ou para os vizinhos. Prepara uma base segura."
+        },
+        {
+          "type": "ordered",
+          "text": "Procura sinais de vento forte, calor excessivo refletido por paredes e chuva que caia continuamente sobre os vasos."
+        },
+        {
+          "type": "ordered",
+          "text": "Escolhe o percurso A, B ou assinala «ainda sem condições»."
+        },
+        {
+          "type": "heading",
+          "text": "Registo rápido"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Hora",
+              "Sol direto?",
+              "O que observaste"
+            ],
+            [
+              "09:00",
+              "Sim / Não",
+              "_____________________________"
+            ],
+            [
+              "11:00",
+              "Sim / Não",
+              "_____________________________"
+            ],
+            [
+              "13:00",
+              "Sim / Não",
+              "_____________________________"
+            ],
+            [
+              "15:00",
+              "Sim / Não",
+              "_____________________________"
+            ],
+            [
+              "17:00",
+              "Sim / Não",
+              "_____________________________"
+            ]
+          ]
+        },
+        {
+          "type": "check",
+          "text": "O local recebe luz suficiente para o percurso escolhido."
+        },
+        {
+          "type": "check",
+          "text": "Os vasos podem ficar estáveis, sem risco de queda."
+        },
+        {
+          "type": "check",
+          "text": "O escoamento da água não cria problemas."
+        },
+        {
+          "type": "callout_title",
+          "text": "SE NÃO DER"
+        },
+        {
+          "type": "body",
+          "text": "Menos de 3 horas de sol direto? Não compres à pressa. Procura outra varanda, pátio ou local exterior mais luminoso. Dentro de casa, uma janela pode não fornecer luz suficiente a longo prazo para estas plantas, mesmo que pareça clara. É preferível adiar a compra a perder três plantas."
+        }
+      ]
+    },
+    {
+      "source_page": 7,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 2 | Decide o que vais cultivar"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 20 MINUTOS"
+        },
+        {
+          "type": "heading",
+          "text": "Missão de hoje"
+        },
+        {
+          "type": "body",
+          "text": "Escolher três espécies, uma localização para cada vaso e uma lista de compras sem artigos desnecessários."
+        },
+        {
+          "type": "heading",
+          "text": "Passo a passo"
+        },
+        {
+          "type": "ordered",
+          "text": "Confirma o percurso A ou B com base nas horas de sol observadas ontem."
+        },
+        {
+          "type": "ordered",
+          "text": "Consulta as fichas e verifica a necessidade de rega de cada espécie."
+        },
+        {
+          "type": "ordered",
+          "text": "Desenha três círculos numa folha. Assinala em cada um nome da planta, local, número aproximado de horas de sol e diâmetro do vaso."
+        },
+        {
+          "type": "ordered",
+          "text": "Se tiveres animais de estimação ou crianças, verifica com o veterinário ou fonte especializada a segurança das espécies e impede o acesso às plantas ou ao substrato quando houver risco."
+        },
+        {
+          "type": "ordered",
+          "text": "Escolhe onde comprar: prefere viveiro, centro de jardinagem ou loja que identifique a espécie por nome científico."
+        },
+        {
+          "type": "heading",
+          "text": "Plano dos meus vasos"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Vaso",
+              "Planta + nome científico",
+              "Local / luz",
+              "Diâmetro"
+            ],
+            [
+              "1",
+              "________________________",
+              "________________",
+              "________"
+            ],
+            [
+              "2",
+              "________________________",
+              "________________",
+              "________"
+            ],
+            [
+              "3",
+              "________________________",
+              "________________",
+              "________"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que NÃO precisas de comprar"
+        },
+        {
+          "type": "bullet",
+          "text": "Vasos decorativos sem furos; usa antes um vaso com drenagem, mesmo que fique dentro de um cachepot que possas esvaziar."
+        },
+        {
+          "type": "bullet",
+          "text": "Fertilizantes, pesticidas, sensores eletrónicos ou sistemas automáticos de rega para começar."
+        },
+        {
+          "type": "bullet",
+          "text": "Uma camada grossa de pedras no fundo: os furos e o substrato apropriado são mais importantes para a drenagem."
+        },
+        {
+          "type": "callout_title",
+          "text": "CRITÉRIO DE CONCLUSÃO"
+        },
+        {
+          "type": "body",
+          "text": "No fim do Dia 2, consegues dizer: «Vou comprar estas três espécies, nestes tamanhos de vaso, e colocar cada uma neste local». Se não consegues, volta ao Dia 1."
+        }
+      ]
+    },
+    {
+      "source_page": 8,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 3 | Compra o necessário"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 30–60 MINUTOS, CONSOANTE O LOCAL DE COMPRA"
+        },
+        {
+          "type": "heading",
+          "text": "Lista de compras para três vasos"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Material",
+              "Quantidade",
+              "Como escolher"
+            ],
+            [
+              "Plantas jovens identificadas",
+              "3 unidades",
+              "Nome científico na etiqueta, folhas saudáveis, sem pragas"
+            ],
+            [
+              "Vasos com furos",
+              "3 unidades",
+              "Diâmetros recomendados nas fichas; base estável"
+            ],
+            [
+              "Substrato de qualidade",
+              "1 saco de 20 L",
+              "Universal solto para o percurso B; próprio para aromáticas para A"
+            ],
+            [
+              "Perlite ou pedra-pomes fina",
+              "1 embalagem pequena (A)",
+              "Mistura opcional para melhorar drenagem de alecrim e tomilho"
+            ],
+            [
+              "Pratos / bandejas",
+              "3 unidades",
+              "Para proteger o piso; nunca deixar água parada"
+            ],
+            [
+              "Etiquetas resistentes",
+              "3 unidades",
+              "Nome científico e data de plantação"
+            ],
+            [
+              "Pequena pá ou colher",
+              "1 unidade",
+              "Para distribuir o substrato"
+            ],
+            [
+              "Regador / jarro com bico",
+              "1 unidade",
+              "Permite regar lentamente sem arrancar a terra"
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Um saco de 20 L é uma referência prática para três vasos pequenos a médios; a quantidade real depende da capacidade dos vasos e do torrão das plantas. Para vasos maiores, confirma os litros antes de comprar. Não precisas de gastar mais só para cumprir esta lista."
+        },
+        {
+          "type": "heading",
+          "text": "Na loja: inspeciona antes de pagar"
+        },
+        {
+          "type": "check",
+          "text": "As três plantas têm etiquetas com nome científico."
+        },
+        {
+          "type": "check",
+          "text": "Não há teias finas, manchas extensas, algodão branco ou insetos evidentes sob as folhas."
+        },
+        {
+          "type": "check",
+          "text": "Os vasos de origem não cheiram a podre e os caules não estão moles."
+        },
+        {
+          "type": "check",
+          "text": "Não há raízes grossas a formar uma massa muito apertada por todo o fundo."
+        },
+        {
+          "type": "check",
+          "text": "Os três vasos novos têm furos de drenagem funcionais."
+        },
+        {
+          "type": "heading",
+          "text": "Decisão da mistura"
+        },
+        {
+          "type": "body",
+          "text": "Percurso A: escolhe substrato para aromáticas bem drenante. Se usares substrato universal, podes misturar aproximadamente 20–30% de perlite ou pedra-pomes para alecrim e tomilho. Ajusta conforme o que estiver indicado no saco. Orégãos também precisam de drenagem, mas não exigem o mesmo grau de secura do tomilho."
+        },
+        {
+          "type": "body",
+          "text": "Percurso B: usa substrato universal de qualidade, arejado. Não precisas de acrescentar uma grande quantidade de perlite. Hortelã, erva-cidreira e salsa beneficiam de humidade mais regular, mas nunca de água estagnada."
+        },
+        {
+          "type": "callout_title",
+          "text": "SE NÃO ENCONTRARES UMA PLANTA"
+        },
+        {
+          "type": "body",
+          "text": "Não substituas por uma espécie sem a conhecer. Procura outro estabelecimento ou volta a confirmar uma alternativa com luz e rega equivalentes. O calendário pode começar no dia em que tiveres o material: é melhor uma compra certa do que uma horta apressada."
+        }
+      ]
+    },
+    {
+      "source_page": 9,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 4 | Monta os três vasos"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 40–60 MINUTOS"
+        },
+        {
+          "type": "heading",
+          "text": "Antes de começares"
+        },
+        {
+          "type": "body",
+          "text": "Trabalha num local fácil de limpar, fora do alcance de crianças e animais. Usa luvas se tiveres pele sensível. Não plantes em pleno calor de uma tarde de verão: a manhã ou o final do dia costumam ser melhores."
+        },
+        {
+          "type": "heading",
+          "text": "Como transplantar, sem danificar as plantas"
+        },
+        {
+          "type": "ordered",
+          "text": "Confirma os furos na base de cada vaso. Se o vaso tiver prato, deixa-o vazio."
+        },
+        {
+          "type": "ordered",
+          "text": "Humedece levemente o substrato novo se estiver muito seco e poeirento. Deve ficar solto, não encharcado."
+        },
+        {
+          "type": "ordered",
+          "text": "Coloca um pouco de substrato no fundo. Não precisas de camada de pedras ou argila expandida."
+        },
+        {
+          "type": "ordered",
+          "text": "Aperta suavemente as laterais do vaso original e retira a planta segurando o torrão, não puxando pelo caule."
+        },
+        {
+          "type": "ordered",
+          "text": "Se as raízes estiverem muito enoveladas à volta do torrão, solta delicadamente só a parte exterior. Não desfaças o torrão todo."
+        },
+        {
+          "type": "ordered",
+          "text": "Posiciona a planta à mesma altura a que estava no vaso original. O colo da planta não deve ficar enterrado."
+        },
+        {
+          "type": "ordered",
+          "text": "Preenche os lados com substrato. Pressiona ligeiramente com os dedos, sem compactar."
+        },
+        {
+          "type": "ordered",
+          "text": "Deixa cerca de 1–2 cm livres até à borda, para a rega não transbordar."
+        },
+        {
+          "type": "ordered",
+          "text": "Rega lentamente até a água começar a sair pelos furos. Deixa escorrer e deita fora a água acumulada no prato."
+        },
+        {
+          "type": "ordered",
+          "text": "Coloca a etiqueta: nome científico, nome comum e data. Repete para os outros dois vasos."
+        },
+        {
+          "type": "heading",
+          "text": "Primeiras horas depois da plantação"
+        },
+        {
+          "type": "bullet",
+          "text": "Protege plantas acabadas de transplantar de vento forte e de sol extremo nas horas mais quentes, sobretudo se vieram de um viveiro abrigado."
+        },
+        {
+          "type": "bullet",
+          "text": "Não juntes fertilizante imediatamente e não faças colheitas grandes."
+        },
+        {
+          "type": "bullet",
+          "text": "Tira uma fotografia a cada vaso e regista o estado das folhas. Vai ajudar-te a perceber mudanças reais."
+        },
+        {
+          "type": "check",
+          "text": "Plantei as três espécies em vasos separados."
+        },
+        {
+          "type": "check",
+          "text": "Os três vasos drenaram água após a primeira rega."
+        },
+        {
+          "type": "check",
+          "text": "As etiquetas e as fotografias ficaram feitas."
+        },
+        {
+          "type": "callout_title",
+          "text": "ERRO QUE CUSTA UMA PLANTA"
+        },
+        {
+          "type": "body",
+          "text": "Enterrar o caule mais fundo do que estava e regar repetidamente no mesmo dia aumenta o risco de problemas. Regra simples: mesma altura, água a sair pelos furos, prato vazio."
+        }
+      ]
+    },
+    {
+      "source_page": 10,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 5 | Aprende a decidir quando regar"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 10–15 MINUTOS"
+        },
+        {
+          "type": "heading",
+          "text": "O objetivo não é regar todos os dias"
+        },
+        {
+          "type": "body",
+          "text": "A primeira rega foi feita no transplante. Hoje vais aprender a verificar se é preciso repetir. Uma planta em vaso pequeno ao vento seca mais depressa do que a mesma espécie num vaso maior num dia fresco."
+        },
+        {
+          "type": "heading",
+          "text": "Teste dos dedos, feito corretamente"
+        },
+        {
+          "type": "ordered",
+          "text": "Enfia um dedo junto à borda do vaso, sem magoar as raízes. Avalia a terra nos primeiros 2–3 cm, ou um pouco menos nas plantas que preferem humidade."
+        },
+        {
+          "type": "ordered",
+          "text": "Levanta ligeiramente o vaso para sentir o peso, se for seguro. Vaso leve e terra seca sugerem necessidade de água; vaso pesado e terra húmida sugerem esperar."
+        },
+        {
+          "type": "ordered",
+          "text": "Observa as folhas, mas não decidas só por elas: folhas murchas podem resultar tanto de falta como de excesso de água."
+        },
+        {
+          "type": "ordered",
+          "text": "Se precisares de regar, fá-lo devagar até começar a escorrer pelos furos. Esvazia o prato depois de drenar."
+        },
+        {
+          "type": "heading",
+          "text": "Decisão por grupo"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Planta",
+              "Sinal para verificar a rega",
+              "O que evitar"
+            ],
+            [
+              "Alecrim / tomilho",
+              "Primeiros centímetros secos; confirma se ainda está húmido mais abaixo",
+              "Solo continuamente molhado"
+            ],
+            [
+              "Orégãos",
+              "Superfície seca e vaso mais leve",
+              "Deixar secar demasiado em calor forte"
+            ],
+            [
+              "Hortelã / erva-cidreira",
+              "1–2 cm superficiais a secar",
+              "Secagem completa prolongada"
+            ],
+            [
+              "Salsa",
+              "Parte superficial a começar a secar",
+              "Alternar encharcamento e secura extrema"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Exercício com os teus três vasos"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Planta",
+              "Terra ao toque",
+              "Decisão",
+              "Anotações"
+            ],
+            [
+              "1. __________",
+              "Seca / Húmida",
+              "Regar / Esperar",
+              "____________"
+            ],
+            [
+              "2. __________",
+              "Seca / Húmida",
+              "Regar / Esperar",
+              "____________"
+            ],
+            [
+              "3. __________",
+              "Seca / Húmida",
+              "Regar / Esperar",
+              "____________"
+            ]
+          ]
+        },
+        {
+          "type": "callout_title",
+          "text": "REGRA QUE FICA"
+        },
+        {
+          "type": "body",
+          "text": "Não regues porque é terça-feira; rega quando o substrato e a planta mostram que precisam. Nunca deixes água acumulada de forma permanente no prato."
+        }
+      ]
+    },
+    {
+      "source_page": 11,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 6 | Confirma se as plantas se adaptaram"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 15–20 MINUTOS"
+        },
+        {
+          "type": "heading",
+          "text": "Faz uma ronda de observação"
+        },
+        {
+          "type": "ordered",
+          "text": "Compara a fotografia do Dia 4 com a planta de hoje. Repara se há manchas novas, pontas secas ou murchidão persistente."
+        },
+        {
+          "type": "ordered",
+          "text": "Verifica a terra e o peso do vaso antes de alterar a rega."
+        },
+        {
+          "type": "ordered",
+          "text": "Confirma se o local recebe a luz prevista. Em calor extremo, considera algum abrigo nas horas mais quentes para as plantas sensíveis."
+        },
+        {
+          "type": "ordered",
+          "text": "Levanta as folhas para procurar pequenos insetos e sinais de praga. Se houver, mantém essa planta mais afastada das outras enquanto identificas o problema."
+        },
+        {
+          "type": "heading",
+          "text": "Tabela de primeiros problemas"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "O que vês",
+              "Verifica primeiro",
+              "Primeira ação segura"
+            ],
+            [
+              "Folhas murchas + terra seca",
+              "Peso do vaso, calor e vento",
+              "Rega lenta e reavalia após algumas horas"
+            ],
+            [
+              "Folhas murchas + terra encharcada",
+              "Furos bloqueados, prato cheio",
+              "Esvazia o prato, melhora drenagem; não regues mais"
+            ],
+            [
+              "Folhas amareladas",
+              "Luz, excesso de água, adaptação",
+              "Observa evolução; evita fertilizar ou regar por impulso"
+            ],
+            [
+              "Pontas queimadas após sol forte",
+              "Exposição súbita, paredes quentes",
+              "Protege do sol intenso e readapta gradualmente"
+            ],
+            [
+              "Folhas com teias ou insetos",
+              "Face inferior e plantas próximas",
+              "Afasta a planta; identifica a praga antes de tratar"
+            ],
+            [
+              "Planta inclinada",
+              "Vento, posição e estabilidade",
+              "Muda para local abrigado, sem prender caules com força"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que NÃO fazer ao primeiro sinal"
+        },
+        {
+          "type": "bullet",
+          "text": "Não acrescentar fertilizante, pesticida ou uma receita caseira sem identificar o problema."
+        },
+        {
+          "type": "bullet",
+          "text": "Não mudar a planta de local repetidamente ao longo do dia."
+        },
+        {
+          "type": "bullet",
+          "text": "Não compensar folhas amarelas com rega extra sem verificar o substrato."
+        },
+        {
+          "type": "callout_title",
+          "text": "QUANDO PEDIR AJUDA"
+        },
+        {
+          "type": "body",
+          "text": "Se a base do caule ficar mole, houver cheiro intenso a podridão, infestação significativa ou deterioração rápida, leva fotografias e dados de rega a um viveiro ou profissional de jardinagem. Quanto mais cedo identificares a causa, menos tentativas às cegas farás."
+        }
+      ]
+    },
+    {
+      "source_page": 12,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Dia 7 | Deixa a horta pronta para continuar"
+        },
+        {
+          "type": "callout_title",
+          "text": "TEMPO ATIVO: 20–30 MINUTOS"
+        },
+        {
+          "type": "heading",
+          "text": "Missão de hoje"
+        },
+        {
+          "type": "body",
+          "text": "No final dos sete dias, o sucesso não é colher grandes quantidades de ervas. É ter três plantas bem escolhidas e plantadas, e saber acompanhá-las sem depender de adivinhações."
+        },
+        {
+          "type": "heading",
+          "text": "Checklist da horta montada"
+        },
+        {
+          "type": "check",
+          "text": "Tenho três plantas identificadas com nome comum e científico."
+        },
+        {
+          "type": "check",
+          "text": "Cada planta está no seu vaso com furos e substrato adequado."
+        },
+        {
+          "type": "check",
+          "text": "Sei quantas horas de sol direto chegam a cada local."
+        },
+        {
+          "type": "check",
+          "text": "Consigo verificar a humidade antes de regar."
+        },
+        {
+          "type": "check",
+          "text": "Tenho um local protegido de queda, acumulação de água e vento excessivo."
+        },
+        {
+          "type": "check",
+          "text": "Fiz pelo menos duas observações depois do transplante."
+        },
+        {
+          "type": "check",
+          "text": "Guardei os registos e fotografias para comparar o crescimento."
+        },
+        {
+          "type": "heading",
+          "text": "Uma rotina que cabe na semana"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Frequência",
+              "Tarefa",
+              "Tempo sugerido"
+            ],
+            [
+              "Todos os dias, sobretudo com calor",
+              "Olhar as folhas, verificar vento e terra quando necessário",
+              "1–2 minutos"
+            ],
+            [
+              "Duas a três vezes por semana",
+              "Observar humidade e decidir se é preciso regar",
+              "3–5 minutos"
+            ],
+            [
+              "Uma vez por semana",
+              "Virar vasos se necessário, ver pragas, limpar folhas caídas, atualizar registo",
+              "5–10 minutos"
+            ],
+            [
+              "Depois de chuva prolongada / geada / onda de calor",
+              "Confirmar drenagem, temperatura, vento e abrigo",
+              "Consoante a situação"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Primeiras colheitas: sem pressa"
+        },
+        {
+          "type": "body",
+          "text": "Não prometemos colheita em sete dias. As plantas precisam de enraizar e crescer. Espera até haver crescimento novo suficiente; colhe apenas pequenas quantidades e evita retirar grande parte da folhagem de uma planta jovem. Nunca uses uma planta sem identificação segura nem para fins terapêuticos sem aconselhamento adequado."
+        },
+        {
+          "type": "heading",
+          "text": "A minha decisão para as próximas semanas"
+        },
+        {
+          "type": "body",
+          "text": "Vou observar os vasos em: _______________________________"
+        },
+        {
+          "type": "body",
+          "text": "Vou fazer a revisão semanal no dia: _______________________"
+        },
+        {
+          "type": "body",
+          "text": "O primeiro sinal que preciso de vigiar é: ___________________"
+        },
+        {
+          "type": "callout_title",
+          "text": "CONCLUSÃO CONCRETA"
+        },
+        {
+          "type": "body",
+          "text": "Se completaste as verificações, já não estás só a ler sobre ervas. Tens uma horta pequena montada e sabes o que fazer a seguir. Esse é o resultado deste plano."
+        }
+      ]
+    },
+    {
+      "source_page": 13,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "SOS | Adapta ao clima em Portugal"
+        },
+        {
+          "type": "body",
+          "text": "Portugal tem microclimas muito diferentes. Repara no que acontece no teu local, em vez de confiar apenas na estação do ano."
+        },
+        {
+          "type": "heading",
+          "text": "Verão quente, interior e sul"
+        },
+        {
+          "type": "bullet",
+          "text": "A terra pode secar muito depressa em vasos pequenos, sobretudo se forem de barro e houver vento."
+        },
+        {
+          "type": "bullet",
+          "text": "Evita transplantar à hora de maior calor. Para hortelã, erva-cidreira e salsa, prefere sol da manhã e abrigo do calor forte da tarde."
+        },
+        {
+          "type": "bullet",
+          "text": "Em dias extremos, observa a terra com mais frequência; não regues automaticamente se ainda estiver húmida."
+        },
+        {
+          "type": "heading",
+          "text": "Inverno chuvoso, sobretudo litoral e norte"
+        },
+        {
+          "type": "bullet",
+          "text": "Reduz a rega quando a terra continua húmida após chuva ou dias frios."
+        },
+        {
+          "type": "bullet",
+          "text": "Mantém os furos livres e protege o vaso de encharcamento prolongado."
+        },
+        {
+          "type": "bullet",
+          "text": "Algumas aromáticas abrandam o crescimento; a parte aérea pode diminuir sem que isso signifique falha do cultivo."
+        },
+        {
+          "type": "heading",
+          "text": "Vento costeiro ou varanda alta"
+        },
+        {
+          "type": "bullet",
+          "text": "Dá prioridade à estabilidade: vasos que não tombem, prateleiras seguras, proteção contra rajadas."
+        },
+        {
+          "type": "bullet",
+          "text": "O vento acelera a secagem da terra e pode danificar folhas; confirma a exposição antes de regar."
+        },
+        {
+          "type": "heading",
+          "text": "Geadas e frio intenso"
+        },
+        {
+          "type": "bullet",
+          "text": "Vasos são mais vulneráveis do que plantas instaladas no solo. Protege-os de frio extremo, especialmente os mais pequenos."
+        },
+        {
+          "type": "bullet",
+          "text": "Procura um local luminoso e abrigado, evitando deixar plantas delicadas ao ar livre em condições extremas."
+        },
+        {
+          "type": "heading",
+          "text": "Se vais cultivar dentro de casa"
+        },
+        {
+          "type": "body",
+          "text": "Uma janela soalheira pode parecer suficiente, mas para muitas aromáticas a luz dentro de casa é limitada. Alecrim e tomilho tendem a funcionar melhor no exterior, com bastante sol e circulação de ar. Se só tens interior, confirma as condições reais antes de comprar; poderá ser necessária iluminação de cultivo adequada, que não faz parte dos materiais básicos deste plano."
+        }
+      ]
+    },
+    {
+      "source_page": 14,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Ferramentas de execução"
+        },
+        {
+          "type": "body",
+          "text": "Estas páginas podem ser preenchidas no ficheiro Word ou impressas. Usa uma folha por conjunto de três vasos."
+        },
+        {
+          "type": "heading",
+          "text": "Ficha A | O meu espaço"
+        },
+        {
+          "type": "body",
+          "text": "Data: __________ Local da horta: _____________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Horas aproximadas de sol direto: ________ Percurso escolhido: A / B / Misto"
+        },
+        {
+          "type": "body",
+          "text": "Vento: baixo / moderado / forte Chuva direta: sim / não"
+        },
+        {
+          "type": "body",
+          "text": "Riscos a corrigir (queda, drenagem, calor, crianças, animais):"
+        },
+        {
+          "type": "body",
+          "text": "________________________________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "________________________________________________________________________"
+        },
+        {
+          "type": "heading",
+          "text": "Ficha B | O que comprei"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Material",
+              "Planeado",
+              "Comprado"
+            ],
+            [
+              "Planta 1 com etiqueta",
+              "_____________________",
+              "☐"
+            ],
+            [
+              "Planta 2 com etiqueta",
+              "_____________________",
+              "☐"
+            ],
+            [
+              "Planta 3 com etiqueta",
+              "_____________________",
+              "☐"
+            ],
+            [
+              "Vasos com furos",
+              "3 unidades",
+              "☐"
+            ],
+            [
+              "Substrato apropriado",
+              "Litros: ________",
+              "☐"
+            ],
+            [
+              "Perlite, se necessário",
+              "______________",
+              "☐"
+            ],
+            [
+              "Pratos / bandejas",
+              "3 unidades",
+              "☐"
+            ],
+            [
+              "Etiquetas + marcador",
+              "3 unidades",
+              "☐"
+            ],
+            [
+              "Pá / regador",
+              "______________",
+              "☐"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Ficha C | Progresso dos 7 dias"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Dia",
+              "Terminei?",
+              "O meu resultado / próxima ação"
+            ],
+            [
+              "1 | Luz e local",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "2 | Escolha das plantas",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "3 | Compras",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "4 | Transplante",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "5 | Rega",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "6 | Adaptação",
+              "☐",
+              "_______________________________________"
+            ],
+            [
+              "7 | Rotina",
+              "☐",
+              "_______________________________________"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source_page": 15,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Registo individual de cada vaso"
+        },
+        {
+          "type": "body",
+          "text": "Faz uma cópia desta página para cada uma das tuas três plantas. O objetivo é perceber o que funciona no teu espaço e corrigir os cuidados com base em observações."
+        },
+        {
+          "type": "body",
+          "text": "Vaso n.º ________ Data do transplante: ____________________________"
+        },
+        {
+          "type": "body",
+          "text": "Planta (nome comum): _______________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Nome científico da etiqueta: _________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Diâmetro e material do vaso: _________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Local: _____________________ Horas de sol direto: _____________________"
+        },
+        {
+          "type": "body",
+          "text": "Substrato utilizado: _________________________________________________"
+        },
+        {
+          "type": "heading",
+          "text": "Primeiras observações"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Data",
+              "Terra: seca/húmida",
+              "Folhas / alterações",
+              "Reguei?"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ],
+            [
+              "________",
+              "________________",
+              "____________________________",
+              "Sim / Não"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Se surgir um problema"
+        },
+        {
+          "type": "body",
+          "text": "O que observei: ___________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Quando começou: __________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Como estava a terra: _______________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Que ação tomei: ___________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "O que mudou depois: _______________________________________________"
+        },
+        {
+          "type": "heading",
+          "text": "Fotografia inicial / comparação"
+        },
+        {
+          "type": "body",
+          "text": "Guardei a fotografia inicial: Sim Não ☐ ☐"
+        },
+        {
+          "type": "body",
+          "text": "Vou comparar de novo no dia: ________________________________________"
+        }
+      ]
+    },
+    {
+      "source_page": 16,
+      "nodes": [
+        {
+          "type": "title",
+          "text": "Perguntas práticas antes de desistires"
+        },
+        {
+          "type": "heading",
+          "text": "«A minha varanda só apanha sol de manhã. Serve?»"
+        },
+        {
+          "type": "body",
+          "text": "Pode servir para o Percurso B se tiver algumas horas de sol e boa claridade. Não escolhas o trio de sol intenso apenas porque o espaço fica claro."
+        },
+        {
+          "type": "heading",
+          "text": "«Posso plantar as três ervas no mesmo vaso grande?»"
+        },
+        {
+          "type": "body",
+          "text": "Não recomendamos neste primeiro plano. Em vasos separados é mais fácil adequar rega, observar problemas e mudar a posição de cada uma."
+        },
+        {
+          "type": "heading",
+          "text": "«Quanto rego? Um copo por dia?»"
+        },
+        {
+          "type": "body",
+          "text": "Não existe um número de copos que sirva para todos os vasos. O tamanho do vaso, o substrato, o tempo e a espécie mudam a necessidade de água. Verifica a terra e rega de modo uniforme até escorrer pelos furos quando for necessário."
+        },
+        {
+          "type": "heading",
+          "text": "«Se chover, ainda tenho de regar?»"
+        },
+        {
+          "type": "body",
+          "text": "Nem sempre. Verifica a terra: a chuva pode já ter sido suficiente, ou até excessiva. O importante é não manter as raízes encharcadas."
+        },
+        {
+          "type": "heading",
+          "text": "«O vaso começou a perder folhas depois de o mudar. Falhei?»"
+        },
+        {
+          "type": "body",
+          "text": "Uma pequena reação ao transplante pode acontecer. Mantém a planta nas condições corretas e observa a evolução. Se houver piora rápida, mau cheiro ou caule mole, investiga drenagem e raízes com apoio de um viveiro."
+        },
+        {
+          "type": "heading",
+          "text": "«Tenho de comprar fertilizante já?»"
+        },
+        {
+          "type": "body",
+          "text": "Não para executar os sete dias. O substrato novo normalmente já permite começar. Evita fertilizar uma planta com sinais de stress sem perceber a causa."
+        },
+        {
+          "type": "heading",
+          "text": "«Posso usar ervas da horta para tratar ansiedade, asma ou outras doenças?»"
+        },
+        {
+          "type": "body",
+          "text": "Este guia não ensina tratamentos médicos. Plantas podem ter contraindicações, interações e riscos de identificação. Não substituas tratamentos prescritos nem uses plantas para tratar sintomas potencialmente graves sem avaliação profissional."
+        },
+        {
+          "type": "callout_title",
+          "text": "GUARDA ISTO"
+        },
+        {
+          "type": "body",
+          "text": "O teu objetivo nos sete dias é ter três vasos montados e uma forma de os acompanhar. O desenvolvimento futuro depende da espécie, da luz, da temperatura e dos cuidados. Se precisares de melhorar um local ou substituir uma planta mal adaptada, isso faz parte de cultivar com método."
+        },
+        {
+          "type": "callout_title",
+          "text": "FIM DO GUIA | BOTICA VIVA"
+        }
+      ]
+    }
+  ]
+}
