@@ -62,7 +62,7 @@ const finalOffer = readFileSync('oferta-final.html', 'utf8');
 assert.equal(finalOffer, renderFinalOffer({ checkoutUrl: FINAL_OFFER_CHECKOUT_URL }));
 assert.equal(readFileSync('public/oferta-final.html', 'utf8'), finalOffer);
 assert.match(finalOffer, /De <del>€9,90<\/del> por:/);
-assert.match(finalOffer, /SIM! QUERO A MINHA BOTICA ORGANIZADA POR €3,70/);
+assert.match(finalOffer, /SIM! QUERO A MINHA BOTICA ORGANIZADA POR €3,90/);
 assert.match(finalOffer, /href="https:\/\/consumer.hotmart.com\/"/);
 assert.match(finalOffer, /name="robots" content="noindex, nofollow, noarchive"/);
 assert.match(renderFinalOffer(), /<button[^>]*id="upsell-purchase"[^>]*disabled/);

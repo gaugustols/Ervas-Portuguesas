@@ -43,7 +43,7 @@ export function renderDownsell({ checkoutUrl = '', declineUrl = DOWNSELL_DECLINE
 }
 
 export function renderFinalOffer({ checkoutUrl = '', declineUrl = FINAL_OFFER_DECLINE_URL } = {}) {
-  return renderPage('oferta-final', 'SIM! QUERO A MINHA BOTICA ORGANIZADA POR €3,70', checkoutUrl, declineUrl);
+  return renderPage('oferta-final', 'SIM! QUERO A MINHA BOTICA ORGANIZADA POR €3,90', checkoutUrl, declineUrl);
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
