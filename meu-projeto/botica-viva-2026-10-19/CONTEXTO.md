@@ -1,5 +1,7 @@
 # CONTEXTO · Botica Viva
 
+- 23/10/2026 · Entregável da oferta final «A Minha Botica Organizada» redesenhado na identidade da aplicação e dos três PDFs anteriores: `../../output/pdf/botica-viva-a-minha-botica-organizada.pdf`, 28 páginas A4, diagramas vetoriais e oito páginas claras de modelos para imprimir. Conteúdo conferido em 684 fragmentos sem faltas; todas as páginas renderizadas e revistas visualmente. Quatro referências ao Word adaptadas à entrega em PDF. Original preservado; fontes e verificações em `oferta-final-pdf/`. PDF pago fora da exportação pública; falta carregamento e teste de entrega na Hotmart. Landing, páginas do funil, webapp, manual e checkouts não foram alterados; alterações locais preexistentes preservadas fora do commit.
+
 ## Projeto
 - Nome: Botica Viva · slug: `botica-viva-2026-10-19` · criado em 19/10/2026.
 - Tipo: produto informativo digital; MVP estático público sem login, por decisão do utilizador.

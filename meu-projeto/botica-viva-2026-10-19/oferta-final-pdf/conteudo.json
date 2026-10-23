@@ -1,0 +1,1856 @@
+{
+  "source_name": "Botica_Viva_A_Minha_Botica_Organizada_Kit_Completo.pdf",
+  "source_sha256": "2e5ed667eef7aaeff7574d96b17d7b04e1d1426b74cc1e05ec89b7f37a717491",
+  "pages": [
+    {
+      "source_page": 1,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "BOTICA VIVA / KIT PRÁTICO"
+        },
+        {
+          "type": "title",
+          "text": "A Minha"
+        },
+        {
+          "type": "title",
+          "text": "Botica Organizada"
+        },
+        {
+          "type": "body",
+          "text": "Identifica. Arruma. Regista. Sabe o que tens antes de voltares a comprar."
+        },
+        {
+          "type": "callout_title",
+          "text": "O RESULTADO DESTE KIT"
+        },
+        {
+          "type": "body",
+          "text": "Em pouco tempo, organizas um espaço para ervas e materiais, identificas os recipientes sem perderes a informação de origem e crias um inventário que te ajuda a encontrar o que tens e a evitar compras repetidas."
+        },
+        {
+          "type": "heading",
+          "text": "O que inclui"
+        },
+        {
+          "type": "bullet",
+          "text": "Método de triagem para saber o que conservar, verificar ou descartar."
+        },
+        {
+          "type": "bullet",
+          "text": "Sistema de três zonas para organizar o espaço sem confusões."
+        },
+        {
+          "type": "bullet",
+          "text": "Etiquetas completas e curtas, inventário, registo de movimentos e lista de compras."
+        },
+        {
+          "type": "bullet",
+          "text": "Exemplo preenchido e rotina semanal de cinco minutos."
+        },
+        {
+          "type": "heading",
+          "text": "Para quem serve"
+        },
+        {
+          "type": "body",
+          "text": "Para quem compra ervas secas e para quem cultiva plantas em casa. Não precisas de ter uma horta nem de comprar frascos novos para usar o método."
+        },
+        {
+          "type": "body",
+          "text": "EDIÇÃO PORTUGAL / KIT PARA IMPRIMIR OU USAR NO TELEMÓVEL Organização doméstica e rastreabilidade. Não ensina tratamentos, doses ou substituição de medicação. A identificação de uma planta por fotografia ou pelo nome comum, por si só, não comprova que é adequada para consumo."
+        }
+      ]
+    },
+    {
+      "source_page": 2,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "LER PRIMEIRO"
+        },
+        {
+          "type": "title",
+          "text": "Começa pelo que tens"
+        },
+        {
+          "type": "body",
+          "text": "Não compres nada antes de fazeres estas três perguntas."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Pergunta",
+              "Se a resposta for…",
+              "Faz isto"
+            ],
+            [
+              "Tenho embalagem original legível?",
+              "Sim",
+              "Usa-a como principal fonte de informação."
+            ],
+            [
+              "Sei qual é a espécie, a origem e o lote?",
+              "Não / dúvida",
+              "Não uses; separa para verificação ou descarte."
+            ],
+            [
+              "O produto está seco e sem sinais de deterioração?",
+              "Não / dúvida",
+              "Não tentes recuperar o conteúdo."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Três tipos de material, três decisões"
+        },
+        {
+          "type": "ordered",
+          "text": "Ervas compradas e embaladas: mantém a embalagem original. Se mudares de recipiente, transfere também a informação de identificação, origem, lote, validade e avisos relevantes.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Ervas cultivadas em casa: regista a espécie confirmada, a data de colheita e o método de conservação. Não inventes uma data de validade nem assumas segurança apenas por serem caseiras.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Saquinhos soltos, ofertas ou misturas sem identificação fiável: guarda separadamente enquanto verificas a origem; se não conseguires confirmar, não destines a consumo.",
+          "number": 3
+        },
+        {
+          "type": "callout_title",
+          "text": "REGRA DE OURO"
+        },
+        {
+          "type": "body",
+          "text": "Um frasco bonito não substitui um rótulo completo. O sistema serve para saber o que está guardado, de onde veio e que cuidados exigem atenção."
+        },
+        {
+          "type": "heading",
+          "text": "Ferramentas que vais usar"
+        },
+        {
+          "type": "body",
+          "text": "Começa pelas páginas imprimíveis no fim do kit. A etiqueta identifica cada recipiente, o inventário diz onde está, e a lista de compras só entra em ação depois de conferires o que já tens."
+        }
+      ]
+    },
+    {
+      "source_page": 3,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 1 DE 5"
+        },
+        {
+          "type": "title",
+          "text": "Faz uma triagem segura"
+        },
+        {
+          "type": "body",
+          "text": "Tira tudo da gaveta ou prateleira. Decide item a item, antes de arrumar."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Sinal encontrado",
+              "Decisão prática"
+            ],
+            [
+              "Nome botânico, fornecedor e lote legíveis; embalagem íntegra",
+              "Manter. Anota ID, origem, datas e local."
+            ],
+            [
+              "Embalagem aberta mas íntegra, identificação confirmada",
+              "Rever instruções do fornecedor; fechar corretamente."
+            ],
+            [
+              "Nome comum ambíguo ou frasco sem rótulo",
+              "Separar. Não usar até confirmar; se não for possível, descartar."
+            ],
+            [
+              "Bolor, cheiro estranho, pragas, humidade ou embalagem danificada",
+              "Descartar. Não cheirar de perto nem provar para testar."
+            ],
+            [
+              "Data indicada pelo fabricante ultrapassada",
+              "Conferir a natureza da data e as instruções; perante dúvida, não usar."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O teste das cinco verificações"
+        },
+        {
+          "type": "ordered",
+          "text": "IDENTIDADE: sei o nome correto? O nome botânico consta da origem fiável?",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "RASTO: sei de quem veio, quando entrou e qual o lote, se existir?",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "ESTADO: não há sinais de humidade, infestação, bolor ou deterioração?",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "INSTRUÇÕES: tenho acesso às condições de conservação e advertências da origem?",
+          "number": 4
+        },
+        {
+          "type": "ordered",
+          "text": "LOCAL: há um sítio seco, limpo, protegido de calor e luz para guardar?",
+          "number": 5
+        },
+        {
+          "type": "callout_title",
+          "text": "SE FALHAR UMA VERIFICAÇÃO"
+        },
+        {
+          "type": "body",
+          "text": "Não mistures o produto com os restantes nem o coloques à disposição para uso. Põe de parte para confirmar ou eliminar adequadamente. Nunca assumes que uma erva é segura porque é “natural”."
+        },
+        {
+          "type": "body",
+          "text": "Para plantas colhidas em casa, a espécie deve estar identificada de forma segura. Não uses plantas silvestres com base apenas numa aplicação ou numa fotografia."
+        }
+      ]
+    },
+    {
+      "source_page": 4,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 2 DE 5"
+        },
+        {
+          "type": "title",
+          "text": "Monta a tua área de botica"
+        },
+        {
+          "type": "body",
+          "text": "Um armário, uma gaveta ou uma caixa fechada pode chegar. O importante é evitar confusão."
+        },
+        {
+          "type": "heading",
+          "text": "Materiais mínimos, sem compras desnecessárias"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Material",
+              "Para quê",
+              "Alternativa"
+            ],
+            [
+              "Embalagens originais",
+              "Conservar origem, lote e avisos",
+              "Mantê-las em caixa organizada"
+            ],
+            [
+              "Frascos próprios para alimentos, limpos, secos e com tampa",
+              "Só se a transferência for adequada",
+              "Não transferir; usar a embalagem"
+            ],
+            [
+              "Etiquetas + caneta indelével",
+              "Identificar com clareza",
+              "Papel preso à embalagem"
+            ],
+            [
+              "Uma pasta ou fotografia dos rótulos",
+              "Guardar informação de origem",
+              "Guardar rótulos originais"
+            ],
+            [
+              "Este kit, impresso ou digital",
+              "Inventário e lista de compras",
+              "Preencher diretamente no Word"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Cria três zonas com funções diferentes"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Zona",
+              "O que fica lá",
+              "Regra"
+            ],
+            [
+              "A • Confirmado",
+              "Produtos identificados e em bom estado",
+              "Sem contacto com luz, vapor ou calor excessivos"
+            ],
+            [
+              "B • Em revisão",
+              "Itens sem identificação ou com informação incompleta",
+              "Separados e marcados “NÃO USAR”"
+            ],
+            [
+              "C • Materiais",
+              "Etiquetas, caneta, fichas e utensílios",
+              "Não guardar materiais sujos junto do produto"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Como escolher o local"
+        },
+        {
+          "type": "bullet",
+          "text": "Evita a zona por cima do fogão, perto do lava-loiça, janelas com sol direto e divisões húmidas."
+        },
+        {
+          "type": "bullet",
+          "text": "Mantém longe de crianças e animais domésticos; não guardes junto de detergentes ou produtos químicos."
+        },
+        {
+          "type": "bullet",
+          "text": "Se um recipiente tiver sido lavado, só o uses quando estiver totalmente limpo e seco."
+        },
+        {
+          "type": "callout_title",
+          "text": "NÃO É OBRIGATÓRIO TRANSFERIR"
+        },
+        {
+          "type": "body",
+          "text": "Se a embalagem de origem conserva melhor as informações e o produto, deixa-o nela. Organizar não é encher uma prateleira de frascos iguais."
+        }
+      ]
+    },
+    {
+      "source_page": 5,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 3 DE 5"
+        },
+        {
+          "type": "title",
+          "text": "Faz etiquetas que dizem a verdade"
+        },
+        {
+          "type": "body",
+          "text": "A etiqueta é a ponte entre o frasco e a informação da origem."
+        },
+        {
+          "type": "heading",
+          "text": "Os seis campos que fazem diferença"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Campo",
+              "O que escrever"
+            ],
+            [
+              "1 ID",
+              "Código único do recipiente: BV-001, BV-002…"
+            ],
+            [
+              "2 Planta",
+              "Nome na embalagem + nome botânico quando confirmado"
+            ],
+            [
+              "3 Origem",
+              "Fornecedor/marca ou “colheita própria” com local"
+            ],
+            [
+              "4 Lote",
+              "Código do produtor, se houver; se não, “não indicado”"
+            ],
+            [
+              "5 Datas",
+              "Compra ou colheita e data indicada na embalagem, sem alterar"
+            ],
+            [
+              "6 Local / observações",
+              "Prateleira, instruções e referência do rótulo original"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Exemplo preenchido: embalagem comprada"
+        },
+        {
+          "type": "callout_title",
+          "text": "BV-003 · TOMILHO"
+        },
+        {
+          "type": "body",
+          "text": "Nome indicado na embalagem: Tomilho (Thymus vulgaris) Origem: Marca X [exemplo fictício] | Lote: EX-084 [fictício] Compra: 08/10/2026 | Data da embalagem: 04/2027 [exemplo] Local: A1 | Rótulo original guardado com o produto."
+        },
+        {
+          "type": "heading",
+          "text": "Exemplo diferente: colheita própria"
+        },
+        {
+          "type": "body",
+          "text": "BV-004 · Alecrim (identificação confirmada). Origem: vaso da varanda. Colheita: ___/___/____. Conservação: __________________. Validade: não definida; não inventar uma data."
+        },
+        {
+          "type": "callout_title",
+          "text": "ERRO A EVITAR"
+        },
+        {
+          "type": "body",
+          "text": "Não escrevas “dura seis meses” ou “seguro até X” sem respaldo adequado. As condições e a duração dependem do produto, do processamento, da origem e das instruções aplicáveis."
+        }
+      ]
+    },
+    {
+      "source_page": 6,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "GUARDAR SEM ESTRAGAR"
+        },
+        {
+          "type": "title",
+          "text": "Arruma e conserva com critério"
+        },
+        {
+          "type": "body",
+          "text": "A organização só funciona se não apagar a identificação nem criar humidade."
+        },
+        {
+          "type": "heading",
+          "text": "Se usares a embalagem original"
+        },
+        {
+          "type": "ordered",
+          "text": "Confirma que o fecho está intacto ou pode ser fechado de forma adequada.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Mantém visíveis as indicações do fornecedor. Se usares uma caixa, coloca-a na Zona A e atribui um ID.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Regista no inventário o ID, nome, localização, quantidade aproximada e data relevante indicada no rótulo.",
+          "number": 3
+        },
+        {
+          "type": "heading",
+          "text": "Se transferires para um frasco"
+        },
+        {
+          "type": "ordered",
+          "text": "Verifica se é apropriado para contacto alimentar; lava-o se necessário e deixa secar completamente.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Transfere apenas um produto de identidade confirmada de cada vez, sem misturar espécies, fornecedores ou lotes.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Aplica a etiqueta antes de o guardar e conserva a embalagem/rótulo original ou uma cópia legível com avisos, lote e datas.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "Não enchas até ao limite se isso dificultar o fecho. Fecha bem e leva para a Zona A.",
+          "number": 4
+        },
+        {
+          "type": "heading",
+          "text": "Se forem plantas cultivadas em casa"
+        },
+        {
+          "type": "body",
+          "text": "Só guardes material seco depois de identificares a espécie e confirmares que a colheita e secagem foram feitas corretamente. Este kit não substitui instruções técnicas de secagem, higiene ou avaliação de adequação para consumo. Se houver humidade residual, não sele o material num frasco para “acabar de secar”."
+        },
+        {
+          "type": "callout_title",
+          "text": "QUANDO DEITAR FORA"
+        },
+        {
+          "type": "body",
+          "text": "Se aparecer bolor, condensação persistente, infestação ou cheiro invulgar, não tentes lavar, tostar, aproveitar partes nem provar para confirmar. Elimina o conteúdo de forma segura."
+        },
+        {
+          "type": "heading",
+          "text": "Verificação antes de fechar a porta"
+        },
+        {
+          "type": "bullet",
+          "text": "Todas as embalagens têm identificação e localização?"
+        },
+        {
+          "type": "bullet",
+          "text": "Os produtos por verificar estão fisicamente separados?"
+        },
+        {
+          "type": "bullet",
+          "text": "O espaço está seco, protegido e sem acesso fácil de crianças e animais?"
+        }
+      ]
+    },
+    {
+      "source_page": 7,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 4 DE 5"
+        },
+        {
+          "type": "title",
+          "text": "Cria um inventário que usas"
+        },
+        {
+          "type": "body",
+          "text": "Não precisa de ser uma aplicação. Uma folha atualizada vale mais do que um sistema complicado."
+        },
+        {
+          "type": "heading",
+          "text": "Exemplo de inventário preenchido"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "ID / produto",
+              "Origem / lote",
+              "Datas",
+              "Local / qt.",
+              "Estado / ação"
+            ],
+            [
+              "BV-001 Hortelã-verde",
+              "Marca A Lote EX-12",
+              "Compra 09/10/26 Rótulo 05/27",
+              "A1 / 1 emb.",
+              "Conforme"
+            ],
+            [
+              "BV-002 Tomilho",
+              "Marca B Lote EX-08",
+              "Compra 12/10/26 Rótulo 06/27",
+              "A1 / 1 emb.",
+              "Conforme"
+            ],
+            [
+              "BV-003 Erva sem rótulo",
+              "Desconhecida",
+              "?",
+              "B / 1 saco",
+              "NÃO USAR"
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Os produtos, marcas, lotes e datas acima são apenas exemplos fictícios de preenchimento."
+        },
+        {
+          "type": "heading",
+          "text": "Quatro momentos em que atualizas"
+        },
+        {
+          "type": "ordered",
+          "text": "ENTRADA: no dia da compra/colheita, cria um ID e regista a origem.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "TRANSFERÊNCIA: mantém o ID ou documenta o novo recipiente e preserva a ligação ao lote.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "SAÍDA: anota quando acaba, é descartado ou deixa de estar disponível.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "REVISÃO: acrescenta a data da última verificação e uma ação, se necessária.",
+          "number": 4
+        },
+        {
+          "type": "heading",
+          "text": "O truque para encontrares tudo"
+        },
+        {
+          "type": "body",
+          "text": "Atribui códigos aos lugares: A1 = primeira prateleira, A2 = segunda, B = itens por verificar. O inventário e a etiqueta usam os mesmos códigos. Se mudares um frasco, atualiza o local no inventário."
+        },
+        {
+          "type": "callout_title",
+          "text": "NÃO DUPLIQUES OS REGISTOS"
+        },
+        {
+          "type": "body",
+          "text": "Uma linha por recipiente ou lote, não uma linha por cada receita. Se dois frascos têm lotes diferentes, usa IDs diferentes. Assim sabes qual deles precisa de revisão."
+        }
+      ]
+    },
+    {
+      "source_page": 8,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 5 DE 5"
+        },
+        {
+          "type": "title",
+          "text": "Compra só o que falta"
+        },
+        {
+          "type": "body",
+          "text": "Uma lista de compras útil começa por conferir o armário, não por escolher mais produtos."
+        },
+        {
+          "type": "heading",
+          "text": "O método em cinco decisões"
+        },
+        {
+          "type": "ordered",
+          "text": "Escreve o nome exato do produto que procuras e a finalidade doméstica (por exemplo, “ter um exemplar identificado para consulta”).",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Confere no inventário se já tens esse produto em condições adequadas.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Verifica a quantidade disponível antes de definir quanto comprar; evita formatos maiores do que consegues armazenar corretamente.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "Marca a prioridade como “necessário”, “pode esperar” ou “não comprar”.",
+          "number": 4
+        },
+        {
+          "type": "ordered",
+          "text": "Na loja, confirma identificação, origem, lote quando aplicável, embalagem íntegra e instruções de conservação.",
+          "number": 5
+        },
+        {
+          "type": "heading",
+          "text": "Exemplo de lista preenchida"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Artigo",
+              "Já tenho?",
+              "Prioridade",
+              "Decisão"
+            ],
+            [
+              "Etiquetas de papel",
+              "Não",
+              "Necessário",
+              "Comprar uma pequena embalagem"
+            ],
+            [
+              "Frasco novo",
+              "Sim, um vazio",
+              "Não comprar",
+              "Usar o que está em casa, se adequado"
+            ],
+            [
+              "Erva seca sem origem clara",
+              "Não",
+              "Não comprar",
+              "Escolher produto identificado ou adiar"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Antes de pagar"
+        },
+        {
+          "type": "bullet",
+          "text": "Qual o nome da espécie indicado na embalagem?"
+        },
+        {
+          "type": "bullet",
+          "text": "A embalagem contém informação de origem, lote ou fornecedor identificável?"
+        },
+        {
+          "type": "bullet",
+          "text": "Consigo guardá-la nas condições recomendadas, sem confundir com o que já tenho?"
+        },
+        {
+          "type": "callout_title",
+          "text": "COMPRA INTELIGENTE"
+        },
+        {
+          "type": "body",
+          "text": "Não compres uma planta só porque alguém associou um nome comum a um sintoma. Se houver dúvidas de uso, interações com medicamentos, gravidez ou doenças existentes, consulta um profissional de saúde."
+        }
+      ]
+    },
+    {
+      "source_page": 9,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PLANO DE ARRUMAÇÃO"
+        },
+        {
+          "type": "title",
+          "text": "Organiza o espaço numa sessão"
+        },
+        {
+          "type": "body",
+          "text": "Segue estas etapas em ordem. Se precisares de lavar frascos, espera que sequem totalmente antes de transferires produtos."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Etapa",
+              "Ação concreta",
+              "Verificação final"
+            ],
+            [
+              "1 • Preparar",
+              "Escolhe prateleira/caixa, imprime etiquetas e prepara caneta.",
+              "Tens superfície limpa e seca?"
+            ],
+            [
+              "2 • Triar",
+              "Agrupa: confirmado, por verificar, materiais.",
+              "Não ficou nenhum sem decisão?"
+            ],
+            [
+              "3 • Etiquetar",
+              "Atribui IDs e copia dados fiáveis das embalagens.",
+              "Cada recipiente tem um ID?"
+            ],
+            [
+              "4 • Inventariar",
+              "Preenche uma linha por ID, lote e local.",
+              "Consegues localizar cada produto?"
+            ],
+            [
+              "5 • Arrumar",
+              "Organiza a Zona A; isola a Zona B.",
+              "Nenhuma origem se perdeu?"
+            ],
+            [
+              "6 • Rever compras",
+              "Confere duplicados e escreve apenas o que falta.",
+              "A lista usa o inventário?"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O teste prático de conclusão"
+        },
+        {
+          "type": "body",
+          "text": "Pede a alguém de casa que encontre um produto pelo inventário, confirme a etiqueta e mostre de onde veio. Se conseguir sem adivinhar, o sistema está funcional."
+        },
+        {
+          "type": "heading",
+          "text": "Se só tens 15 minutos hoje"
+        },
+        {
+          "type": "bullet",
+          "text": "Arruma apenas uma prateleira. Seleciona até cinco produtos."
+        },
+        {
+          "type": "bullet",
+          "text": "Cria os IDs e preenche cinco linhas no inventário."
+        },
+        {
+          "type": "bullet",
+          "text": "Marca o resto como “por organizar”, sem misturar com os itens já confirmados."
+        },
+        {
+          "type": "callout_title",
+          "text": "RESULTADO VERIFICÁVEL"
+        },
+        {
+          "type": "body",
+          "text": "No fim não precisas de ter uma coleção bonita de frascos. Precisas de saber o que tens, onde está e que informação conservaste."
+        }
+      ]
+    },
+    {
+      "source_page": 10,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "MANTER EM ORDEM"
+        },
+        {
+          "type": "title",
+          "text": "Rotina de 5 minutos + revisão mensal"
+        },
+        {
+          "type": "body",
+          "text": "Não deixes o inventário morrer depois do primeiro dia."
+        },
+        {
+          "type": "heading",
+          "text": "Uma vez por semana • 5 minutos"
+        },
+        {
+          "type": "ordered",
+          "text": "Percorre as etiquetas e confirma que continuam legíveis.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Verifica se há sinais de humidade, insetos, bolor ou recipientes mal fechados. Não abras produtos suspeitos para os cheirar.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Vê se algum produto mudou de local, acabou ou foi descartado; atualiza o inventário.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "Confere a Zona B: verifica a origem em falta ou descarta o que não podes identificar.",
+          "number": 4
+        },
+        {
+          "type": "ordered",
+          "text": "Regista a data e escreve uma única ação para a semana seguinte.",
+          "number": 5
+        },
+        {
+          "type": "heading",
+          "text": "Uma vez por mês • revisão mais completa"
+        },
+        {
+          "type": "bullet",
+          "text": "Compara as datas indicadas pelos fabricantes com o inventário e confirma as instruções de conservação."
+        },
+        {
+          "type": "bullet",
+          "text": "Reavalia a quantidade guardada e apaga da lista de compras o que já existe."
+        },
+        {
+          "type": "bullet",
+          "text": "Limpa o espaço conforme necessário sem expor os produtos a humidade ou químicos."
+        },
+        {
+          "type": "bullet",
+          "text": "Confirma que os rótulos originais ou fotografias continuam legíveis e associados aos respetivos IDs."
+        },
+        {
+          "type": "heading",
+          "text": "Três perguntas para decidir depressa"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Se reparares…",
+              "Faz…"
+            ],
+            [
+              "Etiqueta ilegível",
+              "Suspende o uso, recupera a informação da origem ou descarta se impossível."
+            ],
+            [
+              "Embalagem húmida ou bolor",
+              "Descarta o conteúdo; não tentes salvar a parte aparentemente boa."
+            ],
+            [
+              "O produto acabou",
+              "Marca “terminado”, regista a data e só então considera repor."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source_page": 11,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "RESOLUÇÃO DE PROBLEMAS"
+        },
+        {
+          "type": "title",
+          "text": "Se acontecer isto, faz aquilo"
+        },
+        {
+          "type": "body",
+          "text": "Seis situações habituais com uma decisão concreta."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Situação",
+              "O que fazer agora"
+            ],
+            [
+              "“Tenho três frascos com a mesma erva, mas marcas diferentes.”",
+              "Cria um ID por lote/embalagem. Não os mistures; regista o local de cada um."
+            ],
+            [
+              "“Tirei o produto do saco e deitei o rótulo fora.”",
+              "Se não consegues recuperar identificação e origem fiáveis, não o uses."
+            ],
+            [
+              "“O nome popular é o mesmo, mas os rótulos dizem espécies diferentes.”",
+              "Mantém separados. O nome popular não garante equivalência botânica."
+            ],
+            [
+              "“O frasco embacia por dentro.”",
+              "Pára de o utilizar; suspeita de humidade. Não tentes secar e reutilizar o conteúdo."
+            ],
+            [
+              "“A embalagem tem uma data que não compreendo.”",
+              "Lê o texto completo e consulta o fornecedor, em vez de inventar um prazo."
+            ],
+            [
+              "“A minha lista de compras está maior do que o espaço disponível.”",
+              "Reduz à prioridade real; não compres produtos sem local adequado."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Quando pedir ajuda"
+        },
+        {
+          "type": "body",
+          "text": "Se pretendes consumir uma planta com identificação incerta, se tens dúvidas sobre interações com medicação ou se observas sinais de deterioração que não sabes avaliar, não uses o produto. Para dúvidas sobre saúde, fala com um farmacêutico ou médico; para identificação botânica e conservação, procura apoio técnico competente."
+        },
+        {
+          "type": "callout_title",
+          "text": "NÃO FAZER"
+        },
+        {
+          "type": "body",
+          "text": "Nunca uses cheiro, sabor ou aspeto da fotografia como prova isolada de identidade ou segurança. Este kit ajuda a organizar informação, não a certificar plantas."
+        }
+      ]
+    },
+    {
+      "source_page": 12,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "EXEMPLO COMPLETO"
+        },
+        {
+          "type": "title",
+          "text": "De um armário confuso a um sistema funcional"
+        },
+        {
+          "type": "body",
+          "text": "Exemplo fictício para perceberes como as ferramentas trabalham juntas."
+        },
+        {
+          "type": "heading",
+          "text": "O ponto de partida"
+        },
+        {
+          "type": "body",
+          "text": "A Marta tem dois sacos identificados de ervas secas, um frasco vazio e um saquinho recebido sem rótulo. Ia comprar mais tomilho porque já não sabia o que tinha."
+        },
+        {
+          "type": "heading",
+          "text": "1 • Triagem"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Item",
+              "Decisão",
+              "Motivo"
+            ],
+            [
+              "Saco A · tomilho",
+              "Zona A",
+              "Origem, lote e data legíveis."
+            ],
+            [
+              "Saco B · hortelã-verde",
+              "Zona A",
+              "Embalagem identificada e íntegra."
+            ],
+            [
+              "Saquinho sem rótulo",
+              "Zona B → descartar se impossível confirmar",
+              "Origem e espécie desconhecidas."
+            ],
+            [
+              "Frasco vazio",
+              "Zona C",
+              "Pode ser reutilizado depois de limpo e seco."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "2 • Etiqueta e inventário"
+        },
+        {
+          "type": "body",
+          "text": "Saco A recebe o ID BV-001, localizado em A1. Saco B recebe BV-002, também em A1. A Marta guarda os rótulos originais e preenche duas linhas na ficha “Inventário”. Não junta produtos de lotes diferentes."
+        },
+        {
+          "type": "heading",
+          "text": "3 • Lista de compras"
+        },
+        {
+          "type": "body",
+          "text": "O inventário mostra que já há tomilho. A Marta risca-o da lista e regista apenas etiquetas de papel. Decide não comprar frascos novos porque a embalagem original é adequada."
+        },
+        {
+          "type": "heading",
+          "text": "4 • Revisão da semana seguinte"
+        },
+        {
+          "type": "body",
+          "text": "O saco de hortelã-verde está vazio. A Marta anota “terminado”, atualiza a quantidade e só agora decide se é preciso repor."
+        },
+        {
+          "type": "callout_title",
+          "text": "O GANHO CONCRETO"
+        },
+        {
+          "type": "body",
+          "text": "Em quatro movimentos, sabe o que existe, onde está, o que não deve usar e o que não precisa de comprar. As fichas seguintes tornam isso repetível."
+        }
+      ]
+    },
+    {
+      "source_page": 13,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "ANTES DOS MODELOS"
+        },
+        {
+          "type": "title",
+          "text": "Como usar as páginas imprimíveis"
+        },
+        {
+          "type": "body",
+          "text": "Podes imprimir só as folhas de que precisas ou duplicá-las no Word."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Página imprimível",
+              "Quando a usar"
+            ],
+            [
+              "Etiquetas completas",
+              "Recipientes que precisam de identificação e rastreabilidade detalhada."
+            ],
+            [
+              "Etiquetas rápidas",
+              "Embalagens que já conservam o rótulo original, para ID e localização."
+            ],
+            [
+              "Inventário",
+              "Uma linha por recipiente ou lote; atualizar sempre que muda."
+            ],
+            [
+              "Entradas e saídas",
+              "Compra, colheita, transferência, descarte ou término."
+            ],
+            [
+              "Lista de compras",
+              "Depois de conferir o inventário."
+            ],
+            [
+              "Revisão semanal",
+              "Cinco minutos para verificar e anotar uma ação."
+            ],
+            [
+              "Mapa da botica",
+              "Se tiveres várias prateleiras ou caixas."
+            ],
+            [
+              "Ficha de ocorrência",
+              "Quando encontras um problema e tens de documentar a decisão."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Quatro regras para imprimir"
+        },
+        {
+          "type": "bullet",
+          "text": "Imprime em A4, escala 100%. Recorta as etiquetas pelas bordas das caixas."
+        },
+        {
+          "type": "bullet",
+          "text": "Para etiquetas maiores, usa a versão completa; nas curtas não cabem todos os dados da origem."
+        },
+        {
+          "type": "bullet",
+          "text": "Se escreveres a lápis, protege a etiqueta contra desgaste e humidade. Revê a legibilidade com frequência."
+        },
+        {
+          "type": "bullet",
+          "text": "Guarda este PDF ou o Word no telemóvel para poderes consultar ou voltar a imprimir."
+        },
+        {
+          "type": "callout_title",
+          "text": "ANTES DE USAR AS FICHAS"
+        },
+        {
+          "type": "body",
+          "text": "Não preenches o que não sabes como se fosse certo. Escreve “não indicado” ou “por confirmar” e decide se esse produto deve ficar separado. Informação inventada torna o inventário perigoso."
+        }
+      ]
+    },
+    {
+      "source_page": 14,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 01"
+        },
+        {
+          "type": "title",
+          "text": "Etiquetas completas"
+        },
+        {
+          "type": "body",
+          "text": "Recorta e cola. Usa uma etiqueta por recipiente/lote; conserva também a embalagem e as instruções de origem."
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "complete",
+          "lines": [
+            "BOTICA VIVA / COMPLETA ID: BV-____",
+            "Planta / nome botânico: ____________________",
+            "Origem / fornecedor: _______________________",
+            "Lote (se houver): __________________________",
+            "Compra / colheita: ____ / ____ / ______",
+            "Data indicada na origem: ___________________",
+            "Local: ______ Rótulo original: [ ] guardado"
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Se a origem ou identificação não forem fiáveis, não inventes campos nem uses o conteúdo. Escreve “NÃO USAR” e coloca na Zona B."
+        }
+      ]
+    },
+    {
+      "source_page": 15,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 02"
+        },
+        {
+          "type": "title",
+          "text": "Etiquetas rápidas"
+        },
+        {
+          "type": "body",
+          "text": "Para localizar recipientes que mantêm o rótulo original. Se mudares o conteúdo de embalagem, usa a etiqueta completa."
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "label",
+          "variant": "quick",
+          "lines": [
+            "BOTICA VIVA / ETIQUETA RÁPIDA ID: BV-____",
+            "Planta: ___________________________________",
+            "Local: __________ Data: ___ / ___ / _____"
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Nas etiquetas curtas, o ID é a ligação à ficha de inventário, que guarda os dados completos de origem."
+        }
+      ]
+    },
+    {
+      "source_page": 16,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 03"
+        },
+        {
+          "type": "title",
+          "text": "Inventário da botica"
+        },
+        {
+          "type": "body",
+          "text": "Um ID por recipiente/lote. Podes tirar fotocópias ou duplicar esta página no Word."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "ID + planta",
+              "Origem / lote",
+              "Datas do rótulo",
+              "Local / quant.",
+              "Estado / ação"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Datas: aquisição/colheita e data indicada na origem, se existir. Estado: conforme / por confirmar / não usar / terminado. Não atribuir validade artificial."
+        }
+      ]
+    },
+    {
+      "source_page": 17,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 04"
+        },
+        {
+          "type": "title",
+          "text": "Registo de entradas e saídas"
+        },
+        {
+          "type": "body",
+          "text": "Atualiza quando chega, muda de frasco, termina ou é descartado."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Data",
+              "ID",
+              "Movimento",
+              "Quantidade / unidade",
+              "Motivo / nota"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Movimentos possíveis: entrada, transferência, saída, descarte. Se transferires o conteúdo, conserva a referência ao lote original."
+        }
+      ]
+    },
+    {
+      "source_page": 18,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 05"
+        },
+        {
+          "type": "title",
+          "text": "Lista de compras inteligente"
+        },
+        {
+          "type": "body",
+          "text": "Só entra aqui o que falta depois de consultares o inventário."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "O que preciso?",
+              "Já tenho?",
+              "Quantidade",
+              "Prioridade",
+              "O que confirmar na loja"
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Prioridade: necessário / pode esperar / não comprar. Verifica nome, origem, estado da embalagem e instruções antes de pagar."
+        }
+      ]
+    },
+    {
+      "source_page": 19,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 06"
+        },
+        {
+          "type": "title",
+          "text": "Revisão semanal"
+        },
+        {
+          "type": "body",
+          "text": "Escolhe uma data por semana. Observa sem provar nem cheirar produtos suspeitos."
+        },
+        {
+          "type": "review",
+          "lines": [
+            "SEMANA 1 DATA: ____ / ____ / ______",
+            "[ ] Etiquetas legíveis [ ] Embalagens íntegras [ ] Local seco e protegido",
+            "[ ] Inventário atualizado [ ] Zona B revista [ ] Compras conferidas",
+            "O que encontrei: _________________________________________________________",
+            "Ação e responsável: ______________________________________________________"
+          ]
+        },
+        {
+          "type": "review",
+          "lines": [
+            "SEMANA 2 DATA: ____ / ____ / ______",
+            "[ ] Etiquetas legíveis [ ] Embalagens íntegras [ ] Local seco e protegido",
+            "[ ] Inventário atualizado [ ] Zona B revista [ ] Compras conferidas",
+            "O que encontrei: _________________________________________________________",
+            "Ação e responsável: ______________________________________________________"
+          ]
+        },
+        {
+          "type": "review",
+          "lines": [
+            "SEMANA 3 DATA: ____ / ____ / ______",
+            "[ ] Etiquetas legíveis [ ] Embalagens íntegras [ ] Local seco e protegido",
+            "[ ] Inventário atualizado [ ] Zona B revista [ ] Compras conferidas",
+            "O que encontrei: _________________________________________________________",
+            "Ação e responsável: ______________________________________________________"
+          ]
+        },
+        {
+          "type": "review",
+          "lines": [
+            "SEMANA 4 DATA: ____ / ____ / ______",
+            "[ ] Etiquetas legíveis [ ] Embalagens íntegras [ ] Local seco e protegido",
+            "[ ] Inventário atualizado [ ] Zona B revista [ ] Compras conferidas",
+            "O que encontrei: _________________________________________________________",
+            "Ação e responsável: ______________________________________________________"
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Se encontrares bolor, pragas ou humidade persistente: não uses o produto e regista a decisão. Não tentes recuperar o conteúdo."
+        }
+      ]
+    },
+    {
+      "source_page": 20,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 07"
+        },
+        {
+          "type": "title",
+          "text": "Mapa do armário ou caixa"
+        },
+        {
+          "type": "body",
+          "text": "Podes mudar as zonas, mas mantém os códigos coerentes com as etiquetas e o inventário."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Zona",
+              "O que existe neste local?",
+              "IDs / observações"
+            ],
+            [
+              "A1 • Confirmado",
+              "",
+              ""
+            ],
+            [
+              "A2 • Confirmado",
+              "",
+              ""
+            ],
+            [
+              "B • Em revisão",
+              "",
+              ""
+            ],
+            [
+              "C • Materiais",
+              "",
+              ""
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Regras de localização"
+        },
+        {
+          "type": "body",
+          "text": "A1 e A2: apenas itens identificados, íntegros e devidamente guardados. B: informação por confirmar, sempre assinalada “NÃO USAR”. C: etiquetas, canetas, fichas e material limpo."
+        },
+        {
+          "type": "body",
+          "text": "Local escolhido: _________________________________________ Data da última reorganização: ____ / ____ / ______"
+        }
+      ]
+    },
+    {
+      "source_page": 21,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHAS IMPRIMÍVEIS / 08"
+        },
+        {
+          "type": "title",
+          "text": "Ficha de ocorrência"
+        },
+        {
+          "type": "body",
+          "text": "Usa quando encontras um rótulo perdido, recipiente danificado, sinais de deterioração ou falta de informação."
+        },
+        {
+          "type": "incident",
+          "lines": [
+            "OCORRÊNCIA 1",
+            "Data: ____ / ____ / ______ ID: __________ Local: __________",
+            "O que observei: __________________________________________________________",
+            "_________________________________________________________________________",
+            "Origem / rótulo disponível? [ ] Sim [ ] Não [ ] Por confirmar",
+            "Medida: [ ] Separar [ ] Confirmar informação [ ] Descartar [ ] Outra",
+            "Decisão final e data: _____________________________________________________",
+            "Registo atualizado no inventário? [ ] Sim [ ] Ainda não"
+          ]
+        },
+        {
+          "type": "incident",
+          "lines": [
+            "OCORRÊNCIA 2",
+            "Data: ____ / ____ / ______ ID: __________ Local: __________",
+            "O que observei: __________________________________________________________",
+            "_________________________________________________________________________",
+            "Origem / rótulo disponível? [ ] Sim [ ] Não [ ] Por confirmar",
+            "Medida: [ ] Separar [ ] Confirmar informação [ ] Descartar [ ] Outra",
+            "Decisão final e data: _____________________________________________________",
+            "Registo atualizado no inventário? [ ] Sim [ ] Ainda não"
+          ]
+        },
+        {
+          "type": "body",
+          "text": "Este registo não substitui avaliação técnica quando a identificação, conservação ou segurança são incertas."
+        }
+      ]
+    }
+  ]
+}
