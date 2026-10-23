@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { renderUpsell1, renderUpsell2 } from './build-upsell.mjs';
-import { UPSELL1_CHECKOUT_URL, UPSELL2_CHECKOUT_URL } from '../lib/upsell-config.mjs';
+import { renderUpsell1, renderUpsell2, renderDownsell } from './build-upsell.mjs';
+import { UPSELL1_CHECKOUT_URL, UPSELL2_CHECKOUT_URL, DOWNSELL_CHECKOUT_URL } from '../lib/upsell-config.mjs';
 
 const html = readFileSync('upsell-1.html', 'utf8');
 assert.equal(html, renderUpsell1({ checkoutUrl: UPSELL1_CHECKOUT_URL }));
@@ -43,6 +43,21 @@ assert.ok(!configured2.includes('purchase-unavailable'));
 assert.throws(() => renderUpsell2({ checkoutUrl: 'https://other.example/' }));
 assert.throws(() => renderUpsell2({ declineUrl: 'https://consumer.hotmart.com/?redirect=other' }));
 
+const downsell = readFileSync('downsell.html', 'utf8');
+assert.equal(downsell, renderDownsell({ checkoutUrl: DOWNSELL_CHECKOUT_URL }));
+assert.equal(readFileSync('public/downsell.html', 'utf8'), downsell);
+assert.match(downsell, /De <del>€7,90<\/del> por:/);
+assert.match(downsell, /SIM! QUERO COMEÇAR COM UM VASO POR €4,90/);
+assert.match(downsell, /href="https:\/\/ervasportuguesas.vercel.app\/obrigado.html"/);
+assert.match(downsell, /name="robots" content="noindex, nofollow, noarchive"/);
+assert.match(renderDownsell(), /<button[^>]*id="upsell-purchase"[^>]*disabled/);
+assert.ok(!/<script\b|<form\b|<img\b|\{\{[A-Z_]+\}\}/.test(downsell));
+const configuredDownsell = renderDownsell({ checkoutUrl: 'https://pay.hotmart.com/EXAMPLE3?off=offer3&src=downsell' });
+assert.match(configuredDownsell, /EXAMPLE3\?off=offer3&amp;src=downsell/);
+assert.ok(!configuredDownsell.includes('purchase-unavailable'));
+assert.throws(() => renderDownsell({ checkoutUrl: 'javascript:alert(1)' }));
+assert.throws(() => renderDownsell({ declineUrl: 'https://other.example/' }));
+
 // Native HTTP checks; no browser interaction is claimed by this script.
 const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:4173';
 const response = await fetch(origin + '/upsell-1.html?approved=true&plano=pro&checkout=https://other.example/');
@@ -51,8 +66,13 @@ assert.equal(await response.text(), html, 'Query strings cannot activate purchas
 const response2 = await fetch(origin + '/upsell-2.html?approved=true&checkout=https://other.example/');
 assert.equal(response2.status, 200);
 assert.equal(await response2.text(), html2, 'Upsell 2 ignores visitor-supplied payment parameters');
+const responseDownsell = await fetch(origin + '/downsell.html?approved=true&checkout=https://other.example/');
+assert.equal(responseDownsell.status, 200);
+assert.equal(await responseDownsell.text(), downsell, 'Downsell ignores visitor-supplied payment parameters');
 const resources = new Set();
-for (const match of html.matchAll(/href="(assets\/[^"#]+)"/g)) resources.add(new URL(match[1], origin + '/upsell-1.html').href);
+for (const page of [html, html2, downsell]) {
+  for (const match of page.matchAll(/href="(assets\/[^"#]+)"/g)) resources.add(new URL(match[1], origin + '/').href);
+}
 for (const url of resources) {
   const resource = await fetch(url);
   assert.equal(resource.status, 200, url);
@@ -62,5 +82,5 @@ for (const url of resources) {
   }
 }
 assert.equal((await fetch(origin + '/obrigado.html')).status, 200);
-for (const path of ['/lib/upsell-config.mjs', '/templates/upsell-1.html', '/templates/upsell-2.html', '/AGENTS.md', '/.git/config']) assert.equal((await fetch(origin + path)).status, 404, path);
+for (const path of ['/lib/upsell-config.mjs', '/templates/upsell-1.html', '/templates/upsell-2.html', '/templates/downsell.html', '/AGENTS.md', '/.git/config']) assert.equal((await fetch(origin + path)).status, 404, path);
 console.log('Passed: static page, disabled/configured purchase, safe URLs, non-blocking refusal, query isolation, noindex, export and ' + resources.size + ' HTTP resources. Browser validation not included.');

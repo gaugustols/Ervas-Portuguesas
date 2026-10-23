@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { UPSELL1_CHECKOUT_URL, UPSELL1_DECLINE_URL, UPSELL2_CHECKOUT_URL, UPSELL2_DECLINE_URL } from '../lib/upsell-config.mjs';
+import { UPSELL1_CHECKOUT_URL, UPSELL1_DECLINE_URL, UPSELL2_CHECKOUT_URL, UPSELL2_DECLINE_URL, DOWNSELL_CHECKOUT_URL, DOWNSELL_DECLINE_URL } from '../lib/upsell-config.mjs';
 
 const escape = value => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -38,9 +38,15 @@ export function renderUpsell2({ checkoutUrl = '', declineUrl = UPSELL2_DECLINE_U
   return renderPage('upsell-2', 'SIM! QUERO CUIDAR DA MINHA HORTA POR €7,90', checkoutUrl, declineUrl);
 }
 
+export function renderDownsell({ checkoutUrl = '', declineUrl = DOWNSELL_DECLINE_URL } = {}) {
+  return renderPage('downsell', 'SIM! QUERO COMEÇAR COM UM VASO POR €4,90', checkoutUrl, declineUrl);
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   writeFileSync(new URL('../upsell-1.html', import.meta.url), renderUpsell1({ checkoutUrl: UPSELL1_CHECKOUT_URL }));
   writeFileSync(new URL('../upsell-2.html', import.meta.url), renderUpsell2({ checkoutUrl: UPSELL2_CHECKOUT_URL }));
+  writeFileSync(new URL('../downsell.html', import.meta.url), renderDownsell({ checkoutUrl: DOWNSELL_CHECKOUT_URL }));
   console.log('Upsell 1 generated; purchase ' + (UPSELL1_CHECKOUT_URL ? 'enabled with its own checkout.' : 'disabled until its own checkout is configured.'));
   console.log('Upsell 2 generated; purchase ' + (UPSELL2_CHECKOUT_URL ? 'enabled with its own checkout.' : 'disabled until its own checkout is configured.'));
+  console.log('Downsell generated; purchase ' + (DOWNSELL_CHECKOUT_URL ? 'enabled with its own checkout.' : 'disabled until its own checkout is configured.'));
 }

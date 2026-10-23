@@ -34,3 +34,14 @@ Não foram alteradas configurações de GitHub ou Vercel. Confirmar o deployment
 - Confirmado que landing, Upsell 1, templates/estilos anteriores, obrigado, versões Básico/PRO e manual PDF foram preservados. Nenhum checkout real foi chamado ou pagamento realizado.
 - Navegador indisponível: sem validação visual de responsividade ou console. Avaliação interna de fidelidade e consistência técnica: 8,5/10; não é nota de conversão.
 - A copy pressupõe aquisição do Upsell 1. Na ativação futura, configurar a passagem após a aprovação dessa compra, e não após a recusa. Recursos Hotmart de um clique e entrega continuam por verificar; downsell e oferta final aguardam as copys do utilizador.
+
+## Downsell — verificação adicional em 23/10/2026
+
+- Nova página `downsell.html`, gerada a partir de `templates/downsell.html`, com a copy fornecida para «O Meu Primeiro Vaso»: referência €7,90 e preço/CTA €4,90. Sem alteração dos dois upsells ou dos estilos partilhados.
+- Configuração independente `DOWNSELL_CHECKOUT_URL` vazia; botão nativamente desativado até receber o checkout próprio. Recusa disponível sem JavaScript para o seletor do plano já adquirido em `/obrigado.html`.
+- Mantidos noindex, CSP restritiva, política de referência e fontes locais. Nenhum script no navegador, formulário, credencial, recolha adicional de dados ou ligação direta para o novo entregável.
+- Geração e exportação aprovadas. `check:upsell` testa as três páginas, incluindo o downsell com query strings e os estados de compra vazia/configurada. `check:thank-you`, verificações de sintaxe e diff aprovados; quatro recursos CSS/fontes verificados por HTTP.
+- Verificadores das skills checkout-upsell e auditoria-seguranca sobre cópia dos cinco recursos da nova página: zero falhas, zero avisos e zero achados/críticos. Esta checagem não audita integralmente o restante site.
+- Preservação da landing, ambos os upsells, templates/estilos anteriores, obrigado, versões Básico/PRO e manual PDF confirmada. Recursos sensíveis de desenvolvimento permanecem fora da exportação pública.
+- Navegador indisponível: não foram avaliados o aspeto renderizado no telemóvel/desktop ou o console. Avaliação interna de fidelidade à copy e consistência técnica: 8,5/10; não mede conversão.
+- Checkout, entrega do novo conteúdo e encaminhamentos Hotmart continuam por configurar; não foi efetuado pagamento. A copy corresponde ao ramo de recusa do Upsell 1, mas os links das páginas anteriores não foram alterados antes da definição do percurso completo.

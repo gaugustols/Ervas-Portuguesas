@@ -24,6 +24,10 @@ Quando o Upsell 1 estiver ativo, se `a` for a proporção de compradores dos doi
 
 O fator `a × c` evita atribuir o Upsell 2 a todos os compradores do front. Aceitar ambos acrescenta €17,40 à compra inicial: total de €25,30 com o Básico ou €32,30 com o PRO. É apenas aritmética, não uma previsão de conversão, receita ou margem. Ainda não existem checkouts nem adesões observadas para estas ofertas.
 
+**Downsell recebido:** «O Meu Primeiro Vaso», €4,90, alternativa depois de recusar a horta completa. Se `d` for a adesão ao downsell entre quem recusou o Upsell 1, o termo adicional bruto é `€4,90 × (1 − a) × d`.
+
+Com esse ramo, `ticket bruto = ticket atual + €9,50 × a + €7,90 × a × c + €4,90 × (1 − a) × d`. Não somar o downsell como se todos os compradores também tivessem adquirido os dois upsells. Aceitar apenas o downsell dá um total bruto de €12,80 com o Básico ou €19,80 com o PRO. São contas condicionais de estrutura; o encadeamento e as taxas reais ainda não foram configurados/medidos.
+
 Se uma pessoa aceitar apenas esse complemento, o total bruto é €17,40 após o Básico ou €24,40 após o PRO. Estes são totais aritméticos, não previsões de adesão ou lucro. Os preços das restantes etapas e as regras de passagem ainda não foram enviados; não somar ofertas sem considerar os caminhos e as taxas de aceitação condicionais.
 
 Se `p` for a proporção das vendas diretas do PRO, entre 0 e 1:

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PREVIEW_PORT || 4173);
-const pages = new Set(['index.html', 'obrigado.html', 'obrigado-basico.html', 'obrigado-pro.html', 'upsell-1.html', 'upsell-2.html']);
+const pages = new Set(['index.html', 'obrigado.html', 'obrigado-basico.html', 'obrigado-pro.html', 'upsell-1.html', 'upsell-2.html', 'downsell.html']);
 const webappRoot = path.join(root, 'meu-projeto', 'botica-viva-2026-10-19');
 const mime = {
   '.html': 'text/html; charset=utf-8',
