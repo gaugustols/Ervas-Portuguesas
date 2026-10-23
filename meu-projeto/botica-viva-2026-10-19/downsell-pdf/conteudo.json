@@ -1,0 +1,877 @@
+{
+  "source_name": "Down Botica_Viva_O_Meu_Primeiro_Vaso_Guia.pdf",
+  "source_sha256": "744e894dbfc394922c8e636c5903c727e7c1d27eeaee84eb55e0701ef7f19848",
+  "pages": [
+    {
+      "source_page": 1,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "BOTICA VIVA / GUIA DE EXECUÇÃO"
+        },
+        {
+          "type": "title",
+          "text": "O Meu"
+        },
+        {
+          "type": "title",
+          "text": "Primeiro Vaso"
+        },
+        {
+          "type": "body",
+          "text": "Hortelã-verde em casa: da compra aos primeiros cuidados, com um plano de 7 dias."
+        },
+        {
+          "type": "body",
+          "text": "1 planta • 1 vaso • 7 tarefas claras"
+        },
+        {
+          "type": "callout_title",
+          "text": "A META REAL"
+        },
+        {
+          "type": "body",
+          "text": "Ao fim do plano, terás uma hortelã-verde instalada num vaso apropriado e saberás como observar o substrato, quando regar e o que fazer se alguma coisa não estiver bem. Não prometemos folhas novas nem colheitas em sete dias."
+        },
+        {
+          "type": "kicker",
+          "text": "PARA CULTIVO DOMÉSTICO EM PORTUGAL | EDIÇÃO DIGITAL"
+        }
+      ]
+    },
+    {
+      "source_page": 2,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "COMEÇA AQUI"
+        },
+        {
+          "type": "title",
+          "text": "Um vaso que consegues tratar"
+        },
+        {
+          "type": "body",
+          "text": "Este guia foi feito para quem não quer uma horta de três plantas neste momento. Vais começar apenas com uma hortelã-verde, sem compras ao acaso."
+        },
+        {
+          "type": "heading",
+          "text": "O que vais conseguir fazer"
+        },
+        {
+          "type": "bullet",
+          "text": "Escolher um sítio que tenha luz suficiente sem expor a planta ao calor excessivo."
+        },
+        {
+          "type": "bullet",
+          "text": "Comprar uma hortelã-verde saudável, um vaso adequado e o substrato certo."
+        },
+        {
+          "type": "bullet",
+          "text": "Transplantar a planta, fazer a primeira rega e seguir uma rotina de observação durante sete dias."
+        },
+        {
+          "type": "heading",
+          "text": "O que NÃO tens de fazer"
+        },
+        {
+          "type": "bullet",
+          "text": "Não precisas de um quintal, de adubos especiais nem de comprar várias plantas."
+        },
+        {
+          "type": "bullet",
+          "text": "Não tens de regar todos os dias nem de aprender vinte técnicas de jardinagem."
+        },
+        {
+          "type": "bullet",
+          "text": "Não tens de colher folhas ao fim da semana. Primeiro, a planta precisa de se adaptar."
+        },
+        {
+          "type": "heading",
+          "text": "O teu roteiro"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Antes de plantar",
+              "Depois de plantar"
+            ],
+            [
+              "Dias 1 e 2: confirmar o local e reunir os materiais.",
+              "Dia 4: observar recuperação e humidade."
+            ],
+            [
+              "Dia 3: transplante e primeira rega completa.",
+              "Dias 5 a 7: corrigir cuidados e definir a rotina."
+            ]
+          ]
+        },
+        {
+          "type": "callout_title",
+          "text": "QUANDO COMEÇAR A CONTAR"
+        },
+        {
+          "type": "body",
+          "text": "Se a loja não tiver hortelã-verde saudável ou se o teu espaço ainda não servir, pausa o plano. É melhor começar uns dias mais tarde do que perder a planta por pressa."
+        },
+        {
+          "type": "heading",
+          "text": "É hortelã-verde, não uma mistura de espécies"
+        },
+        {
+          "type": "body",
+          "text": "Procura o nome botânico Mentha spicata na etiqueta. Alguns viveiros usam nomes comuns diferentes para espécies de Mentha. Se a identificação não for clara, pede confirmação antes de comprar. Não recolhas plantas silvestres para este projeto."
+        }
+      ]
+    },
+    {
+      "source_page": 3,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 1 / O ESPAÇO"
+        },
+        {
+          "type": "title",
+          "text": "Encontra um local que funcione"
+        },
+        {
+          "type": "body",
+          "text": "Antes de gastares dinheiro, faz esta verificação. O nome «hortelã» não significa que aguente qualquer canto da casa."
+        },
+        {
+          "type": "heading",
+          "text": "Teste de luz em 3 passos"
+        },
+        {
+          "type": "ordered",
+          "text": "Escolhe o lugar exato onde o vaso ficará: varanda, terraço, pátio ou janela exterior estável e protegida.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Num dia de céu razoavelmente limpo, repara quando o sol incide diretamente naquele ponto. Anota horas e intensidade.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Procura luz abundante com algumas horas de sol suave, de preferência de manhã, ou meia-sombra luminosa. Protege do sol forte da tarde, sobretudo no verão.",
+          "number": 3
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Se observares…",
+              "A decisão sensata"
+            ],
+            [
+              "Luz abundante e 3 a 5 h de sol suave; abrigo do vento extremo.",
+              "Bom ponto de partida. Observa a reação da planta após instalar."
+            ],
+            [
+              "Muita claridade, mas pouco sol direto.",
+              "Pode funcionar, com crescimento mais lento; vigia alongamento e folhas fracas."
+            ],
+            [
+              "Canto escuro no interior ou junto a vidro muito quente.",
+              "Procura outro local antes de comprar. Não avances por obrigação."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Verifica ainda"
+        },
+        {
+          "type": "bullet",
+          "text": "Drenagem: a água tem de poder sair do vaso; não deixes água parada no prato."
+        },
+        {
+          "type": "bullet",
+          "text": "Segurança: impede que o vaso caia do parapeito; mantém fora do alcance de crianças pequenas e animais que o possam mastigar."
+        },
+        {
+          "type": "bullet",
+          "text": "Estação do ano: vento frio, geada e calor intenso pedem proteção temporária. O local pode ter de mudar."
+        },
+        {
+          "type": "callout_title",
+          "text": "A REGRA PRÁTICA"
+        },
+        {
+          "type": "body",
+          "text": "A hortelã prefere humidade regular sem encharcamento. Um sítio fresco e luminoso costuma ser melhor do que uma varanda onde o vaso aquece demasiado."
+        }
+      ]
+    },
+    {
+      "source_page": 4,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 2 / A COMPRA"
+        },
+        {
+          "type": "title",
+          "text": "Leva só o necessário"
+        },
+        {
+          "type": "body",
+          "text": "Esta lista é para UM vaso. Não compres um conjunto de jardinagem inteiro para começar."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Comprar",
+              "Quantidade / como escolher"
+            ],
+            [
+              "Hortelã-verde (Mentha spicata)",
+              "1 planta de viveiro, com etiqueta e folhas em bom estado."
+            ],
+            [
+              "Vaso com furos de drenagem",
+              "1 vaso com cerca de 18–22 cm de diâmetro, maior que o vaso de compra."
+            ],
+            [
+              "Substrato universal para vasos",
+              "1 saco pequeno; cerca de 4–6 L costuma bastar, mas depende do vaso."
+            ],
+            [
+              "Prato de recolha",
+              "1, para proteger o chão; deves esvaziá-lo após regar."
+            ],
+            [
+              "Água e recipiente para regar",
+              "1 regador pequeno ou jarro de bico controlado."
+            ],
+            [
+              "Etiqueta e caneta",
+              "1 etiqueta com «Mentha spicata» e a data da plantação."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Na loja, faz uma inspeção de 60 segundos"
+        },
+        {
+          "type": "bullet",
+          "text": "Olha por baixo de algumas folhas: evita plantas com muitos insetos, teias ou zonas pegajosas."
+        },
+        {
+          "type": "bullet",
+          "text": "Escolhe caules firmes, folhas sem manchas extensas e crescimento relativamente compacto."
+        },
+        {
+          "type": "bullet",
+          "text": "Toca na superfície do substrato: evita vasos com cheiro podre ou encharcamento persistente."
+        },
+        {
+          "type": "bullet",
+          "text": "Pergunta se a planta recebeu algum produto fitossanitário e respeita a informação de utilização, sobretudo se pensares usá-la na cozinha."
+        },
+        {
+          "type": "heading",
+          "text": "O que podes deixar na prateleira"
+        },
+        {
+          "type": "body",
+          "text": "Pedras para fazer uma «camada de drenagem», fertilizantes de arranque, sprays caseiros, vasos sem furos e kits com dez ferramentas. Os furos e um bom substrato importam mais que esses extras."
+        },
+        {
+          "type": "callout_title",
+          "text": "ATALHO PARA POUPAR"
+        },
+        {
+          "type": "body",
+          "text": "Se a hortelã já veio num vaso suficientemente grande, com furos e raízes sem aperto, podes mantê-la no vaso de origem por enquanto. O transplante não é obrigatório só para cumprir o calendário."
+        }
+      ]
+    },
+    {
+      "source_page": 5,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "PASSO 3 / MONTAR O VASO"
+        },
+        {
+          "type": "title",
+          "text": "Transplanta sem complicar"
+        },
+        {
+          "type": "body",
+          "text": "Reserva 20 a 30 minutos. Faz o transplante ao fim da tarde ou num período ameno, não sob sol forte."
+        },
+        {
+          "type": "heading",
+          "text": "Os 10 passos"
+        },
+        {
+          "type": "ordered",
+          "text": "Lava as mãos e prepara uma superfície limpa. Confirma que o vaso novo tem furos desimpedidos.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Coloca substrato no fundo, suficiente para o topo do torrão ficar cerca de 1–2 cm abaixo da borda do vaso.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Aperta de leve o vaso de compra nas laterais e retira a planta segurando o torrão, sem puxar pelos caules.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "Observa as raízes. Se estiverem muito enroladas à volta do torrão, solta apenas a camada exterior, com cuidado.",
+          "number": 4
+        },
+        {
+          "type": "ordered",
+          "text": "Pousa a planta ao centro. O colo, onde o caule encontra o substrato, fica aproximadamente à mesma altura de antes.",
+          "number": 5
+        },
+        {
+          "type": "ordered",
+          "text": "Preenche as laterais com substrato, sem enterrar folhas ou caules e sem comprimir com força.",
+          "number": 6
+        },
+        {
+          "type": "ordered",
+          "text": "Deixa 1–2 cm livres entre a superfície do substrato e a borda para facilitar a rega.",
+          "number": 7
+        },
+        {
+          "type": "ordered",
+          "text": "Rega devagar até começares a ver água a sair pelos furos. Se o substrato estiver muito seco, espera um pouco e rega em pequenas passagens.",
+          "number": 8
+        },
+        {
+          "type": "ordered",
+          "text": "Deixa escorrer e esvazia o prato. Nunca deixes o vaso a «beber» água acumulada durante horas.",
+          "number": 9
+        },
+        {
+          "type": "ordered",
+          "text": "Coloca a etiqueta e põe o vaso no local escolhido, protegido do sol mais agressivo nos primeiros dias.",
+          "number": 10
+        },
+        {
+          "type": "callout_title",
+          "text": "SE AS RAÍZES ESTIVEREM MOLES E CASTANHAS"
+        },
+        {
+          "type": "body",
+          "text": "Não forces o transplante como se tudo estivesse normal. Pede orientação ao viveiro, sobretudo se houver mau cheiro ou partes do caule a apodrecer."
+        }
+      ]
+    },
+    {
+      "source_page": 6,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "A DECISÃO QUE MAIS IMPORTA"
+        },
+        {
+          "type": "title",
+          "text": "Rega quando é preciso, não por hábito"
+        },
+        {
+          "type": "body",
+          "text": "Não há uma regra «de dois em dois dias» que sirva para todas as casas. A temperatura, o vento, o tamanho do vaso e a estação mudam o consumo de água."
+        },
+        {
+          "type": "heading",
+          "text": "O teste de 45 segundos"
+        },
+        {
+          "type": "ordered",
+          "text": "Toca no substrato a 1–2 cm de profundidade, perto da borda e sem ferir raízes.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Levanta ligeiramente o vaso: com prática, notas a diferença entre leve e pesado.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Se ainda estiver húmido e o vaso pesado, espera e volta a verificar no dia seguinte.",
+          "number": 3
+        },
+        {
+          "type": "ordered",
+          "text": "Se essa camada estiver seca e o vaso mais leve, rega devagar e deixa escorrer pelos furos.",
+          "number": 4
+        },
+        {
+          "type": "heading",
+          "text": "Casos que confundem quem começa"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "O que aconteceu",
+              "O que fazer agora"
+            ],
+            [
+              "As folhas estão caídas e a terra está seca.",
+              "Regar com calma, deixar escorrer, observar recuperação nas próximas horas."
+            ],
+            [
+              "As folhas estão caídas mas a terra está húmida.",
+              "Não acrescentar água. Verificar drenagem, calor e sinais de raízes comprometidas."
+            ],
+            [
+              "Choveu e o prato está cheio de água.",
+              "Esvaziar o prato e verificar humidade antes de voltar a regar."
+            ],
+            [
+              "O substrato repele a água e escorre logo.",
+              "Regar em pequenas passagens, com pausas, até humedecer uniformemente."
+            ]
+          ]
+        },
+        {
+          "type": "callout_title",
+          "text": "O ERRO QUE ESTE GUIA EVITA"
+        },
+        {
+          "type": "body",
+          "text": "Folha murcha não é sinónimo automático de sede. Confirmar a terra antes de agir evita transformar um problema simples em excesso de água."
+        },
+        {
+          "type": "heading",
+          "text": "Uma regra de segurança"
+        },
+        {
+          "type": "body",
+          "text": "Não apliques detergente, álcool, óleos essenciais ou misturas caseiras nas folhas para «salvar» a planta. Podem danificá-la e criar riscos se a planta for usada em alimentos."
+        }
+      ]
+    },
+    {
+      "source_page": 7,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "CALENDÁRIO DE EXECUÇÃO"
+        },
+        {
+          "type": "title",
+          "text": "Dias 1 a 3: começar"
+        },
+        {
+          "type": "body",
+          "text": "Segue estes dias por ordem. Faz uma fotografia no início para poderes comparar mudanças reais mais tarde."
+        },
+        {
+          "type": "task",
+          "day": 1,
+          "title": "Confirmar o local",
+          "duration": "(10–15 min)",
+          "items": [
+            "Observa a luz no lugar escolhido e anota se há sol da manhã, vento ou calor intenso.",
+            "Confirma que o vaso ficará estável e longe de quedas."
+          ],
+          "done": "Feito quando: escreveste onde vai ficar e por que esse lugar serve."
+        },
+        {
+          "type": "task",
+          "day": 2,
+          "title": "Comprar sem improvisar",
+          "duration": "(20–40 min)",
+          "items": [
+            "Leva a lista da página 4 e confirma o nome Mentha spicata.",
+            "Escolhe uma planta firme, sem sinais fortes de pragas, e verifica os furos do vaso."
+          ],
+          "done": "Feito quando: tens planta, vaso e substrato adequados, ou decidiste adiar com motivo."
+        },
+        {
+          "type": "task",
+          "day": 3,
+          "title": "Montar o primeiro vaso",
+          "duration": "(20–30 min)",
+          "items": [
+            "Segue os dez passos da página 5, apenas se a planta precisar de transplante.",
+            "Faz a primeira rega de forma completa, deixa escorrer e regista a data.",
+            "Fotografa a planta de frente e a etiqueta."
+          ],
+          "done": "Feito quando: a hortelã está instalada com drenagem, etiqueta e fotografia inicial."
+        },
+        {
+          "type": "heading",
+          "text": "Se não transplantares no Dia 3"
+        },
+        {
+          "type": "body",
+          "text": "Confirma que o vaso de compra tem furos, espaço suficiente para as raízes e substrato em condições. Mantém a planta nele, regista a decisão e segue com as mesmas observações dos Dias 4 a 7."
+        },
+        {
+          "type": "callout_title",
+          "text": "RESULTADO DESTA FASE"
+        },
+        {
+          "type": "body",
+          "text": "Não precisas de ver crescimento novo. Precisas de ter uma planta identificada, instalada e com condições razoáveis para se adaptar."
+        }
+      ]
+    },
+    {
+      "source_page": 8,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "CALENDÁRIO DE ACOMPANHAMENTO"
+        },
+        {
+          "type": "title",
+          "text": "Dias 4 a 7: aprender a cuidar"
+        },
+        {
+          "type": "body",
+          "text": "Cada tarefa demora poucos minutos. O mais importante é observar antes de mudar alguma coisa."
+        },
+        {
+          "type": "task",
+          "day": 4,
+          "title": "Primeira observação",
+          "duration": "(5 min)",
+          "items": [
+            "Vê se os caules estão firmes e se há folhas com alterações evidentes.",
+            "Confirma humidade a 1–2 cm. Só rega se a verificação justificar."
+          ],
+          "done": "Feito quando: registaste «regar» ou «esperar» e o motivo."
+        },
+        {
+          "type": "task",
+          "day": 5,
+          "title": "Verificar luz e drenagem",
+          "duration": "(5–10 min)",
+          "items": [
+            "Repara se o local aquece muito ao fim do dia; protege do sol forte se houver sinais de escaldão.",
+            "Confirma que não há água no prato e que os furos estão livres."
+          ],
+          "done": "Feito quando: corrigiste o local ou confirmaste que está adequado."
+        },
+        {
+          "type": "task",
+          "day": 6,
+          "title": "Inspecionar as folhas",
+          "duration": "(5 min)",
+          "items": [
+            "Compara com a fotografia do Dia 3; observa a face inferior das folhas.",
+            "Se aparecer um problema, usa a tabela SOS e altera apenas um cuidado de cada vez."
+          ],
+          "done": "Feito quando: anotaste a mudança ou escreveste «sem alterações»."
+        },
+        {
+          "type": "task",
+          "day": 7,
+          "title": "Fechar a primeira semana",
+          "duration": "(10 min)",
+          "items": [
+            "Faz nova fotografia e compara a firmeza, a cor e a humidade do substrato.",
+            "Define dois momentos fixos da semana para observar o vaso, sem fixar dias obrigatórios de rega."
+          ],
+          "done": "Feito quando: sabes onde a planta fica, como decidir a rega e qual será a próxima observação."
+        }
+      ]
+    },
+    {
+      "source_page": 9,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "QUANDO ALGO CORRE MAL"
+        },
+        {
+          "type": "title",
+          "text": "SOS: 6 situações frequentes"
+        },
+        {
+          "type": "body",
+          "text": "Estes sinais podem ter mais do que uma causa. Faz primeiro a verificação indicada; não tentes corrigir tudo de uma vez."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "O que vês",
+              "Primeiro teste / primeira ação"
+            ],
+            [
+              "Folhas murchas",
+              "Verifica a terra a 1–2 cm. Seca: rega. Húmida: não regues; procura calor excessivo e drenagem deficiente."
+            ],
+            [
+              "Folhas amarelas",
+              "Vê se há água parada, substrato permanentemente húmido ou pouca luz. Corrige um fator e acompanha."
+            ],
+            [
+              "Pontas castanhas ou folhas queimadas",
+              "Observa exposição a sol forte, vento quente e secura. Muda para luz mais suave se necessário."
+            ],
+            [
+              "Caules finos e muito alongados",
+              "A planta pode estar com luz insuficiente. Tenta um lugar mais luminoso, de forma gradual."
+            ],
+            [
+              "Insetos ou folhas pegajosas",
+              "Isola o vaso de outras plantas, observa o verso das folhas e pede orientação no viveiro para soluções adequadas."
+            ],
+            [
+              "Cheiro a podre ou base mole",
+              "Suspende a rega, verifica drenagem e pede avaliação ao viveiro. Pode haver problema sério nas raízes."
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "O que fazer se a planta piorar"
+        },
+        {
+          "type": "ordered",
+          "text": "Fotografa o problema com boa luz e anota a data.",
+          "number": 1
+        },
+        {
+          "type": "ordered",
+          "text": "Confirma a humidade e as condições do local. Não apliques vários tratamentos ao mesmo tempo.",
+          "number": 2
+        },
+        {
+          "type": "ordered",
+          "text": "Se o caule amolecer, houver apodrecimento, muitos insetos ou deterioração rápida, procura orientação de um viveiro antes de agir.",
+          "number": 3
+        },
+        {
+          "type": "callout_title",
+          "text": "NÃO VALE A PENA «SALVAR» A QUALQUER CUSTO"
+        },
+        {
+          "type": "body",
+          "text": "Por vezes uma planta de viveiro já chega debilitada. Identificar isso cedo e pedir substituição, quando aplicável, é mais útil do que insistir em receitas improvisadas."
+        }
+      ]
+    },
+    {
+      "source_page": 10,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "DEPOIS DOS 7 DIAS"
+        },
+        {
+          "type": "title",
+          "text": "O que fazer a seguir"
+        },
+        {
+          "type": "body",
+          "text": "Uma semana é suficiente para montar o vaso e aprender a observá-lo. Não é tempo garantido para enraizamento completo ou colheita."
+        },
+        {
+          "type": "heading",
+          "text": "Sinais de que estás no bom caminho"
+        },
+        {
+          "type": "bullet",
+          "text": "A planta mantém-se firme e não apresenta deterioração progressiva."
+        },
+        {
+          "type": "bullet",
+          "text": "Consegues explicar por que regaste ou esperaste na última observação."
+        },
+        {
+          "type": "bullet",
+          "text": "O vaso drena, o prato não fica com água e o local dá luz adequada."
+        },
+        {
+          "type": "bullet",
+          "text": "Sabes como registar uma alteração e quando pedir ajuda."
+        },
+        {
+          "type": "heading",
+          "text": "E a primeira colheita?"
+        },
+        {
+          "type": "body",
+          "text": "Não cortes folhas só porque passaram sete dias. Espera que a planta esteja estabelecida, com crescimento novo e vigoroso. Faz uma colheita leve, com tesoura limpa, escolhendo pontas de caules saudáveis e sem retirar uma grande parte da folhagem de uma vez. Se a planta ainda está pequena ou debilitada, espera."
+        },
+        {
+          "type": "heading",
+          "text": "Se pensas usar as folhas na cozinha"
+        },
+        {
+          "type": "body",
+          "text": "Confirma a identificação da planta e pergunta no viveiro se houve tratamentos incompatíveis com uso alimentar. Lava as folhas antes da utilização. Este guia ensina cultivo doméstico; não prescreve infusões, doses ou tratamentos para doenças. O uso medicinal de plantas pode ter contraindicações e interações com medicamentos."
+        },
+        {
+          "type": "heading",
+          "text": "Checklist da missão cumprida"
+        },
+        {
+          "type": "check",
+          "text": "Tenho uma hortelã-verde identificada e instalada num vaso com furos."
+        },
+        {
+          "type": "check",
+          "text": "Sei confirmar a terra antes de regar e esvazio o prato."
+        },
+        {
+          "type": "check",
+          "text": "Sei observar folhas, caules e local sem mudar tudo de uma vez."
+        },
+        {
+          "type": "check",
+          "text": "Tenho uma fotografia inicial e um registo dos primeiros sete dias."
+        },
+        {
+          "type": "check",
+          "text": "Defini quando volto a observar a planta na próxima semana."
+        },
+        {
+          "type": "callout_title",
+          "text": "O RESULTADO PROMETIDO"
+        },
+        {
+          "type": "body",
+          "text": "Um vaso pronto a cuidar, com escolhas feitas e rotina iniciada. Se ainda não tinhas condições de luz, terminar o diagnóstico e evitar uma compra errada também é uma decisão acertada."
+        }
+      ]
+    },
+    {
+      "source_page": 11,
+      "nodes": [
+        {
+          "type": "kicker",
+          "text": "FICHA PARA IMPRIMIR"
+        },
+        {
+          "type": "title",
+          "text": "O meu primeiro vaso"
+        },
+        {
+          "type": "body",
+          "text": "Podes imprimir esta página ou preenchê-la no telemóvel. Uma observação simples vale mais do que tentar lembrar tudo de cabeça."
+        },
+        {
+          "type": "body",
+          "text": "NOME: ________________________________________ DATA DE INÍCIO: ____ / ____ / ______"
+        },
+        {
+          "type": "body",
+          "text": "LOCAL DO VASO: __________________________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "SOL DIRETO (aprox.): __________________ HORÁRIO: ______________________________"
+        },
+        {
+          "type": "body",
+          "text": "ESPÉCIE NO RÓTULO: Mentha spicata VASO (cm): ______ TRANSPLANTADO? [ ] SIM [ ] NÃO"
+        },
+        {
+          "type": "heading",
+          "text": "Lista de compras"
+        },
+        {
+          "type": "check",
+          "text": "Planta identificada [ ] Vaso com furos [ ] Substrato [ ] Prato [ ] Etiqueta"
+        },
+        {
+          "type": "heading",
+          "text": "Registo dos sete dias"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Dia",
+              "O que observei",
+              "Terra: seca / húmida",
+              "O que fiz"
+            ],
+            [
+              "1",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "2",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "3",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "4",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "5",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "6",
+              "________________________",
+              "________________",
+              "________________"
+            ],
+            [
+              "7",
+              "________________________",
+              "________________",
+              "________________"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Se apareceu um problema"
+        },
+        {
+          "type": "body",
+          "text": "Sinal: ________________________________________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "O que confirmei antes de agir: ________________________________________________________"
+        },
+        {
+          "type": "body",
+          "text": "Uma ação que fiz: ________________________________________ Volto a avaliar em: __________"
+        },
+        {
+          "type": "heading",
+          "text": "O meu próximo passo"
+        },
+        {
+          "type": "body",
+          "text": "Dia da próxima observação: __________________ Local definido: __________________________"
+        },
+        {
+          "type": "body",
+          "text": "Não tenho de regar por calendário. Tenho de olhar, tocar na terra e decidir."
+        }
+      ]
+    }
+  ]
+}

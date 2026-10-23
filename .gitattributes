@@ -1,3 +1,4 @@
 # Preserve the deliverable PDF byte for byte and treat it as a binary asset.
 output/pdf/botica-viva-horta-em-7-dias.pdf binary
 output/pdf/botica-viva-mantem-a-tua-horta-viva-30-dias.pdf binary
+output/pdf/botica-viva-o-meu-primeiro-vaso.pdf binary
