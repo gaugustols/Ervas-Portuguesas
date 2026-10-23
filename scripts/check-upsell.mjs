@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { renderUpsell1, renderUpsell2, renderDownsell } from './build-upsell.mjs';
-import { UPSELL1_CHECKOUT_URL, UPSELL2_CHECKOUT_URL, DOWNSELL_CHECKOUT_URL } from '../lib/upsell-config.mjs';
+import { renderUpsell1, renderUpsell2, renderDownsell, renderFinalOffer } from './build-upsell.mjs';
+import { UPSELL1_CHECKOUT_URL, UPSELL2_CHECKOUT_URL, DOWNSELL_CHECKOUT_URL, FINAL_OFFER_CHECKOUT_URL } from '../lib/upsell-config.mjs';
 
 const html = readFileSync('upsell-1.html', 'utf8');
 assert.equal(html, renderUpsell1({ checkoutUrl: UPSELL1_CHECKOUT_URL }));
@@ -58,6 +58,21 @@ assert.ok(!configuredDownsell.includes('purchase-unavailable'));
 assert.throws(() => renderDownsell({ checkoutUrl: 'javascript:alert(1)' }));
 assert.throws(() => renderDownsell({ declineUrl: 'https://other.example/' }));
 
+const finalOffer = readFileSync('oferta-final.html', 'utf8');
+assert.equal(finalOffer, renderFinalOffer({ checkoutUrl: FINAL_OFFER_CHECKOUT_URL }));
+assert.equal(readFileSync('public/oferta-final.html', 'utf8'), finalOffer);
+assert.match(finalOffer, /De <del>€9,90<\/del> por:/);
+assert.match(finalOffer, /SIM! QUERO A MINHA BOTICA ORGANIZADA POR €3,70/);
+assert.match(finalOffer, /href="https:\/\/consumer.hotmart.com\/"/);
+assert.match(finalOffer, /name="robots" content="noindex, nofollow, noarchive"/);
+assert.match(renderFinalOffer(), /<button[^>]*id="upsell-purchase"[^>]*disabled/);
+assert.ok(!/<script\b|<form\b|<img\b|\{\{[A-Z_]+\}\}/.test(finalOffer));
+const configuredFinal = renderFinalOffer({ checkoutUrl: 'https://pay.hotmart.com/EXAMPLE4?off=offer4&src=final' });
+assert.match(configuredFinal, /EXAMPLE4\?off=offer4&amp;src=final/);
+assert.ok(!configuredFinal.includes('purchase-unavailable'));
+assert.throws(() => renderFinalOffer({ checkoutUrl: 'javascript:alert(1)' }));
+assert.throws(() => renderFinalOffer({ declineUrl: 'https://consumer.hotmart.com/?redirect=other' }));
+
 // Native HTTP checks; no browser interaction is claimed by this script.
 const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:4173';
 const response = await fetch(origin + '/upsell-1.html?approved=true&plano=pro&checkout=https://other.example/');
@@ -69,8 +84,11 @@ assert.equal(await response2.text(), html2, 'Upsell 2 ignores visitor-supplied p
 const responseDownsell = await fetch(origin + '/downsell.html?approved=true&checkout=https://other.example/');
 assert.equal(responseDownsell.status, 200);
 assert.equal(await responseDownsell.text(), downsell, 'Downsell ignores visitor-supplied payment parameters');
+const responseFinal = await fetch(origin + '/oferta-final.html?approved=true&checkout=https://other.example/');
+assert.equal(responseFinal.status, 200);
+assert.equal(await responseFinal.text(), finalOffer, 'Final offer ignores visitor-supplied payment parameters');
 const resources = new Set();
-for (const page of [html, html2, downsell]) {
+for (const page of [html, html2, downsell, finalOffer]) {
   for (const match of page.matchAll(/href="(assets\/[^"#]+)"/g)) resources.add(new URL(match[1], origin + '/').href);
 }
 for (const url of resources) {
@@ -82,5 +100,5 @@ for (const url of resources) {
   }
 }
 assert.equal((await fetch(origin + '/obrigado.html')).status, 200);
-for (const path of ['/lib/upsell-config.mjs', '/templates/upsell-1.html', '/templates/upsell-2.html', '/templates/downsell.html', '/AGENTS.md', '/.git/config']) assert.equal((await fetch(origin + path)).status, 404, path);
+for (const path of ['/lib/upsell-config.mjs', '/templates/upsell-1.html', '/templates/upsell-2.html', '/templates/downsell.html', '/templates/oferta-final.html', '/AGENTS.md', '/.git/config']) assert.equal((await fetch(origin + path)).status, 404, path);
 console.log('Passed: static page, disabled/configured purchase, safe URLs, non-blocking refusal, query isolation, noindex, export and ' + resources.size + ' HTTP resources. Browser validation not included.');

@@ -28,6 +28,10 @@ O fator `a × c` evita atribuir o Upsell 2 a todos os compradores do front. Acei
 
 Com esse ramo, `ticket bruto = ticket atual + €9,50 × a + €7,90 × a × c + €4,90 × (1 − a) × d`. Não somar o downsell como se todos os compradores também tivessem adquirido os dois upsells. Aceitar apenas o downsell dá um total bruto de €12,80 com o Básico ou €19,80 com o PRO. São contas condicionais de estrutura; o encadeamento e as taxas reais ainda não foram configurados/medidos.
 
+**Oferta final recebida:** «A Minha Botica Organizada», €3,70. Se `z` representar a proporção de todos os compradores iniciais que efetivamente a compram, acrescentar `€3,70 × z` à fórmula anterior. `z` já considera exposição e aceitação nos diferentes caminhos; não assumir que todas as pessoas verão ou aceitarão a oferta.
+
+Comprar os dois upsells e a oferta final acrescenta €21,10: total bruto €29,00 com o Básico ou €36,00 com o PRO. Comprar o downsell e a oferta final acrescenta €8,60: total bruto €16,50 com o Básico ou €23,50 com o PRO. Não juntar os dois caminhos como se fossem uma só compra. Checkouts, taxas e adesões continuam pendentes; estas contas não validam lucro nem previsão de receita.
+
 Se uma pessoa aceitar apenas esse complemento, o total bruto é €17,40 após o Básico ou €24,40 após o PRO. Estes são totais aritméticos, não previsões de adesão ou lucro. Os preços das restantes etapas e as regras de passagem ainda não foram enviados; não somar ofertas sem considerar os caminhos e as taxas de aceitação condicionais.
 
 Se `p` for a proporção das vendas diretas do PRO, entre 0 e 1:

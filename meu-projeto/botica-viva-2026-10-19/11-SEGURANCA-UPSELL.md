@@ -45,3 +45,14 @@ Não foram alteradas configurações de GitHub ou Vercel. Confirmar o deployment
 - Preservação da landing, ambos os upsells, templates/estilos anteriores, obrigado, versões Básico/PRO e manual PDF confirmada. Recursos sensíveis de desenvolvimento permanecem fora da exportação pública.
 - Navegador indisponível: não foram avaliados o aspeto renderizado no telemóvel/desktop ou o console. Avaliação interna de fidelidade à copy e consistência técnica: 8,5/10; não mede conversão.
 - Checkout, entrega do novo conteúdo e encaminhamentos Hotmart continuam por configurar; não foi efetuado pagamento. A copy corresponde ao ramo de recusa do Upsell 1, mas os links das páginas anteriores não foram alterados antes da definição do percurso completo.
+
+## Oferta final — verificação adicional em 23/10/2026
+
+- Nova página `oferta-final.html`, template próprio e recursos CSS/fontes partilhados com as três páginas anteriores. Copy preservada: «A Minha Botica Organizada», referência €9,90 e preço/CTA €3,70 fornecidos pelo utilizador.
+- `FINAL_OFFER_CHECKOUT_URL` vazio mantém a compra desativada. Recusa para `https://consumer.hotmart.com/` sem condicionar o acesso a uma nova compra. Não há scripts no navegador, formulários, credenciais, recolha adicional de dados ou ligação direta para o novo entregável.
+- Noindex, CSP e política de referência preservados do padrão anterior. Página e recursos exportados para `public/` por lista explícita; fontes de desenvolvimento continuam excluídas.
+- Geração/exportação e verificações de sintaxe aprovadas. `check:upsell` ampliado para as quatro páginas, incluindo estado de compra configurada/desativada, recusa, isolamento de parâmetros e quatro recursos HTTP de CSS/fontes. `check:thank-you` executado sem opção de navegador.
+- Verificador da skill checkout-upsell e auditor de segurança sobre cópia dos cinco recursos da oferta final: zero falhas, zero avisos, zero achados/críticos. Não constitui auditoria integral do restante site.
+- Comparação confirmou preservação da landing, dos dois upsells, do downsell, templates/estilos anteriores, obrigado, versões Básico/PRO e manual PDF.
+- Navegador indisponível: sem validação visual de responsividade ou console. Nota interna de fidelidade à copy e consistência técnica: 8,5/10; não é uma medição de conversão.
+- A página está preparada para publicar; a conta Hotmart, pagamento, encaminhamentos e entrega não foram configurados ou testados. Não interpretar query strings como prova de compra nem afirmar um fluxo de pagamento completo em funcionamento.

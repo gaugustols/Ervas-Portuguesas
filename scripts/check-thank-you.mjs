@@ -25,7 +25,7 @@ assert.ok(ready.includes('Abrir o meu webapp') && ready.includes('href="mailto:a
 for (const accessUrl of ['javascript:alert(1)', 'http://area.example.com', 'https://127.0.0.1/', 'https://user:pass@area.example.com/', 'https://area.example.com/%0a']) assert.throws(() => renderThankYou({ accessUrl }));
 assert.throws(() => renderThankYou({ supportUrl: 'mailto:apoio@example.com?bcc=outro@example.com' }));
 assert.equal(readFileSync('public/obrigado.html', 'utf8'), html);
-assert.deepEqual(readdirSync('public').sort(), ['app', 'assets', 'downsell.html', 'index.html', 'obrigado-basico.html', 'obrigado-pro.html', 'obrigado.html', 'pro', 'upsell-1.html', 'upsell-2.html']);
+assert.deepEqual(readdirSync('public').sort(), ['app', 'assets', 'downsell.html', 'index.html', 'obrigado-basico.html', 'obrigado-pro.html', 'obrigado.html', 'oferta-final.html', 'pro', 'upsell-1.html', 'upsell-2.html']);
 for (const version of ['app', 'pro']) {
   const files = readdirSync('public/' + version, { recursive: true, withFileTypes: true }).filter(entry => entry.isFile());
   const data = JSON.parse(readFileSync('public/' + version + '/index.html', 'utf8').split('<script id="conteudo" type="application/json">')[1].split('</script>')[0]);
