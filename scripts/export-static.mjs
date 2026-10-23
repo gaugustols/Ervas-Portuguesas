@@ -8,6 +8,7 @@ mkdirSync(output, { recursive: true });
 cpSync(path.join(root, 'index.html'), path.join(output, 'index.html'));
 cpSync(path.join(root, 'obrigado.html'), path.join(output, 'obrigado.html'));
 for (const file of ['obrigado-basico.html', 'obrigado-pro.html']) cpSync(path.join(root, file), path.join(output, file));
+cpSync(path.join(root, 'upsell-1.html'), path.join(output, 'upsell-1.html'));
 mkdirSync(path.join(output, 'assets'), { recursive: true });
 cpSync(path.join(root, 'assets', 'nova-pagina'), path.join(output, 'assets', 'nova-pagina'), { recursive: true });
 // Export only the compiled HTML and the assets used by each version; never source/docs.

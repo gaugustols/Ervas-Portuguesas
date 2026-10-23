@@ -2,9 +2,9 @@
 
 ## Desenvolvimento atual
 
-**Estado: textos de checkout escritos; upsell à espera da escolha do utilizador.** Skill: `.agents/skills/checkout-upsell`. Não foram alteradas a landing, a aplicação, o manual, as páginas de obrigado ou a conta Hotmart nesta tarefa.
+**Estado: Upsell 1 gerado e verificado localmente; compra desativada, à espera do checkout próprio.** Skill: `.agents/skills/checkout-upsell`. O utilizador definiu um funil comum para Básico e PRO e decidiu enviar a própria copy de Upsell 1, Upsell 2, downsell e oferta final. As sugestões anteriores de upgrade e de novos complementos foram substituídas por esta decisão.
 
-Recomendação: oferecer os extras do PRO a quem já comprou o Básico, através de uma oferta adicional própria. Reutiliza conteúdos existentes e preserva a distinção entre os planos. Ainda não há preço nem checkout de upgrade aprovados. O checkout PRO atual cobra €14,90 pelo plano completo; não o apresentar como cobrança apenas da diferença.
+Página criada: `../../upsell-1.html`, gerada por `../../scripts/build-upsell.mjs` a partir de `../../templates/upsell-1.html`. URL de publicação: `https://ervasportuguesas.vercel.app/upsell-1.html`. A estética reutiliza `obrigado.css` e acrescenta `upsell.css`, sem modificar a página de obrigado, a landing ou o produto. Não foram alteradas configurações no painel Hotmart.
 
 ## Texto do checkout Básico — pronto para colar
 
@@ -57,7 +57,7 @@ Recomendação: oferecer os extras do PRO a quem já comprou o Básico, através
 
 **Apoio:** o contacto próprio ainda não foi definido. Até lá, orientar para o contacto do produtor nos detalhes da compra na Hotmart; não inventar email, WhatsApp ou horário de atendimento.
 
-## Order bump — três opções avaliadas, ainda não criadas
+## Order bump — propostas anteriores, fora do funil atual
 
 Preços abaixo são propostas internas, não ofertas ativas. O intervalo de 20–50% do Básico corresponde a €1,58–€3,95. Nota de cada critério: 0–2; total máximo 6. Notas editoriais, não resultados de vendas.
 
@@ -69,52 +69,40 @@ Preços abaixo são propostas internas, não ofertas ativas. O intervalo de 20�
 
 **Bump recomendado, se for criado depois:** organizador de compras e stock, por €2,90. Resolve uma tarefa diferente da biblioteca e não deve reutilizar como extra pago nenhum recurso já incluído no Básico ou no PRO. Antes de o oferecer, criar e verificar a entrega e confirmar o preço. Para o lançamento atual, manter o checkout sem bump até essa entrega existir.
 
-## Upsell recomendado — extras do PRO após o Básico
+## Upsell 1 definido pelo utilizador — A Minha Horta Medicinal em 7 Dias
 
-**Elegibilidade:** apenas quem comprou o Básico. Não oferecer a compradores do PRO conteúdos que já receberam. A identificação da oferta comprada e a integração Hotmart ainda não foram verificadas; não usar parâmetros da URL como prova de pagamento.
+**Destinatários:** compradores de ambos os planos, Básico e PRO, com a mesma página e o mesmo complemento. Não é uma venda do upgrade PRO.
 
-**Próximo passo:** passar da consulta de plantas para uma organização mais completa das infusões, do cultivo e dos registos em papel.
+**Copy:** fornecida pelo utilizador e preservada no template, incluindo «PASSO 2», «Já tens o guia», os parágrafos, os três benefícios e a linha de garantia/acesso/Hotmart. A oferta propõe escolher três plantas, reunir materiais e montar os primeiros vasos em sete dias, respeitando as condições do espaço. O conteúdo do novo entregável não foi criado nesta tarefa.
 
-**Texto base da página:**
+**Preço:** €9,50. Referência de €29,90 apresentada na copy do utilizador e preservada; não foi consultado um histórico independente desse preço. Não foram acrescentadas contagens regressivas, vagas, testemunhos ou números de vendas.
 
-> **Queres completar a tua Botica Viva com os recursos PRO?**
->
-> O teu Plano Básico inclui a biblioteca de plantas e as ferramentas de consulta. Se quiseres ir mais longe, podes acrescentar os recursos PRO à tua experiência.
->
-> Oito fichas de infusões para consultar, orientações de cultivo e conservação de seis plantas e quatro modelos para imprimir.
->
-> É um complemento opcional. Podes continuar a utilizar o que já compraste sem aceitar esta oferta.
+**Configuração:** `../../lib/upsell-config.mjs`, variável `UPSELL1_CHECKOUT_URL` vazia. O utilizador confirmou que ainda não há checkout e autorizou desenvolver a página para inserir a ligação depois. O botão está nativamente desativado e identificado por «Compra indisponível de momento». O marcador `#PLACEHOLDER-CHECKOUT` é apenas uma convenção interna, não um destino clicável publicado.
 
-**Aceitação:** «Quero acrescentar os recursos PRO» — só ativar com preço e checkout específicos do upgrade configurados.
+**Aceitação:** «Acrescenta agora à tua Botica Viva», preparada para um checkout próprio da Hotmart. Um link comum não é, por si só, uma integração de compra de um clique. A validação do gerador rejeita destinos inesperados, HTTP e URLs com credenciais.
 
-**Recusa:** «Não, obrigado. Quero aceder ao meu Plano Básico» — seguir diretamente para a página de obrigado Básico. Sem nova tentativa obrigatória, temporizador ou bloqueio de acesso.
+**Recusa:** «Não, obrigado. Quero continuar ao meu acesso.» → `https://ervasportuguesas.vercel.app/obrigado.html`, com escolha do plano adquirido. Esta opção funciona sem JavaScript e não exige aceitar uma compra adicional.
 
-**Preço:** por definir. A diferença aritmética entre €14,90 e €7,90 é €7,00; isso não cria um preço aprovado, crédito automático, cupão ou oferta de upgrade na Hotmart.
+## Próximas páginas do mesmo funil
 
-**Checkout adicional:** `#PLACEHOLDER-CHECKOUT` apenas como marcador interno. Nunca apontar o botão para um pagamento inventado ou para o PRO integral como se cobrasse só a diferença.
+- `/upsell-2.html`: aguarda copy, preço e checkout do utilizador.
+- `/downsell.html`: aguarda copy, preço e checkout do utilizador.
+- `/oferta-final.html`: aguarda copy, preço e checkout do utilizador.
 
-## Downsell e percurso
+Não foram criadas páginas vazias nem links para etapas inexistentes. A ordem de aceitação/recusa entre as quatro etapas e o destino após cada pagamento ainda precisam de ser definidos; não supor automaticamente que todas as pessoas devem passar por todas as páginas. Até lá, a recusa do Upsell 1 mantém a saída direta para o acesso comprado.
 
-Não há uma entrega menor distinta aprovada. Não criar um desconto arbitrário para o mesmo PRO nem voltar a vender partes do que já foi comprado. A recusa do upsell deve levar imediatamente ao acesso Básico. Só produzir `site/downsell.html` se for definida uma oferta menor real, com conteúdo e preço próprios.
+Usar o domínio Vercel atual com caminhos próprios, como combinado com o utilizador. Não criar projetos, domínios ou subdomínios separados. Não foi configurado o redirecionamento da Hotmart nem alterado o percurso de compra da landing.
 
-Percurso proposto, ainda não integrado:
-
-1. Landing existente → checkout Básico ou PRO.
-2. Básico aprovado → oferta opcional de upgrade, quando configurada.
-3. Recusa → `/obrigado-basico.html` → `/app/`.
-4. Upgrade aprovado → `/obrigado-pro.html` → `/pro/`.
-5. PRO comprado diretamente → `/obrigado-pro.html` → `/pro/`, sem repetir a oferta.
-
-O acesso ao produto comprado nunca depende de aceitar uma compra adicional. As páginas de obrigado existentes devem ser reutilizadas, sem substituir o fluxo atual antes de verificar as regras no painel Hotmart.
+O conteúdo das ofertas adicionais só pode ser entregue depois de existir. Não usar o endereço público ou parâmetros como prova de pagamento. O MVP sem login e a ajuda Hotmart atuais permanecem como estavam.
 
 ## Verificações e pendências desta etapa
 
 - Texto em português de Portugal; aplicação online identificada como entrega principal.
 - Preços, acesso vitalício e garantia preservados das condições confirmadas.
 - Order bump, upsell de um clique, cupões e encaminhamento por oferta no painel Hotmart: **não verificado**.
-- `site/upsell.html`: ainda não criado; depende da escolha entre upgrade e novo complemento e da definição do preço.
+- Página Upsell 1 com `noindex`, CSP restritiva, recursos locais e dois estados de compra testados. Testes em `../../scripts/check-upsell.mjs`; segurança em `11-SEGURANCA-UPSELL.md`.
 - Ticket médio e margem: preparação em `03-CONTAS.md`; sem taxas, custos, CPA e adesões observadas não há validação de rentabilidade.
-- Avaliação editorial desta etapa: 8/10 para clareza dos textos; não é nota de conversão nem de um fluxo em funcionamento. A implementação integral permanece pendente.
+- Avaliação interna: 8,5/10 para fidelidade à copy, consistência com a página de obrigado e funcionamento técnico local. Não é uma medição de conversão nem uma validação visual: o navegador está indisponível. Compra, entrega do complemento e integração Hotmart continuam pendentes.
 
 ## Referência anterior do lançamento
 

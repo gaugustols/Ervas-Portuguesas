@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && npm run build:faq && npm run build:animations && npm run build:webapp && npm run build:thank-you && node scripts/export-static.mjs",
+    "build": "npm run build:styles && npm run build:headline && npm run build:rating && npm run build:vsl && npm run build:faq && npm run build:animations && npm run build:webapp && npm run build:thank-you && npm run build:upsell && node scripts/export-static.mjs",
+    "build:upsell": "node scripts/build-upsell.mjs",
+    "check:upsell": "node scripts/check-upsell.mjs",
     "build:webapp": "node meu-projeto/botica-viva-2026-10-19/scripts/gerar.mjs",
     "build:thank-you": "node scripts/build-thank-you.mjs",
     "check:thank-you": "node scripts/check-thank-you.mjs",

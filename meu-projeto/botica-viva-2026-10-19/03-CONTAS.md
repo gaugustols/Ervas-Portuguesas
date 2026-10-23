@@ -12,6 +12,14 @@
 
 ## Ticket médio bruto, antes das taxas
 
+**Decisão posterior do utilizador:** um único funil para Básico e PRO. O Upsell 1 «A Minha Horta Medicinal em 7 Dias» tem preço indicado de €9,50. Ainda não há checkout nem vendas desta oferta. A proposta anterior de upgrade do Básico para PRO não é a oferta do funil atual.
+
+Quando o Upsell 1 estiver ativo, se `a` for a proporção de compradores dos dois planos que o compram:
+
+`ticket bruto com Upsell 1 = ticket atual + €9,50 × a`.
+
+Se uma pessoa aceitar apenas esse complemento, o total bruto é €17,40 após o Básico ou €24,40 após o PRO. Estes são totais aritméticos, não previsões de adesão ou lucro. Os preços das restantes etapas e as regras de passagem ainda não foram enviados; não somar ofertas sem considerar os caminhos e as taxas de aceitação condicionais.
+
 Se `p` for a proporção das vendas diretas do PRO, entre 0 e 1:
 
 `ticket atual = €7,90 × (1 − p) + €14,90 × p = €7,90 + €7,00 × p`.
