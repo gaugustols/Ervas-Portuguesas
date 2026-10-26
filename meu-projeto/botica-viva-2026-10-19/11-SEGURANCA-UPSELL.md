@@ -1,5 +1,15 @@
 # Verificação do Upsell 1 · 23/10/2026
 
+## Preparação para aprovação do merge · 26/10/2026
+
+- O utilizador confirmou a revisão visual mobile das quatro páginas. A alteração adicional é apenas uma regra CSS de ecrã para `.upsell-offer .access-note`: 13 px, entrelinha 1,6 e cor `--text`. Sobrepõe a regra mobile de 11 px sem alterar o produto principal, a página de obrigado ou a impressão. Contraste calculado da cor existente #f7faf8 nos dois extremos do fundo do card: 15,26:1 e 17,45:1; não é uma medição em navegador.
+- HTML, templates, preços atuais e valores riscados idênticos a 5857b8f. Quatro contentores e quatro inicializações no conjunto, um por página. SDK oficial único por documento; sem ações manuais de compra/recusa, checkouts fabricados ou permissões CSP adicionais. O script externo e o inicializador com hash mantêm-se os mesmos.
+- URLs confirmadas pelo utilizador, retiradas de Widget Code no funil «Backend Plano Básico»: https://ervasportuguesas.vercel.app/upsell-1.html, https://ervasportuguesas.vercel.app/upsell-2.html, https://ervasportuguesas.vercel.app/downsell.html e https://ervasportuguesas.vercel.app/oferta-final.html. Verificada correspondência exata com os ficheiros preparados/exportados; não foi inspecionado ou alterado o painel Hotmart pelo agente.
+- Executados com aprovação: build completo, typecheck, check:upsell (CSP exata, init único, ausência de ações próprias, exportação e seis recursos HTTP), sintaxe do gerador/verificador, html-validate 11.17.0 nas quatro páginas (zero erros/avisos), check:thank-you, check:hook, check:rating e testar-fichas.mjs (38 fichas e 53 recursos HTTP por versão Básico/PRO, com DOM em memória).
+- Navegador indisponível para o agente. Não executados os testes CDP de animações e navegação real nem uma compra Hotmart; não afirmar ausência de erros de console observada nesta sessão. A revisão visual anterior é a confirmação do utilizador. A aprovação do ajuste visual final pode ser feita no novo Preview.
+- Valores riscados encontrados, sem alteração e por confirmar pelo utilizador: Upsell 1 €29,90; Upsell 2 €17,90; Downsell €7,90; Oferta Final €9,90. Preços atuais: €9,50, €7,90, €4,90 e €3,90. Não declarar os valores riscados comprovados antes dessa confirmação.
+- A branch atual descende de origin/main, permitindo preparar a integração sem executar merge. PR em rascunho e Preview para revisão; aprovação explícita do resumo e dos valores riscados é condição anterior a qualquer merge/publicação em produção. Sem mudanças do produto principal, preços, URLs, configurações Hotmart ou ativação do funil.
+
 ## Widget nas restantes três etapas · Preview de 26/10/2026
 
 - O utilizador confirmou visualmente o primeiro Preview no telemóvel, com a mensagem de compra em andamento necessária. Essa confirmação foi fornecida pelo utilizador e não constitui teste de pagamento.
