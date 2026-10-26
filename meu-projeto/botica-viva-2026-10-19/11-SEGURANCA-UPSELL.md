@@ -1,5 +1,15 @@
 # Verificação do Upsell 1 · 23/10/2026
 
+## Revisão para Preview · 26/10/2026
+
+- Branch de teste `test/upsell-1-hotmart-widget`, criada de `ba18bcc` num worktree isolado. A branch `main` local e as alterações preexistentes do utilizador foram preservadas; apenas a branch de teste será enviada. Sem merge, push em main, deploy por CLI ou ativação do funil.
+- Confirmados um contentor na área do CTA, um script oficial seguido do inicializador e ausência de ações manuais de compra/recusa. Preço €9,50 e outras páginas/configurações preservados por comparação com o commit revisto.
+- CSP revista: removido `style-src-attr 'unsafe-inline'`, que era desnecessário. O SDK atual usa propriedades individuais de `element.style`, sem `cssText` nem `setAttribute`. Essas operações não requerem permissão para atributos inline, conforme a [documentação MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr). Mantidos apenas o SDK oficial específico, hash do inicializador, iframe em `pay.hotmart.com` e recursos locais. Sem wildcards, unsafe-inline ou unsafe-eval.
+- As três correções do commit original foram DOCTYPE em maiúsculas e remoção de aria-label no span da marca e no parágrafo do preço. Não são pré-requisitos do widget: o DOCTYPE anterior já era HTML5 válido, mas não cumpria a regra de estilo do validador; os atributos ARIA eram inadequados em elementos genéricos e redundantes com o texto. Nenhuma nova alteração nessas linhas.
+- Repetidos com aprovação: build completo, typecheck, check:upsell, sintaxe dos scripts alterados e do SDK, html-validate 11.17.0 (zero erros/avisos), verificação da CSP e comparação das outras páginas. Cinco recursos HTTP locais aprovados. A primeira tentativa de build falhou em uv_os_get_passwd/ENOMEM no ambiente restrito; a repetição com permissões nativas passou.
+- O SDK oficial também foi executado em VM com DOM de teste: montou um iframe no destino /funnel sem escrever atributos style ou cssText. Isto não substitui um navegador, a aplicação efetiva da CSP ou o contexto de compra da Hotmart.
+- Navegador indisponível. Continuam pendentes console/rede e responsividade em mobile/desktop, sessão e parâmetros reais do funil, preço/moeda no widget, aceitação/recusa e respetivos encaminhamentos, aprovação/recusa do pagamento e entrega sem cobrança duplicada. Não foi feita compra nem alterado o painel Hotmart. Verificar o Preview gerado automaticamente pelo push, sem promover a produção.
+
 ## Widget oficial Hotmart · 26/10/2026
 
 - Escopo: apenas o Upsell 1. Compra e recusa manuais removidas; contentor na área do CTA, seguido de um único carregamento do SDK e do inicializador oficial. Preço de €9,50, texto e apresentação exterior preservados. As outras páginas e `lib/upsell-config.mjs` não mudaram.

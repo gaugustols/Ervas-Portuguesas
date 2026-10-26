@@ -32,7 +32,8 @@ assert.deepEqual(widgetCalls, ['salesFunnel', '#hotmart-sales-funnel']);
 const widgetHash = createHash('sha256').update(widgetScripts[1][2]).digest('base64');
 assert.ok(html.includes(`script-src https://checkout.hotmart.com/lib/hotmart-checkout-elements.js 'sha256-${widgetHash}'`));
 assert.match(html, /frame-src https:\/\/pay\.hotmart\.com;/);
-assert.match(html, /style-src-attr 'unsafe-inline'/);
+assert.match(html, /style-src 'self';/);
+assert.doesNotMatch(html, /'unsafe-inline'|'unsafe-eval'|https:\/\/\*/, 'CSP has no broad script/style permissions');
 assert.ok(!/<button\b|id="upsell-purchase"|upsell-decline|purchase-unavailable|href="https:\/\/(?:pay|consumer)\.hotmart\.com|href="https:\/\/ervasportuguesas\.vercel\.app\/obrigado.html"/.test(html), 'All purchase and decline actions belong to the widget');
 assert.equal(renderUpsell1({ checkoutUrl: 'https://other.example/', declineUrl: 'https://other.example/' }), html, 'Legacy manual configuration cannot restore buttons');
 
