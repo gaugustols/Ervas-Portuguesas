@@ -1,5 +1,13 @@
 # Verificação do Upsell 1 · 23/10/2026
 
+## Apresentação pós-compra sem preços riscados · 26/10/2026
+
+- Pedido restrito aos quatro rótulos acima dos preços nos templates e HTML gerados. Retiradas as referências €29,90, €17,90, €7,90 e €9,90; preços de compra mantidos em €9,50, €7,90, €4,90 e €3,90. Os rótulos são os quatro textos fornecidos pelo utilizador, sem desconto ou temporizador adicional.
+- Comparação com 80ad2e5 confirmou que os oito ficheiros só diferem nesses rótulos. Landing e recursos partilhados preservados; garantia continua em 13 px. Sem alterações ao SDK, inicializador, CSP, URLs, encaminhamentos ou configuração Hotmart. Check:upsell agora exige os novos textos e rejeita elementos del/s.
+- Aprovados: build completo, typecheck, sintaxe do gerador e verificador, html-validate 11.17.0 nas quatro páginas (zero erros/avisos), check:upsell (widget único, ordem, inicialização, CSP exata, preços, exportação e seis recursos HTTP), check:thank-you, check:hook, check:rating e testar-fichas.mjs nas versões Básico/PRO (38 fichas e 53 recursos por versão). Diff revisto sem alterações de conteúdo não relacionadas.
+- Navegador indisponível nesta sessão: não foram repetidas a revisão visual, a observação de console ou os testes CDP. A revisão mobile anterior foi confirmada pelo utilizador. Compra/contexto real Hotmart, decisões de aceitar/recusar, pagamento e entrega continuam por testar em condições legítimas da plataforma.
+- Atualizar PR #1 e apenas a branch test/upsell-1-hotmart-widget para Preview automático. Não executar merge, push em main, deploy por CLI ou ativação do funil. A decisão de retirar as referências substitui a pendência de as comprovar; não constitui autorização de merge.
+
 ## Preparação para aprovação do merge · 26/10/2026
 
 - O utilizador confirmou a revisão visual mobile das quatro páginas. A alteração adicional é apenas uma regra CSS de ecrã para `.upsell-offer .access-note`: 13 px, entrelinha 1,6 e cor `--text`. Sobrepõe a regra mobile de 11 px sem alterar o produto principal, a página de obrigado ou a impressão. Contraste calculado da cor existente #f7faf8 nos dois extremos do fundo do card: 15,26:1 e 17,45:1; não é uma medição em navegador.

@@ -5,10 +5,10 @@ import { Script } from 'node:vm';
 import { renderUpsell1, renderUpsell2, renderDownsell, renderFinalOffer } from './build-upsell.mjs';
 
 const pages = [
-  { name: 'upsell-1', render: renderUpsell1, price: '€9,50', reference: '€29,90' },
-  { name: 'upsell-2', render: renderUpsell2, price: '€7,90', reference: '€17,90' },
-  { name: 'downsell', render: renderDownsell, price: '€4,90', reference: '€7,90' },
-  { name: 'oferta-final', render: renderFinalOffer, price: '€3,90', reference: '€9,90' },
+  { name: 'upsell-1', render: renderUpsell1, price: '€9,50', offerLabel: 'CONDIÇÃO ESPECIAL APÓS A TUA COMPRA' },
+  { name: 'upsell-2', render: renderUpsell2, price: '€7,90', offerLabel: 'COMPLEMENTO PARA A TUA NOVA HORTA' },
+  { name: 'downsell', render: renderDownsell, price: '€4,90', offerLabel: 'UMA FORMA MAIS SIMPLES DE COMEÇAR' },
+  { name: 'oferta-final', render: renderFinalOffer, price: '€3,90', offerLabel: 'ÚLTIMO COMPLEMENTO DESTA COMPRA' },
 ];
 const sdk = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
 const origin = process.env.PREVIEW_ORIGIN || 'http://127.0.0.1:4173';
@@ -23,7 +23,8 @@ for (const page of pages) {
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.ok(!/<form\b|<img\b|\{\{[A-Z_]+\}\}/.test(html));
   assert.equal(html.match(/<p class="upsell-price"[^>]*>([^<]+)<\/p>/)?.[1], page.price);
-  assert.ok(html.includes(`De <del>${page.reference}</del> por:`));
+  assert.equal(html.match(/<p class="upsell-reference">([^<]+)<\/p>/)?.[1], page.offerLabel);
+  assert.doesNotMatch(html, /<del\b|<s\b/i, `${page.name}: no crossed-out reference price`);
   assert.equal((html.match(/id="hotmart-sales-funnel"/g) || []).length, 1);
   const offer = html.match(/<section class="access-card upsell-offer"[^>]*>([\s\S]*?)<\/section>/)?.[1];
   assert.ok(offer?.includes('<div id="hotmart-sales-funnel"></div>'), `${page.name}: widget in CTA card`);
