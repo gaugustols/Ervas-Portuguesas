@@ -1,5 +1,18 @@
 # Verificação do Upsell 1 · 23/10/2026
 
+## Widget nas restantes três etapas · Preview de 26/10/2026
+
+- O utilizador confirmou visualmente o primeiro Preview no telemóvel, com a mensagem de compra em andamento necessária. Essa confirmação foi fornecida pelo utilizador e não constitui teste de pagamento.
+- Integração restrita a upsell-2.html, downsell.html, oferta-final.html e respetivos templates. Cada CTA tem um contentor, um script oficial sem async/defer e uma única chamada init('salesFunnel').mount(...). Ações manuais removidas; preços €7,90, €4,90 e €3,90 e restante conteúdo visível preservados.
+- Gerador comum reutiliza a implementação do Upsell 1, normaliza finais de linha e calcula o hash do inicializador. Não consome os antigos links de compra/recusa nem constrói pagamentos ou encaminhamentos. lib/upsell-config.mjs e painel Hotmart não foram alterados. HTML/template/CSS do Upsell 1 mantêm-se iguais.
+- CSP idêntica à versão restrita do Upsell 1: SDK específico em checkout.hotmart.com, hash do inicializador, iframe em pay.hotmart.com, recursos locais e default-src none. Sem unsafe-inline, unsafe-eval, wildcards ou connect-src adicional.
+- hotmart-sales-funnel.css serve apenas as três novas etapas: iframe limitado ao card, sem mínimo fixo de 320 px, com 300 px de espaço inicial e altura final gerida pelo SDK. Estilos partilhados anteriores não mudaram.
+- Para validar os documentos com o mesmo perfil do Upsell 1, foram normalizados DOCTYPE e dois aria-label redundantes em elementos genéricos de cada página. Ajustes não visuais de validação; títulos, preços, benefícios e descrições comparados com o commit anterior, descontando apenas o widget e estes atributos.
+- Aprovados: build completo, typecheck, sintaxe do gerador/verificador, html-validate 11.17.0 nas quatro páginas (zero erros/avisos), init/mount em VM, um script por página, CSP exata, preços, ausência de ações manuais, exportação e seis recursos HTTP. Comparação com 9eb1cf7 confirmou preservação do Upsell 1, landing, obrigado, Básico/PRO e configurações de acesso/checkout.
+- Verificadores das skills sobre cópia isolada dos três HTML e três CSS: zero falhas e zero críticos. Três avisos de script externo revistos: todos são o SDK oficial solicitado e necessário. Runtime Python temporário com assinatura válida da Python Software Foundation. Não constitui auditoria integral nem teste de invasão.
+- Navegador indisponível nesta execução. Nova visualização mobile/desktop e decisões reais dependem do Preview autenticado e do contexto legítimo Hotmart. Sem parâmetros fabricados, compras, mudanças de encaminhamento, merge, promoção a produção ou ativação do funil. Publicar apenas na branch de teste.
+
+
 ## Revisão para Preview · 26/10/2026
 
 - Branch de teste `test/upsell-1-hotmart-widget`, criada de `ba18bcc` num worktree isolado. A branch `main` local e as alterações preexistentes do utilizador foram preservadas; apenas a branch de teste será enviada. Sem merge, push em main, deploy por CLI ou ativação do funil.
