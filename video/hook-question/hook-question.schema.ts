@@ -16,7 +16,7 @@ export type HookQuestionInput = z.infer<typeof schema>;
 // The original landing-page copy is intentionally kept in full.
 export const defaults: HookQuestionInput = schema.parse({
   question: "Azia, insónias, ansiedade, colesterol alto, dores… E se algumas das ervas mais valiosas estivessem no teu quintal e nem soubesses?",
-  answer: "Já imaginou curar ansiedade, dor de estômago, tosse ou até inflamações com algo que pode estar crescendo no seu quintal agora mesmo? Isso não é magia, é o poder real das plantas medicinais.",
+  answer: "Descobre como identificar e preparar ervas do dia a dia com a Botica Viva: receitas organizadas, instruções passo a passo e cuidados de utilização, num só lugar.",
   colors: {
     text: "#ffffff",
     primary: "#0b6b2c",
