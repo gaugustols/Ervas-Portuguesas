@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
   <meta charset="utf-8">
@@ -6,17 +6,18 @@
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#080a09">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src https://checkout.hotmart.com/lib/hotmart-checkout-elements.js 'sha256-{{HOTMART_INIT_HASH}}'; frame-src https://pay.hotmart.com; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
   <title>A Minha Botica Organizada · Botica Viva</title>
   <meta name="description" content="Um kit digital para identificar recipientes, manter um inventário de ervas e organizar as compras.">
   <link rel="stylesheet" href="assets/nova-pagina/css/obrigado.css">
   <link rel="stylesheet" href="assets/nova-pagina/css/upsell.css">
+  <link rel="stylesheet" href="assets/nova-pagina/css/hotmart-sales-funnel.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230b6b2c'/%3E%3Cpath d='M12 28Q28 27 29 10Q12 10 12 28ZM12 28L24 16' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
 </head>
 <body class="upsell-page">
   <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
   <header class="brand-bar wrap">
-    <span class="brand" aria-label="Botica Viva">
+    <span class="brand">
       <svg class="brand-symbol" width="32" height="36" viewBox="0 0 32 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M16 32V9M16 17C7 17 4 12 4 7c8 0 12 4 12 10Zm0 8c9 0 12-5 12-10-8 0-12 4-12 10Zm0-13c0-6 3-9 7-10 1 6-1 10-7 10Z"/></svg>
       Botica Viva
     </span>
@@ -41,10 +42,15 @@
       <section class="access-card upsell-offer" aria-labelledby="offer-title">
         <p class="section-label">Acrescenta este kit à tua Botica Viva</p>
         <h2 id="offer-title">A Minha Botica Organizada</h2>
-        <p class="upsell-reference">De <del>€9,90</del> por:</p>
-        <p class="upsell-price" aria-label="3 euros e 90 cêntimos">€3,90</p>
-        {{PURCHASE_ACTION}}
-        <a class="secondary-button upsell-decline" href="{{DECLINE_URL}}">Não, obrigado. Quero aceder aos meus produtos.</a>
+        <p class="upsell-reference">ÚLTIMO COMPLEMENTO DESTA COMPRA</p>
+        <p class="upsell-price">€3,90</p>
+        <!-- HOTMART - Sales Funnel Widget -->
+        <div id="hotmart-sales-funnel"></div>
+        <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+        <script>
+          checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        </script>
+        <!-- HOTMART - Sales Funnel Widget -->
         <p class="access-note">Garantia de 7 dias | Acesso imediato | Compra segura pela Hotmart</p>
       </section>
     </div>
