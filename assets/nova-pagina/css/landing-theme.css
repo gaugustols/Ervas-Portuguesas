@@ -1,0 +1,257 @@
+/* Identidade das páginas de pós-compra, aplicada apenas à landing. */
+:root {
+  color-scheme: dark;
+  --pagina-fundo: #080a09;
+  --pagina-fundo-suave: #080a09;
+  --pagina-painel: #101511;
+  --pagina-texto: #f7faf8;
+  --pagina-titulo: #f7faf8;
+  --pagina-secundario: #b8c4bb;
+  --pagina-destaque: #0b6b2c;
+  --pagina-linha: #28352c;
+  --sage: #79d598;
+  --landing-accent: #79d598;
+  --landing-card: linear-gradient(145deg, #14251a, #101612 65%);
+}
+
+body { font-size: 15px; line-height: 1.7; }
+.container { max-width: 1080px; }
+.container-narrow { max-width: 800px; }
+.container > *, .cols-2 > *, .split > *, .oferta-planos > * { min-width: 0; }
+.hero, .sec, .sec:nth-of-type(even), .sec.faq, footer {
+  background: var(--pagina-fundo);
+  border-color: var(--pagina-linha);
+}
+.sec { padding-block: clamp(48px, 6vw, 76px); }
+.sec h2, .sistema .processo-titulo, .sec.faq .faq-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.04em;
+  text-transform: none;
+  text-wrap: balance;
+}
+.sec h3 { font-weight: 600; line-height: 1.4; letter-spacing: -.025em; }
+.sec p, .sec li { overflow-wrap: break-word; }
+.sec-title, .aprender h2, .quem h2 { margin-bottom: 28px; }
+.sec .sec-title { text-align: center; }
+.split p, .quote-block .intro, .quote-block .depois, .quote-block .caminho,
+.processo-subtitulo, .dep-sub, .oferta .valor-total { color: var(--pagina-secundario); }
+.lista-check li::before, .lista-pills li::before, .lista-fogo li::before,
+.card-aprender h3::before, .card-aprender li::before,
+.hero-selo-check, .sintomas-resposta .sintomas-resposta-numero,
+.hero-oferta-contador, .processo-numero { color: var(--landing-accent); }
+.hero-bullets li::before { background: var(--landing-accent); }
+.plano-beneficios li::before { border-color: var(--landing-accent); }
+.hero .hook-question-accent { color: var(--landing-accent) !important; }
+
+/* Hero centrada, com a mesma hierarquia tipográfica do funil. */
+.hero { padding-block: clamp(32px, 5vw, 58px) clamp(40px, 6vw, 64px); }
+.hero-video {
+  border-color: #32543d;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px #0005;
+}
+.hero-heading { max-width: 960px; text-align: center; }
+.hero h1.hook-question-title {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.045em;
+  margin-bottom: 22px;
+}
+.hero .sub-h1.hook-question-answer {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: var(--pagina-secundario) !important;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.hero-grid { max-width: 720px; }
+.hero-grid > div { display: grid; justify-items: center; }
+.hero-bullets { width: 100%; margin-bottom: 24px; text-align: left; }
+.hero-bullets li { color: var(--pagina-secundario); font-size: 14px; }
+.hero-compra-info { width: 100%; max-width: 480px; }
+.hero-selos { justify-content: center; }
+.hero-selos li { background: var(--pagina-painel); color: var(--pagina-secundario); font-size: 11px; }
+.hero-oferta-tempo { text-align: center; }
+.hero-oferta-rotulo { color: var(--pagina-secundario); font-size: 11px; letter-spacing: .1em; }
+.hero .hero-prova-social {
+  border: 1px solid var(--pagina-linha);
+  border-radius: 16px;
+  background: var(--pagina-painel);
+  box-shadow: none;
+}
+.hero .hero-prova-social .hero-prova-texto { color: var(--pagina-secundario); }
+
+/* Cartões e etiquetas com as superfícies e os contornos da referência. */
+.sintoma-opcao, .processo-cartao, .card-aprender, .bonus-card,
+.exemplos, .garantia-card, .oferta-plano, .hero .hero-prova-social {
+  border-color: var(--pagina-linha);
+  border-radius: 22px;
+}
+.sintoma-opcao, .processo-cartao, .card-aprender, .bonus-card {
+  background: var(--pagina-painel);
+  box-shadow: none;
+}
+.card-aprender, .processo-cartao, .bonus-card { padding: 28px; }
+.processo-cartao p, .card-aprender ul { color: var(--pagina-secundario); line-height: 1.8; }
+.processo-numero { font-size: 13px; font-weight: 600; letter-spacing: .12em; }
+.sistema .processo-cartao h3 { font-weight: 600; text-transform: none; }
+.processo-cartao:focus-visible, .sintoma-opcao:focus-within {
+  outline: 3px solid var(--landing-accent);
+  outline-offset: 4px;
+}
+.lista-pills li, .dep-eyebrow, .previa-selo, .faixa-topo-selo {
+  border: 1px solid #23482e;
+  border-radius: 999px;
+  background: #0d2115;
+  color: var(--landing-accent);
+  font-size: 12px;
+  font-weight: 600;
+}
+.dep-eyebrow { letter-spacing: .08em; }
+.quote-block blockquote, .farma blockquote, .destaque-viagem {
+  color: var(--pagina-texto);
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -.035em;
+}
+.quote-block blockquote { border-left-color: var(--landing-accent); }
+.split img, .foto-nepal img, .resultado img { border: 1px solid var(--pagina-linha); border-radius: 22px; box-shadow: 0 20px 60px #0005; }
+.exemplos, .garantia-card { background: var(--landing-card); border: 1px solid #32543d; box-shadow: 0 20px 60px #0005; }
+.previa-janela, .previa-painel { background: var(--pagina-painel); border-color: var(--pagina-linha); border-radius: 16px; }
+.previa-tema { border-radius: 999px; font-size: 12px; }
+.previa-tema:focus-visible { outline-color: var(--landing-accent); }
+.previa-tema[aria-selected="true"] { border-color: #319452; }
+.previa-barra { border-color: var(--pagina-linha); }
+.previa-painel h4 { font-size: 24px; font-weight: 600; letter-spacing: -.03em; }
+.previa-plantas li { background: #0d2115; border-color: #23482e; }
+.previa-plantas li::before { background: var(--landing-accent); }
+.previa-progresso strong { color: var(--landing-accent); }
+.previa-acao > span { font-size: 12px; }
+
+/* Mesmo cartão de oferta, com maior ênfase no plano PRO. */
+.oferta-planos { max-width: 1000px; gap: 28px; }
+.oferta-plano { padding: 28px; background: var(--pagina-painel); }
+.oferta-plano-pro { border: 1px solid #32543d; background: var(--landing-card); box-shadow: 0 20px 60px #0005; }
+.oferta-plano h3 { font-size: 22px; letter-spacing: -.03em; }
+.plano-descricao { color: var(--pagina-secundario); }
+.plano-preco { font-size: clamp(48px, 6vw, 68px); font-weight: 600; letter-spacing: -2px; }
+.plano-recomendado { left: 24px; border: 1px solid #319452; background: var(--pagina-destaque); font-size: 11px; letter-spacing: .08em; }
+.oferta-tempo { border-color: #32543d; background: var(--pagina-painel); border-radius: 16px; }
+.selo-garantia { background: #0d2115; border-color: #32543d; color: var(--landing-accent); }
+.garantia-texto h3 { font-size: 24px; }
+
+/* CTAs iguais entre si; a barra fixa conserva a versão compacta. */
+.btn, .hero .btn, .oferta .btn, .cta-fixo .btn {
+  border: 1px solid #319452;
+  border-radius: 999px;
+  background: var(--pagina-destaque);
+  box-shadow: 0 6px 22px #0b6b2c33;
+  font-weight: 600;
+  transition: background-color .2s, box-shadow .2s;
+}
+.btn:not(.cta-fixo .btn), .hero .hero-grid .btn, .oferta-box .btn {
+  width: 100%;
+  max-width: 440px;
+  min-height: 56px;
+  padding: 14px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.btn:hover, .hero .btn:hover, .oferta .btn:hover, .cta-fixo .btn:hover {
+  background: #107734;
+  border-color: #319452;
+  box-shadow: 0 6px 28px #0b6b2c66;
+  transform: none;
+}
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--landing-accent);
+  outline-offset: 5px;
+}
+.oferta-plano .btn:focus-visible { outline-color: var(--landing-accent); }
+
+/* Depoimentos no tema escuro; estrelas e conteúdo preservados. */
+.rating-summary {
+  border: 1px solid #32543d;
+  border-radius: 22px;
+  background: var(--landing-card);
+  color: var(--pagina-texto) !important;
+  aspect-ratio: auto;
+  min-height: 0;
+}
+.rating-summary-overview { border-color: var(--pagina-linha); }
+.rating-summary .rating-summary-score, .rating-summary .rating-summary-count,
+.rating-summary .rating-summary-count strong, .rating-summary-snippet blockquote { color: var(--pagina-texto); }
+.rating-summary .rating-summary-score { font-weight: 600; }
+.rating-summary .rating-summary-scale, .rating-summary .rating-summary-source,
+.rating-summary .rating-summary-author { color: var(--pagina-secundario); }
+.rating-summary-snippet { padding: 18px; border: 1px solid var(--pagina-linha); border-radius: 16px; background: var(--pagina-painel); box-shadow: none; }
+.rating-summary .rating-summary-count, .rating-summary .rating-summary-source,
+.rating-summary .rating-summary-author { font-size: 13px; line-height: 1.7; }
+.rating-summary .rating-summary-count { gap: 4px; }
+.rating-summary-snippet blockquote { font-size: 14px; line-height: 1.8; }
+
+/* FAQ e remates com o mesmo contraste e espaçamento do funil. */
+.sec.faq { padding-block: clamp(48px, 6vw, 76px); }
+.faq-inner { max-width: 800px; }
+.faq-description { font-size: 15px; color: var(--pagina-secundario); }
+.faq-list { margin-top: 32px; }
+.faq-item { border-color: var(--pagina-linha); }
+.faq-trigger { color: var(--pagina-texto); font-size: 15px; }
+.faq-icon { color: var(--landing-accent); }
+.faq-answer { background: var(--pagina-painel); color: var(--pagina-secundario); border-color: var(--pagina-linha); border-radius: 16px; font-size: 14px; line-height: 1.8; }
+.faq-trigger:focus-visible { outline-color: var(--landing-accent); }
+.faixa-topo { padding: 14px 20px; color: var(--pagina-secundario); font-size: 11px; }
+.faixa-topo-selo { font-size: 11px; padding: 6px 13px; letter-spacing: .08em; }
+.faixa-topo-conteudo { flex-wrap: wrap; gap: 8px 12px; }
+footer { border-color: var(--pagina-linha); }
+.footer-base { border-color: var(--pagina-linha); color: var(--pagina-secundario); }
+.footer-marca { color: var(--pagina-texto); font-weight: 600; }
+.cta-fixo { background: #080a09f5; border-color: var(--pagina-linha); }
+.cta-fixo .preco-mini small { color: var(--pagina-secundario); }
+
+@media (hover: hover) and (pointer: fine) {
+  .sintoma-opcao:hover, .processo-cartao:hover { border-color: #32543d; background: #14251a; }
+}
+@media (max-width: 860px) {
+  .hero { padding-inline: 20px; gap: 24px; }
+  .hero h1.hook-question-title { margin: 0; font-size: clamp(30px, 7.2vw, 40px); }
+  .hero .sub-h1.hook-question-answer { margin: 0; font-size: 15px; }
+  .hero-video { border-radius: 18px; }
+  .hero-grid > div { display: contents; }
+  .hero .hero-grid .btn { justify-self: center; }
+  .hero-compra-info, .hero .hero-prova-social { justify-self: center; }
+  .hero-bullets { max-width: 480px; justify-self: center; }
+  .hero-selos li { font-size: 10px; }
+  .oferta-planos { max-width: 580px; gap: 32px; }
+  .oferta-plano, .card-aprender, .processo-cartao { padding: 24px 20px; border-radius: 18px; }
+  .oferta-plano .btn { max-width: 440px; }
+  .garantia-card { padding: 24px 20px; border-radius: 18px; }
+  .rating-summary { padding: 28px 20px; border-radius: 18px; }
+}
+@media (max-width: 480px) {
+  .hero .hero-grid .btn, .btn:not(.cta-fixo .btn) { max-width: 100%; font-size: 13px; padding-inline: 16px; }
+  .hero-grid > div { min-width: 0; }
+  .sec h2, .sistema .processo-titulo, .sec.faq .faq-title { font-size: 28px; }
+  .sec h3 { font-size: 20px; }
+  .rating-summary { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .rating-summary-overview { border-bottom-color: var(--pagina-linha); }
+  .rating-summary-snippet { padding: 16px; }
+  .faq-trigger { font-size: 14px; }
+  .faq-answer { font-size: 14px; }
+  .faixa-topo { padding: 12px 20px; font-size: 11px; }
+  .faixa-topo-selo { font-size: 10px; }
+  .hero-selos li { font-size: 10px; }
+}
+@media (max-width: 360px) {
+  .oferta-plano { padding: 22px 16px; }
+  .hero h1.hook-question-title { font-size: 30px; }
+  .cta-fixo .btn { padding-inline: 10px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .hero .btn, .oferta .btn, .cta-fixo .btn { transition: none; }
+}
