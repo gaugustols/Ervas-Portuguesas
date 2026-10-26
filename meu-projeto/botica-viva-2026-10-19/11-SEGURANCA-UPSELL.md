@@ -1,5 +1,16 @@
 # Verificação do Upsell 1 · 23/10/2026
 
+## Widget oficial Hotmart · 26/10/2026
+
+- Escopo: apenas o Upsell 1. Compra e recusa manuais removidas; contentor na área do CTA, seguido de um único carregamento do SDK e do inicializador oficial. Preço de €9,50, texto e apresentação exterior preservados. As outras páginas e `lib/upsell-config.mjs` não mudaram.
+- O gerador calcula o hash SHA-256 do inicializador com finais de linha normalizados. A CSP desta página permite o script oficial em `checkout.hotmart.com`, esse inicializador e o iframe em `pay.hotmart.com`. Estilos por atributo permitem os ajustes de dimensão do SDK; folhas de estilo continuam limitadas à própria origem. Não foi alterada a configuração da Vercel.
+- JavaScript oficial obtido por HTTPS com HTTP 200 e inspecionado: `salesFunnel` monta `https://pay.hotmart.com/funnel` usando o contexto recebido pela Hotmart. Não foram fabricados parâmetros, pagamentos, destinos de recusa ou ligações alternativas. A configuração manual anterior deixou de ser consumida pelo Upsell 1.
+- CSS específico carregado apenas nesta página remove a largura mínima fixa de 320 px do iframe, limita-o ao card e reserva 300 px de altura inicial. A altura final continua gerida pelo widget.
+- Geração/exportação, `node --check` nos dois scripts alterados e no SDK obtido, execução do inicializador com API de teste, ordem dos scripts, montagem única, hash CSP e cinco recursos HTTP aprovados. `html-validate` 11.17.0: zero erros e avisos após correção de três problemas não visuais preexistentes (DOCTYPE e dois atributos ARIA inadequados).
+- Verificadores das skills executados numa cópia isolada da página e dos seus três CSS: zero falhas e zero críticos. Aviso médio de script externo revisto: trata-se do SDK oficial solicitado, necessário ao widget. Aviso sobre «garantido» refere-se à copy anterior de acesso, preservada por instrução do utilizador. Não constitui auditoria integral do site.
+- Navegador indisponível: renderização, console e decisões reais do widget não foram verificados. Sem ativação do funil, alterações no painel Hotmart ou teste de compra. A exibição transacional depende do contexto real da plataforma: [documentação oficial](https://suportehotmart.zendesk.com/hc/en-us/articles/43101499107597-How-to-set-up-an-Upsell-using-the-Sales-Funnel-and-Hotmart-Pages).
+- Avaliação interna: 9/10 de fidelidade ao pedido e consistência técnica; não mede conversão. Commit preparado apenas localmente, sem push/deploy, conforme o pedido desta etapa.
+
 ## Escopo
 
 Nova página `upsell-1.html`, respetivo gerador, configuração, estilos e integração na lista de ficheiros exportados. As páginas existentes, a aplicação e o manual não são objeto de uma nova auditoria integral nesta etapa. Skills utilizadas: checkout-upsell e auditoria-seguranca.

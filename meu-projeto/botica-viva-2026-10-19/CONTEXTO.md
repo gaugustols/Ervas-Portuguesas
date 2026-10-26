@@ -44,6 +44,7 @@
 - Sem controlo de acesso: qualquer pessoa com a ligação pode abrir a respetiva versão. `noindex` apenas orienta os motores de pesquisa. Não há validação de compra, bloqueio por plano nem revogação automática nesta fase.
 
 ## Decisões
+- 26/10/2026 · Pedido de integração apenas no Upsell 1: substituídos compra/recusa manuais pelo widget oficial `salesFunnel` da Hotmart, mantendo €9,50 e a copy. Template e gerador atualizados para preservar a integração; CSP com hash do inicializador e origens oficiais, CSS carregado apenas nesta página. Correções não visuais do DOCTYPE e de dois atributos ARIA preexistentes para validação HTML. Outras páginas e configurações de checkout preservadas. Commit apenas local, sem push/deploy nem ativação no painel Hotmart; validação visual e transacional pendente por falta de navegador e contexto real do funil.
 - 19/10/2026 · Conteúdo original autorizado pelo utilizador; nenhuma autoria clínica inventada.
 - 19/10/2026 · Duas versões autónomas: conteúdo pago PRO fora do HTML do Básico.
 - 19/10/2026 · Template ampliado para incluir a experiência exigida pela própria skill: biblioteca, boas-vindas, evidência real, painel e oferta única dispensável. Sem novas bibliotecas.
