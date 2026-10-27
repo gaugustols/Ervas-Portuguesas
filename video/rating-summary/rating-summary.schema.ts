@@ -5,7 +5,7 @@ export const schema = z.object({
   count: z.number().int().nonnegative(),
   countLabel: z.string().min(1).max(24),
   source: z.string().min(1).max(40),
-  snippets: z.array(z.object({ quote: z.string().min(1), author: z.string().min(1) })).min(1).max(3),
+  snippets: z.array(z.object({ quote: z.string().min(1), author: z.string().min(1), avatar: z.string().min(1).optional() })).min(1).max(3),
   colors: z.object({ text: z.string(), primary: z.string(), background: z.string() }),
   fonts: z.object({ heading: z.string(), body: z.string(), numerals: z.string() }),
 });
@@ -20,7 +20,7 @@ export const defaults: RatingSummaryInput = schema.parse({
   countLabel: "comentários em destaque",
   source: "Comentários sobre a aplicação",
   snippets: [
-    { quote: "Estou a pôr em prática e a adorar. Recebi o acesso muito rapidamente. A Dalva é uma excelente profissional.", author: "Regina Celia Vallejo" },
+    { quote: "Estou a pôr em prática e a adorar. Recebi o acesso muito rapidamente. A Dalva é uma excelente profissional.", author: "Regina Celia Vallejo", avatar: "assets/nova-pagina/images/regina-celia-vallejo.jpg" },
     { quote: "Recebi tudo direitinho. Muito conhecimento e muito prático de usar.", author: "Edite Souza" },
   ],
   colors: { text: "#111111", primary: "#ff9900", background: "#eceae6" },

@@ -73,7 +73,9 @@
   background: #ffffff;
   box-shadow: 0 8px 18px rgba(0, 0, 0, .17);
 }
-.rating-summary-card-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin: 0 0 8px; }
+.rating-summary-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 8px; }
+.rating-summary-person { display: flex; flex: 1; align-items: center; gap: 10px; min-width: 0; }
+.rating-summary .rating-summary-avatar { display: block; width: 40px; height: 40px; flex: 0 0 40px; border: 1px solid rgba(121, 213, 152, .3); border-radius: 50%; object-fit: cover; object-position: 50% 40%; }
 .rating-summary-author { min-width: 0; color: #4e4a44; font-size: clamp(10px, 1vw, 13px); font-weight: 400; line-height: 1.4; overflow-wrap: anywhere; }
 .rating-summary-card-stars { display: flex; flex-shrink: 0; gap: 1px; margin-top: 1px; color: var(--rating-accent); }
 .rating-summary-card-stars svg { display: block; width: clamp(7px, 1vw, 12px); height: clamp(7px, 1vw, 12px); stroke-width: 1px; }
@@ -94,6 +96,7 @@
   .rating-summary-score, .rating-summary-stars, .rating-summary .rating-summary-count { justify-content: center; }
   .rating-summary-snippet { padding: 16px; }
   .rating-summary-author { font-size: 11px; }
+  .rating-summary .rating-summary-avatar { width: 36px; height: 36px; flex-basis: 36px; }
   .rating-summary-card-stars svg { width: 10px; height: 10px; }
   .rating-summary-snippet blockquote { font-size: 14px; }
 }

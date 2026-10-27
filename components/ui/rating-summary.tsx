@@ -103,7 +103,10 @@ export function RatingSummary({ score, count, countLabel, source, snippets, colo
           return (
             <figure className="rating-summary-snippet" key={snippet.author + index} style={snippetStyle}>
               <figcaption className="rating-summary-card-heading" style={{ fontFamily: fonts.heading }}>
-                <span className="rating-summary-author">{snippet.author}</span>
+                <span className="rating-summary-person">
+                  {snippet.avatar && <img className="rating-summary-avatar" src={snippet.avatar} alt="" width="40" height="40" loading="lazy" decoding="async" />}
+                  <span className="rating-summary-author">{snippet.author}</span>
+                </span>
                 <span className="rating-summary-card-stars" role="img" aria-label={`Classificação geral de ${formatScore(score)} em 5`} title={`Classificação geral: ${formatScore(score)}/5`}>
                   {Array.from({ length: 5 }, (_, star) => (
                     <Star key={star} fill="currentColor" aria-hidden="true" style={{ clipPath: `inset(0 ${(1 - clamp(score - star)) * 100}% 0 0)` }} />
