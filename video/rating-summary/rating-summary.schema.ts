@@ -13,16 +13,15 @@ export const schema = z.object({
 export type RatingSummaryInput = z.infer<typeof schema>;
 
 // Score supplied by the owner. Count describes the selected excerpts, not total reviews.
-// Quotes and names are transcribed from the original images 07, 08 and 13.
+// App testimonials supplied by the owner; wording adapted to European Portuguese.
 export const defaults: RatingSummaryInput = schema.parse({
   score: 4.9,
-  count: 3,
+  count: 2,
   countLabel: "comentários em destaque",
-  source: "Comentários sobre a obra",
+  source: "Comentários sobre a aplicação",
   snippets: [
-    { quote: "Estou muito feliz. Obrigada", author: "Valdeny Val" },
-    { quote: "Estou lendo e praticando. O meu livro veio rapidinho. Adorei!", author: "Regina Celia Vallejo Mendes" },
-    { quote: "Recebi o livro obrigada", author: "editepereirasouza" },
+    { quote: "Estou a pôr em prática e a adorar. Recebi o acesso muito rapidamente. A Dalva é uma excelente profissional.", author: "Regina Celia Vallejo" },
+    { quote: "Recebi tudo direitinho. Muito conhecimento e muito prático de usar.", author: "Edite Souza" },
   ],
   colors: { text: "#111111", primary: "#ff9900", background: "#eceae6" },
   fonts: {
