@@ -15,11 +15,16 @@ assert.ok(getRatingSummaryMotion(78, 4.9, 3).snippets.every(item => item.opacity
 assert.deepEqual(getRatingSummaryMotion(149, 4.9, 3), getRatingSummaryMotion(78, 4.9, 3));
 const markup = renderToStaticMarkup(<RatingSummary {...defaults} />);
 const photos = [...markup.matchAll(/<img\b[^>]*>/g)].map(match => match[0]);
-assert.equal(photos.length, 1, "Only the supplied Regina photo is rendered");
+assert.equal(photos.length, 2, "Only the supplied Regina and Edite photos are rendered");
 assert.match(photos[0], /src="assets\/nova-pagina\/images\/regina-celia-vallejo\.jpg"/);
-assert.match(photos[0], /alt=""/);
-assert.match(photos[0], /width="40" height="40" loading="lazy" decoding="async"/);
-assert.ok(readFileSync(new URL("../assets/nova-pagina/images/regina-celia-vallejo.jpg", import.meta.url)).length > 0);
+assert.match(photos[1], /src="assets\/nova-pagina\/images\/edite-souza\.jpg"/);
+for (const photo of photos) {
+  assert.match(photo, /alt=""/);
+  assert.match(photo, /width="40" height="40" loading="lazy" decoding="async"/);
+}
+for (const file of ["regina-celia-vallejo.jpg", "edite-souza.jpg"]) {
+  assert.ok(readFileSync(new URL(`../assets/nova-pagina/images/${file}`, import.meta.url)).length > 0);
+}
 const withoutPhotos = renderToStaticMarkup(<RatingSummary {...defaults} snippets={defaults.snippets.map(({ avatar, ...snippet }) => snippet)} />);
 assert.ok(!/<img\b/.test(withoutPhotos), "Testimonials without a supplied photo render without placeholders");
 assert.ok(markup.includes('aria-label="Avaliação de 4,9 em 5"'));
