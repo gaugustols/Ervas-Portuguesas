@@ -81,9 +81,16 @@ const fichas = {
  'erva-12': {resumo:'Uso tradicional no relaxamento e conforto digestivo.', modoUsar:'A infusão descrita é uma bebida alimentar ocasional. Para sintomas de stress ou dificuldades do sono, um produto medicinal deve seguir o respetivo folheto. Se os sintomas persistirem, procure avaliação em vez de aumentar a quantidade.'},
  'erva-13': {
   resumo:'Infusão tradicional associada ao relaxamento.',
-  beneficios:'A camomila tem uma longa tradição como bebida de conforto e relaxamento. A evidência clínica não permite apresentar um chá como tratamento comprovado da insónia ou da ansiedade.',
+  beneficios:'A camomila é usada tradicionalmente para relaxamento, conforto digestivo e alguns cuidados da pele. As utilizações abaixo distinguem a tradição da evidência científica; não substituem medicamentos nem acompanhamento médico.',
+  beneficiosDetalhados:[
+   {titulo:'Stress e ansiedade',texto:'Contém apigenina, um flavonoide estudado pela sua possível ação no sistema nervoso. A camomila é tradicionalmente associada ao relaxamento; os estudos em pessoas com ansiedade são preliminares e não comprovam que uma infusão trate a ansiedade.'},
+   {titulo:'Sono',texto:'É habitual consumir a infusão numa rotina de relaxamento antes de deitar. A evidência disponível é insuficiente para a apresentar como tratamento da insónia ou garantir relaxamento muscular e indução do sono.'},
+   {titulo:'Conforto digestivo',texto:'Algumas preparações medicinais de camomila têm uso tradicional no alívio de gases, distensão abdominal e espasmos intestinais ligeiros. Isso não demonstra que uma infusão caseira trate azia, refluxo ou indigestão persistente.'},
+   {titulo:'Ação anti-inflamatória e alívio da dor',texto:'Alguns constituintes têm atividade anti-inflamatória em estudos laboratoriais. Esses resultados não comprovam que o chá alivie cólicas menstruais, dores musculares ou sintomas de gripe e constipações. O uso tradicional de certas preparações para constipações não equivale a um benefício comprovado da infusão.'},
+   {titulo:'Cuidados com a pele',texto:'Há uso tradicional de preparações próprias para irritações e inflamações ligeiras da pele, incluindo vermelhidão solar. Não há evidência suficiente para recomendar compressas caseiras como tratamento de dermatites, queimaduras solares ou olheiras. Evite aplicações nos olhos; a camomila pode causar irritação e alergia.'}
+  ],
   preparacao:bebida('camomila','Capítulos florais de Matricaria chamomilla'), modoUsar:ocasional,
-  referencias:[ref('NCCIH · Camomila','https://www.nccih.nih.gov/health/chamomile')]
+  referencias:[ref('NCCIH · Camomila','https://www.nccih.nih.gov/health/chamomile'),ref('EMA · Flor de camomila: usos tradicionais','https://www.ema.europa.eu/en/medicines/herbal/matricariae-flos'),ref('EMA · Avaliação da camomila e dos seus constituintes','https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-matricaria-recutita-l-flos-and-matricaria-recutita-l-aetheroleum-first-version_en.pdf-0')]
  },
  'erva-14': {
   resumo:'Alimento e tradição no conforto digestivo.',

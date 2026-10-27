@@ -79,6 +79,17 @@ for(const plan of ['app','pro']){
   shortcuts[3].events.click();assert.equal(ui.document.activeElement.attrs.id,'planta-cuidados');
   assert.equal(ui.location.hash,'#plantas/'+e.id,'Atalho não interfere com o router');
  }
+ ui.goto('#plantas/erva-13');
+ const camomila=data.ervas.find(e=>e.id==='erva-13');
+ assert.equal(camomila.nome,'Camomila');
+ assert.equal(camomila.beneficiosDetalhados.length,5);
+ const utilizacoes=ui.document.getElementById('planta-utilizacoes');
+ const itens=utilizacoes.querySelectorAll('li');
+ assert.equal(itens.length,5,'Camomila apresenta cinco utilizações em lista');
+ for(const [i,item] of camomila.beneficiosDetalhados.entries()){
+  assert.equal(itens[i].querySelector('strong').textContent,item.titulo+': ');
+  assert.ok(itens[i].textContent.includes(item.texto));
+ }
  ui.goto('#plantas/erva-10');
  assert.match(ui.main.textContent,/Nos meus favoritos/,'Favoritos anteriores preservados');
  ui.main.querySelectorAll('button').find(b=>b.textContent==='Criar ficha desta planta →').events.click();
