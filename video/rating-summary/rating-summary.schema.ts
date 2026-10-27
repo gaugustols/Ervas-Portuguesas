@@ -16,12 +16,13 @@ export type RatingSummaryInput = z.infer<typeof schema>;
 // App testimonials supplied by the owner; wording adapted to European Portuguese.
 export const defaults: RatingSummaryInput = schema.parse({
   score: 4.9,
-  count: 2,
+  count: 3,
   countLabel: "comentários em destaque",
   source: "Comentários sobre a aplicação",
   snippets: [
     { quote: "Estou a pôr em prática e a adorar. Recebi o acesso muito rapidamente. A Dalva é uma excelente profissional.", author: "Regina Celia Vallejo", avatar: "assets/nova-pagina/images/regina-celia-vallejo.jpg" },
     { quote: "Recebi tudo direitinho. Muito conhecimento e muito prático de usar.", author: "Edite Souza", avatar: "assets/nova-pagina/images/edite-souza.jpg" },
+    { quote: "Não tinha muita experiência com plantas, mas sempre quis plantar no meu jardim. A Botica Viva está a ajudar-me nisso. Gratidão!", author: "Rafael Queiroz", avatar: "assets/nova-pagina/images/rafael-queiroz.jpg" },
   ],
   colors: { text: "#111111", primary: "#ff9900", background: "#eceae6" },
   fonts: {
