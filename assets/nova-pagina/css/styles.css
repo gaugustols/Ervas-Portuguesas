@@ -2269,7 +2269,7 @@ body, body *, body::before, body::after, body *::before, body *::after {
 /* Areas da aplicacao: carrossel horizontal nativo, com arrasto por toque e rato. */
 .inside-heading { max-width: 760px; margin: 0 auto 28px; text-align: center; }
 .inside-preview .inside-eyebrow { text-align: center; margin: 0 0 12px; color: var(--pagina-destaque); font-size: 11px; font-weight: 700; line-height: 1.6; letter-spacing: .12em; }
-.inside-preview #inside-title { margin: 0; color: #fff; font-size: clamp(28px,4vw,42px); line-height: 1.2; text-transform: none; letter-spacing: -.025em; }
+.inside-preview #inside-title { text-align: center; margin: 0; color: #fff; font-size: clamp(28px,4vw,42px); line-height: 1.2; text-transform: none; letter-spacing: -.025em; }
 .inside-track { --inside-gap: 18px; display: flex; gap: var(--inside-gap); padding: 4px 2px 18px; margin: 0; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #335b40 #061009; cursor: grab; }
 .inside-track.is-dragging { cursor: grabbing; user-select: none; scroll-snap-type: none; }
 .inside-item { flex: 0 0 calc((100% - 2 * var(--inside-gap)) / 3); min-width: 0; display: flex; scroll-snap-align: start; scroll-snap-stop: always; }
@@ -2293,7 +2293,7 @@ body, body *, body::before, body::after, body *::before, body *::after {
 }
 @media (max-width: 600px) {
   .inside-heading { text-align: left; margin-bottom: 22px; }
-  .inside-preview #inside-title { font-size: 30px; max-width: 330px; }
+  .inside-preview #inside-title { font-size: 30px; max-width: 330px; margin-inline: auto; }
   .inside-preview .inside-eyebrow { font-size: 10px; }
   .inside-track { --inside-gap: 12px; }
   .inside-item { flex-basis: 86%; }
