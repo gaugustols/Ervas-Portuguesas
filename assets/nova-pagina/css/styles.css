@@ -385,7 +385,7 @@ footer{background:#0a130d;color:#bde0c8;padding:52px 0 90px;font-size:13px;}
   .split img{max-width:420px;margin:0 auto;}
   .resultado img{max-width:190px;}
   .cta-fixo{display:flex;}
-  footer{padding-bottom:110px;}
+  footer{padding-bottom:24px;}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
@@ -855,7 +855,7 @@ footer { padding: 72px 0 48px; background: var(--charcoal); color: var(--sage); 
   .dep-grid { columns: 1; max-width: 520px; margin-inline: auto; }
   .garantia-card { flex-direction: column; text-align: center; gap: 24px; padding: 28px 24px; }
   .footer-grid-3 { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  footer { padding-bottom: calc(128px + env(safe-area-inset-bottom)); }
+  footer { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
   .cta-fixo { display: flex; }
 }
 @media (max-width: 480px) {

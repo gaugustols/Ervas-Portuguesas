@@ -98,9 +98,8 @@ try {
   assert.equal(await evaluate('JSON.stringify([...document.querySelectorAll("[data-scroll-reveal]")].map(e=>e.dataset.revealState))'), states, "Once does not replay");
   await viewport(375, 812); await pause(150);
   assert.ok(await evaluate('document.documentElement.scrollWidth<=innerWidth'));
-  assert.ok(await evaluate(`(()=>{const e=document.querySelector('.cta-fixo .btn'),r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.left+r.width/2,r.top+r.height/2);return e===hit||e.contains(hit)})()`), "Fixed CTA stays above blur");
   assert.equal(await evaluate('getComputedStyle(document.querySelector("[data-progressive-blur]")).pointerEvents'), "none");
-  assert.ok(await evaluate('Number(getComputedStyle(document.querySelector(".cta-fixo")).zIndex)>999'));
+  assert.equal(await evaluate('document.querySelector(".cta-fixo")'), null, "Fixed purchase bar is removed");
   await screenshot("hero-mobile");
   await scrollTo(await evaluate('document.getElementById("oferta").getBoundingClientRect().top+scrollY'));
   await screenshot("pricing-mobile");
@@ -136,6 +135,6 @@ try {
   await call("Page.reload"); await waitFor('document.querySelectorAll("[data-scroll-reveal]").length>30');
   assert.equal(await evaluate('document.querySelectorAll("[data-reveal-state=pending]").length'), 0, "Reduced motion at page load");
   assert.deepEqual(errors, [], "No JS or hydration errors");
-  console.log("Passed: SSR, eight inline blur layers, scroll, once/repeat, directions, delay, threshold, motion preference, layout and CTA hit testing.");
+  console.log("Passed: SSR, eight inline blur layers, scroll, once/repeat, directions, delay, threshold, motion preference, layout and absence of the fixed purchase bar.");
   console.log("Screenshots: " + output);
 } finally { socket.close(); }
