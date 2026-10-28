@@ -2170,3 +2170,49 @@ footer {
 body, body *, body::before, body::after, body *::before, body *::after {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
+
+/* Convite final: continuidade da oferta depois do FAQ. */
+.convite-final {
+  background: radial-gradient(ellipse at 50% 100%, rgba(11, 107, 44, .18), transparent 70%), #050b08;
+  border-top: 1px solid rgba(112, 238, 157, .14);
+}
+.convite-final .convite-final-conteudo {
+  max-width: 800px;
+  text-align: center;
+}
+.convite-final h2 {
+  margin: 0 auto 28px;
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  text-transform: none;
+}
+.convite-final p {
+  margin: 0 0 22px;
+  color: var(--pagina-secundario, #b2c3b8);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.8;
+}
+.convite-final .convite-final-abertura,
+.convite-final strong { color: #ffffff; }
+.convite-final .convite-final-escolha {
+  margin: 30px 0;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.6;
+}
+.convite-final-escolha span { color: var(--pagina-destaque, #70ee9d); white-space: nowrap; }
+.convite-final .btn.convite-final-cta {
+  width: min(100%, 480px);
+  min-height: 61px;
+  padding: 18px 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .convite-final h2 { margin-bottom: 24px; }
+  .convite-final p { margin-bottom: 20px; }
+  .convite-final .btn.convite-final-cta { padding: 18px 16px; font-size: 12px; }
+}
