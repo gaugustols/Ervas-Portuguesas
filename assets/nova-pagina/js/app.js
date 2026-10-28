@@ -186,3 +186,66 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
   }
   controls.hidden = false;
 })();
+
+// Carrossel das areas da Botica Viva: toque nativo, setas, teclado e arrasto no desktop.
+(() => {
+  const root = document.querySelector('[data-inside-gallery]');
+  if (!root) return;
+  const track = root.querySelector('[data-inside-track]');
+  const items = Array.from(root.querySelectorAll('.inside-item'));
+  const controls = root.querySelector('[data-inside-controls]');
+  const previous = root.querySelector('[data-inside-prev]');
+  const next = root.querySelector('[data-inside-next]');
+  if (!track || !items.length || !previous || !next || !controls) return;
+  const update = () => {
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    previous.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+  };
+  const move = direction => {
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    const distance = items[0].getBoundingClientRect().width + gap;
+    track.scrollBy({ left: distance * direction, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  };
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  track.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight') move(1);
+    else if (event.key === 'ArrowLeft') move(-1);
+    else if (event.key === 'Home') track.scrollTo({ left: 0, behavior: 'instant' });
+    else if (event.key === 'End') track.scrollTo({ left: track.scrollWidth, behavior: 'instant' });
+    else return;
+    event.preventDefault();
+  });
+  track.addEventListener('scroll', update, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(update).observe(track);
+  let drag = null;
+  track.addEventListener('pointerdown', event => {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+    drag = { id: event.pointerId, x: event.clientX, left: track.scrollLeft, moved: false };
+  });
+  track.addEventListener('pointermove', event => {
+    if (!drag || drag.id !== event.pointerId) return;
+    const delta = event.clientX - drag.x;
+    if (!drag.moved && Math.abs(delta) < 6) return;
+    if (!drag.moved) {
+      drag.moved = true;
+      track.setPointerCapture(event.pointerId);
+      track.classList.add('is-dragging');
+    }
+    event.preventDefault();
+    track.scrollLeft = drag.left - delta;
+  });
+  const finish = event => {
+    if (!drag || drag.id !== event.pointerId) return;
+    if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    drag = null;
+    track.classList.remove('is-dragging');
+    update();
+  };
+  track.addEventListener('pointerup', finish);
+  track.addEventListener('pointercancel', finish);
+  track.addEventListener('lostpointercapture', () => { drag = null; track.classList.remove('is-dragging'); });
+  controls.hidden = false;
+  update();
+})();
