@@ -136,7 +136,6 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
   const previous = root.querySelector('[data-real-app-prev]');
   const next = root.querySelector('[data-real-app-next]');
   const counter = root.querySelector('[data-real-app-count]');
-  const zoom = root.querySelector('[data-real-app-zoom]');
   if (!track || !slides.length || tabs.length !== slides.length) return;
   let index = 0;
   const sync = () => {
@@ -186,51 +185,4 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
     }).observe(track);
   }
   controls.hidden = false;
-  if (!('HTMLDialogElement' in window)) {
-    zoom.hidden = true;
-    return;
-  }
-  const dialog = document.createElement('dialog');
-  if (typeof dialog.showModal !== 'function') {
-    zoom.hidden = true;
-    return;
-  }
-  dialog.className = 'app-real-dialog';
-  dialog.setAttribute('aria-labelledby', 'app-real-dialog-title');
-  const head = document.createElement('div');
-  head.className = 'app-real-dialog-head';
-  const title = document.createElement('p');
-  title.id = 'app-real-dialog-title';
-  title.className = 'app-real-dialog-title';
-  const close = document.createElement('button');
-  close.type = 'button';
-  close.className = 'app-real-dialog-close';
-  close.textContent = 'Fechar';
-  head.append(title, close);
-  const area = document.createElement('div');
-  area.className = 'app-real-zoom-area';
-  const image = document.createElement('img');
-  area.append(image);
-  dialog.append(head, area);
-  document.body.append(dialog);
-  zoom.addEventListener('click', () => {
-    const current = slides[index].querySelector('img');
-    image.src = current.currentSrc || current.src;
-    image.alt = current.alt;
-    title.textContent = slides[index].querySelector('h4').textContent;
-    dialog.showModal();
-    document.body.classList.add('app-real-zoom-open');
-    area.scrollTo(0, 0);
-    close.focus();
-  });
-  close.addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => {
-    if (event.target !== dialog) return;
-    const rect = dialog.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-  });
-  dialog.addEventListener('close', () => {
-    document.body.classList.remove('app-real-zoom-open');
-    zoom.focus();
-  });
 })();

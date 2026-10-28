@@ -1,0 +1,99 @@
+[
+  {
+    "file": "pesquisa-previa.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:46.108Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "clip": {
+      "x": 280,
+      "y": 268.6875,
+      "width": 958,
+      "height": 320,
+      "scale": 1
+    }
+  },
+  {
+    "file": "preparacao-previa.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:46.759Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "clip": {
+      "x": 303,
+      "y": 1093.28125,
+      "width": 754,
+      "height": 320,
+      "scale": 1
+    }
+  },
+  {
+    "file": "favoritos-previa.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:52.062Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "clip": {
+      "x": 281,
+      "y": 533.578125,
+      "width": 306.65625,
+      "height": 320,
+      "scale": 1
+    }
+  },
+  {
+    "file": "pesquisa-previa-mobile.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:52.569Z",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "clip": {
+      "x": 20,
+      "y": 437.15625,
+      "width": 350,
+      "height": 230,
+      "scale": 1
+    }
+  },
+  {
+    "file": "preparacao-previa-mobile.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:52.830Z",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "clip": {
+      "x": 40,
+      "y": 1357.421875,
+      "width": 310,
+      "height": 230,
+      "scale": 1
+    }
+  },
+  {
+    "file": "favoritos-previa-mobile.webp",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "capturedAt": "2026-10-28T01:32:58.106Z",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "clip": {
+      "x": 21,
+      "y": 783.046875,
+      "width": 348,
+      "height": 230,
+      "scale": 1
+    }
+  }
+]
+
