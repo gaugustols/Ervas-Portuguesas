@@ -1,0 +1,233 @@
+[
+  {
+    "id": "inicio",
+    "title": "Página inicial",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "inicio",
+    "capturedAt": "2026-10-28T01:08:10.412Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "inicio.webp",
+    "bytes": 97250,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/",
+      "title": "O saber das ervas, na sua rotina.",
+      "images": []
+    }
+  },
+  {
+    "id": "pesquisa",
+    "title": "Pesquisa por planta",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; pesquisa: alecrim",
+    "capturedAt": "2026-10-28T01:08:11.344Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "pesquisa.webp",
+    "bytes": 79500,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/#plantas",
+      "title": "Conheça as plantas",
+      "search": "alecrim",
+      "filter": "Todas as plantas",
+      "images": [
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-1.webp",
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "categorias",
+    "title": "Categorias da biblioteca",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; categoria: Infusões",
+    "capturedAt": "2026-10-28T01:08:12.340Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "categorias.webp",
+    "bytes": 241372,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/#plantas",
+      "title": "Conheça as plantas",
+      "search": "",
+      "filter": "Infusões",
+      "images": [
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-12.webp",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-13.jpg",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-14.jpg",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-15.jpg",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-16.jpg",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-17.jpg",
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "ficha-planta",
+    "title": "Ficha de alecrim",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas/erva-1",
+    "capturedAt": "2026-10-28T01:08:12.845Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "ficha-planta.webp",
+    "bytes": 112940,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/#plantas/erva-1",
+      "title": "Alecrim",
+      "images": [
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-1.webp",
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "preparacao",
+    "title": "Preparação e cuidados",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas/erva-1; secção de preparação",
+    "capturedAt": "2026-10-28T01:09:12.505Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "preparacao.webp",
+    "bytes": 131062
+  },
+  {
+    "id": "favoritos",
+    "title": "Plantas favoritas",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; filtro: Favoritas",
+    "capturedAt": "2026-10-28T01:08:18.398Z",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "image": "favoritos.webp",
+    "bytes": 160934,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/#plantas",
+      "title": "Conheça as plantas",
+      "search": "",
+      "filter": "Favoritas",
+      "images": [
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-1.webp",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-12.webp",
+          "ok": true
+        },
+        {
+          "src": "https://ervasportuguesas.vercel.app/app/assets/plantas/erva-13.jpg",
+          "ok": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "mobile",
+    "title": "Versão para telemóvel",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "inicio",
+    "capturedAt": "2026-10-28T01:16:45.389Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "mobile.webp",
+    "bytes": 80536,
+    "state": {
+      "url": "https://ervasportuguesas.vercel.app/app/#inicio",
+      "title": "O saber das ervas, na sua rotina.",
+      "images": []
+    }
+  },
+  {
+    "id": "pesquisa-mobile",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; pesquisa: alecrim",
+    "capturedAt": "2026-10-28T01:09:50.114Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "pesquisa-mobile.webp"
+  },
+  {
+    "id": "categorias-mobile",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; categoria: Infusões",
+    "capturedAt": "2026-10-28T01:09:51.024Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "categorias-mobile.webp"
+  },
+  {
+    "id": "ficha-planta-mobile",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas/erva-1",
+    "capturedAt": "2026-10-28T01:09:51.450Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "ficha-planta-mobile.webp"
+  },
+  {
+    "id": "preparacao-mobile",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas/erva-1; secção de preparação",
+    "capturedAt": "2026-10-28T01:09:52.522Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "preparacao-mobile.webp"
+  },
+  {
+    "id": "favoritos-mobile",
+    "source": "https://ervasportuguesas.vercel.app/app/",
+    "route": "plantas; filtro: Favoritas",
+    "capturedAt": "2026-10-28T01:09:53.255Z",
+    "viewport": {
+      "width": 390,
+      "height": 1100
+    },
+    "image": "favoritos-mobile.webp"
+  }
+]
+

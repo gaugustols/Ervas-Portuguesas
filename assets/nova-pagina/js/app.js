@@ -125,50 +125,112 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
   document.addEventListener('visibilitychange', atualizar);
 })();
 
-// Amostra do guia: seleciona conteudo ja presente na pagina, sem recolher dados.
+// Capturas reais da aplicacao: navegacao manual por toque, rato e teclado.
 (() => {
-  const raiz = document.querySelector('[data-guide-preview]');
-  if (!raiz) return;
-  const navegacao = raiz.querySelector('[data-preview-tabs]');
-  const botoes = Array.from(raiz.querySelectorAll('[data-preview-topic]'));
-  const paineis = Array.from(raiz.querySelectorAll('[data-preview-panel]'));
-  const exploracao = raiz.querySelector('[data-preview-exploration]');
-  const progresso = raiz.querySelector('[data-preview-progress]');
-  const preenchimento = raiz.querySelector('[data-preview-progress-fill]');
-  if (!navegacao || !botoes.length || botoes.length !== paineis.length) return;
-  const visitados = new Set();
-  const selecionar = (chave, moverFoco = false) => {
-    const botaoAtivo = botoes.find(botao => botao.dataset.previewTopic === chave);
-    const painelAtivo = paineis.find(painel => painel.dataset.previewPanel === chave);
-    if (!botaoAtivo || !painelAtivo) return;
-    botoes.forEach(botao => {
-      const ativo = botao === botaoAtivo;
-      botao.setAttribute('aria-selected', String(ativo));
-      botao.tabIndex = ativo ? 0 : -1;
+  const root = document.querySelector('[data-real-app-gallery]');
+  if (!root) return;
+  const track = root.querySelector('[data-real-app-track]');
+  const slides = Array.from(root.querySelectorAll('[data-real-app-slide]'));
+  const tabs = Array.from(root.querySelectorAll('[data-real-app-tab]'));
+  const controls = root.querySelector('[data-real-app-controls]');
+  const previous = root.querySelector('[data-real-app-prev]');
+  const next = root.querySelector('[data-real-app-next]');
+  const counter = root.querySelector('[data-real-app-count]');
+  const zoom = root.querySelector('[data-real-app-zoom]');
+  if (!track || !slides.length || tabs.length !== slides.length) return;
+  let index = 0;
+  const sync = () => {
+    const nextIndex = Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / Math.max(1, track.clientWidth))));
+    if (nextIndex === index && counter.textContent === (index + 1) + ' / ' + slides.length) return;
+    index = nextIndex;
+    tabs.forEach((tab, i) => {
+      if (i === index) tab.setAttribute('aria-current', 'true');
+      else tab.removeAttribute('aria-current');
     });
-    paineis.forEach(painel => {
-      painel.hidden = painel !== painelAtivo;
-      painel.setAttribute('role', 'tabpanel');
-    });
-    visitados.add(chave);
-    if (progresso) progresso.textContent = visitados.size + ' de ' + botoes.length + ' temas explorados';
-    if (preenchimento) preenchimento.style.width = (visitados.size / botoes.length * 100) + '%';
-    if (moverFoco) botaoAtivo.focus();
+    counter.textContent = (index + 1) + ' / ' + slides.length;
   };
-  botoes.forEach((botao, indice) => {
-    botao.addEventListener('click', () => selecionar(botao.dataset.previewTopic));
-    botao.addEventListener('keydown', evento => {
-      let seguinte;
-      if (evento.key === 'ArrowRight') seguinte = (indice + 1) % botoes.length;
-      else if (evento.key === 'ArrowLeft') seguinte = (indice - 1 + botoes.length) % botoes.length;
-      else if (evento.key === 'Home') seguinte = 0;
-      else if (evento.key === 'End') seguinte = botoes.length - 1;
-      else return;
-      evento.preventDefault();
-      selecionar(botoes[seguinte].dataset.previewTopic, true);
+  const go = target => {
+    index = (target + slides.length) % slides.length;
+    track.scrollTo({ left: index * track.clientWidth, behavior: 'instant' });
+    tabs.forEach((tab, i) => {
+      if (i === index) tab.setAttribute('aria-current', 'true');
+      else tab.removeAttribute('aria-current');
     });
+    counter.textContent = (index + 1) + ' / ' + slides.length;
+  };
+  tabs.forEach((tab, i) => tab.addEventListener('click', event => {
+    event.preventDefault();
+    go(i);
+  }));
+  previous.addEventListener('click', () => go(index - 1));
+  next.addEventListener('click', () => go(index + 1));
+  track.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight') go(index + 1);
+    else if (event.key === 'ArrowLeft') go(index - 1);
+    else if (event.key === 'Home') go(0);
+    else if (event.key === 'End') go(slides.length - 1);
+    else return;
+    event.preventDefault();
   });
-  selecionar(botoes[0].dataset.previewTopic);
-  navegacao.hidden = false;
-  if (exploracao) exploracao.hidden = false;
+  let scrollFrame = 0;
+  track.addEventListener('scroll', () => {
+    cancelAnimationFrame(scrollFrame);
+    scrollFrame = requestAnimationFrame(sync);
+  }, { passive: true });
+  if ('ResizeObserver' in window) {
+    let lastWidth = track.clientWidth;
+    new ResizeObserver(() => {
+      if (lastWidth === track.clientWidth) return;
+      lastWidth = track.clientWidth;
+      track.scrollTo({ left: index * lastWidth, behavior: 'instant' });
+    }).observe(track);
+  }
+  controls.hidden = false;
+  if (!('HTMLDialogElement' in window)) {
+    zoom.hidden = true;
+    return;
+  }
+  const dialog = document.createElement('dialog');
+  if (typeof dialog.showModal !== 'function') {
+    zoom.hidden = true;
+    return;
+  }
+  dialog.className = 'app-real-dialog';
+  dialog.setAttribute('aria-labelledby', 'app-real-dialog-title');
+  const head = document.createElement('div');
+  head.className = 'app-real-dialog-head';
+  const title = document.createElement('p');
+  title.id = 'app-real-dialog-title';
+  title.className = 'app-real-dialog-title';
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'app-real-dialog-close';
+  close.textContent = 'Fechar';
+  head.append(title, close);
+  const area = document.createElement('div');
+  area.className = 'app-real-zoom-area';
+  const image = document.createElement('img');
+  area.append(image);
+  dialog.append(head, area);
+  document.body.append(dialog);
+  zoom.addEventListener('click', () => {
+    const current = slides[index].querySelector('img');
+    image.src = current.currentSrc || current.src;
+    image.alt = current.alt;
+    title.textContent = slides[index].querySelector('h4').textContent;
+    dialog.showModal();
+    document.body.classList.add('app-real-zoom-open');
+    area.scrollTo(0, 0);
+    close.focus();
+  });
+  close.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('app-real-zoom-open');
+    zoom.focus();
+  });
 })();
