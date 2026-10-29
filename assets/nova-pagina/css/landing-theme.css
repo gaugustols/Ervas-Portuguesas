@@ -161,12 +161,23 @@ body { font-size: 15px; line-height: 1.7; }
 .previa-acao > span { font-size: 12px; }
 
 /* Mesmo cartão de oferta, com maior ênfase no plano PRO. */
-.oferta-planos { max-width: 1000px; gap: 28px; }
+.oferta-planos { max-width: 1000px; gap: 28px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; }
 .oferta-plano { padding: 28px; background: var(--pagina-painel); }
-.oferta-plano-pro { border: 1px solid #32543d; background: var(--landing-card); box-shadow: 0 20px 60px #0005; }
+.oferta-plano-pro { padding-block: 38px; border: 2px solid var(--landing-accent); background: var(--landing-card); box-shadow: 0 20px 60px #0005, 0 0 30px #79d59812; }
 .oferta-plano h3 { font-size: 22px; letter-spacing: -.03em; }
+.plano-titulo-complemento { display: block; margin-top: 4px; font-size: 16px; letter-spacing: 0; }
 .plano-descricao { color: var(--pagina-secundario); }
 .plano-preco { font-size: clamp(48px, 6vw, 68px); font-weight: 600; letter-spacing: -2px; }
+.oferta .valor-total { font-size: 14px; color: var(--pagina-secundario); }
+.plano-beneficios-oferta { margin-block: 24px 28px; }
+.plano-beneficios-oferta li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding-left: 0; }
+.plano-beneficios-oferta li::before { content: none; }
+.plano-beneficio-icone { line-height: 1.7; }
+.plano-valor { margin-bottom: 24px; }
+.plano-referencia, .plano-preco-rotulo, .plano-pagamento { margin: 0; color: var(--pagina-secundario); font-size: 13px; line-height: 1.7; }
+.plano-referencia { margin-bottom: 12px; }
+.plano-referencia > span { display: block; }
+.plano-valor .plano-preco { margin: 4px 0; color: var(--pagina-texto); }
 .plano-recomendado { left: 24px; border: 1px solid #319452; background: var(--pagina-destaque); font-size: 11px; letter-spacing: .08em; }
 .oferta-tempo { border-color: #32543d; background: var(--pagina-painel); border-radius: 16px; }
 .selo-garantia { background: #0d2115; border-color: #32543d; color: var(--landing-accent); }
@@ -201,6 +212,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   outline-offset: 5px;
 }
 .oferta-plano .btn:focus-visible { outline-color: var(--landing-accent); }
+.oferta .btn.plano-cta-basico { background: transparent; border-color: #89968d; color: var(--pagina-texto); box-shadow: none; }
+.oferta .btn.plano-cta-basico:hover { background: #ffffff0a; border-color: var(--pagina-texto); }
+.oferta .btn.plano-cta-pro { animation: plano-pro-pulse 2s ease-in-out infinite; }
+@keyframes plano-pro-pulse {
+  0%, 100% { box-shadow: 0 6px 22px #0b6b2c33; }
+  50% { box-shadow: 0 6px 32px #0b6b2c88, 0 0 0 4px #79d59814; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .oferta .btn.plano-cta-pro { animation: none; }
+}
 
 /* Depoimentos no tema escuro; estrelas e conteúdo preservados. */
 .rating-summary {
@@ -255,7 +276,7 @@ footer { border-color: var(--pagina-linha); }
   .hero-compra-info, .hero .hero-prova-social { justify-self: center; }
   .hero-bullets { max-width: 480px; justify-self: center; }
   .hero-selos li { font-size: 10px; }
-  .oferta-planos { max-width: 580px; gap: 32px; }
+  .oferta-planos { max-width: 580px; gap: 32px; grid-template-columns: minmax(0, 1fr); }
   .oferta-plano, .card-aprender, .processo-cartao { padding: 24px 20px; border-radius: 18px; }
   .oferta-plano .btn { max-width: 440px; }
   .garantia-card { padding: 24px 20px; border-radius: 18px; }
