@@ -1,5 +1,6 @@
 // Built with Remotion - https://remotion.pro/license
 import type { CSSProperties } from "react";
+import { BrandNameText } from "./brand-name-text";
 import { Star } from "lucide-react";
 import { defineVideoMeta } from "../../kit/spec";
 import type { RatingSummaryInput } from "../../video/rating-summary/rating-summary.schema";
@@ -113,7 +114,7 @@ export function RatingSummary({ score, count, countLabel, source, snippets, colo
                   ))}
                 </span>
               </figcaption>
-              <blockquote>“{snippet.quote}”</blockquote>
+              <blockquote>“<BrandNameText>{snippet.quote}</BrandNameText>”</blockquote>
             </figure>
           );
         })}

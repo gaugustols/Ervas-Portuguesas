@@ -2,6 +2,7 @@
 
 import { motion, MotionConfig } from "motion/react";
 import { cn } from "@/lib/utils";
+import { BrandNameText } from "./brand-name-text";
 import {
   Accordion,
   AccordionItem,
@@ -53,14 +54,14 @@ export default function FrequentlyAskedQuestions({
             ))}
           </h2>
           <p className="faq-description">
-            {description}
+            <BrandNameText>{description}</BrandNameText>
             {hasEmail && <> <a href={`mailto:${email}`}>{email}</a></>}
           </p>
           <Accordion type="single" collapsible defaultValue="item-0" className="faq-list">
             {data.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={item.question}>
-                <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionTrigger><BrandNameText>{item.question}</BrandNameText></AccordionTrigger>
+                <AccordionContent><BrandNameText>{item.answer}</BrandNameText></AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

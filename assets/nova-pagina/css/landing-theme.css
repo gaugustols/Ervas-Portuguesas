@@ -15,6 +15,8 @@
 }
 
 body { font-size: 15px; line-height: 1.7; }
+body .landing-brand-name { color: var(--landing-accent); }
+body .btn .landing-brand-name { color: #c5ffd4; }
 .container { max-width: 1080px; }
 .container-narrow { max-width: 800px; }
 .container > *, .cols-2 > *, .split > *, .oferta-planos > * { min-width: 0; }

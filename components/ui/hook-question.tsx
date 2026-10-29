@@ -1,5 +1,6 @@
 // Built with Remotion - https://remotion.pro/license
 import type { CSSProperties } from "react";
+import { BrandNameText } from "./brand-name-text";
 import { defineVideoMeta } from "../../kit/spec";
 import { cn } from "../../lib/utils";
 import type { HookQuestionInput } from "../../video/hook-question/hook-question.schema";
@@ -72,13 +73,13 @@ export function HookQuestion({ question, answer, note, colors, fonts, frame, red
       <h1 className={cn("hook-question-title hq:relative hq:w-full hq:text-balance", className)} style={titleStyle}>
         <span className="hook-question-enter hq:block" style={questionStyle}>
           {question.split(/(\b(?:ervas?|plantas?)\b)/gi).map((part, index) =>
-            /^(?:ervas?|plantas?)$/i.test(part) ? <span key={index} className="hook-question-accent" style={{ color: colors.primary }}>{part}</span> : part
+            /^(?:ervas?|plantas?)$/i.test(part) ? <span key={index} className="hook-question-accent" style={{ color: colors.primary }}>{part}</span> : <BrandNameText key={index}>{part}</BrandNameText>
           )}
         </span>
       </h1>
       <p className="sub-h1 hook-question-answer hq:w-full hq:text-balance" style={answerStyle}>
-        {answer}
-        {note && <small className="hook-question-note">{note}</small>}
+        <BrandNameText>{answer}</BrandNameText>
+        {note && <small className="hook-question-note"><BrandNameText>{note}</BrandNameText></small>}
       </p>
     </>
   );
