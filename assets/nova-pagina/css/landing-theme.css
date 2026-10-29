@@ -180,8 +180,15 @@ body { font-size: 15px; line-height: 1.7; }
 .plano-valor .plano-preco { margin: 4px 0; color: var(--pagina-texto); }
 .plano-recomendado { left: 24px; border: 1px solid #319452; background: var(--pagina-destaque); font-size: 11px; letter-spacing: .08em; }
 .oferta-tempo { border-color: #32543d; background: var(--pagina-painel); border-radius: 16px; }
-.selo-garantia { background: #0d2115; border-color: #32543d; color: var(--landing-accent); }
-.garantia-texto h3 { font-size: 24px; }
+.selo-garantia { background: #064e3b; border-color: #10b981; color: #fff; box-shadow: 0 8px 28px #0005, inset 0 0 0 5px #ffffff08; }
+.selo-garantia .dias { font-family: inherit; font-weight: 800; }
+.selo-garantia .txt { font-weight: 700; }
+.garantia .garantia-texto h3 { display: flex; align-items: center; gap: 10px; font-family: inherit; font-size: clamp(24px, 3vw, 30px); font-weight: 800; color: #fff; }
+.garantia-escudo { flex: 0 0 auto; color: #e9c96b; }
+.garantia .garantia-texto p { font-size: 15px; line-height: 1.8; }
+@media (max-width: 860px) {
+  .garantia .garantia-texto h3 { justify-content: center; }
+}
 
 /* CTAs iguais entre si; a barra fixa conserva a versão compacta. */
 .btn, .hero .btn, .oferta .btn, .cta-fixo .btn {
