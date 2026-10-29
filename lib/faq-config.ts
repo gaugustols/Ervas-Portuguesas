@@ -22,7 +22,7 @@ export const faqConfig = {
     },
     {
       question: "Como funciona a garantia de 7 dias?",
-      answer: "A oferta inclui uma garantia de 7 dias. Se não gostar da aplicação, pode pedir o reembolso dentro desse prazo, seguindo as instruções disponibilizadas na compra.",
+      answer: "Tens 7 dias para testar tudo. Se achares que não é para ti, envias um e-mail e devolvemos cada cêntimo. Sem perguntas. Sem burocracia. O risco é 100% nosso.",
     },
     {
       question: "A aplicação substitui aconselhamento médico?",
