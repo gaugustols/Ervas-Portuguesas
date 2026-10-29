@@ -215,6 +215,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 .oferta .btn.plano-cta-basico { background: transparent; border-color: #89968d; color: var(--pagina-texto); box-shadow: none; }
 .oferta .btn.plano-cta-basico:hover { background: #ffffff0a; border-color: var(--pagina-texto); }
 .oferta .btn.plano-cta-pro { animation: plano-pro-pulse 2s ease-in-out infinite; }
+.plano-seguranca { margin: 14px 0 0; color: var(--pagina-secundario); font-size: 12px; line-height: 1.7; text-align: center; }
 @keyframes plano-pro-pulse {
   0%, 100% { box-shadow: 0 6px 22px #0b6b2c33; }
   50% { box-shadow: 0 6px 32px #0b6b2c88, 0 0 0 4px #79d59814; }
