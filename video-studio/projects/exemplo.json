@@ -1,0 +1,12 @@
+{
+  "clips": [
+    { "src": "entrada/video.mp4", "trimBefore": 0, "durationInFrames": 90, "volume": 1, "fit": "contain" },
+    { "src": "entrada/video.mp4", "trimBefore": 150, "durationInFrames": 90, "volume": 1, "fit": "contain" }
+  ],
+  "captions": [
+    { "start": 0, "end": 90, "text": "Substituir pela legenda aprovada" }
+  ],
+  "music": null,
+  "musicVolume": 0.15,
+  "showBrand": true
+}

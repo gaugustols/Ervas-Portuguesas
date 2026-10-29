@@ -1,0 +1,31 @@
+{
+  "name": "botica-viva-video-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare:media": "node scripts/prepare-media.mjs",
+    "studio": "npm run prepare:media && remotion studio src/index.ts --port=3001 --no-open",
+    "browser": "remotion browser ensure",
+    "compositions": "npm run prepare:media && remotion compositions src/index.ts",
+    "render:vertical": "npm run prepare:media && remotion render src/index.ts BoticaVivaVertical ../output/videos/botica-viva-vertical.mp4",
+    "render:square": "npm run prepare:media && remotion render src/index.ts BoticaVivaQuadrado ../output/videos/botica-viva-quadrado.mp4",
+    "render:horizontal": "npm run prepare:media && remotion render src/index.ts BoticaVivaHorizontal ../output/videos/botica-viva-horizontal.mp4",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test-export.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.536",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

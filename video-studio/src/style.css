@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Botica Jakarta';
+  src: url('../media/fonts/plus-jakarta-sans-400.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Botica Jakarta';
+  src: url('../media/fonts/plus-jakarta-sans-600.ttf') format('truetype');
+  font-weight: 600;
+}
+* { box-sizing: border-box; }
