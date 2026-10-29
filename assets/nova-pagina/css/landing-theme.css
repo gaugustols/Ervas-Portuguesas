@@ -173,6 +173,9 @@ body { font-size: 15px; line-height: 1.7; }
 .bonus-entrega .bonus-entrega-valor { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 24px 0 0; padding-top: 20px; border-top: 1px solid var(--pagina-linha); font-size: 16px; }
 .bonus-entrega-valor s { text-decoration-thickness: 2px; }
 .bonus-entrega .bonus-entrega-valor strong { color: var(--landing-accent); font-size: 18px; font-weight: 800; }
+.bonus-entrega-total { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; max-width: 900px; margin: 24px auto 0; padding: 24px 20px; border: 1px solid #319452; border-radius: 18px; background: #0d2115; color: var(--pagina-texto); font-size: clamp(16px, 2vw, 20px); line-height: 1.6; text-align: center; }
+.bonus-entrega-total s { color: var(--pagina-secundario); text-decoration-thickness: 2px; }
+.bonus-entrega .bonus-entrega-total strong { color: var(--landing-accent); font-weight: 800; }
 @media (max-width: 600px) {
   .bonus-entrega-heading { padding: 24px 20px; border-radius: 18px; }
   .bonus-entrega-card { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px 20px; }
