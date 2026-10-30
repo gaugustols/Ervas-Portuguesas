@@ -6,7 +6,7 @@ import { renderUpsell1, renderUpsell2, renderDownsell, renderFinalOffer } from '
 
 const pages = [
   { name: 'upsell-1', render: renderUpsell1, price: '€29,90', offerLabel: 'CONDIÇÃO ESPECIAL APÓS A TUA COMPRA' },
-  { name: 'upsell-2', render: renderUpsell2, price: '€7,90', offerLabel: 'COMPLEMENTO PARA A TUA NOVA HORTA' },
+  { name: 'upsell-2', render: renderUpsell2, price: '€19,90', offerLabel: 'COMPLEMENTO PARA A TUA NOVA HORTA' },
   { name: 'downsell', render: renderDownsell, price: '€4,90', offerLabel: 'UMA FORMA MAIS SIMPLES DE COMEÇAR' },
   { name: 'oferta-final', render: renderFinalOffer, price: '€3,90', offerLabel: 'ÚLTIMO COMPLEMENTO DESTA COMPRA' },
 ];
