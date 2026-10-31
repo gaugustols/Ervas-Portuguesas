@@ -1,0 +1,17 @@
+/* Landing only: original cascade compiled into one inline stylesheet. */
+@import "../assets/nova-pagina/css/styles.css";
+@import "../assets/nova-pagina/css/hook-question.css";
+@import "../assets/nova-pagina/css/rating-summary.css";
+@import "../assets/nova-pagina/css/landing-theme.css";
+
+/* System fonts explicitly authorised: no font requests or font-loading shifts. */
+body, body *, body::before, body::after, body *::before, body *::after {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+/* Show the initial offer without waiting for animation or an observer. */
+.hero .hook-question-enter, .hero .hook-question-answer {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}

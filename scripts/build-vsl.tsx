@@ -28,4 +28,4 @@ html = html.replace(block, `<!-- hero-vsl:start -->\n  <div id="hero-vsl-root" c
 const script = '<script type="module" src="assets/nova-pagina/js/vsl-player.js"></script>';
 if (!html.includes(script)) html = html.replace("</body>", `${script}\n</body>`);
 writeFileSync(path, html);
-console.log("VSL thumbnail rendered and React client component bundled.");
+console.log("VSL poster rendered and native click-to-play controller bundled.");

@@ -7,13 +7,6 @@ export function landingRevealTargets(root: Document = document) {
       targets.set(element, { ...options, delay: (options.delay ?? 0) + (index % cycle) * stagger });
     });
   };
-  add(".faixa-topo-selo", { direction: "left" });
-  add(".hero h1", { direction: "left", delay: 150 });
-  add(".hero .sub-h1", { direction: "left", delay: 300 });
-  add(".hero-grid .btn", { direction: "left", delay: 450 });
-  add(".hero-bullets", { direction: "left", delay: 300 });
-  add(".hero-compra-info, .hero-prova-social", { direction: "up", delay: 600 });
-  add(".hero-video", { direction: "right", delay: 300, duration: 800 });
   add("body > section h2, .faq-title", { direction: "up" }, 150, 2);
   add(".processo-subtitulo, .dep-sub, .oferta .valor-total, .faq-description", { direction: "up", delay: 150 });
   add(".sintoma-opcao", { direction: "up" }, 150, 3);

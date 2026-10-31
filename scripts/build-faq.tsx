@@ -34,4 +34,4 @@ html = html.includes("<!-- faq:start -->")
 const script = '<script type="module" src="assets/nova-pagina/js/faq.js"></script>';
 if (!html.includes(script)) html = html.replace("</body>", `${script}\n</body>`);
 writeFileSync(path, html);
-console.log("FAQ rendered below the guarantee and React accordion bundled.");
+console.log("FAQ rendered below the guarantee and native accessible controller bundled.");

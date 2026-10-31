@@ -2,30 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 import { VolumeOff } from "lucide-react";
+import { VIDEO_POSTER } from "../../lib/video-config";
 
-export function getVslVideo(videoUrl: string) {
-  try {
-    const url = new URL(videoUrl);
-    if (!["https:", "http:"].includes(url.protocol)) return null;
-    let id: string | null | undefined;
-    if (url.hostname === "youtu.be") id = url.pathname.slice(1);
-    else if (["youtube.com", "www.youtube.com", "m.youtube.com", "youtube-nocookie.com", "www.youtube-nocookie.com"].includes(url.hostname)) {
-      id = url.pathname === "/watch" ? url.searchParams.get("v") : url.pathname.match(/^\/(?:embed|shorts|live)\/([^/]+)\/?$/)?.[1];
-    }
-    if (!id || !/^[\w-]{11}$/.test(id)) return null;
-    const seconds = url.searchParams.get("t")?.match(/^(\d+)s?$/)?.[1] ?? url.searchParams.get("start");
-    const start = Number(seconds ?? 0);
-    return { id, start: Number.isSafeInteger(start) && start >= 0 ? start : 0 };
-  } catch {
-    return null;
-  }
-}
+import { getVslVideo } from "../../lib/youtube-video";
+export { getVslVideo } from "../../lib/youtube-video";
 
 export function VslPlayer({ videoUrl }: { videoUrl: string }) {
   const video = getVslVideo(videoUrl);
   const [playing, setPlaying] = useState(false);
   const [thumbnail, setThumbnail] = useState<"maxresdefault" | "hqdefault" | null>("maxresdefault");
   const imageRef = useRef<HTMLImageElement>(null);
+  const localPoster = video?.id === VIDEO_POSTER.videoId && thumbnail === "maxresdefault";
 
   useEffect(() => {
     const image = imageRef.current;
@@ -59,7 +46,7 @@ export function VslPlayer({ videoUrl }: { videoUrl: string }) {
         <img
           className="vsl-thumbnail"
           ref={imageRef}
-          src={`https://img.youtube.com/vi/${video.id}/${thumbnail}.jpg`}
+          src={localPoster ? VIDEO_POSTER.src : `https://img.youtube.com/vi/${video.id}/${thumbnail}.jpg`}
           alt=""
           width="1280"
           height="720"
