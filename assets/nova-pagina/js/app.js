@@ -252,15 +252,16 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
 
 
 // bonus-weekday:start
-// Current weekday in Portugal, refreshed at each minute and when the tab resumes.
+// Current weekday and dd/mm date in Portugal; refreshed each minute and on resume.
 (() => {
   const labels = document.querySelectorAll('[data-bonus-weekday]');
   if (!labels.length) return;
   const formatter = new Intl.DateTimeFormat('pt-PT', { weekday: 'long', timeZone: 'Europe/Lisbon' });
+  const dateFormatter = new Intl.DateTimeFormat('pt-PT', { day: '2-digit', month: '2-digit', timeZone: 'Europe/Lisbon' });
   let timer;
   const update = () => {
     const now = new Date();
-    const text = ' ' + formatter.format(now);
+    const text = ' ' + formatter.format(now) + ', ' + dateFormatter.format(now);
     labels.forEach(label => { label.textContent = text; });
     clearTimeout(timer);
     if (!document.hidden) timer = setTimeout(update, 60000 - (Date.now() % 60000));
