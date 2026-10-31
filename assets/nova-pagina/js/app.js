@@ -249,3 +249,27 @@ const PRO_CHECKOUT_URL = 'https://pay.hotmart.com/P108062599Y?off=uszcskzv&check
   controls.hidden = false;
   update();
 })();
+
+
+// bonus-weekday:start
+// Current weekday in Portugal, refreshed at each minute and when the tab resumes.
+(() => {
+  const labels = document.querySelectorAll('[data-bonus-weekday]');
+  if (!labels.length) return;
+  const formatter = new Intl.DateTimeFormat('pt-PT', { weekday: 'long', timeZone: 'Europe/Lisbon' });
+  let timer;
+  const update = () => {
+    const now = new Date();
+    const text = ' ' + formatter.format(now);
+    labels.forEach(label => { label.textContent = text; });
+    clearTimeout(timer);
+    if (!document.hidden) timer = setTimeout(update, 60000 - (Date.now() % 60000));
+  };
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) clearTimeout(timer);
+    else update();
+  });
+  window.addEventListener('focus', update);
+  update();
+})();
+// bonus-weekday:end
