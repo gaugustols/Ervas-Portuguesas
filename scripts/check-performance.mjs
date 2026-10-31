@@ -10,6 +10,7 @@ assert.ok(html.indexOf("fbq('track'") < html.indexOf('<style'));
 assert.equal((html.match(/id="landing-critical-css"/g) ?? []).length, 1);
 assert.ok(!/<link[^>]+rel="stylesheet"/.test(html));
 assert.ok(!html.includes('@font-face'));
+assert.ok(html.includes('.hero .sub-h1.hook-question-answer{animation:none;opacity:1;transform:none}'), 'Subheadline must override the legacy delayed animation');
 assert.ok(!html.includes('<iframe'));
 assert.ok(!html.includes('maxresdefault.jpg'));
 assert.ok(html.includes('vsl-poster-480.webp'));

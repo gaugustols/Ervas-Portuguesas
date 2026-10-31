@@ -10,7 +10,7 @@ body, body *, body::before, body::after, body *::before, body *::after {
 }
 
 /* Show the initial offer without waiting for animation or an observer. */
-.hero .hook-question-enter, .hero .hook-question-answer {
+.hero .hook-question-enter, .hero .sub-h1.hook-question-answer {
   animation: none;
   opacity: 1;
   transform: none;
