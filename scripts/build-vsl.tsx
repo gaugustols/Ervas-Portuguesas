@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { VslPlayer } from "../components/ui/vsl-player";
 import { VIDEO_URL } from "../lib/video-config";
 
-const path = new URL("../index.html", import.meta.url);
+const path = new URL("../original.html", import.meta.url);
 let html = readFileSync(path, "utf8");
 const block = /<!-- hero-vsl:start -->[\s\S]*?<!-- hero-vsl:end -->|<div class="hero-video" data-hero-video[\s\S]*?<\/button>\s*<\/div>/g;
 if ((html.match(block) ?? []).length !== 1) throw new Error("Expected exactly one hero video; no files changed.");

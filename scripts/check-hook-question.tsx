@@ -17,7 +17,7 @@ const settled = renderToStaticMarkup(<HookQuestion {...defaults} frame={60} />);
 assert.ok(!settled.includes("opacity:0"));
 const reduced = renderToStaticMarkup(<HookQuestion {...defaults} frame={0} reducedMotion />);
 assert.ok(!reduced.includes("opacity:0"), "Reduced motion must show both texts immediately");
-const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+const html = readFileSync(new URL("../original.html", import.meta.url), "utf8");
 assert.ok(html.includes(renderToStaticMarkup(<HookQuestion {...defaults} />)));
 assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
 const css = readFileSync(new URL("../assets/nova-pagina/css/hook-question.css", import.meta.url), "utf8");

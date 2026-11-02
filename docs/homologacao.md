@@ -1,5 +1,7 @@
 # Homologação da variante Ervas Portuguesas
 
+> Registo da etapa de homologação. O utilizador autorizou depois a promoção a página principal; consulte [promocao-principal.md](promocao-principal.md) para o estado atual.
+
 ## Estado da publicação
 
 **Branch de homologação enviada ao GitHub e integração Vercel acionada.** A `main` mantém o commit `364746af1bfa3bce2c8e249c43bf4ce5baea7f1f`; nenhum merge, promoção de produção ou mudança do domínio dos anúncios foi executado.

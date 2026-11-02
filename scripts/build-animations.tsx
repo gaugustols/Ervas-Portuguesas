@@ -4,7 +4,7 @@ import { build } from "esbuild";
 import { fileURLToPath } from "node:url";
 import ProgressiveBlur from "../components/ProgressiveBlur";
 
-const path = new URL("../index.html", import.meta.url);
+const path = new URL("../original.html", import.meta.url);
 let html = readFileSync(path, "utf8");
 const block = /<!-- progressive-blur:start -->[\s\S]*?<!-- progressive-blur:end -->/g;
 if ((html.match(block) ?? []).length > 1) throw new Error("Expected one blur block; no files changed.");

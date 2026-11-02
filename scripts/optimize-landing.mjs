@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 
-const page = new URL('../index.html', import.meta.url);
+const page = new URL('../original.html', import.meta.url);
 let html = readFileSync(page, 'utf8');
 const css = await build({
   entryPoints: [fileURLToPath(new URL('../styles/landing.css', import.meta.url))],

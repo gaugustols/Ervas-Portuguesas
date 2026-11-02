@@ -3,11 +3,16 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import vm from 'node:vm';
 
-const original = readFileSync('index.html', 'utf8');
+const original = readFileSync('original.html', 'utf8');
 const variant = readFileSync('teste-ervas.html', 'utf8');
 const tracking = readFileSync('assets/nova-pagina/js/conversion-events.js', 'utf8');
 assert.equal(readFileSync('public/teste-ervas.html', 'utf8'), variant, 'Variant included in static deployment export');
-for (const html of [original, variant]) {
+const primary = readFileSync('index.html', 'utf8');
+assert.equal(primary, variant.replace('<meta name="robots" content="noindex, follow">\n', ''));
+assert.equal(readFileSync('public/index.html', 'utf8'), primary);
+assert.equal(readFileSync('public/original.html', 'utf8'), original);
+assert.ok(!primary.includes('name="robots" content="noindex'));
+for (const html of [original, variant, primary]) {
   assert.equal((html.match(/fbq\('init', '891065599076214'\)/g) || []).length, 1);
   assert.equal((html.match(/fbq\('track', 'PageView'\)/g) || []).length, 1);
   assert.equal((html.match(/src="assets\/nova-pagina\/js\/conversion-events.js"/g) || []).length, 1);
@@ -42,7 +47,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PAT
 const results = [];
 try {
   for (const width of [360, 390, 768, 1366]) {
-    for (const path of ['/', '/teste-ervas.html']) {
+    for (const path of ['/original.html', '/', '/teste-ervas.html']) {
       const context = await browser.newContext({ viewport: { width, height: 800 }, deviceScaleFactor: width < 600 ? 2 : 1, isMobile: width < 600, hasTouch: true, reducedMotion: 'reduce' });
       // Local deterministic telemetry capture; never send synthetic events to Meta.
       await context.route('https://**/*', async route => {
@@ -70,7 +75,7 @@ try {
         if (href.startsWith('#')) assert.ok(await page.locator(href).count(), `Missing target ${href}`);
         else if (!href.startsWith('https://')) assert.equal((await context.request.get(new URL(href, base).href)).status(), 200, href);
       }
-      if (path !== '/') {
+      if (path !== '/original.html') {
         await page.addScriptTag({ content: readFileSync('assets/nova-pagina/js/checkout-attribution.js', 'utf8') });
         assert.equal(await page.locator('a.btn:not([data-checkout-plan="pro"])').count(), 0, 'Every test CTA opens PRO');
         const rect = await page.locator('.test-cta').boundingBox();
@@ -101,7 +106,7 @@ try {
         assert.equal(destination.pathname, '/P108062599Y');
         assert.equal(destination.searchParams.get('off'), plan === 'pro' ? 'uszcskzv' : 'dv3haixa');
         assert.equal(destination.searchParams.get('checkoutMode'), '10');
-        if (path !== '/') {
+        if (path !== '/original.html') {
           for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid', 'src', 'sck']) assert.equal(destination.searchParams.get(key), attribution.get(key), key);
           assert.equal(destination.searchParams.has('email'), false, 'No arbitrary personal query data forwarded');
           assert.equal(destination.searchParams.getAll('utm_source').length, 1);
@@ -112,7 +117,7 @@ try {
         assert.equal(await count('CTA_Click'), beforeCTA + 1);
         const event = (await calls()).filter(args => args[1] === 'Checkout_Click').at(-1);
         assert.equal(event[2].plan, plan); assert.equal(event[2].value, plan === 'pro' ? 14.9 : 7.9);
-        assert.equal(event[2].currency, 'EUR'); assert.equal(event[2].lp_variant, path === '/' ? 'original' : 'ervas-cozinha');
+        assert.equal(event[2].currency, 'EUR'); assert.equal(event[2].lp_variant, path === '/original.html' ? 'original' : 'ervas-cozinha');
       }
       for (const faq of await page.locator('.faq-trigger').all()) {
         const before = await faq.getAttribute('aria-expanded'); await faq.tap();
@@ -126,7 +131,7 @@ try {
         await page.locator('[data-inside-prev]').tap();
         await page.waitForFunction(() => document.querySelector('[data-inside-track]').scrollLeft <= 2);
       } else assert.ok(await track.evaluate(el => el.scrollWidth <= el.clientWidth + 2));
-      if (path === '/') {
+      if (path === '/original.html') {
         await page.locator('.vsl-trigger').tap();
         assert.ok((await page.locator('#hero-vsl-root iframe').getAttribute('src')).startsWith('https://www.youtube-nocookie.com/embed/'));
       }
@@ -142,7 +147,7 @@ try {
   // With JavaScript disabled the test's primary CTA must still be a working native link.
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 800 } });
   await context.route('https://pay.hotmart.com/**', route => route.fulfill({ contentType: 'text/html', body: '<title>Checkout navigation target</title>' }));
-  const page = await context.newPage(); await page.goto(base + '/teste-ervas.html');
+  const page = await context.newPage(); await page.goto(base + '/');
   await page.locator('.test-cta').click();
   await page.waitForURL('https://pay.hotmart.com/**');
   assert.equal(new URL(page.url()).searchParams.get('off'), 'uszcskzv');

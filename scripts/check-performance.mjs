@@ -13,7 +13,9 @@ assert.ok(!html.includes('@font-face'));
 assert.ok(html.includes('.hero .sub-h1.hook-question-answer{animation:none;opacity:1;transform:none}'), 'Subheadline must override the legacy delayed animation');
 assert.ok(!html.includes('<iframe'));
 assert.ok(!html.includes('maxresdefault.jpg'));
-assert.ok(html.includes('vsl-poster-480.webp'));
+assert.ok(html.includes('test-product') && html.includes('aplicacao-real/mobile.webp'));
+assert.ok(!html.includes('vsl-poster-768.webp'));
+assert.ok(!html.includes('name="robots" content="noindex'));
 assert.ok(brotliCompressSync(Buffer.from(html)).length < 50000);
 assert.equal(readFileSync('public/index.html', 'utf8'), html);
 
@@ -49,4 +51,4 @@ assert.equal((await response.text()).replace(/\r\n/g, '\n'), html.replace(/\r\n/
 const paths = new Set([...html.matchAll(/<(?:img|script)\b[^>]*?src="(assets\/[^"?#]+)"/g)].map(match => match[1]));
 for (const asset of paths) assert.equal((await fetch(new URL(asset, base))).status, 200, asset);
 for (const path of ['AGENTS.md', '.env', '.git/config', 'meu-projeto/ATIVO.md', 'scripts/optimize-landing.mjs']) assert.equal((await fetch(new URL(path, base))).status, 404, path);
-console.log('Passed: one early async Meta pixel, one PageView, no blocking CSS/own JS or fonts, reserved local poster, no initial iframe, exact export, payload budgets, ' + paths.size + ' HTTP assets and private paths 404.');
+console.log('Passed: one early async Meta pixel, one PageView, no blocking CSS/own JS or fonts, reserved product mockup, no initial iframe, exact export, payload budgets, ' + paths.size + ' HTTP assets and private paths 404.');

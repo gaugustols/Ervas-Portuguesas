@@ -19,13 +19,13 @@ Abra **http://127.0.0.1:4173**. Para encerrar o servidor, pressione Ctrl+C. Ele 
 
 Confira a página no desktop e em uma largura móvel, role até ao rodapé e teste as âncoras e os CTAs. Na aba Network do navegador, os recursos locais devem carregar sem erros.
 
-Os botões Básico e PRO da original usam os links Hotmart já configurados. A versão original continua em `/` e `/index.html`. A variante `/teste-ervas.html` é focada no PRO (€14,90): todos os seus CTAs de compra levam à oferta PRO existente; o Básico continua disponível apenas na original. A variante encaminha UTMs e identificadores de atribuição permitidos para o checkout, sem permitir alterar a oferta por parâmetros da URL. Não há distribuição automática de tráfego entre as versões.
+A página principal `/` e `/index.html` usa agora a versão PRO com a headline «Tens ervas na cozinha, mas só sabes fazer chá com elas?». Os quatro CTAs de compra abrem a oferta PRO existente (€14,90), com passagem dos parâmetros UTM e de atribuição permitidos. O Pixel e os preços não foram alterados.
 
-`npm run build` gera ambas as páginas e inclui a variante na pasta `public/`. Para atualizar apenas a variante a partir do HTML original, execute `npm run build:test-hero` e `node scripts/export-static.mjs`.
+A versão anterior fica em `/original.html`, com ambos os planos, e a cópia de teste em `/teste-ervas.html`. Estas duas rotas têm `noindex`; a página principal não tem essa restrição. O build regenera os componentes da original preservada e depois produz a principal e a cópia de teste através de `scripts/build-test-hero.mjs`. Execute `npm run build` para atualizar o conjunto; não substitua a principal copiando a original manualmente.
 
-O rastreamento reutiliza o Pixel existente: `CTA_Click`, `Pricing_View` e `Checkout_Click`, com identificação da variante. Um clique não dispara `InitiateCheckout`, pois a LP não consegue confirmar o início no checkout externo. Auditoria, parâmetros, limitações e reprodução dos testes: [relatório de conversão](docs/auditoria-conversao.md).
+O rastreamento reutiliza o Pixel existente: `CTA_Click`, `Pricing_View` e `Checkout_Click`. Um clique não dispara `InitiateCheckout`. Testes de browser: `npm run check:conversion -- --browser`, com servidor local em execução na porta 4180 (ou `PREVIEW_ORIGIN` configurado).
 
-Estado da publicação de teste, validações atuais e pendências externas: [relatório de homologação](docs/homologacao.md).
+Relatórios: [promoção à página principal](docs/promocao-principal.md), [homologação](docs/homologacao.md) e [auditoria inicial](docs/auditoria-conversao.md).
 
 ## Estrutura
 

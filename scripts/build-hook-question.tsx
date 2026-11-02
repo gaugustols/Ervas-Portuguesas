@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { HookQuestion } from "../components/ui/hook-question";
 import { defaults } from "../video/hook-question/hook-question.schema";
 
-const path = new URL("../index.html", import.meta.url);
+const path = new URL("../original.html", import.meta.url);
 const html = readFileSync(path, "utf8");
 const heading = /(<div class="container hero-heading">)\s*[\s\S]*?(\s*<\/div>)/;
 if ((html.match(/class="container hero-heading"/g) ?? []).length !== 1) {

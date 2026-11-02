@@ -3,7 +3,7 @@ import { build } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 
 const root = new URL('../', import.meta.url);
-const original = readFileSync(new URL('index.html', root), 'utf8');
+const original = readFileSync(new URL('original.html', root), 'utf8');
 const pro = original.match(/<a\b[^>]*href="([^"]+)"[^>]*data-checkout-plan="pro"/)?.[1];
 if (!pro || !original.includes('<header class="hero">')) throw Error('Original hero or existing PRO checkout missing');
 const hero = `<header class="hero test-hero">
@@ -28,16 +28,20 @@ const hero = `<header class="hero test-hero">
 </header>`;
 const css = await build({ entryPoints: [fileURLToPath(new URL('styles/test-hero.css', root))], minify: true, write: false });
 const result = original
+  .replace(/<meta name="robots"[^>]*>\s*/g, '')
   .replace('<body>', '<body data-lp-variant="ervas-cozinha">')
   .replace(/<header class="hero">[\s\S]*?<\/header>/, hero)
-  // Homologation is PRO-only; the original still offers both unchanged plans.
+  // The promoted landing is PRO-only; the archive retains both unchanged plans.
   .replace(/<article class="oferta-plano" aria-labelledby="plano-basico-titulo">[\s\S]*?<\/article>/, '')
   .replace(/<a\b([^>]*class="[^"]*\bbtn\b[^"]*"[^>]*)>[\s\S]*?<\/a>/g, (_match, attrs) => {
     const retained = attrs.replace(/\s(?:href|data-checkout-plan|aria-describedby)="[^"]*"/g, '');
     return `<a${retained} href="${pro}" data-checkout-plan="pro" aria-describedby="plano-pro-descricao">Quero o acesso PRO — €14,90</a>`;
   })
   .replace('<script src="assets/nova-pagina/js/conversion-events.js" defer></script>', '<script src="assets/nova-pagina/js/checkout-attribution.js" defer></script>\n<script src="assets/nova-pagina/js/conversion-events.js" defer></script>')
+  .replace(/<meta name="description"[^>]*>/, '<meta name="description" content="Descobre receitas tradicionais portuguesas e novas formas de aproveitar as plantas que já conheces. Botica Viva digital: acesso PRO por 14,90 €, pagamento único.">')
   .replace(/<link\b(?=[^>]*rel="preload")(?=[^>]*as="image")[^>]*>\s*/g, '')
+  .replace(/^[\t ]+$/gm, '')
   .replace('</head>', `<meta name="robots" content="noindex, follow">\n<style>${css.outputFiles[0].text}</style>\n</head>`);
 writeFileSync(new URL('teste-ervas.html', root), result);
-console.log('Test hero generated at teste-ervas.html; original and checkout preserved.');
+writeFileSync(new URL('index.html', root), result.replace('<meta name="robots" content="noindex, follow">\n', ''));
+console.log('PRO landing promoted to index.html; original preserved at original.html; test remains noindex.');

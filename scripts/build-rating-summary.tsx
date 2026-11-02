@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { RatingSummary } from "../components/ui/rating-summary";
 import { defaults } from "../video/rating-summary/rating-summary.schema";
 
-const path = new URL("../index.html", import.meta.url);
+const path = new URL("../original.html", import.meta.url);
 let html = readFileSync(path, "utf8");
 const section = /(<section class="sec depoimentos">)([\s\S]*?)(<\/section>)/;
 if ((html.match(/<section class="sec depoimentos">/g) ?? []).length !== 1) throw new Error("Expected one testimonials section.");

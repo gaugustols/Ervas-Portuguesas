@@ -6,6 +6,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, 'public');
 mkdirSync(output, { recursive: true });
 cpSync(path.join(root, 'index.html'), path.join(output, 'index.html'));
+cpSync(path.join(root, 'original.html'), path.join(output, 'original.html'));
 cpSync(path.join(root, 'teste-ervas.html'), path.join(output, 'teste-ervas.html'));
 cpSync(path.join(root, 'obrigado.html'), path.join(output, 'obrigado.html'));
 for (const file of ['obrigado-basico.html', 'obrigado-pro.html']) cpSync(path.join(root, file), path.join(output, file));

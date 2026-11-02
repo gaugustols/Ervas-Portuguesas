@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import FrequentlyAskedQuestions from "../components/ui/frequently-asked-questions-with-accordion";
 import { faqConfig } from "../lib/faq-config";
 
-const path = new URL("../index.html", import.meta.url);
+const path = new URL("../original.html", import.meta.url);
 let html = readFileSync(path, "utf8");
 const block = /<!-- faq:start -->[\s\S]*?<!-- faq:end -->/g;
 if ((html.match(block) ?? []).length > 1) throw new Error("Expected at most one FAQ; no files changed.");
