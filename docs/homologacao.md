@@ -2,11 +2,17 @@
 
 ## Estado da publicação
 
-**Publicação não executada; URL pública de teste ainda indisponível.** Não foi alterado o site dos anúncios, nenhum alias de produção, domínio ou integração de pagamento.
+**Branch de homologação enviada ao GitHub e integração Vercel acionada.** A `main` mantém o commit `364746af1bfa3bce2c8e249c43bf4ce5baea7f1f`; nenhum merge, promoção de produção ou mudança do domínio dos anúncios foi executado.
 
-O projeto usa referências a `ervasportuguesas.vercel.app`, mas não tem metadados locais `.vercel`, CLI Vercel instalada, ligação de publicação disponível nas ferramentas ou credenciais Vercel identificadas nos nomes das variáveis/configuração do ambiente. A consulta às publicações do GitHub pela API foi bloqueada (`Forbidden`). A existência de autenticação GitHub para outras operações não foi tratada como autorização/acesso à Vercel. Não foi feito push para tentar provocar uma publicação sem conhecer a configuração da integração.
+Branch: `homologacao/ervas-pro-preview`. Commit da implementação: `9c6b22babeecda73696be6c451d5d11f1d54b8e7`.
 
-Foi solicitado ao utilizador o acesso de preview ou a identificação de um fluxo já configurado. Tokens não devem ser enviados no chat. Após disponibilizar esse acesso, falta publicar apenas como **Preview**, obter a URL real e testar o respetivo caminho `/teste-ervas.html`. A autorização dada é para homologação; não autoriza promover a variante a página principal.
+URL de preview identificada no link de feedback do check Vercel associado ao commit:
+
+https://ervasportuguesas-git-homologa-63fa75-gal-negocios-digitais-ltda.vercel.app/teste-ervas.html
+
+A interface pública do GitHub confirmou o check **Vercel Preview Comments** com estado `succeeded` e apresentou o hostname acima. Esse check confirma a resposta da integração, mas não substitui a confirmação do estado do build/deployment. O GET ao preview foi bloqueado pelo proxy (`CONNECT tunnel failed, response 403`), antes de obter resposta da Vercel. O carregamento público e o estado final do deployment permanecem por validar; não foram apresentados como testes aprovados.
+
+O acesso direto à API GitHub continua bloqueado, mas a leitura e o push Git pelo proxy funcionaram. O fluxo GitHub → Vercel não exigiu credenciais Vercel no executor. A avaliação inicial de que seria indispensável acesso direto à Vercel foi corrigida após verificar este fluxo. A página principal não foi substituída.
 
 ## Pacote preparado
 
@@ -74,7 +80,7 @@ Um `CTA_Click` e um `Checkout_Click` no mesmo clique são dois eventos de etapas
 - `check:thank-you` passou: páginas de agradecimento, app/PRO e export mantidos; estas áreas não fazem parte do pacote reduzido do preview.
 - `git diff --check` passou. Integridade e correspondência dos HTML do pacote verificadas.
 
-Capturas e resultados estruturados: `/tmp/ervas-conversion-tests/test-*.png` e `results.json`. Os serviços externos foram isolados no teste do navegador. Não foram testados iPhone/Safari físico, a receção real na Meta, pagamentos, nem o preview público ainda inexistente.
+Capturas e resultados estruturados: `/tmp/ervas-conversion-tests/test-*.png` e `results.json`. Os serviços externos foram isolados no teste do navegador. Não foram testados iPhone/Safari físico, a receção real na Meta, pagamentos, nem o carregamento público do preview identificado.
 
 Para reproduzir, na raiz do projeto:
 
@@ -96,7 +102,7 @@ Os testes usam Playwright/Chromium fornecidos pelo ambiente. A execução de red
 
 ## Pendências separadas
 
-1. **Publicação:** disponibilizar acesso ao alojamento ou um fluxo de preview verificável; publicar, obter a URL e confirmar que não existe promoção/alias de produção.
+1. **Deployment público:** confirmar na Vercel que o deployment da branch terminou com sucesso e abrir a URL de preview acima. O push e a resposta da integração estão confirmados; o proxy impediu a validação HTTP externa.
 2. **Checkout externo:** abrir a URL real do preview no telemóvel e confirmar o carregamento da oferta PRO, preço em EUR e parâmetros no destino, num contexto com acesso à Hotmart.
 3. **Meta:** verificar a receção dos três eventos no Events Manager, incluindo eventual duplicação por integrações externas que este repositório não expõe.
 4. **Dispositivos reais:** confirmar no browser mobile usado pelo público, incluindo o navegador interno dos anúncios Meta; a validação atual é por emulação Chromium.
