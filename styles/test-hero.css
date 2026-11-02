@@ -1,0 +1,30 @@
+/* Test first fold only; reuses the original palette, buttons and type system. */
+body[data-lp-variant="ervas-cozinha"] .oferta-planos { grid-template-columns: minmax(0, 1fr); max-width: 580px; }
+.test-hero { padding: 32px 0 40px; }
+.test-hero-layout { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 32px; text-align: left; }
+.test-hero .test-brand { color: var(--landing-accent); font-size: 14px; font-weight: 650; margin: 0 0 12px; }
+.test-hero h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 650; text-transform: none; line-height: 1.15; letter-spacing: -.04em; margin: 0 0 16px; text-wrap: balance; }
+.test-hero .test-subtitle { color: var(--pagina-secundario); font-size: 17px; line-height: 1.5; margin: 0 0 18px; }
+.test-hero .test-examples { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 0; margin: 0 0 18px; font-size: 14px; }
+.test-examples li::before { content: '✓ '; color: var(--landing-accent); }
+.test-hero .test-cta { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; white-space: normal; text-align: center; margin: 0; padding: 14px 20px; font-size: 16px; }
+.test-hero .test-terms { color: var(--pagina-secundario); font-size: 12px; margin: 10px 0 0; }
+.test-product { margin: 0; text-align: center; }
+.test-phone { display: inline-block; padding: 8px; border: 1px solid var(--pagina-linha); border-radius: 28px; background: var(--pagina-painel); box-shadow: 0 16px 40px #0006; }
+.test-phone img { display: block; width: 178px; height: 330px; object-fit: cover; object-position: top; border-radius: 20px; }
+.test-product figcaption { color: var(--pagina-secundario); font-size: 12px; margin-top: 8px; }
+@media (max-width: 640px) {
+  .test-hero { padding: 22px 0 28px; }
+  .test-hero-layout { grid-template-columns: 1fr 110px; gap: 12px; }
+  .test-copy { display: contents; }
+  .test-hero .test-brand, .test-hero h1, .test-hero .test-subtitle, .test-hero .test-cta, .test-hero .test-terms { grid-column: 1 / -1; margin: 0; }
+  .test-hero .test-examples { grid-column: 1; grid-row: 4; flex-direction: column; align-self: center; }
+  .test-product { grid-column: 2; grid-row: 4; }
+  .test-hero h1 { font-size: 30px; }
+  .test-hero .test-subtitle { font-size: 16px; margin-bottom: 14px; }
+  .test-hero .test-examples { font-size: 13px; margin-bottom: 14px; }
+  .test-hero .test-cta { width: 100%; }
+  .test-phone { padding: 5px; border-radius: 18px; }
+  .test-phone img { width: 90px; height: 146px; border-radius: 13px; }
+  .test-product figcaption { font-size: 10px; line-height: 1.3; }
+}

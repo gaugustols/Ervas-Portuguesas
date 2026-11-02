@@ -17,9 +17,15 @@ node servidor-local.mjs
 
 Abra **http://127.0.0.1:4173**. Para encerrar o servidor, pressione Ctrl+C. Ele serve somente o HTML da raiz e os recursos da página.
 
-Confira a página no desktop e em uma largura móvel, role até o rodapé para carregar todas as imagens e teste as âncoras e o CTA fixo. Na aba Network do navegador, CSS, JavaScript, imagens e fontes devem carregar sem erros.
+Confira a página no desktop e em uma largura móvel, role até ao rodapé e teste as âncoras e os CTAs. Na aba Network do navegador, os recursos locais devem carregar sem erros.
 
-Os links de checkout, atendimento, termos e privacidade mantêm o estado desativado da versão atual. O CTA móvel leva à seção da oferta.
+Os botões Básico e PRO da original usam os links Hotmart já configurados. A versão original continua em `/` e `/index.html`. A variante `/teste-ervas.html` é focada no PRO (€14,90): todos os seus CTAs de compra levam à oferta PRO existente; o Básico continua disponível apenas na original. A variante encaminha UTMs e identificadores de atribuição permitidos para o checkout, sem permitir alterar a oferta por parâmetros da URL. Não há distribuição automática de tráfego entre as versões.
+
+`npm run build` gera ambas as páginas e inclui a variante na pasta `public/`. Para atualizar apenas a variante a partir do HTML original, execute `npm run build:test-hero` e `node scripts/export-static.mjs`.
+
+O rastreamento reutiliza o Pixel existente: `CTA_Click`, `Pricing_View` e `Checkout_Click`, com identificação da variante. Um clique não dispara `InitiateCheckout`, pois a LP não consegue confirmar o início no checkout externo. Auditoria, parâmetros, limitações e reprodução dos testes: [relatório de conversão](docs/auditoria-conversao.md).
+
+Estado da publicação de teste, validações atuais e pendências externas: [relatório de homologação](docs/homologacao.md).
 
 ## Estrutura
 

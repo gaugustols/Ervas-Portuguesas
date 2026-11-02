@@ -14,7 +14,9 @@ const stylesheet = css.outputFiles[0].text.replace(/<\/style/gi, '<\\/style');
 html = html.replace(/<style id="landing-critical-css">[\s\S]*?<\/style>\s*/g, '');
 html = html.replace(/<link\b[^>]*rel="stylesheet"[^>]*href="assets\/nova-pagina\/css\/(?:styles|fonts|hook-question|rating-summary|landing-theme)\.css"[^>]*>\s*/g, '');
 html = html.replace(/<link\b[^>]*rel="preconnect"[^>]*href="https:\/\/(?:connect.facebook.net|www.facebook.com)"[^>]*>\s*/g, '');
-const preloads = html.match(/<link\b(?=[^>]*rel="preload")(?=[^>]*as="image")[^>]*>/g) ?? [];
+// Derive the preload from the actual poster instead of retaining obsolete srcsets.
+const poster = html.match(/<img\b[^>]*class="vsl-thumbnail"[^>]*src="([^"]+)"/)?.[1];
+const preloads = poster ? [`<link rel="preload" as="image" href="${poster}" fetchpriority="high">`] : [];
 html = html.replace(/<link\b(?=[^>]*rel="preload")(?=[^>]*as="image")[^>]*>\s*/g, '');
 const pixel = html.match(/<!-- Meta Pixel Code -->[\s\S]*?<!-- End Meta Pixel Code -->/)?.[0];
 if (!pixel || (html.match(/fbq\('init'/g) ?? []).length !== 1) throw new Error('Expected one existing Meta base pixel.');
